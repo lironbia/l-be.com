@@ -27,7 +27,7 @@
 - [Home](https://l-be.com/): services, projects, clients, client messages, contact form
 - [About Liron Bialkovich](https://l-be.com/liron-bialkovich): story, background and vision
 - [Solutions](https://l-be.com/solutions): the detailed list of solutions
-- [Case study](https://l-be.com/case-study): a CRM and automation rollout in a 50-person company
+- [Case study](https://l-be.com/case-study): הבית של עידה, a 30-person home furniture and design company: a company-wide CRM, an internal AI system connected to every department, and AI-based business apps built on top of it
 - [Portfolio (PDF, English)](https://l-be.com/liron-bialkovich-portfolio.pdf)
 
 ## Contact
