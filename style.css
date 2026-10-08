@@ -600,7 +600,8 @@ form[data-sent] .form-again { display: inline-block; }
 .nav-panel .nav-more a { text-decoration: underline; text-underline-offset: 0.3em; }
 .nav-panel .links { padding: 0 1rem 1rem; }
 .nav-panel .links a.plain { justify-content: center; width: 100%; background: var(--ink); color: var(--on-ink); }
-@media (max-width: 46rem) {
+/* Below this width the links no longer fit on one row beside the two mode buttons */
+@media (max-width: 70rem) {
   html.js .site-nav a:not(.mode) { display: none; }
   html.js .site-nav { margin-inline-start: auto; overflow: visible; }
   html.js .nav-open { display: inline-flex; }
@@ -644,3 +645,7 @@ html.a11y-big.js .nav-open { display: inline-flex; }
 @media (prefers-reduced-motion: reduce) {
   .untangle .knot, .untangle .rider, .untangle .loose, .untangle .landing { animation: none; }
 }
+
+/* Product page opener: same layout as the home opener, with a longer headline */
+.hero.product h1 { font-size: clamp(2.125rem, 4.6vw, 3.375rem); line-height: 1.1; }
+.form-note.one-line { white-space: nowrap; }
