@@ -74,12 +74,18 @@
       utm_content: param("utm_content"), utm_term: param("utm_term"), utm_adset: param("utm_adset"),
       fbclid: param("fbclid"), gclid: param("gclid"), affiliate_code: param("affiliate_code"),
     };
+    const blocked = window.lbeGuard ? window.lbeGuard.check() : "";
+    if (blocked) {
+      say("error", blocked);
+      return;
+    }
     button.disabled = true;
     say("busy", "שולח את הפנייה…");
     try {
       const res = await fetch(form.dataset.hook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error("Webhook responded " + res.status);
       say("ok", "הפנייה התקבלה. תודה, אחזור אליך בהקדם האפשרי.");
+      if (window.lbeGuard) window.lbeGuard.mark();
       form.dataset.sent = "1";
     } catch (err) {
       say("error", "השליחה נכשלה. אפשר לנסות שוב.");

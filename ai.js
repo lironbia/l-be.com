@@ -90,12 +90,18 @@
       utm_content: param("utm_content"), utm_term: param("utm_term"), utm_adset: param("utm_adset"),
       fbclid: param("fbclid"), gclid: param("gclid"), affiliate_code: param("affiliate_code"),
     };
+    const blocked = window.lbeGuard ? window.lbeGuard.check() : "";
+    if (blocked) {
+      say("error", ["status: 429", "✗ " + blocked]);
+      return;
+    }
     button.disabled = true;
     say("busy", ["status: sending…"]);
     try {
       const res = await fetch(form.dataset.hook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error("Webhook responded " + res.status);
       say("ok", ["status: 200", "✓ הפנייה התקבלה. לירון יחזור בהקדם האפשרי."]);
+      if (window.lbeGuard) window.lbeGuard.mark();
       form.dataset.sent = "1";
     } catch (err) {
       say("error", ["status: 502", "✗ השליחה נכשלה. אפשר לנסות שוב, או לתאם שיחה ביומן."]);

@@ -608,3 +608,39 @@ form[data-sent] .form-again { display: inline-block; }
 html.a11y-big.js .site-nav a:not(.mode) { display: none; }
 html.a11y-big.js .nav-open { display: inline-flex; }
 @media print { .nav-open, .nav-panel { display: none; } }
+
+/* Read-later form: the field is exactly as wide as the button; centred on small screens */
+.later-form { grid-template-columns: max-content; justify-content: start; justify-items: stretch; }
+.later-form .field { max-width: none; }
+.later-form .form-status, .later-form .form-note, .later-form .field-msg { width: 0; min-width: 100%; }
+@media (max-width: 46rem) {
+  .later .wrap { justify-items: center; text-align: center; }
+  .later-head { justify-items: center; }
+  .later-form { grid-template-columns: minmax(0, max-content); justify-content: center; }
+  .later-form .btn { justify-self: stretch; }
+  .later-form .field label { text-align: center; }
+}
+
+/* AI layer on the home page */
+.ai-rules { display: grid; gap: 0.75rem; }
+.chain.plain li::after { content: none; }
+.chain li { color: var(--ink); }
+
+/* The untangle picture, animated: threads turn slowly, cubes ride the lines to the stack */
+.untangle { width: 100%; height: auto; }
+.untangle .knot, .untangle .lane, .untangle .thread { fill: none; stroke: var(--ink); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.untangle .knot { transform-box: view-box; transform-origin: 300px 376px; animation: knot-turn 18s ease-in-out infinite alternate; }
+.untangle .k1 { animation-duration: 23s; animation-direction: alternate-reverse; }
+.untangle .k2 { animation-duration: 27s; }
+.untangle .k3 { animation-duration: 21s; animation-direction: alternate-reverse; }
+@keyframes knot-turn { from { transform: rotate(-9deg) scale(1.02); } to { transform: rotate(9deg) scale(0.94); } }
+.untangle .rider { offset-rotate: 0deg; offset-distance: var(--at); animation: ride linear infinite; }
+.untangle .rider polygon { stroke-width: 1.2; }
+@keyframes ride { 0% { offset-distance: 0%; opacity: 0; } 7% { opacity: 1; } 93% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+.untangle .loose { animation: loose-bob 5s ease-in-out infinite; }
+@keyframes loose-bob { 50% { transform: translateY(-5px); } }
+.untangle .landing { animation: landing 3.2s ease-in-out infinite; }
+@keyframes landing { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@media (prefers-reduced-motion: reduce) {
+  .untangle .knot, .untangle .rider, .untangle .loose, .untangle .landing { animation: none; }
+}
