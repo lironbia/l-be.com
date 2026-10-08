@@ -2,35 +2,28 @@
 
 > L-Be is the consultancy of Liron Bialkovich (לירון ביאלקוביץ), an independent consultant and developer in Israel who implements CRM systems, AI systems and business automation for companies. The site is in Hebrew.
 
-## Who
 - Name: לירון ביאלקוביץ (Hebrew) / Liron Bialkovich (English)
-- Role: independent consultant and developer: CRM, AI and business automation
 - Brand: L-Be (l-be.com). SubK (subk.co.il) is his earlier brand and now points to L-Be.
 - Liron Bialkovich is an independent consultant and developer who builds AI systems, automations and CRM systems for companies. At L-Be he specifies, sets up and implements CRM systems, AI solutions and automated processes.
-
-## What L-Be does
-- סוכני AI מתקדמים
-- ניהול והקמת מערכי CRM
-- אוטומציה עסקית
-- ממשק לכל מערכת עם API
-- לוחות ניהול ודו"חות עבודה
-- ניהול מכירות ושיווק A-Z
-- הקמה וניהול כל אופרציה
-- הדרכות, הכשרות וליווי מלא
-
-## Track record, in his own words
-- Developing companies and businesses since 2013; independent since 2017.
-- More than 300 projects accompanied; more than 80 business owners and companies, from small businesses up to 100 employees.
+- Developing companies and businesses since 2013; independent since 2017. More than 300 projects; more than 80 business owners and companies, up to 100 employees.
 - Some clients have been with him for 13 consecutive years; client churn is about 3%.
+- First consultation is free. Prices, phone number and address are not published.
 
 ## Pages
-- [Home](https://l-be.com/): services, projects, clients, client messages, contact form
-- [About Liron Bialkovich](https://l-be.com/liron-bialkovich): story, background and vision
-- [Solutions](https://l-be.com/solutions): the detailed list of solutions
-- [Case study](https://l-be.com/case-study): הבית של עידה, a 30-person home furniture and design company: a company-wide CRM, an internal AI system connected to every department, and AI-based business apps built on top of it
-- [Portfolio (PDF, English)](https://l-be.com/liron-bialkovich-portfolio.pdf)
+
+- [AI mode: facts and FAQ](https://l-be.com/ai): one plain page written for AI agents
+- [About Liron Bialkovich](https://l-be.com/liron-bialkovich.md): story, background and vision
+- [Solutions](https://l-be.com/solutions.md): the detailed list of solutions
+- [Case study: הבית של עידה](https://l-be.com/case-study.md): a 30-person home furniture and design company; the whole business in one process from sale to collection, with an AI layer connected to every department
+- [Home](https://l-be.com/): services, projects, clients, original client messages, contact form
 
 ## Contact
-- Contact form: https://l-be.com/#contact
-- Book a call: https://calendly.com/subk/intro-call
-- LinkedIn: https://www.linkedin.com/in/liron-bialkovich-2508a286
+
+- [Contact form](https://l-be.com/#contact)
+- [Book a call](https://calendly.com/subk/intro-call)
+- [LinkedIn](https://www.linkedin.com/in/liron-bialkovich-2508a286)
+
+## Optional
+
+- [Full site content in one file](https://l-be.com/llms-full.txt)
+- [Portfolio (PDF, English)](https://l-be.com/liron-bialkovich-portfolio.pdf)

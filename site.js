@@ -33,6 +33,19 @@
   addEventListener("resize", onScroll);
   frame();
 
+  // --- "תקצר לי": the short version of the home page (process, client messages, contact).
+  const hasShort = !!document.querySelector("[data-tachles]");
+  function setShort(on) {
+    root.classList.toggle("tachles", on);
+    document.querySelectorAll("[data-tachles-toggle]").forEach((el) => {
+      if (!el.dataset.fullLabel) el.dataset.fullLabel = el.textContent;
+      el.textContent = on ? "לאתר המלא" : el.dataset.fullLabel;
+      el.setAttribute("aria-pressed", String(on));
+    });
+    onScroll();
+  }
+  if (hasShort && location.hash === "#tachles") setShort(true);
+
   // --- Lazy script loader (each URL once)
   const loading = {};
   function load(src) {
@@ -123,6 +136,15 @@
   }
 
   document.addEventListener("click", (event) => {
+    const shortToggle = event.target.closest("[data-tachles-toggle]");
+    if (shortToggle && hasShort) {
+      event.preventDefault();
+      const on = !root.classList.contains("tachles");
+      setShort(on);
+      history.replaceState(null, "", on ? "#tachles" : location.pathname);
+      scrollTo(0, 0);
+      return;
+    }
     const calendly = event.target.closest("[data-calendly]");
     if (calendly) {
       event.preventDefault();
