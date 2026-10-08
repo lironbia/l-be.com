@@ -17,7 +17,7 @@
 - [Solutions](https://l-be.com/solutions.md): the detailed list of solutions
 - [Case study: הבית של עידה](https://l-be.com/case-study.md): a 30-person home furniture and design company; the whole business in one process from sale to collection, with an AI layer connected to every department
 - [Digital dreams: system specification for founders](https://l-be.com/digital-dreams): why planning costs less than building, and five working rules for specifying complex systems
-- [Business systems built on AI (the L-Be system)](https://l-be.com/business-ai): a dedicated, secure AI server per company with a data hub, BI, dashboards, knowledge base, AI traffic management, integrations and AI web applications
+- [L-Be, the business operating system](https://l-be.com/business-ai): one place where people and AI agents work together, with tasks, seats and ownership, approval gates, dashboards, BI and AI traffic management; AI proposes, a person decides
 - [Kala CRM: an Israeli CRM system](https://l-be.com/kala-crm): Liron has accompanied its development since day one and implements it for Israeli companies
 - [GoHighLevel (GHL) in Israel](https://l-be.com/gohighlevel): GHL setup for companies, help for founders already on GHL, and setting up a GHL agency, in Hebrew
 - [Privacy policy](https://l-be.com/privacy): no cookies, no tracking; personal details are sent only through forms

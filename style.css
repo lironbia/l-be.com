@@ -668,3 +668,14 @@ html.a11y-big.js .nav-open { display: inline-flex; }
 [dir="ltr"] .hero h1 { font-size: clamp(2.375rem, 6vw, 4.25rem); }
 [dir="ltr"] .page-hero h1 { font-size: clamp(2.25rem, 5.6vw, 4rem); }
 [dir="ltr"] .scores td:last-child, [dir="ltr"] .scores thead th:last-child { text-align: right; }
+
+/* L-Be system page */
+.changes.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.changes.five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.steps.six { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 2rem; }
+.checks.wide { max-width: 52rem; font-size: 1.125rem; }
+.offer .eg { color: var(--ink); font-size: 1rem; }
+.hero.product .byline { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.25rem, 2.4vw, 1.625rem); border-top: 0; padding-top: 0; }
+html.a11y-big .changes.three, html.a11y-big .changes.five, html.a11y-big .steps.six { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 56rem) { .changes.five { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 46rem) { .changes.three, .changes.five, .steps.six { grid-template-columns: minmax(0, 1fr); } }
