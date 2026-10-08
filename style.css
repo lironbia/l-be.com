@@ -197,8 +197,8 @@ html.tachles #tachles { border-top: 0; }
 .kpis b { font-family: var(--font-display); font-weight: 900; font-size: 2.25rem; line-height: 1; direction: ltr; text-align: right; }
 
 /* The open invitation sits on its own, centred above the client logos */
-.spot { display: block; width: min(100%, 27rem); margin-inline: auto; border: var(--rule); background: var(--paper); box-shadow: -8px 8px 0 var(--mint-2); transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.spot:hover { transform: translate(-3px, 3px); box-shadow: -5px 5px 0 var(--mint-2); }
+.spot { display: block; width: min(100%, 16rem); margin-inline: auto; border: var(--rule); background: var(--paper); box-shadow: -5px 5px 0 var(--mint-2); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.spot:hover { transform: translate(-2px, 2px); box-shadow: -3px 3px 0 var(--mint-2); }
 .spot img { width: 100%; }
 .logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: 0.875rem; }
 .logos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: var(--rule); background: var(--surface); }
@@ -247,6 +247,39 @@ html.tachles #tachles { border-top: 0; }
 
 .profiles.on-paper a { border-color: var(--ink); }
 .profiles.on-paper a:hover { background: var(--ink); color: var(--on-ink); }
+
+/* Short divider under a heading */
+hr.short { width: 3.5rem; height: 0; margin: 0.25rem 0; border: 0; border-top: 1.5px solid var(--ink-soft); opacity: 0.5; }
+
+/* Consulting: three steps in a row */
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; counter-reset: step; }
+.steps li { counter-increment: step; display: grid; gap: 0.375rem; align-content: start; border-top: var(--rule); padding-top: 1rem; }
+.steps li::before { content: counter(step, decimal-leading-zero); font-family: var(--font-mono); font-size: 0.875rem; color: var(--sky-ink); }
+.steps b { font-size: 1.3125rem; line-height: 1.3; }
+.steps span { color: var(--ink-soft); }
+
+/* Digital dreams page */
+.ratio { display: grid; gap: 1.5rem; max-width: 50rem; }
+.ratio-row { display: grid; gap: 0.625rem; }
+.ratio-row p { font-size: 1.1875rem; }
+.bar { display: flex; height: 2.25rem; border: var(--rule); }
+.bar i { display: block; }
+.bar .plan, .key.plan { background: var(--sky-2); }
+.bar .build, .key.build { background: var(--coral-2); }
+.bar i + i { border-inline-start: var(--rule); }
+.legend { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; color: var(--ink-soft); }
+.key { display: inline-block; width: 0.875rem; height: 0.875rem; border: var(--rule); }
+.key.build { margin-inline-start: 1rem; }
+.tips { display: grid; gap: 0; counter-reset: tip; max-width: 54rem; }
+.tips > li { counter-increment: tip; display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); column-gap: 1.25rem; row-gap: 0.5rem; border-top: var(--rule); padding-block: 1.5rem; }
+.tips > li::before { content: counter(tip); grid-row: 1 / span 3; font-family: var(--font-display); font-weight: 900; font-size: 3.5rem; line-height: 0.9; color: var(--sky-3); }
+.tips > li > * { grid-column: 2; }
+.tips h3 { font-size: 1.375rem; line-height: 1.3; }
+.tips p { color: var(--ink-soft); font-size: 1.0625rem; }
+.chain { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chain li { display: inline-flex; align-items: center; gap: 0.5rem; border: var(--rule); background: var(--paper); padding: 0.2rem 0.75rem; font-weight: 600; font-size: 0.9375rem; }
+.chain li:not(:last-child)::after { content: "←"; color: var(--sky-3); margin-inline-start: 0.25rem; }
+.founder-text > p + p { margin-top: -0.25rem; }
 
 /* Case study */
 .pull { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.375rem, 3vw, 1.875rem); line-height: 1.35; border-inline-start: 6px solid var(--coral-2); padding-inline-start: 1.25rem; margin-block: 1.75rem; text-wrap: balance; }
@@ -362,7 +395,9 @@ html.tachles #tachles { border-top: 0; }
 }
 @media (max-width: 46rem) {
   .hero .wrap, .founder, .contact, .two-col, .svc, .sol-grid, .person .wrap, .split { grid-template-columns: minmax(0, 1fr); }
-  .shots, .proc-grid, .changes { grid-template-columns: minmax(0, 1fr); }
+  .shots, .proc-grid, .changes, .steps { grid-template-columns: minmax(0, 1fr); }
+  .tips > li { grid-template-columns: 3rem minmax(0, 1fr); }
+  .tips > li::before { font-size: 2.5rem; }
   .masthead .wrap { flex-wrap: nowrap; padding-block: 0.625rem; }
   .brand { font-size: 1.25rem; }
   .brand img { height: 2rem; }
