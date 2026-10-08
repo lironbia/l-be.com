@@ -124,7 +124,14 @@ html.tachles #tachles { border-top: 0; }
 .hero-art svg { width: 100%; }
 .hero-art text { font-family: var(--font-body); font-weight: 600; font-size: 21px; fill: var(--ink); }
 .hero-art .leader { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 2 5; stroke-linecap: round; }
-.layer { animation: float 7s ease-in-out infinite; animation-delay: calc(var(--i) * -1.1s); }
+/* The whole stack floats as one piece; pointing at it slowly joins the layers into a single block. */
+.hero-art svg { animation: float 7s ease-in-out infinite; }
+.hero-art [data-parallax] { transition: transform 0.6s ease-out; }
+.hero-art .slab { transition: transform 1.6s cubic-bezier(0.3, 0.6, 0.2, 1); }
+.hero-art .leader { transition: opacity 0.8s ease; }
+.hero-art svg:hover [data-parallax] { transform: none !important; }
+.hero-art svg:hover .slab { transform: translateY(var(--join)); }
+.hero-art svg:hover .leader { opacity: 0; }
 .hero-art .leader { animation: flow 1.4s linear infinite; }
 @keyframes flow { to { stroke-dashoffset: -14; } }
 @keyframes float { 50% { transform: translateY(-5px); } }
@@ -358,7 +365,8 @@ html.tachles #tachles { border-top: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .layer, .hero-art .leader, .guide.is-docked::after { animation: none; }
+  .hero-art svg, .hero-art .leader, .guide.is-docked::after { animation: none; }
+  .hero-art .slab, .hero-art [data-parallax] { transition: none; }
   .site-footer nav a::after { transition: none; }
   .btn { transition: none; }
 }
