@@ -180,6 +180,7 @@ html.tachles #tachles { border-top: 0; }
 .brands > p { font-size: 1.0625rem; max-width: 46rem; }
 .past-clients { width: 100%; max-width: 54rem; border: 1.5px solid var(--on-ink); }
 .brands .names { display: flex; flex-wrap: wrap; gap: 0.25rem 0; font-size: 0.9375rem; color: var(--on-ink-soft); max-width: 54rem; }
+.brands .names li { display: inline; font-family: var(--font-body); font-weight: 500; font-size: 0.9375rem; line-height: 1.9; }
 .brands .names li:not(:last-child)::after { content: "·"; margin-inline: 0.5rem; color: var(--sky-2); }
 .brands ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
 .brands li { display: inline-flex; align-items: center; gap: 0.625rem; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3.4vw, 2.375rem); line-height: 1.25; }
