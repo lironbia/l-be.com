@@ -4,7 +4,8 @@
   // Motion is off when the system asks for it or when "עצירת אנימציות" is on in the accessibility menu.
   const motionQuery = matchMedia("(prefers-reduced-motion: reduce)");
   const calm = () => motionQuery.matches || root.classList.contains("a11y-calm");
-  const PDFJS = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/";
+  // pdf.js is served from this site (vendor/), next to this script wherever the page lives.
+  const PDFJS = new URL("vendor/", document.currentScript.src).href;
 
   // --- Scroll: --sp (0..1) drives the logo gradient; [data-parallax] elements drift at their own speed.
   const drifters = [...document.querySelectorAll("[data-parallax]")].map((el) => ({
@@ -19,7 +20,7 @@
   // The opener has its own effect, so the dot only appears once the opener has scrolled away,
   // and the opener's buttons are not targets.
   const opener = document.querySelector("main > section");
-  const guideTargets = guide ? [...document.querySelectorAll("main .btn, main [data-guide]")].filter((el) => !opener || !opener.contains(el)) : [];
+  const guideTargets = guide ? [...document.querySelectorAll("main .btn, main [data-guide]")].filter((el) => (!opener || !opener.contains(el)) && !el.closest(".later")) : [];
   let gx = 0, gy = 0, tx = 0, ty = 0, guideMoving = false, guidePlaced = false;
   function guideStep() {
     gx += (tx - gx) * 0.12;

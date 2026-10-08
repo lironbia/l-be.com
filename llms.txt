@@ -16,6 +16,9 @@
 - [Solutions](https://l-be.com/solutions.md): the detailed list of solutions
 - [Case study: הבית של עידה](https://l-be.com/case-study.md): a 30-person home furniture and design company; the whole business in one process from sale to collection, with an AI layer connected to every department
 - [Digital dreams: system specification for founders](https://l-be.com/digital-dreams): why planning costs less than building, and five working rules for specifying complex systems
+- [GoHighLevel (GHL) in Israel](https://l-be.com/gohighlevel): GHL setup for companies, help for founders already on GHL, and setting up a GHL agency, in Hebrew
+- [Privacy policy](https://l-be.com/privacy): no cookies, no tracking; personal details are sent only through forms
+- [Terms of use](https://l-be.com/terms)
 - [Accessibility statement and glossary](https://l-be.com/accessibility): how the site was made accessible, and plain-language definitions of the abbreviations used
 - [Home](https://l-be.com/): services, consulting offer, projects, clients, original client messages, contact form
 

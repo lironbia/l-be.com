@@ -1,3 +1,17 @@
+/* Web fonts, served from this site (SIL Open Font License). */
+@font-face { font-family: 'Frank Ruhl Libre'; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/frank-ruhl-libre-700-hebrew.woff2") format('woff2'); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: 'Frank Ruhl Libre'; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/frank-ruhl-libre-700-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Frank Ruhl Libre'; font-style: normal; font-weight: 900; font-display: swap; src: url("fonts/frank-ruhl-libre-900-hebrew.woff2") format('woff2'); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: 'Frank Ruhl Libre'; font-style: normal; font-weight: 900; font-display: swap; src: url("fonts/frank-ruhl-libre-900-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/ibm-plex-mono-500-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Sans Hebrew'; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-sans-hebrew-400-hebrew.woff2") format('woff2'); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: 'IBM Plex Sans Hebrew'; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-sans-hebrew-400-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Sans Hebrew'; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/ibm-plex-sans-hebrew-500-hebrew.woff2") format('woff2'); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: 'IBM Plex Sans Hebrew'; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/ibm-plex-sans-hebrew-500-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Sans Hebrew'; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/ibm-plex-sans-hebrew-600-hebrew.woff2") format('woff2'); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: 'IBM Plex Sans Hebrew'; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/ibm-plex-sans-hebrew-600-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Sans Hebrew'; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/ibm-plex-sans-hebrew-700-hebrew.woff2") format('woff2'); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: 'IBM Plex Sans Hebrew'; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/ibm-plex-sans-hebrew-700-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 /* Layout: full-bleed bands ruled in ink, asymmetric two-column openers, and flat
    outlined blocks that echo the isometric logo. One look, light, by choice. */
 :root {
@@ -324,7 +338,7 @@ hr.short { width: 3.5rem; height: 0; margin: 0.25rem 0; border: 0; border-top: 1
 .stats.light .figure { display: flex; align-items: flex-end; gap: 0.75rem; height: 5.5rem; }
 .stats.light .figure b { font-size: 5.5rem; line-height: 0.82; color: var(--ink); }
 .stats.light .figure small { font-size: 1.125rem; font-weight: 700; line-height: 1.2; padding-bottom: 0.125rem; }
-.stats.light .figure img { height: 100%; width: auto; mix-blend-mode: multiply; }
+.stats.light .figure img { height: 125%; width: auto; mix-blend-mode: multiply; margin-inline-start: -0.75rem; }
 .stats.light .stat > span { font-size: 1.0625rem; }
 .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; }
 .contact .links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; max-width: 26rem; }
@@ -449,7 +463,8 @@ hr.short { width: 3.5rem; height: 0; margin: 0.25rem 0; border: 0; border-top: 1
 .later .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 1rem clamp(1.5rem, 5vw, 4rem); align-items: center; padding-block: clamp(1.75rem, 4vw, 2.75rem); }
 .later-head { display: grid; gap: 0.5rem; }
 .later h2 { font-size: clamp(1.625rem, 3.4vw, 2.25rem); }
-.later-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.875rem 1rem; align-items: end; }
+.later-form { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.875rem; justify-items: start; }
+.later-form .field { width: 100%; max-width: 30rem; }
 .later-form .form-status { grid-column: 1 / -1; }
 
 /* Glossary on the accessibility page */
@@ -547,3 +562,13 @@ kbd { font-family: var(--font-mono); font-size: 0.875em; border: var(--rule); ba
 .scores-note { font-size: 0.9375rem; color: var(--ink-soft); }
 html.a11y-big .offer { grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 46rem) { .offer { grid-template-columns: minmax(0, 1fr); } }
+
+/* Small print under a form: what happens with the details, and the privacy policy */
+.form-note { grid-column: 1 / -1; font-size: 0.875rem; color: var(--ink-soft); }
+.form-note a { font-weight: 600; text-underline-offset: 0.3em; }
+/* GoHighLevel page */
+.offer.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.offer .who { font-size: 0.875rem; font-weight: 600; color: var(--sky-ink); }
+.faq h3 { margin-top: 1.75rem; }
+html.a11y-big .offer.three { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 56rem) { .offer.three { grid-template-columns: minmax(0, 1fr); } }
