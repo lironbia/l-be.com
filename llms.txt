@@ -13,6 +13,7 @@
 
 - [AI mode: facts, FAQ and site tree](https://l-be.com/ai): the hub for AI agents; every page has a plain version at https://l-be.com/ai-<page>
 - [The whole site on one plain page](https://l-be.com/ai-all)
+- [Ready prompt plus the whole site as text](https://l-be.com/agent-prompt.txt): what the site's "send to your AI agent" button copies
 - [About Liron Bialkovich](https://l-be.com/liron-bialkovich.md): story, background and vision
 - [Solutions](https://l-be.com/solutions.md): the detailed list of solutions
 - [Case study: הבית של עידה](https://l-be.com/case-study.md): a 30-person home furniture and design company; the whole business in one process from sale to collection, with an AI layer connected to every department

@@ -474,10 +474,10 @@ hr.short { width: 3.5rem; height: 0; margin: 0.25rem 0; border: 0; border-top: 1
 .glossary dd { margin: 0; }
 
 /* Accessibility menu */
-.a11y { position: fixed; z-index: 40; bottom: 1rem; left: 1rem; }
+.a11y { position: fixed; z-index: 40; bottom: 4.75rem; left: 1rem; }
 .a11y-toggle { display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; background: var(--ink); color: var(--on-ink); border: 2px solid var(--on-ink); border-radius: 50%; box-shadow: 0 0 0 1.5px var(--ink); cursor: pointer; }
 .a11y-toggle svg { fill: currentColor; }
-.a11y-panel { position: absolute; bottom: calc(100% + 0.5rem); left: 0; width: min(20rem, calc(100vw - 2rem)); max-height: calc(100vh - 6rem); overflow: auto; display: grid; gap: 0.75rem; padding: 1rem; background: var(--surface); color: var(--ink); border: var(--rule); box-shadow: -6px 6px 0 var(--sky-2); }
+.a11y-panel { position: absolute; bottom: calc(100% + 0.5rem); left: 0; width: min(20rem, calc(100vw - 2rem)); max-height: calc(100vh - 9.5rem); overflow: auto; display: grid; gap: 0.75rem; padding: 1rem; background: var(--surface); color: var(--ink); border: var(--rule); box-shadow: -6px 6px 0 var(--sky-2); }
 .a11y-panel[hidden] { display: none; }
 .a11y-panel h2 { font-size: 1.25rem; font-weight: 700; }
 .a11y-panel button, .a11y-panel a { display: flex; align-items: center; gap: 0.5rem; width: 100%; min-height: 2.75rem; padding: 0.5rem 0.75rem; font: inherit; font-weight: 600; text-align: start; color: var(--ink); background: var(--paper); border: var(--rule); border-radius: 0; cursor: pointer; }
@@ -679,3 +679,34 @@ html.a11y-big.js .nav-open { display: inline-flex; }
 html.a11y-big .changes.three, html.a11y-big .changes.five, html.a11y-big .steps.six { grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 56rem) { .changes.five { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 46rem) { .changes.three, .changes.five, .steps.six { grid-template-columns: minmax(0, 1fr); } }
+
+/* Language menu in the header: a globe that opens the list of languages */
+.lang-menu { position: relative; flex: none; }
+.lang-menu summary { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; list-style: none; cursor: pointer; border: var(--rule); background: var(--surface); }
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary svg { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.lang-menu .langs { position: absolute; z-index: 30; top: calc(100% + 0.375rem); inset-inline-end: 0; display: grid; gap: 0; width: max-content; min-width: 9rem; padding: 0.25rem 0.875rem; background: var(--surface); border: var(--rule); box-shadow: -5px 5px 0 var(--sky-2); }
+.masthead .wrap { flex-wrap: nowrap; }
+.masthead .site-nav { margin-inline-end: auto; }
+@media (min-width: 70.01rem) { .masthead .site-nav { margin-inline: auto 0; } }
+
+/* "Send to your AI agent": the band on the home page, and the floating button under the accessibility one */
+.agent-band .wrap { padding-block: clamp(2rem, 5vw, 3.5rem); }
+.agent-band .section-head h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+.agent-copy { display: grid; gap: 0.75rem; justify-items: start; }
+.agent-status { min-height: 1.5em; font-weight: 600; }
+.agent-fab { position: fixed; z-index: 40; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: 0.625rem; pointer-events: none; }
+.agent-fab button { pointer-events: auto; display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; background: var(--mint-1); color: var(--ink); border: 2px solid var(--ink); border-radius: 50%; cursor: pointer; }
+.agent-fab svg { fill: currentColor; }
+.agent-fab-note { pointer-events: auto; max-width: 15rem; padding: 0.375rem 0.75rem; font-size: 0.875rem; font-weight: 600; line-height: 1.4; background: var(--ink); color: var(--on-ink); border: 1.5px solid var(--on-ink); }
+.agent-fab-note:not([data-state]) { display: none; }
+@media (min-width: 62rem) { .agent-fab-note:not([data-state]) { display: block; } }
+.game-ui .btn { padding: 0.5rem 1rem; box-shadow: none; }
+@media (max-width: 46rem) {
+  .site-nav a.mode { padding: 0.2rem 0.5rem; font-size: 0.8125rem; }
+  .masthead .wrap { gap: 0.5rem; }
+  .site-nav { gap: 0.25rem 0.5rem; }
+  .lang-menu summary, .nav-open { width: 2.5rem; height: 2.5rem; position: relative; }
+  .lang-menu summary::before, .nav-open::before { content: ""; position: absolute; inset: -0.125rem; }
+}
+@media print { .agent-fab, .lang-menu { display: none; } }

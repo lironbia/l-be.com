@@ -264,6 +264,20 @@
     });
   });
 
+  // --- Language menu: closes on a click elsewhere and on Escape
+  const langMenu = document.querySelector(".lang-menu");
+  if (langMenu) {
+    document.addEventListener("click", (event) => {
+      if (langMenu.open && !langMenu.contains(event.target)) langMenu.open = false;
+    });
+    langMenu.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && langMenu.open) {
+        langMenu.open = false;
+        langMenu.querySelector("summary").focus();
+      }
+    });
+  }
+
   document.addEventListener("click", (event) => {
     const shortToggle = event.target.closest("[data-tachles-toggle]");
     if (shortToggle && hasShort) {

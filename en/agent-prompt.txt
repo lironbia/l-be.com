@@ -1,0 +1,1351 @@
+I want to check whether it makes sense for me to work with Liron Bialkovich (L-Be), a consultant who implements CRM, AI and automation systems for companies. This text was copied from his site, l-be.com, and Liron wrote it. The whole content of the site follows it.
+
+Please answer me based on what you know about me and my business:
+
+- Introduce Liron to me briefly: who he is and what he does.
+
+- Tell me what on the site is especially relevant to me and my business, and why.
+
+- Explain what can actually be done with him: which services or systems fit my situation, and where it makes sense to start.
+
+- Explain how this kind of support can help me along the way: on the technology and digital side, in day-to-day operations and in growing the business.
+
+- Tell me how this could free up my time, for example for more vacations in the Caribbean, while the business keeps ticking.
+
+- Tell me honestly what does not fit me, and what is missing in order to decide. Prices, for example, are not published on the site.
+
+- Suggest two or three questions I should ask Liron in an introductory call.
+
+A few rules: rely only on what is written in the content below, and do not make up facts, numbers or prices. If you lack information about me, first ask me two or three short questions about the business. The answer should serve me: if Liron is not a fit for me, say so.
+
+To book an introductory call with Liron: https://calendly.com/subk/intro-call . To leave your details: https://l-be.com/en/#contact
+
+From here on: the whole content of the site l-be.com.
+
+=== https://l-be.com/en/ ===
+Even a small business should think big
+
+# Implementing CRM and AI systems for companies
+
+I'll make sure your business runs on one consistent method, automated and ticking like clockwork.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call) Keep it short, I want the bottom line (https://l-be.com/en/ai-home#tachles)
+Liron Bialkovich (https://l-be.com/en/ai-liron-bialkovich) Implementing CRM and AI systems for companies
+
+AI
+
+# Don't feel like reading? Your AI agent will read it for you.
+
+One click copies a ready prompt, with the whole site's content. Paste it into your AI agent's chat, and it will introduce me to you and fit things to your business.
+
+What it's like to work with me
+
+# Implementing information systems and AI is a long, cumbersome and exhausting process. With me, it's fun.
+
+It's a very complex process. With me you get through it with a smile, and learn a lot along the way.
+
+- 11 years running I have clients who have been with me for 11 years.
+
+- 3% churn My churn rate stands at 3%, and I make a point of keeping it below that.
+
+- Holiday gifts Some clients bring me gifts on the holidays, as if I were family or an employee of their company.
+
+Solutions
+
+# For every client I put together the set of solutions that fits them best
+
+I have a range of solutions for you - business owners who want to upgrade the quality of life in the business a little, in every department that matters.
+
+- AI agents and bots
+
+- CRM, leads and sales
+
+- Customer service and communication
+
+- Orders, billing and finance
+
+- Automation and integrations
+
+- Management, reports and team
+
+- Specification, training and support
+
+[Image: Illustration: a central cube connected by dashed lines to six modules around it]
+
+See all solutions (https://l-be.com/en/ai-solutions)
+
+AI in the business
+
+# An AI layer connected to the data of the whole business
+
+This is how it works today at a client of mine, a company of 30 employees.
+
+- Ask in plain Hebrew An employee asks in plain Hebrew, for example "Which orders are delayed at a supplier?", and gets an answer based on the company's data.
+
+- A report in one click A useful report is saved, and can be run again with one click.
+
+- A dashboard from words A manager asks for a dashboard in words, and the system builds it.
+
+- One definition for every number Behind every number stands one agreed business definition, so everyone is talking about the same "sold" and the same "late".
+
+Responsible AI
+
+- The AI suggests, and a person approves
+
+- Every employee sees only what their role allows
+
+- Sign-in uses two-step verification
+
+- Customers' personal details do not leave the company
+
+- Every action is logged
+
+Get to know the system (https://l-be.com/en/ai-business-ai) The full story (https://l-be.com/en/ai-case-study)
+Consulting for companies
+
+# One session. One report. A work plan.
+
+One session of a few hours, followed by a thorough summary report with recommendations and a work plan for immediate improvements.
+
+- A session A few hours together, on the business and its processes.
+
+- A thorough summary report With recommendations.
+
+- A work plan For immediate improvements.
+
+Book a call (https://calendly.com/subk/intro-call) or leave your details (https://l-be.com/en/ai#agent-contact)
+Projects
+
+# Where I come from and what I've done so far
+
+- 300+ projects I've had the privilege of guiding, small and large
+
+- 80+ business owners and companies, from small businesses to 100 employees, that I've worked with hands-on since 2017
+
+- 2013 developing companies and businesses ever since
+
+I've built complex automation systems for all sorts of business processes at different companies, and managed web development projects, huge ones and small ones, for many different kinds of businesses.
+
+In the past I managed web technology projects for hundreds of brands, from ones you may never hear of to names everybody knows. These are some of the clients I worked with during my time at Restart IT, in 2013-2015:
+
+[Image: Logos of some of the clients from the Restart IT period: Microsoft Israel R&D Center, Applied Materials, Bank of America, mako, Azrieli Group, LR Group, Africa Israel Residences, Eldan, HP, Discount Bank, Mifal HaPais (Israel's national lottery), Strauss, Cafe Cafe, The College of Management, Walt Disney Pictures, Azorim, Leumi, Blonde 2.0, Gindi Holdings, Burgus Burger Bar, HOT, Moses, Tradis Gat, Fattal Hotels, mobli, Colmobil, Maybelline New York, L'Oréal Paris, Garnier, Israel Railways, Jerusalem Municipality, ALUT, Bezeq International, Rhodium]
+
+Case study · Ida's Home
+
+# The whole business in one process, from sale to payment collection. And above it, an AI layer connected to every department.
+
+Ida's Home designs and sells home furniture: made-to-order sofas and armchairs, lighting, rugs and textiles. The company has 30 employees, and works with several warehouses, a carpentry workshop and many suppliers.
+
+- One continuous process From sale to payment collection, instead of information scattered across people and files.
+
+- Updates from the field The warehouse, the couriers and sales update the system as they work, from their phones.
+
+- One picture for the whole company Every department sees the same order, in the same status, at the same time.
+
+- A reliable picture for management Of orders, inventory and debts. The system exposed gaps that had not been visible before, and they were dealt with.
+
+The full story (https://l-be.com/en/ai-case-study)
+Clients
+
+# Clients you may know
+
+Some of them simply enjoy their life in the business more today, and some have doubled and tripled their business. I'd be glad to be there for your business too.
+
+[Image: There's room for you here, and if there isn't, I'll make room :)] (https://l-be.com/en/ai#agent-contact)
+
+- The Cooking Studio
+
+- Ida's Home
+
+- FlyEast
+
+- Tor Olam
+
+- Dr. Zchuyot
+
+- AICC Systems
+
+- IB Communications
+
+- Razor Engineering and Consulting
+
+- Linder Mortgages
+
+- Autovik
+
+- Afikim Mayim
+
+- Marketing AVC
+
+- Triple D Illustrations
+
+- Welcome
+
+- Rampa - Elevators and Accessibility
+
+- Olam Nistar
+
+- TTM
+
+- Natali Somech - Training, Coaching, Organizational Consulting
+
+- Project X
+
+- Hoshaya - Kindergarten Network
+
+and more...
+
+Kind words
+
+# Along the way I've kept the odd kind word that came my way
+
+And also shmura matzah or flowers. The screenshots here are the original messages.
+
+[Image: WhatsApp screenshot: I wish you half a million dollars in cash and the rest in installments! You've made a revolution in helping people. Believe me, the change is crazy] (https://l-be.com/kudos/kudos-02.webp)
+
+[Image: WhatsApp screenshot: Love Liron, thank you for the day you matched me up with him] (https://l-be.com/kudos/kudos-09.webp)
+
+[Image: WhatsApp screenshot. Liron: And that's already directly with me as the implementer. The client: That's a bonus. Liron: What's the bonus, the transfer or me? The client: You, as the implementer] (https://l-be.com/kudos/kudos-06.webp)
+
+[Image: Email screenshot, 2019: I logged into the system, and at first glance it looks impressive. Of course we'll need a little getting used to. But from above I really liked the small details and the thought given to every detail, which are sometimes critical later on. I mean even really small fields that seem unimportant. Precisely because I was the one who specified the current system we work with today, I understand the implications better now.] (https://l-be.com/kudos/kudos-05.webp)
+
+[Image: WhatsApp screenshot: If there were words I would write them to you, but I have none. What I can do is wish you only good things in life, because your essence is to do only good. Glad for the moment I met you.] (https://l-be.com/kudos/kudos-07.webp)
+
+[Image: Email screenshot: Thanks for the answers and for today's call. I feel really good about the system and I'm convinced it will give us a very high-quality solution. I'll play with the settings over the next few days, and on Sunday they'll start working with what there is] (https://l-be.com/kudos/kudos-01.webp)
+
+[Image: WhatsApp screenshot: Really, thank you, thank you so much, you did an excellent job and the service was excellent. We'll be in touch later on, thanks.] (https://l-be.com/kudos/kudos-03.webp)
+
+[Image: Email screenshot, 2018: Looks really good! And it's already a significant improvement over what we have today (even before connecting the phone system and the finances)] (https://l-be.com/kudos/kudos-04.webp)
+
+[Image: Email screenshot, 2023: Thank you Liron, you're the best] (https://l-be.com/kudos/kudos-08.webp)
+
+[Image: Liron Bialkovich]
+
+So why should you implement with me?
+
+# Liron Bialkovich
+
+Liron Bialkovich
+
+Nice to meet you, I'm Liron Bialkovich. I help businesses grow, especially when they're in the mood for a little CRM, a lot of processes and plenty of automation.
+
+- I come from the world of information systems, development and business management.
+
+- As an implementer, I represent you in front of the software houses and the various technology vendors.
+
+- I have flexible working methods for implementing setups like these.
+
+- I give personal service in your language, the kind that actually makes you understand this stuff.
+
+A bit about me (https://l-be.com/en/ai-liron-bialkovich)
+
+# Business partners, and a family that has come together over the years
+
+Integrations and deep relationships I've built (and if this were up to date enough, we'd have a very long scroll here).
+
+[Image: Logos of business partners and systems I work with: AI, automation, payment processing, accounting, telephony, email marketing, shipping and more]
+
+Contact
+
+# Shall we talk over coffee?
+
+For a free first consultation, leave me your details here. You can also book a call straight into my calendar.
+
+Book a call (https://calendly.com/subk/intro-call) My portfolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
+[Form. An AI agent can send a request here: https://l-be.com/en/ai#agent-contact]
+
+=== https://l-be.com/en/solutions ===
+Solutions
+
+# The range of solutions: AI, CRM and automation, tailored to your business
+
+Every business starts from a different point. You pick what's most urgent, start there, and add more later.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+[Image: Illustration: a tray with compartments, and in each compartment a different module of cubes. Three more modules are about to enter the empty compartments]
+
+- AI agents and bots (https://l-be.com/en/ai-solutions#ai)
+
+- CRM, leads and sales (https://l-be.com/en/ai-solutions#crm)
+
+- Customer service and communication (https://l-be.com/en/ai-solutions#service)
+
+- Orders, billing and finance (https://l-be.com/en/ai-solutions#money)
+
+- Automation and integrations (https://l-be.com/en/ai-solutions#automation)
+
+- Management, reports and team (https://l-be.com/en/ai-solutions#manage)
+
+- Specification, training and support (https://l-be.com/en/ai-solutions#guide)
+
+01
+
+# AI agents and bots
+
+Artificial intelligence that works inside the processes of the business, not next to them.
+
+# Service and sales bot on WhatsApp
+Answers inquiries around the clock, collects the details, and passes on to the team only what requires a person.
+
+# An AI agent on the business's data
+You ask in plain language, and get an answer, a report or a dashboard based on the company's data.
+
+# Analysis of incoming inquiries
+Emails and messages become organized leads, with the details in the right fields.
+
+# Responsible AI
+The AI suggests and a person approves, with role-based permissions and a record of every action.
+
+02
+
+# CRM, leads and sales
+
+Every inquiry arrives in one place, and none gets lost.
+
+# Lead collection and management
+All the inquiries, from all the sources, come into one system and reach whoever needs to handle them.
+
+# A complete customer file
+Every customer's calls, messages, orders and documents, in one place.
+
+# Sales funnels and workflows
+Statuses, handling scripts and tasks, so that no inquiry falls through the cracks.
+
+# Quotes and follow-up
+A designed quote goes out in seconds, and the follow-up runs by itself.
+
+# Marketing measurement
+You see which campaign brought the person who paid in the end, and not just the one who left their details.
+
+03
+
+# Customer service and communication
+
+Every channel your customers use, documented and connected.
+
+# WhatsApp, SMS, email and social networks
+Outgoing and incoming messages from all the channels, recorded in the customer file.
+
+# Cloud phone system (PBX)
+An incoming call opens the customer card, and the recording is saved in it.
+
+# Meeting scheduling and attendance confirmations
+Customers pick an available time themselves, and the reminders go out on their own.
+
+# Satisfaction surveys
+You ask the customers in a form or a bot, and the answers come back into the system.
+
+# Personal area for customers and suppliers
+Viewing data and carrying out actions, without picking up the phone.
+
+04
+
+# Orders, billing and finance
+
+From the deal to payment collection, in one process.
+
+# Order management
+Products, operations, shipping and payment, from the deal to delivery.
+
+# Payment processing and billing
+Credit cards, digital wallets and direct debits, straight from the system.
+
+# Subscriptions and recurring billing
+Retainers and subscriptions are charged automatically, with tracking of what was not collected.
+
+# Accounting documents
+Invoices and receipts come out of the process itself, and are synced with accounting.
+
+# Inventory, purchasing and suppliers
+Catalog, warehouses and purchase orders, connected to the customers' orders.
+
+05
+
+# Automation and integrations
+
+What repeats itself moves into the system, and separate systems start talking to each other.
+
+# Process automation
+Tasks, alerts, messages and status updates happen by themselves, at the right time.
+
+# Connection to any system with an API
+Information moves between the business's systems without double entry.
+
+# Stores and websites
+Orders and inquiries from the website and the online store go straight into the system.
+
+# Smart forms
+Registration, signing a document, updating details and purchasing, in a form that updates the system.
+
+# Shipping companies
+A shipment is opened from within the order, and its tracking comes back to it.
+
+06
+
+# Management, reports and team
+
+One picture of the business, one you can rely on.
+
+# Dashboards and reports
+An up-to-date picture of the business, tailored to each role.
+
+# Task and project management
+Who does what and by when, with a calendar and progress tracking.
+
+# Work hours tracking
+Hours by customer, project or order, to know how much the work really costs.
+
+# Procedures and protocols
+Written work procedures, to train employees quickly and grow without chaos.
+
+07
+
+# Specification, training and support
+
+A good system starts with planning, and ends with a team that knows how to work with it.
+
+# Process specification
+We study the process in depth before building, until it's clear how it works in practice.
+
+# Specification of complex systems
+From an idea to a plan you can build from.
+
+# Training and implementation on the ground
+The team learns to work in the system, and I'm there until it becomes a habit.
+
+# Ongoing support
+The system keeps improving together with the business.
+
+# Consulting for companies
+One session of a few hours, followed by a summary report with recommendations and a work plan.
+
+Where to start
+
+# You don't have to start with everything
+
+In a first call we work out what hurts most in the business today, and build from there. The first consultation is free.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call) What it looks like in a company of 30 employees (https://l-be.com/en/ai-case-study)
+
+=== https://l-be.com/en/business-ai ===
+The L-Be System
+
+# The operating system of your business. With AI inside.
+
+One place where people and AI agents work together. Every area has an owner, and at any moment you can see what is happening and what is waiting for your decision.
+
+The AI proposes. A person decides. The business moves forward.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+Who it is for
+
+# Not one more tool. The way your business works.
+
+For company owners and managers who want a business that runs by a method, even when they are not in the room.
+
+Every client gets the system, and the L-Be team builds on it what that business needs. Later on, clients will also be able to build on the system themselves.
+
+What sets it apart
+
+# A system that starts from the question "what does it take to run a business"
+
+Most systems start from customers and try to expand. L-Be starts from the business itself.
+
+- Compared with a CRM A CRM system knows who your customers are. L-Be knows how your business works: who is responsible, what is stuck, who decides.
+
+- Compared with regular BI BI shows you what happened. L-Be also makes sure someone does something about it.
+
+- Compared with a general AI chat A chat answers a question and forgets. In L-Be an AI agent has a role, permissions, someone responsible above it and a record of every action.
+
+Core components
+
+# What is in the system
+
+Some of the components are built into the system, and some are built for you by L-Be, according to what the business needs.
+
+- Built into the system
+
+# Project management and business development
+The roadmap, sprints and tasks on one screen, with a clear "Waiting for you".
+For example:  you open it in the morning and see what is urgent, what is next and what needs you.
+
+- Built into the system
+
+# Management: seats and responsibility
+Every role has a holder, a person or an AI agent, and every area of the business has an owner.
+For example:  you see right away which area has been left without an owner.
+
+- Built into the system
+
+# Blockers and escalation
+Nothing gets stuck quietly. Every delay reaches the one who decides.
+For example:  an AI agent stops at a business decision, and it goes up to the right manager.
+
+- Built into the system
+
+# Approval gates
+What matters does not happen without your approval, and everything is recorded.
+For example:  a significant change does not go live without a sign-off.
+
+- Built into the system
+
+# The setup wizard
+The business defines itself: identity, vision, goals, way of working.
+For example:  at the end of the wizard there is a written master plan.
+
+- Built in, and adapted for you
+
+# Data repository
+All of the business's information in one place, organized and linked.
+For example:  a customer, a task, a decision and its owner are connected to each other.
+
+- Built in, and extended for you
+
+# Knowledge base
+The procedures, the decisions and the documents open next to the work they belong to.
+For example:  whoever carries out a task sees the decision behind it.
+
+- Built in, and dedicated dashboards are built for you
+
+# Dashboards
+A status picture for the manager, and for every seat its own picture.
+For example:  a "manager's view" of the sprint and of the blockers.
+
+- Built for you
+
+# BI
+The business's data turns into answers.
+For example:  where the bottleneck is, and what has changed since last month.
+
+- Built and configured for you
+
+# AI traffic management
+All of the business's AI under one control.
+For example:  you see who uses AI, for what purpose, and how much it costs.
+
+- A built-in interface, connections built for you
+
+# Interfaces and integrations
+The system talks to the tools you already have, and to AI agents.
+For example:  an AI agent opens a task and reports through a secure interface.
+
+- Built for you
+
+# AI-based web applications
+From an idea to a screen you can see, and from there to a tool that works.
+For example:  you ask in words, get a clickable example, and approve.
+
+- Built into the system
+
+# Secure sign-in and permissions
+Everyone sees only what their role allows.
+For example:  two-step sign-in for every user.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+AI traffic management
+
+# AI in the business with no surprises on the bill and no decisions that nobody approved
+
+Today every employee uses a different AI, on a different account, without anyone knowing what was sent, how much it costs and what came back. L-Be puts one gate between the business and all the AI models.
+
+- Control Who uses AI, for what purpose, and with which model.
+
+- Cost How much the AI costs the business, in dollars, by usage.
+
+- Budget and brake A monthly ceiling, and an off switch when needed.
+
+- The right model for the task A strong model for a complex decision, an economical model for routine work.
+
+- Trust in stages The AI starts as an observer, continues as an adviser, and acts on its own only after it has proven itself.
+
+- No dependence on one provider The business is not locked into one model or one company.
+
+Security
+
+# AI proposes, a person decides on everything that cannot be undone
+
+This is the principle above everything else. And these are the things behind it:
+
+- The system runs on L-Be's dedicated cloud server, not on shared hosting.
+
+- All traffic is encrypted, and the database is closed to the internet.
+
+- Two-step sign-in for every user: a password and a personal code from an authenticator app.
+
+- Passwords, authentication secrets and AI keys are kept protected and encrypted.
+
+- Permissions by role, and full separation between one organization and another.
+
+- A record of who did what, and when.
+
+- Automatic daily backup, with restore tests.
+
+- Every update to the system goes through automated tests, and is rolled back automatically if something is wrong.
+
+What already runs on the system
+
+# L-Be runs itself on L-Be
+
+AI agents work in our system every day: they open tasks, carry them out, report, and stop when a person is needed. These are tools we use every day:
+
+- A board with a cockpit What is urgent, what is next, what is blocked and what is waiting for the manager.
+
+- The organization map Who holds each role, a person or an AI agent, and who owns each area.
+
+- Approval gates Decisions wait for the right person, and the ruling is saved with a name and a date.
+
+- The setup wizard Eight steps that end in a master plan.
+
+- Knowledge next to the work The document and the decision open next to the task.
+
+What implementation looks like
+
+# Six steps, from definition to a system that works
+
+- Defining the business A short wizard: who we are, where we are going, how we work. At the end there is a master plan.
+
+- L-Be sets up the environment In the background, with no need to wait for it.
+
+- Defining people and roles Who holds each seat, what each one sees, who decides on what.
+
+- The team joins in stages Everyone gets an introduction to the system and to their role in it.
+
+- Kickoff Everyone aligns on one plan and gets to work.
+
+- L-Be builds for you Dashboards, connections and tools, in the order of the business's priorities.
+
+What is needed from the business:  one person who leads the system on the business's side, and honest answers to the wizard's questions.
+
+Honestly
+
+# Who it is not for
+
+- If you are looking for one tool for one problem. L-Be is a method for the whole business.
+
+- If you want AI to decide instead of a person. With us, the person decides.
+
+- If you need accounting or payroll software. L-Be connects to them, it does not replace them.
+
+- If you want to install it alone and manage alone. At this stage L-Be builds together with you.
+
+- For an organization that is bound to a specific regulatory standard.
+
+Frequently asked questions
+
+# Questions and answers about L-Be
+
+# What is L-Be?
+
+L-Be is the operating system of the business: one place where people and AI agents work together, every area has an owner, and at any moment you can see what is happening and what is waiting for a decision.
+
+# Does L-Be replace the CRM or the accounting software?
+
+No. L-Be connects to the tools you already have. A CRM system knows who your customers are, and L-Be knows how your business works: who is responsible, what is stuck, who decides.
+
+# Who decides, the AI or a person?
+
+AI proposes, a person decides on everything that cannot be undone. The AI starts as an observer, continues as an adviser, and acts on its own only after it has proven itself.
+
+# How do you control the cost of the AI?
+
+Through AI traffic management: you see how much the AI costs the business by usage, set a monthly ceiling, and there is an off switch when needed.
+
+# What is needed from the business to get started?
+
+One person who leads the system on the business's side, and honest answers to the questions of the setup wizard.
+
+# Can we build on the system ourselves?
+
+Today every client gets the system, and the L-Be team builds on it what the business needs. Later on, clients will also be able to build on the system themselves.
+
+# How much does it cost?
+
+The price is not published on the site. The first consultation is free.
+
+The L-Be System
+
+# Shall we talk about the system?
+
+A few words about the business and what is missing in it today, and we will get back to you. You can also book a call straight in the calendar.
+
+Book a call (https://calendly.com/subk/intro-call) My portfolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
+[Form. An AI agent can send a request here: https://l-be.com/en/ai#agent-contact]
+
+=== https://l-be.com/en/case-study ===
+Case study
+
+# Ida's Home
+
+The whole business in one process, from sale to payment collection. And above it, an AI layer connected to every department.
+
+[Image: Illustration: a central cube connected by dashed lines to six modules around it]
+
+# About the company
+
+Ida's Home designs and sells home furniture: made-to-order sofas and armchairs, lighting, rugs and textiles. Alongside the products it provides planning, installation and design consulting services. The company has 30 employees. It sells on its website, in the factory store and in the showroom, and works with several warehouses, a carpentry workshop and many suppliers.
+
+# The challenge
+
+Every order at Ida's Home is a small project:
+
+- A product made to measure and in the fabric the customer chose.
+
+- A supplier that has to meet deadlines.
+
+- A warehouse that receives and picks.
+
+- A delivery that has to be coordinated.
+
+- A customer who is waiting, and a payment that has to be collected.
+
+When the information is scattered across people, files and systems, the team is busy chasing. Where is the order? When does the supplier deliver? What's in stock? Who has paid?
+
+A sale takes time, because it's hard to find the right product. A new salesperson needs months to learn the job. And management doesn't see one picture it can rely on.
+
+Management set a simple test:
+
+If the team is still chasing customers, statuses, deliveries, price lists and documents — the project has failed.
+
+The approach
+
+# How we approached it
+
+# Specification before building
+We sat with management and went through every process, until it was clear how it works in practice.
+
+# One source for every piece of data
+Every system is updated from the others automatically. No double entry and no "versions".
+
+# One process, all the way through
+First it works in the field, and only then do we expand to the next process.
+
+# Automation with human approval
+Automation where the rule is clear. A person approves where there is money or a customer involved.
+
+What was built
+
+# The core processes of the business, connected end to end
+
+# Sales in every channel
+
+- Website, factory store, showroom and points of sale.
+
+- A dedicated point of sale (POS) with credit card processing and payment by link.
+
+- Every order, from every channel, enters the same track.
+
+One customer, one order and one picture, no matter where they bought.
+
+# Purchasing and suppliers
+
+- Purchase orders go out to suppliers automatically, according to what the customer ordered.
+
+- Every supplier regularly receives a picture of what is open with them.
+
+No order is forgotten on the way to the supplier.
+
+# SLA with suppliers and with customers
+
+- Every product has a calculated delivery date, and everything that goes past it is tracked.
+
+At any moment you can see what is delayed and with whom, before the customer calls.
+
+# Inventory and warehouses
+
+- Inventory management across several warehouses.
+
+- A product that is already in stock is allocated to an order automatically.
+
+You sell what you have, and don't reorder what is already on the shelf.
+
+# Smart scanners
+
+- Scanning on a phone at every stage: receiving from a supplier, picking, dispatch for delivery, returns and repairs.
+
+- Every scan moves the order forward automatically.
+
+The warehouse updates the whole company as it works, without typing.
+
+# Shipping and delivery coordination
+
+- The customer sets a time themselves, through a link.
+
+- The couriers are assigned to a route.
+
+- The courier app documents every delivery with a photo and a signature.
+
+- An interface for managing the couriers and paying them.
+
+Every delivery is coordinated and documented from the start to the handover.
+
+# Marketing and customer service
+
+- Automatic messages to the customer at every stage of the order.
+
+- A proactive update to the customer, and a request for feedback at the end.
+
+The customer knows what is happening without asking, and the service team is free to handle what really needs handling.
+
+# Complementary products
+
+- An offer to the customer to complete their order, with a personal link.
+
+The basket grows without manual work.
+
+# Payment collection and accounting
+
+- Sync with accounting.
+
+- Credit card processing.
+
+- Collection tracking, and detection of gaps between the systems.
+
+A true picture of the debt, not a number where you have to guess what is behind it.
+
+# BI and management
+
+- Dashboards, cash flow and insights that update themselves.
+
+Management sees the business in real time and decides based on data.
+
+# The AI layer
+
+Above all these processes stands an AI system connected to the data of every department.
+
+- An employee asks in plain Hebrew, for example "Which orders are delayed at a supplier?", and gets an answer based on the company's data.
+
+- A useful report is saved, and can be run again with one click.
+
+- A manager asks for a dashboard in words, and the system builds it.
+
+- Behind every number stands one agreed business definition, so everyone is talking about the same "sold" and the same "late".
+
+Responsible AI.  An AI system connected to a company's data has to work within clear boundaries. The control is built in:
+
+- The AI suggests, and a person approves.
+
+- Every employee sees only what their role allows.
+
+- Sign-in uses two-step verification.
+
+- Customers' personal details do not leave the company.
+
+- Every action is logged.
+
+The result
+
+# What changed
+
+- One continuous process From sale to payment collection, instead of information scattered across people and files.
+
+- Updates from the field The warehouse, the couriers and sales update the system as they work, from their phones.
+
+- One picture for the whole company Every department sees the same order, in the same status, at the same time.
+
+- A reliable picture for management Of orders, inventory and debts. The system exposed gaps that had not been visible before, and they were dealt with.
+
+# My role
+
+- Specifying the processes with management.
+
+- Setting up the CRM from scratch.
+
+- Connecting all the systems to each other.
+
+- Building the AI layer and the apps.
+
+- Implementation on the ground.
+
+- Ongoing support.
+
+Shall we talk over coffee? (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+
+=== https://l-be.com/en/digital-dreams ===
+System specification and technology consulting
+
+# Making Digital Dreams Real
+
+I'm a consultant and I specify systems. I take an idea for a complex system and turn it into a plan you can build from.
+
+For creative entrepreneurs who believe in themselves, and want a close, tech-savvy friend to go along with them on the way.
+
+Tell me about the dream (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+[Image: Illustration: a drawing on a sheet, and rising from it a structure built of blocks]
+
+What I do for you
+
+# I specify, plan and guide. Until the dream works.
+
+Before you invest in development, it's worth knowing exactly what you're building. That's my job.
+
+-
+# System specification
+I turn the dream into an organized specification document: what the system does, for whom, and how. From the macro to the micro.
+
+-
+# Architecture and planning
+I plan the structure of the system before a single line of code is written. My specialties: SaaS, automation, AI and CRM.
+
+-
+# Work plan
+I break the road down into a roadmap, decisions and resolutions, sprints, tasks and milestones.
+
+-
+# Consulting and guidance
+I stay by your side as a close, tech-savvy friend, and represent you in front of the software houses and the technology vendors.
+
+Tell me about the dream (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+Why plan
+
+# Planning costs far less than execution
+
+How important it is to plan, and to plan right: when you plan the processes you want to develop more correctly, you save a lot further down the road.
+
+Most people in the world  plan for one year and build for nine.
+
+The Chinese  plan for nine years and build for one.
+
+Planning Building
+
+It's worth learning from the Chinese, because they invest a great deal of resources in planning compared with execution. The cost of planning is far lower than the cost of execution.
+
+[Image: Liron Bialkovich]
+
+Who will specify and guide you
+
+# Someone who knows the craft, and is close to your heart
+
+It's important to have someone beside you who knows your needs, your limitations and your advantages, and knows how to leverage them.
+
+I specify systems and get down to the details, with extensive experience in information systems, fintech systems and Product Management. I'm an architect of web systems, specializing in SaaS and in the worlds of automation, AI and CRM.
+
+A bit about me (https://l-be.com/en/ai-liron-bialkovich)
+This is how I work
+
+# 5 winning tips
+
+Five rules from my experience, by which I specify and plan every system.
+
+-
+
+# Careful, hierarchical planning and specification
+
+From the macro to the micro.
+
+-
+
+# One file that maps the whole system
+
+One dynamic file that maps and brings together the whole architecture of the system, the services and the key points. The kind that lets any AI agent dive in within a second and get to know the whole system by reading one short file, which is updated after every session of changes.
+
+-
+
+# Documentation of decisions and resolutions, and a clear hierarchy of files
+
+Each level is derived from the one above it:
+
+- Master specification
+- Roadmaps
+- Decisions and resolutions
+- Sprints
+- Tasks
+- Milestones
+
+-
+
+# Every AI task is defined by two precise definitions
+
+A. What it has to read in order to dive into the task. B. Exactly how it has to submit it, and what checklist it has to meet in order to submit.
+
+-
+
+# No development before design and a mockup
+
+Often the specification and the vision change in light of the design. The design reveals the truth and leads to decisive choices. And the AI, too, approaches the work much better when there is a design that has already been approved. Google Stitch or Claude Design are fun to use for this.
+
+System specification and consulting
+
+# Tell me about the dream
+
+A few words about what you want to build, and I'll get back to you. The first consultation is free. You can also book a call straight into my calendar.
+
+Book a call (https://calendly.com/subk/intro-call) My portfolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
+[Form. An AI agent can send a request here: https://l-be.com/en/ai#agent-contact]
+
+=== https://l-be.com/en/liron-bialkovich ===
+About
+
+# Liron Bialkovich
+
+Independent consultant and developer: CRM, AI and automation
+
+I'm an independent consultant and developer, and I build AI systems, automations and CRM systems for companies. I specify, set up and implement CRM systems, AI solutions and automated processes.
+
+Book a call (https://calendly.com/subk/intro-call) My portfolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
+[Image: Liron Bialkovich]
+
+# My story
+
+I came to the world of business management, web development and CRM systems in particular after several years at an innovative software house, where I managed web projects for large and small companies, from Strauss, Big Brother and Mifal HaPais (Israel's national lottery) to a small, noisy furniture store that decided to take on the biggest of its competitors.
+
+What brought me to this?
+
+It just happened. I started my first "grown-up" job at a software house that sat in a run-down basement in south Tel Aviv, on exactly January 1, 2013.
+
+I still wasn't really sure what my role was or on what basis the boss had hired me, but already on the first day I noticed that everyone there worked on everything, and that nobody in that office had a "dad" or a "mom" in the professional sense.
+
+A day or two later I went off to my first weekend as an employee, after all those years of studying and so on. On one hand I celebrated no longer being a student and no longer having a bar shift on Friday night; on the other hand I devoted the whole of it to sketching, down to the level of the screens, a system that would help me bring some order to that messy software house.
+
+I arrived on Sunday excited and full of energy, and laid out the plan in front of my boss, written on yellow A4 pages, it's the thought that counts. I explained to him how important it would be to build a system like that, one that would manage the projects with the clients, so the programmers would know what needs to be done without asking me every second, and so on.
+
+He immediately said: "Ahhh, haha.. that's called a CRM, we tried it once, nobody had the energy to use it". And there I was thinking I had discovered America.
+
+I didn't argue with him. He was a boss worth admiring, so I followed him and learned everything I could. But I told him, in these words: "The day will come when I'll build a system like that, one that helps companies bring order to their work, you'll see" (and here you go, Yos, hoping you're reading this, the years have gone by and look what's become of me :)
+
+Eventually, as the years went by, a little after I had traveled and crossed continents, I found myself working at a large Israeli tourism company that wanted to grow and was dealing with growing pains. It had already tried a few CRM systems that hadn't helped it take off.
+
+The boss wanted to make a MOVE there, and somehow, through the mother of a friend of mine from school, it reached me. He asked me to help him find and adopt a real solution once and for all: a CRM system with a unique service you can grow with hand in hand, the kind that really delivers the goods.
+
+He actually paid me to do it, and employed me full-time to find him a solution like that, as if my path had been paved in advance. After especially thorough research, I found an answer from two kinds of vendors:
+
+The first kind  was very expensive and bombastic — it wanted a lot of money and demanded too much patience. On top of that, it made a point of paying attention mainly to the big companies with the deep pockets, so I always felt I was too small for it, and that this would come back to bite me later, when we would really need them.
+
+The second kind  came to the market to bite into the first one's share, and offered a cheap, ready-made, almost-fitting solution, with minimal ability to run things independently, systematically and in a way tailored to our needs. And when we'd want to upgrade, we'd run into lots of difficulties and limitations that in many cases would force us either to compromise, a lot, or to keep searching for the next solution, which would set us back and keep us from moving forward.
+
+This dichotomy between the solutions almost always leads business owners with more modest means to settle for the cheap solution. Even when they have the liquidity to invest in the business. And that's only because they haven't found the right service. They compromise on too many of the features they want from the system, and as a result they may be moving forward, but nowhere near the pace they want.
+
+In fact, the research showed that the market is saturated with systems but badly lacking in the three things that actually matter most to the Israeli market: sufficient system capabilities, personal guidance and service, and customization.
+
+# What I did
+
+Well, I came in with a lot of experience working with software houses and developing cloud systems for the web. So I found the software house best suited to the task, and together we developed a system, a service and a method by which I provide not only tools to leverage the business, but also go deep into its infrastructure and teach it to point itself upward and grow in a measurable, gradual way.
+
+I'll manage a comprehensive project for you: implementing a CRM system that will do for your business what a CRM system is really supposed to do: work for you and keep watch for you - 24/7
+
+That means you won't just have a customer management system that lifts your activity. You'll also have a dedicated professional whose job is to stay close to you and help you implement and improve more and more processes, until you run like a well-oiled institution. That's how sustainable businesses are made today.
+
+# A bit more about me, my background and my vision
+
+After a few years as a cook and manager in chef restaurants, culinary studies, a degree in communications, a rich background and a great interest in business management and economics: I made a career change, and since 2013 I've been developing companies and businesses.
+
+In my first years in the field I worked as an employee, and in 2017 I officially set up my own business, as an independent who goes from business to business and helps the people in it run faster.
+
+I've built complex automation systems for all sorts of business processes at different companies, and managed web development projects, huge ones and small ones, for many different kinds of businesses. I've accompanied companies through a major digital transformation, and some of them doubled and tripled their activity within a year or two.
+
+In the past I managed web technology projects, from the managerial, technical, creative, financial and operational sides, for hundreds of brands (from ones you may never hear of to banks, colleges, Big Brother, Israel Railways, Strauss, Disney Israel and large advertising agencies, in 2013-2015).
+
+I've had the privilege of guiding more than 300 projects, small and large, each of them meant to move a particular business forward, both internally and in how it deals with the outside world.
+
+Since 2017 I've worked mainly on consulting, specification, setup and implementation of customized systems for managing customers and business processes (CRM/ERP/BPM), after a careful analysis I carry out of all the important processes that we can manage with methods a little more innovative and efficient than the ones we're used to.
+
+In that time I've worked with more than 80 business owners and companies (from small businesses to companies of 100 employees), helping them implement significant changes across the length and breadth of the business, hands-on.
+
+I know my clients from the inside: the employees, the procedures, the pressures and what works well.
+
+I treat every client as if I were a partner in their business: their success is my success, and I'm connected to the business as if I were a regular employee there.
+
+# How I can help
+
+# Automation
+
+Automation - in one word. If something can be specified and happens in the digital world, automation can be built for it.
+
+# Getting things moving
+
+The fact that in our world anything can be done, and that in the end it all comes down to time and money, doesn't mean everything will move by itself - I'm here to get things moving, and if needed I also get up and move them myself.
+
+# Customer service processes
+
+From the channels of communication with customers to the service method and all the digital tools that will help the service move toward perfection.
+
+# Sales
+
+From tools that help salespeople improve from day to day to "automatic salespeople", including customized sales training.
+
+# Marketing, and everything that connects it to the other departments and back
+
+From recruiting the right marketing vendors to the creative side of getting our messages out.
+
+# Planning, specification and management of digital projects and information systems
+
+Every need has an answer. The question is where you look for it and how you plan to implement it.
+
+# Help in advancing the important interests of the business
+
+Whether it's strengthening business development, PR, building partner programs, or recruiting marketers, distributors, investors and members for mailing lists or conferences.
+
+# Content, content, content
+
+Every business today needs to know how to produce content, and of the highest quality possible. Digital tools for improving the way the business runs overall.
+
+# Planning and writing protocols for managing the work
+
+Great for companies that want to grow faster and train employees easily.
+
+# Recruiting staff
+
+Recruiting staff and screening candidates efficiently.
+
+# Strengthening operations
+
+Implementing systems for managing inventory, purchasing, supply and delivery notes, supplier management, collaborations, order management, feedback automation, shipping and more.
+
+Shall we talk over coffee? (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call) Case study: my client number 1 (https://l-be.com/en/ai-case-study)
+Liron Bialkovich is an independent consultant and developer who builds AI systems, automations and CRM systems for companies. At L-Be he specifies, sets up and implements CRM systems, AI solutions and automated processes.
+
+=== https://l-be.com/en/kala-crm ===
+Kala CRM · made in Israel
+
+# Implementing Kala CRM: an Israeli CRM system, truly customized
+
+I have accompanied the development of Kala CRM from its first day until today. Together we developed a solution for Israeli companies that need personal service and truly personal customization: a system that lets you build almost any process you can imagine.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+[Image: Illustration: a dark central cube, and eight colorful cubes around it. Each one is connected to it by a continuous line]
+
+About the system
+
+# What is Kala CRM?
+
+An Israeli system for managing, marketing and automating the business. Inquiries, customers, sales, billing, calendars and communication with customers, in one system and fully in Hebrew. In my view, one of the most advanced and comfortable systems in Israel.
+
+- Gathering and managing inquiries and leads from all sources
+
+- Customer database and customer files
+
+- Orders and sales processes
+
+- Quotes with automatic follow-up
+
+- Accounting documents
+
+- Credit card processing, digital wallets and direct debits (Masav, Israel's bank clearing system)
+
+- Subscriptions and recurring billing
+
+- Phone system (PBX), WhatsApp, SMS and email
+
+- AI-based automations and bots
+
+- Calendars, tasks and self-service meeting scheduling
+
+- Project, inventory and supplier management
+
+- Connection to WordPress sites and to other systems
+
+Made in Israel
+
+# Why an Israeli CRM system
+
+An Israeli business works with Israeli payment processing, with Israeli accounting and with customers who speak Hebrew. A system that was built here is already connected to all of that.
+
+- Fully Hebrew A system built in Hebrew, right to left, for businesses that work in Israel.
+
+- Israeli providers Payment processing, accounting, phone systems (PBX), Masav (Israel's bank clearing system) and WhatsApp, connected from the system itself.
+
+- Truly personal customization The fields, the screens and the processes are built around the way the business works, and not the other way around.
+
+- Personal service Support in Hebrew, and a system that is updated and improved regularly.
+
+Connections
+
+# Connected to the providers an Israeli business needs
+
+These are the business partners and the systems I connect and know closely: payment processing, accounting, telephony, email marketing, shipping, automation and AI.
+
+[Image: Logos of business partners and systems that connect to Kala CRM and to the processes I build: AI, automation, payment processing, accounting, telephony, email marketing, shipping and more]
+
+What I do
+
+# From specification to a system that works for you
+
+I know Kala CRM from the inside, from its first day. That is what lets me build processes in it that other systems don't allow.
+
+-
+# Specifying the processes
+We sit down together on the business, and define exactly what the system needs to do.
+
+-
+# Setup and customization
+I build the system according to the specification: fields, screens, permissions and processes.
+
+-
+# Automations, bots and AI
+What repeats itself moves to automation, and AI-based bots answer customers.
+
+-
+# Connections, training and support
+I connect the providers the business works with, train the team and stay on to support.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+Frequently asked questions
+
+# Questions and answers about Kala CRM
+
+# What is Kala CRM?
+
+Kala CRM is an Israeli system for managing, marketing and automating the business: inquiries, customers, sales, billing, calendars and communication with customers in one system, fully in Hebrew and customized.
+
+# Who is Kala CRM for?
+
+Israeli companies and businesses that want a CRM system in Hebrew, personal service, and processes tailored exactly to the way they work.
+
+# What is the difference between Kala CRM and international CRM systems?
+
+Kala is a system made in Israel: it is built in Hebrew, connected to the Israeli providers (payment processing, accounting, phone systems, Masav and WhatsApp), and can be deeply customized, with local service.
+
+# Which systems does Kala CRM connect to?
+
+Credit card processing and digital wallets, accounting systems, phone systems (PBX), Masav (Israel's bank clearing system), WhatsApp, SMS and email, WordPress sites, and other systems through custom integrations.
+
+# Can Kala CRM be adapted to a process that is unique to the business?
+
+Yes, and that is the heart of the system. You can build almost any process you can imagine in it, and I specify and build it together with the business.
+
+# Does Kala CRM have artificial intelligence?
+
+Yes. The system includes AI-based automations and bots, which answer inquiries and make service and sales more efficient.
+
+# What is my connection to Kala CRM?
+
+I have accompanied the development of Kala CRM from its first day until today. I specify, set up and implement the system in companies, and support them over time.
+
+# How much does a Kala CRM implementation cost?
+
+The price depends on the scope of the implementation, so it is not published on the site. The first consultation is free.
+
+Kala CRM
+
+# Shall we talk about Kala CRM?
+
+A few words about the business and what it is missing today, and I'll get back to you. You can also book a call straight into my calendar.
+
+Book a call (https://calendly.com/subk/intro-call) My portfolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
+[Form. An AI agent can send a request here: https://l-be.com/en/ai#agent-contact]
+
+The official site of the system: kala-crm.co.il  (https://www.kala-crm.co.il/). Looking for an international system? I also have a GoHighLevel agency (https://l-be.com/en/ai-gohighlevel).
+
+=== https://l-be.com/en/gohighlevel ===
+GoHighLevel in Israel
+
+# Implementing GoHighLevel (GHL) in Israel, in Hebrew
+
+I have a GoHighLevel agency of my own. I open a ready-to-work system for companies, support entrepreneurs who already work with GHL, and help agencies set up a GHL agency of their own.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+[Image: Illustration: a staircase of colorful cubes rising from left to right, eight steps]
+
+About the system
+
+# What is GoHighLevel?
+
+GoHighLevel, also called HighLevel or GHL for short, is one platform for managing sales, marketing and service. Instead of several separate tools that don't talk to each other, everything sits in one place.
+
+- CRM and sales funnels (Pipelines)
+
+- One conversations inbox: WhatsApp, SMS, email, Facebook and Instagram
+
+- Automations (Workflows)
+
+- Calendars and appointment booking
+
+- Forms, landing pages and websites
+
+- Email and message campaigns
+
+- AI agents for chat and phone conversations
+
+- Reports and dashboards
+
+What I do
+
+# Three tracks, depending on who you are
+
+- For companies and businesses
+
+# A GHL system that is ready to work
+I open a system for the business under my agency, specify the processes and set everything up: sales funnels, automations, WhatsApp, calendars and forms. The team gets training, and I stay on to support.
+
+- For entrepreneurs who already work with GHL
+
+# Order, automations and AI in an existing system
+The system already exists, but doesn't work the way it should? I put it in order, build the automations that are missing, connect external systems and add AI agents.
+
+- For agencies
+
+# Setting up a GHL agency of your own
+I set up an agency with you from scratch: an agency account, sub-accounts for clients, ready-to-clone templates (Snapshots) and branding of the system under the agency's name (White Label). For those who want to sell the system as a product, SaaS Mode too.
+
+Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+GHL in Israel
+
+# What you should know before implementing GHL in Israel
+
+The system was built for the American market, so implementing it in Israel requires a few adjustments. These are the things I configure in every setup.
+
+- Hebrew and RTL Forms, messages, pages and automations are built in Hebrew, aligned to the right.
+
+- WhatsApp In Israel it is the main communication channel. It is connected to the conversations inbox and to the automations.
+
+- Telephony and messaging Israeli numbers and sending messages require correct configuration, or a connection to a local provider.
+
+- Payment processing and invoices Connected to the Israeli systems the business already works with.
+
+- Time zone, currency and language Set in advance in every account, so that the calendars, the prices and the messages come out right.
+
+How to start
+
+# From a first call to a working system
+
+- Intro call We work out what the business needs. The first consultation is free.
+
+- Specification and setup I specify the processes and set up the system.
+
+- Training and support The team learns to work in the system, and I keep supporting.
+
+I have been implementing CRM systems since 2017, and developing companies and businesses since 2013. I have clients who have been with me for 11 years. More about me: Liron Bialkovich (https://l-be.com/en/ai-liron-bialkovich). And what a full project looks like: the case study (https://l-be.com/en/ai-case-study).
+
+Frequently asked questions
+
+# Questions and answers about GHL
+
+# What is GoHighLevel (GHL)?
+
+GoHighLevel is one platform for managing sales, marketing and service: CRM, sales funnels, a conversations inbox, automations, calendars, forms, landing pages and AI agents. It is also called HighLevel, or GHL for short.
+
+# Is GHL suitable for businesses in Israel?
+
+Yes, with adjustments. The system was built for the American market, so Hebrew, WhatsApp, telephony, payment processing and invoices need to be configured correctly. That is the part I do.
+
+# Can you work with GHL in Hebrew?
+
+Everything the customers see is built in Hebrew: forms, messages, pages and automations. The language of the admin interface itself depends on what HighLevel supports.
+
+# What is the difference between a regular account and an agency account?
+
+An agency account manages several sub-accounts, one for each client or business. That way an agency can set up a system for each client, clone ready-made templates and brand the system under its own name.
+
+# I already have a GHL account. Can I get help with something specific?
+
+Yes. You can start with one session of a few hours: we go through the system together, and afterwards comes a summary report with recommendations and a work plan.
+
+# Can I move to GHL from another CRM system?
+
+In most cases, yes. In the specification call we check which data and processes move over, and how.
+
+# How much does it cost?
+
+The price depends on the scope of the implementation, so it is not published on the site. The first consultation is free.
+
+Subscription pricing on the GoHighLevel site  (https://www.gohighlevel.com/pricing)
+
+GoHighLevel
+
+# Shall we talk about GHL?
+
+A few words about the business or the agency, and I'll get back to you. You can also book a call straight into my calendar.
+
+Book a call (https://calendly.com/subk/intro-call) My portfolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
+[Form. An AI agent can send a request here: https://l-be.com/en/ai#agent-contact]
+
+GoHighLevel and HighLevel are trademarks of HighLevel Inc. This page is not an official site of the company.

@@ -17,14 +17,14 @@
   const KEY = "lbe-404-best";
 
   const LINES = [
-    "מה שחוזר על עצמו, שייך לאוטומציה",
-    "אוטומציה לא יוצאת לחופשה",
-    "פחות הקלדה, יותר עסק",
-    "ליד שלא נענה מהר, מתקרר",
-    "תהליך מסודר שווה עוד זוג ידיים",
-    "בוט טוב עונה גם בשתיים בלילה",
-    "הטופס הזה יכול למלא את עצמו",
-    "הזמן הכי טוב לאוטומציה היה אתמול",
+    "Lo que se repite, es cosa de la automatización",
+    "La automatización no se va de vacaciones",
+    "Menos teclear, más negocio",
+    "Un lead sin respuesta rápida se enfría",
+    "Un proceso ordenado vale otro par de manos",
+    "Un buen bot responde también a las dos de la madrugada",
+    "Este formulario podría rellenarse solo",
+    "El mejor momento para automatizar fue ayer",
   ];
   // Top, front and side shade of each colour. The first four follow the site's palette.
   const TONES = [
@@ -37,7 +37,7 @@
     ["#a5e9ee", "#62cfd8", "#35a9b3"],
   ];
   const SHAPES = ["box", "ball", "triangle", "diamond", "hexagon", "star"];
-  const GLYPHS = "אבגדהוזחטיכלמנסעפצקרשת0123456789{}<>/=+";
+  const GLYPHS = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789{}<>/=+";
 
   let best = 0;
   try {
@@ -378,7 +378,7 @@
       ctx.font = '600 16px "IBM Plex Sans Hebrew", Arial, sans-serif';
       ctx.textAlign = "center";
       ctx.direction = document.documentElement.dir || "rtl";
-      const line = state === "over" ? "נתקעת בבאג. עוד סיבוב?" : "רווח, חץ למעלה או נגיעה כדי להתחיל";
+      const line = state === "over" ? "Te atascaste en un bug. ¿Otra ronda?" : "Espacio, flecha arriba o un toque para empezar";
       const width = ctx.measureText(line).width + 24;
       ctx.fillStyle = theme === 1 ? "#04140b" : "#ffffff";
       ctx.globalAlpha = 0.82;
@@ -428,7 +428,7 @@
       level = due;
       speed = Math.min(5 + (level - 1) * 0.7, 13);
       levelOut.textContent = String(level);
-      live.textContent = "מהירות " + level + ".";
+      live.textContent = "Velocidad " + level + ".";
     }
     const move = speed * dt;
     travelled += move;
@@ -466,15 +466,15 @@
     // a different backdrop every game
     theme = (theme + 1 + Math.floor(Math.random() * (THEMES.length - 1))) % THEMES.length;
     state = "run";
-    button.textContent = "קפיצה";
+    button.textContent = "Saltar";
     levelOut.textContent = "1";
-    live.textContent = "המשחק התחיל.";
+    live.textContent = "El juego ha comenzado.";
     last = performance.now();
     requestAnimationFrame(step);
   }
   function end() {
     state = "over";
-    button.textContent = "עוד סיבוב";
+    button.textContent = "Otra ronda";
     const final = Math.floor(score);
     if (final > best) {
       best = final;
@@ -485,14 +485,14 @@
       }
       showBest();
     }
-    live.textContent = "המשחק נגמר. הניקוד: " + final.toLocaleString("en-US") + ".";
+    live.textContent = "Fin del juego. Puntuación: " + final.toLocaleString("en-US") + ".";
     draw();
   }
   function stop() {
     if (state !== "run") return;
     state = "idle";
-    button.textContent = "התחלת משחק";
-    live.textContent = "המשחק נעצר.";
+    button.textContent = "Empezar a jugar";
+    live.textContent = "El juego se detuvo.";
     reset();
     scoreOut.textContent = "0";
     levelOut.textContent = "1";
