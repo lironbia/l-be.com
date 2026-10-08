@@ -17,7 +17,7 @@
   // The opener has its own effect, so the dot only appears once the opener has scrolled away,
   // and the opener's buttons are not targets.
   const opener = document.querySelector("main > section");
-  const guideTargets = guide ? [...document.querySelectorAll("main .btn")].filter((el) => !opener || !opener.contains(el)) : [];
+  const guideTargets = guide ? [...document.querySelectorAll("main .btn, main [data-guide]")].filter((el) => !opener || !opener.contains(el)) : [];
   let gx = 0, gy = 0, tx = 0, ty = 0, guideMoving = false, guidePlaced = false;
   function guideStep() {
     gx += (tx - gx) * 0.12;

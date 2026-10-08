@@ -182,6 +182,10 @@ html.tachles #tachles { border-top: 0; }
 .kpis li { display: grid; gap: 0.25rem; align-content: start; border-top: var(--rule); padding-top: 0.75rem; font-size: 0.9375rem; line-height: 1.45; }
 .kpis b { font-family: var(--font-display); font-weight: 900; font-size: 2.25rem; line-height: 1; direction: ltr; text-align: right; }
 
+/* The open invitation sits on its own, centred above the client logos */
+.spot { display: block; width: min(100%, 27rem); margin-inline: auto; border: var(--rule); background: var(--paper); box-shadow: -8px 8px 0 var(--mint-2); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.spot:hover { transform: translate(-3px, 3px); box-shadow: -5px 5px 0 var(--mint-2); }
+.spot img { width: 100%; }
 .logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: 0.875rem; }
 .logos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: var(--rule); background: var(--surface); }
 
