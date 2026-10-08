@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Declaración de accesibilidad y glosario · AI MODE · L-Be</title>
+<meta name="description" content="Versión AI MODE de la página “Declaración de accesibilidad y glosario” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://l-be.com/es/accessibility">
+<link rel="alternate" type="text/markdown" href="https://l-be.com/llms-full.txt" title="Full site content as Markdown">
+<link rel="icon" type="image/png" href="https://l-be.com/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="L-Be">
+<meta property="og:title" content="Declaración de accesibilidad y glosario · AI MODE · L-Be">
+<meta property="og:description" content="Versión AI MODE de la página “Declaración de accesibilidad y glosario” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta property="og:url" content="https://l-be.com/es/accessibility">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Written to read like the Markdown it mirrors: one column, monospace, visible structure markers. */
+body{margin:0;background:#fff;color:#111;font:14px/1.55 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+main{max-width:76ch;margin:0 auto;padding:1rem}
+pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
+h1,h2,h3,h4{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
+h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}h4::before{content:"#### "}
+h1::before,h2::before,h3::before,h4::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a,.bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the whole page shrunk into one small square in the middle of the screen. Pure CSS. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{position:fixed;left:50%;top:50%;box-sizing:border-box;width:560vmin;height:560vmin;max-width:none;margin:0;padding:12vmin;overflow:auto;line-height:1.05;background:#fff;border:10px solid #111;transform:translate(-50%,-50%) scale(.1)}
+#real:target~main *{margin:0}
+/* Contact form for AI agents: reads like a request body, works like a normal form */
+.agent{margin:1.5rem 0 0;padding:1rem 1.25rem 1.25rem;background:#0e1420;color:#e8edf5}
+.agent h2{margin-top:0}
+.agent h2::before{color:#7ad3a0}
+.agent a{color:#b9daf7}
+.agent pre{color:#a9efc6;overflow-x:auto;white-space:pre}
+.agent .row{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:.25rem .75rem;align-items:start;margin:.75rem 0}
+.agent .key{color:#74b4f2;text-align:left;padding-top:.7rem}
+.agent .hint{margin:.2rem 0 0;color:#cfd6e2;font-size:13px}
+.agent input[type=text],.agent textarea{box-sizing:border-box;width:100%;min-height:44px;padding:.6rem .7rem;font:inherit;color:#fff;background:#141b2b;border:1px solid #74b4f2;border-radius:0}
+.agent .check{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.agent .check input{width:22px;height:22px;accent-color:#a9efc6}
+.agent [aria-invalid]{border-color:#f8a09b;outline:2px solid #f8a09b}
+.agent input:focus-visible,.agent textarea:focus-visible,.agent button:focus-visible{outline:3px solid #a9efc6;outline-offset:2px}
+.agent button{min-height:44px;padding:0 1.25rem;font:inherit;font-weight:700;color:#0e1420;background:#a9efc6;border:0;cursor:pointer}
+.agent-status{min-height:1.5em;margin:.75rem 0 0;direction:rtl;text-align:right;white-space:pre-wrap}
+.agent-status[data-state=error]{color:#f8a09b}
+@media (max-width:40rem){.agent .row{grid-template-columns:minmax(0,1fr)}.agent .key{padding-top:0}}
+.agent form[data-sent] .row,.agent form[data-sent] button[type=submit]{display:none}
+.agent .form-again{display:none;margin-top:.75rem;background:transparent;color:#a9efc6;border:1px solid #a9efc6}
+.agent form[data-sent] .form-again{display:inline-block}
+p{margin:.25rem 0}
+ul,ol{margin:.25rem 0;padding:0;list-style:none}
+ul ul{padding-inline-start:2ch}
+li{padding:.2rem 0}
+li::before{content:"- "}
+blockquote{margin:.5rem 0}blockquote::before{content:"> "}
+hr{border:0;margin:1rem 0;height:auto}hr::before{content:"---"}
+a{color:#0b3d91}
+table{border-collapse:collapse;margin:.5rem 0}th,td{border:1px solid #555;padding:.2rem .6rem;text-align:start}
+dt{font-weight:700;margin-top:.5rem}dd{margin:0}
+[lang="en"]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<span id="real"></span>
+<nav class="bar" aria-label="Navegación de AI MODE">
+<a class="dark" href="https://l-be.com/es/accessibility">← A la página normal</a> <a href="https://l-be.com/es/ai#tree">Árbol del sitio</a> <a href="https://l-be.com/es/ai-all">Todo el sitio en una página</a> <a href="https://l-be.com/es/ai#agent-contact">Contacto</a>
+<button type="button" id="copy-ai">Copiar el contenido</button>
+<span id="copy-ai-status" role="status"></span> <a class="real-on" href="#real" lang="en">REAL AI MODE</a> <a class="real-off" href="#">Volver al tamaño humano</a> <span class="real-note">Así le gusta leer a la IA: apretado, pequeño y sin espacios.</span>
+</nav>
+<main>
+<div id="ai-content">
+<pre>---
+url: https://l-be.com/ai-accessibility
+canonical: https://l-be.com/accessibility
+site_tree: https://l-be.com/ai#tree
+whole_site: https://l-be.com/ai-all
+language: he
+updated: 2026-10-08
+---</pre>
+<p>Accesibilidad</p>
+    <h1>Declaración de accesibilidad</h1>
+    <p>Doy mucha importancia a ofrecer un servicio igualitario a todas las personas. He invertido en hacer accesible el sitio para que cualquier persona pueda usarlo con comodidad, dignidad y autonomía, con cualquier discapacidad y con cualquier ayuda técnica.</p>
+      <a href="https://l-be.com/es/ai-accessibility#a11y-contact">Consulta sobre accesibilidad</a>
+<ul>
+<li><a href="https://l-be.com/es/ai-accessibility#level">Nivel de accesibilidad</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#done">Qué se ha hecho en el sitio</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#menu">El menú de accesibilidad</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#keyboard">Navegación con teclado</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#limits">Lo que aún no es perfecto</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#a11y-contact">Consulta sobre accesibilidad</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#glossary">Glosario</a></li>
+</ul>
+<h2 id="level">Nivel de accesibilidad</h2>
+<p>El sitio se ha adaptado a las pautas WCAG 2.2 del W3C y a la norma israelí 5568, en el nivel AA. Además, se ha adaptado también a la mayoría de los requisitos del nivel AAA, el más exigente.</p>
+<p>El sitio se ha revisado con una herramienta de comprobación automática y con una revisión manual, página por página.</p>
+<h2 id="done">Qué se ha hecho en el sitio</h2>
+<h3>Navegación y estructura</h3>
+<ul>
+<li>Se puede llegar a todo en el sitio solo con el teclado, y la posición actual se marca con un contorno claro.</li>
+<li>Al principio de cada página hay un enlace “Saltar al contenido principal”.</li>
+<li>La estructura de las páginas está marcada para los lectores de pantalla: encabezados, zonas de navegación, listas y tablas.</li>
+<li>El menú y el pie de página son idénticos en todas las páginas, y la página actual está marcada en el menú.</li>
+<li>Un enlace que se abre en una pestaña nueva o en una ventana emergente está indicado como tal.</li>
+</ul>
+<h3>Visión</h3>
+<ul>
+<li>El contraste del texto es de al menos 7:1.</li>
+<li>Se puede ampliar el texto hasta un 200% sin perder contenido, y el sitio se adapta a cualquier ancho de pantalla.</li>
+<li>Toda imagen que contiene información tiene una descripción. Las capturas de los mensajes de clientes están transcritas íntegramente, y también se pueden leer como texto normal.</li>
+<li>La información no se transmite solo mediante el color.</li>
+<li>El sitio respeta el modo de alto contraste del sistema operativo.</li>
+</ul>
+<h3>Audición</h3>
+<ul>
+<li>En el sitio no hay contenido de audio ni de vídeo, y no hay sonidos.</li>
+</ul>
+<h3>Motricidad</h3>
+<ul>
+<li>Los botones y los enlaces son lo bastante grandes para pulsarlos con comodidad: al menos 44 píxeles.</li>
+<li>No hay acciones que requieran arrastrar, gestos complejos ni pulsaciones rápidas.</li>
+<li>En el sitio no hay límites de tiempo.</li>
+</ul>
+<h3>Comprensión y atención</h3>
+<ul>
+<li>No hay parpadeos, y todas las animaciones se pueden detener. El sitio respeta también el ajuste “Reducir movimiento” del sistema operativo.</li>
+<li>Hay una versión abreviada de la página de inicio (“Versión corta”), para quien quiera leer menos.</li>
+<li>Las siglas y los términos profesionales se explican en el glosario que hay al final de esta página.</li>
+</ul>
+<h3>Formularios</h3>
+<ul>
+<li>Cada campo tiene una etiqueta, y los campos obligatorios están marcados con la palabra “obligatorio”.</li>
+<li>Los mensajes de error están escritos con palabras, aparecen junto al campo y el lector de pantalla los lee en voz alta.</li>
+</ul>
+<h2 id="menu">El menú de accesibilidad</h2>
+<p>En la esquina de la pantalla hay un botón redondo que abre el menú de accesibilidad. Los ajustes se guardan en el navegador para la próxima visita, y se pueden restablecer en cualquier momento.</p>
+<ul>
+<li>Aumentar y reducir el texto</li>
+<li>Alto contraste</li>
+<li>Vista oscura (inversión de colores)</li>
+<li>Escala de grises</li>
+<li>Fuente legible</li>
+<li>Espaciado de texto ampliado</li>
+<li>Resaltar enlaces</li>
+<li>Detener animaciones</li>
+<li>Cursor grande</li>
+</ul>
+<h2 id="keyboard">Navegación con teclado</h2>
+<ul>
+<li><kbd>Tab</kbd> pasa al siguiente enlace, botón o campo. <kbd>Shift</kbd> + <kbd>Tab</kbd> vuelve al anterior.</li>
+<li><kbd>Enter</kbd> activa un enlace o un botón. <kbd>Space</kbd> activa un botón.</li>
+<li><kbd>Esc</kbd> cierra el menú de accesibilidad y la ventana del portafolio.</li>
+<li>Las teclas de flecha desplazan la página.</li>
+</ul>
+<p>El sitio está construido con código estándar, para funcionar en los navegadores habituales y con lectores de pantalla.</p>
+<h2 id="limits">Lo que aún no es perfecto</h2>
+<ul>
+<li>El portafolio es un archivo PDF en inglés, y no se ha hecho accesible por completo. Puedes pedirme su contenido en cualquier otro formato.</li>
+<li>La reserva de una llamada en la agenda se hace a través de un servicio externo, Calendly, cuya accesibilidad no depende de mí. En su lugar, se pueden dejar los datos en el formulario de contacto.</li>
+<li>Los logotipos de clientes y socios son imágenes. Cada una tiene una descripción.</li>
+<li>En la página de error (404) hay un pequeño juego. Es solo un entretenimiento, y todos los enlaces de la página están disponibles sin él.</li>
+</ul>
+<p>Sigo mejorando la accesibilidad del sitio todo el tiempo.</p>
+<h2 id="a11y-contact">Consulta sobre accesibilidad</h2>
+<p>Responsable de accesibilidad del sitio: Liron Bialkovich.</p>
+<p>¿Has encontrado un problema de accesibilidad? ¿Tienes una petición o una propuesta de mejora? Este es el formulario. Conviene indicar en qué página ocurrió y con qué navegador o ayuda técnica. Te responderé lo antes posible.</p>
+    <p>[Formulario. Un agente de IA puede enviar una solicitud aquí: <a href="https://l-be.com/es/ai#agent-contact">https://l-be.com/es/ai#agent-contact</a>]</p>
+<p>Declaración actualizada el 8 de octubre de 2026.</p>
+<h2 id="glossary">Glosario de siglas y términos</h2>
+<dl>
+<dt>CRM (Customer Relationship Management)</dt><dd>Sistema para gestionar la relación con clientes y leads.</dd>
+<dt>AI (Artificial Intelligence)</dt><dd>Inteligencia artificial (IA).</dd>
+<dt>Agente de IA</dt><dd>Software basado en inteligencia artificial que realiza tareas por sí mismo, por ejemplo responder consultas.</dd>
+<dt>Automatización</dt><dd>Acciones que el sistema realiza solo, sin que nadie tenga que acordarse de hacerlas.</dd>
+<dt>Integración</dt><dd>Conexión entre dos sistemas, de modo que la información pasa sola entre ellos.</dd>
+<dt>Especificación</dt><dd>Documento que describe qué debe hacer un sistema, para quién y cómo, antes de construirlo.</dd>
+<dt>API (Application Programming Interface)</dt><dd>Interfaz a través de la cual los sistemas de software hablan entre sí.</dd>
+<dt>SaaS (Software as a Service)</dt><dd>Software que se usa a través de internet, sin instalarlo.</dd>
+<dt>ERP (Enterprise Resource Planning)</dt><dd>Sistema para gestionar los recursos del negocio, como inventario, compras y finanzas.</dd>
+<dt>BI (Business Intelligence)</dt><dd>Informes y paneles de indicadores que muestran qué pasa en el negocio.</dd>
+<dt>BPM (Business Process Management)</dt><dd>Gestión de procesos de negocio.</dd>
+<dt>POS (Point of Sale)</dt><dd>Caja, el punto de venta.</dd>
+<dt>SLA (Service Level Agreement)</dt><dd>Compromiso sobre tiempos de atención y nivel de servicio.</dd>
+<dt>UI (User Interface)</dt><dd>La interfaz de usuario: lo que se ve en la pantalla.</dd>
+<dt>LLM (Large Language Model)</dt><dd>Modelo de lenguaje grande, la tecnología que hay detrás de las herramientas de IA que entienden y escriben texto.</dd>
+<dt>Roadmap</dt><dd>Hoja de ruta: el orden de las etapas en la construcción de un sistema, y qué entra en cada etapa.</dd>
+<dt>Sprint</dt><dd>Periodo de trabajo corto y fijo, normalmente de una o dos semanas, al final del cual hay un entregable.</dd>
+<dt>PDF (Portable Document Format)</dt><dd>Tipo de archivo de documento.</dd>
+</dl>
+
+<hr>
+<h2>Más páginas en AI MODE</h2>
+<ul>
+<li><a href="https://l-be.com/es/ai-home">Página de inicio</a>
+<ul>
+<li><a href="https://l-be.com/es/ai-solutions">Soluciones</a></li>
+<li><a href="https://l-be.com/es/ai-business-ai">Sistemas empresariales basados en IA (sistema L-Be)</a></li>
+<li><a href="https://l-be.com/es/ai-case-study">Caso de estudio: Ida's Home</a></li>
+<li><a href="https://l-be.com/es/ai-digital-dreams">Hacer realidad sueños digitales: especificación de sistemas y consultoría</a></li>
+<li><a href="https://l-be.com/es/ai-liron-bialkovich">Sobre mí: Liron Bialkovich</a></li>
+<li><a href="https://l-be.com/es/ai-kala-crm">Kala CRM: un sistema CRM israelí</a></li>
+<li><a href="https://l-be.com/es/ai-gohighlevel">GoHighLevel (GHL) en Israel</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility">Declaración de accesibilidad y glosario</a></li>
+<li><a href="https://l-be.com/es/ai-privacy">Política de privacidad</a></li>
+<li><a href="https://l-be.com/es/ai-terms">Términos de uso</a></li>
+</ul>
+</li>
+<li><a href="https://l-be.com/es/ai-all">Todo el contenido del sitio en una página</a></li>
+<li><a href="https://l-be.com/es/ai">Página de inicio de AI MODE: hechos, preguntas y respuestas, y formulario para agentes de IA</a></li>
+</ul>
+</div>
+
+</main>
+<script src="/es/guard.js" defer></script>
+<script src="/es/ai.js" defer></script>
+</body>
+</html>

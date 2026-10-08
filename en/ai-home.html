@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home page · AI MODE · L-Be</title>
+<meta name="description" content="The AI MODE version of the page &quot;Home page&quot; on the L-Be site: the full content of the page, without design.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://l-be.com/en/">
+<link rel="alternate" type="text/markdown" href="https://l-be.com/llms-full.txt" title="Full site content as Markdown">
+<link rel="icon" type="image/png" href="https://l-be.com/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="L-Be">
+<meta property="og:title" content="Home page · AI MODE · L-Be">
+<meta property="og:description" content="The AI MODE version of the page &quot;Home page&quot; on the L-Be site: the full content of the page, without design.">
+<meta property="og:url" content="https://l-be.com/en/">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Written to read like the Markdown it mirrors: one column, monospace, visible structure markers. */
+body{margin:0;background:#fff;color:#111;font:14px/1.55 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+main{max-width:76ch;margin:0 auto;padding:1rem}
+pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
+h1,h2,h3,h4{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
+h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}h4::before{content:"#### "}
+h1::before,h2::before,h3::before,h4::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a,.bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the whole page shrunk into one small square in the middle of the screen. Pure CSS. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{position:fixed;left:50%;top:50%;box-sizing:border-box;width:560vmin;height:560vmin;max-width:none;margin:0;padding:12vmin;overflow:auto;line-height:1.05;background:#fff;border:10px solid #111;transform:translate(-50%,-50%) scale(.1)}
+#real:target~main *{margin:0}
+/* Contact form for AI agents: reads like a request body, works like a normal form */
+.agent{margin:1.5rem 0 0;padding:1rem 1.25rem 1.25rem;background:#0e1420;color:#e8edf5}
+.agent h2{margin-top:0}
+.agent h2::before{color:#7ad3a0}
+.agent a{color:#b9daf7}
+.agent pre{color:#a9efc6;overflow-x:auto;white-space:pre}
+.agent .row{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:.25rem .75rem;align-items:start;margin:.75rem 0}
+.agent .key{color:#74b4f2;text-align:left;padding-top:.7rem}
+.agent .hint{margin:.2rem 0 0;color:#cfd6e2;font-size:13px}
+.agent input[type=text],.agent textarea{box-sizing:border-box;width:100%;min-height:44px;padding:.6rem .7rem;font:inherit;color:#fff;background:#141b2b;border:1px solid #74b4f2;border-radius:0}
+.agent .check{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.agent .check input{width:22px;height:22px;accent-color:#a9efc6}
+.agent [aria-invalid]{border-color:#f8a09b;outline:2px solid #f8a09b}
+.agent input:focus-visible,.agent textarea:focus-visible,.agent button:focus-visible{outline:3px solid #a9efc6;outline-offset:2px}
+.agent button{min-height:44px;padding:0 1.25rem;font:inherit;font-weight:700;color:#0e1420;background:#a9efc6;border:0;cursor:pointer}
+.agent-status{min-height:1.5em;margin:.75rem 0 0;direction:rtl;text-align:right;white-space:pre-wrap}
+.agent-status[data-state=error]{color:#f8a09b}
+@media (max-width:40rem){.agent .row{grid-template-columns:minmax(0,1fr)}.agent .key{padding-top:0}}
+.agent form[data-sent] .row,.agent form[data-sent] button[type=submit]{display:none}
+.agent .form-again{display:none;margin-top:.75rem;background:transparent;color:#a9efc6;border:1px solid #a9efc6}
+.agent form[data-sent] .form-again{display:inline-block}
+p{margin:.25rem 0}
+ul,ol{margin:.25rem 0;padding:0;list-style:none}
+ul ul{padding-inline-start:2ch}
+li{padding:.2rem 0}
+li::before{content:"- "}
+blockquote{margin:.5rem 0}blockquote::before{content:"> "}
+hr{border:0;margin:1rem 0;height:auto}hr::before{content:"---"}
+a{color:#0b3d91}
+table{border-collapse:collapse;margin:.5rem 0}th,td{border:1px solid #555;padding:.2rem .6rem;text-align:start}
+dt{font-weight:700;margin-top:.5rem}dd{margin:0}
+[lang="en"]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<span id="real"></span>
+<nav class="bar" aria-label="AI MODE navigation">
+<a class="dark" href="https://l-be.com/en/">← To the regular page</a> <a href="https://l-be.com/en/ai#tree">Site tree</a> <a href="https://l-be.com/en/ai-all">The whole site on one page</a> <a href="https://l-be.com/en/ai#agent-contact">Contact</a>
+<button type="button" id="copy-ai">Copy the content</button>
+<span id="copy-ai-status" role="status"></span> <a class="real-on" href="#real" lang="en">REAL AI MODE</a> <a class="real-off" href="#">Back to human size</a> <span class="real-note">This is how AI likes to read: dense, small and with no spacing.</span>
+</nav>
+<main>
+<div id="ai-content">
+<pre>---
+url: https://l-be.com/ai-home
+canonical: https://l-be.com/
+site_tree: https://l-be.com/ai#tree
+whole_site: https://l-be.com/ai-all
+language: he
+updated: 2026-10-08
+---</pre>
+<p>Even a small business should think big</p>
+      <h1>Implementing CRM and AI systems for companies</h1>
+      <p>I'll make sure your business runs on one consistent method, automated and ticking like clockwork.</p>
+        <a href="https://l-be.com/en/ai#agent-contact">Free first consultation</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Book a call<span class="visually-hidden"> (opens in a new tab)</span></a> <a href="https://l-be.com/en/ai-home#tachles">Keep it short, I want the bottom line</a>
+      <p><a href="https://l-be.com/en/ai-liron-bialkovich">Liron Bialkovich</a> Implementing CRM and AI systems for companies</p>
+      <p>What it's like to work with me</p>
+      <h2>Implementing information systems and AI is a long, cumbersome and exhausting process. With me, it's fun.</h2>
+      <p>It's a very complex process. With me you get through it with a smile, and learn a lot along the way.</p>
+    <ul>
+      <li><b>11</b> years running I have clients who have been with me for 11 years.</li>
+      <li><b>3%</b> churn My churn rate stands at 3%, and I make a point of keeping it below that.</li>
+      <li>Holiday gifts Some clients bring me gifts on the holidays, as if I were family or an employee of their company.</li>
+    </ul>
+      <p>Solutions</p>
+      <h2>For every client I put together the set of solutions that fits them best</h2>
+      <p>I have a range of solutions for you - business owners who want to upgrade the quality of life in the business a little, in every department that matters.</p>
+      <ul>
+        <li>AI agents and bots</li>
+        <li>CRM, leads and sales</li>
+        <li>Customer service and communication</li>
+        <li>Orders, billing and finance</li>
+        <li>Automation and integrations</li>
+        <li>Management, reports and team</li>
+        <li>Specification, training and support</li>
+      </ul>
+      <p>[Image: Illustration: a central cube connected by dashed lines to six modules around it]</p>
+    <p><a href="https://l-be.com/en/ai-solutions">See all solutions</a></p>
+      <p>AI in the business</p>
+      <h2>An AI layer connected to the data of the whole business</h2>
+      <p>This is how it works today at a client of mine, a company of 30 employees.</p>
+    <ul>
+      <li><b>Ask in plain Hebrew</b> An employee asks in plain Hebrew, for example "Which orders are delayed at a supplier?", and gets an answer based on the company's data.</li>
+      <li><b>A report in one click</b> A useful report is saved, and can be run again with one click.</li>
+      <li><b>A dashboard from words</b> A manager asks for a dashboard in words, and the system builds it.</li>
+      <li><b>One definition for every number</b> Behind every number stands one agreed business definition, so everyone is talking about the same "sold" and the same "late".</li>
+    </ul>
+      <p>Responsible AI</p>
+      <ul>
+        <li>The AI suggests, and a person approves</li>
+        <li>Every employee sees only what their role allows</li>
+        <li>Sign-in uses two-step verification</li>
+        <li>Customers' personal details do not leave the company</li>
+        <li>Every action is logged</li>
+      </ul>
+      <a href="https://l-be.com/en/ai-business-ai">Get to know the system</a> <a href="https://l-be.com/en/ai-case-study">The full story</a>
+      <p>Consulting for companies</p>
+      <h2>One session. One report. A work plan.</h2>
+      <p>One session of a few hours, followed by a thorough summary report with recommendations and a work plan for immediate improvements.</p>
+    <ol>
+      <li><b>A session</b> A few hours together, on the business and its processes.</li>
+      <li><b>A thorough summary report</b> With recommendations.</li>
+      <li><b>A work plan</b> For immediate improvements.</li>
+    </ol>
+      <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Book a call<span class="visually-hidden"> (opens in a new tab)</span></a> <a href="https://l-be.com/en/ai#agent-contact">or leave your details</a>
+      <p>Projects</p>
+      <h2>Where I come from and what I've done so far</h2>
+    <ul>
+      <li><b>300+</b> projects I've had the privilege of guiding, small and large</li>
+      <li><b>80+</b> business owners and companies, from small businesses to 100 employees, that I've worked with hands-on since 2017</li>
+      <li><b>2013</b> developing companies and businesses ever since</li>
+    </ul>
+      <p>I've built complex automation systems for all sorts of business processes at different companies, and managed web development projects, huge ones and small ones, for many different kinds of businesses.</p>
+        <p>In the past I managed web technology projects for hundreds of brands, from ones you may never hear of to names everybody knows. These are some of the clients I worked with during my time at Restart IT, in 2013-2015:</p>
+        <p>[Image: Logos of some of the clients from the Restart IT period: Microsoft Israel R&amp;D Center, Applied Materials, Bank of America, mako, Azrieli Group, LR Group, Africa Israel Residences, Eldan, HP, Discount Bank, Mifal HaPais (Israel's national lottery), Strauss, Cafe Cafe, The College of Management, Walt Disney Pictures, Azorim, Leumi, Blonde 2.0, Gindi Holdings, Burgus Burger Bar, HOT, Moses, Tradis Gat, Fattal Hotels, mobli, Colmobil, Maybelline New York, L'Oréal Paris, Garnier, Israel Railways, Jerusalem Municipality, ALUT, Bezeq International, Rhodium]</p>
+      <p>Case study · Ida's Home</p>
+      <h3>The whole business in one process, from sale to payment collection. And above it, an AI layer connected to every department.</h3>
+      <p>Ida's Home designs and sells home furniture: made-to-order sofas and armchairs, lighting, rugs and textiles. The company has 30 employees, and works with several warehouses, a carpentry workshop and many suppliers.</p>
+      <ul>
+        <li><b>One continuous process</b> From sale to payment collection, instead of information scattered across people and files.</li>
+        <li><b>Updates from the field</b> The warehouse, the couriers and sales update the system as they work, from their phones.</li>
+        <li><b>One picture for the whole company</b> Every department sees the same order, in the same status, at the same time.</li>
+        <li><b>A reliable picture for management</b> Of orders, inventory and debts. The system exposed gaps that had not been visible before, and they were dealt with.</li>
+      </ul>
+      <a href="https://l-be.com/en/ai-case-study">The full story</a>
+      <p>Clients</p>
+      <h2>Clients you may know</h2>
+      <p>Some of them simply enjoy their life in the business more today, and some have doubled and tripled their business. I'd be glad to be there for your business too.</p>
+    <p><a href="https://l-be.com/en/ai#agent-contact">[Image: There's room for you here, and if there isn't, I'll make room :)]</a></p>
+    <ul>
+      <li>The Cooking Studio</li>
+      <li>Ida's Home</li>
+      <li>FlyEast</li>
+      <li>Tor Olam</li>
+      <li>Dr. Zchuyot</li>
+      <li>AICC Systems</li>
+      <li>IB Communications</li>
+      <li>Razor Engineering and Consulting</li>
+      <li>Linder Mortgages</li>
+      <li>Autovik</li>
+      <li>Afikim Mayim</li>
+      <li>Marketing AVC</li>
+      <li>Triple D Illustrations</li>
+      <li>Welcome</li>
+      <li>Rampa - Elevators and Accessibility</li>
+      <li>Olam Nistar</li>
+      <li>TTM</li>
+      <li>Natali Somech - Training, Coaching, Organizational Consulting</li>
+      <li>Project X</li>
+      <li>Hoshaya - Kindergarten Network</li>
+    </ul>
+    <p>and more...</p>
+      <p>Kind words</p>
+      <h2>Along the way I've kept the odd kind word that came my way</h2>
+      <p>And also shmura matzah or flowers. The screenshots here are the original messages.</p>
+      <p><a href="https://l-be.com/kudos/kudos-02.webp">[Image: WhatsApp screenshot: I wish you half a million dollars in cash and the rest in installments! You've made a revolution in helping people. Believe me, the change is crazy]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-09.webp">[Image: WhatsApp screenshot: Love Liron, thank you for the day you matched me up with him]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-06.webp">[Image: WhatsApp screenshot. Liron: And that's already directly with me as the implementer. The client: That's a bonus. Liron: What's the bonus, the transfer or me? The client: You, as the implementer]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-05.webp">[Image: Email screenshot, 2019: I logged into the system, and at first glance it looks impressive. Of course we'll need a little getting used to. But from above I really liked the small details and the thought given to every detail, which are sometimes critical later on. I mean even really small fields that seem unimportant. Precisely because I was the one who specified the current system we work with today, I understand the implications better now.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-07.webp">[Image: WhatsApp screenshot: If there were words I would write them to you, but I have none. What I can do is wish you only good things in life, because your essence is to do only good. Glad for the moment I met you.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-01.webp">[Image: Email screenshot: Thanks for the answers and for today's call. I feel really good about the system and I'm convinced it will give us a very high-quality solution. I'll play with the settings over the next few days, and on Sunday they'll start working with what there is]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-03.webp">[Image: WhatsApp screenshot: Really, thank you, thank you so much, you did an excellent job and the service was excellent. We'll be in touch later on, thanks.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-04.webp">[Image: Email screenshot, 2018: Looks really good! And it's already a significant improvement over what we have today (even before connecting the phone system and the finances)]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-08.webp">[Image: Email screenshot, 2023: Thank you Liron, you're the best]</a></p>
+    <p>[Image: Liron Bialkovich]</p>
+      <p>So why should you implement with me?</p>
+      <h2>Liron Bialkovich</h2>
+      <p lang="en">Liron Bialkovich</p>
+      <p>Nice to meet you, I'm Liron Bialkovich. I help businesses grow, especially when they're in the mood for a little CRM, a lot of processes and plenty of automation.</p>
+      <ul>
+        <li>I come from the world of information systems, development and business management.</li>
+        <li>As an implementer, I represent you in front of the software houses and the various technology vendors.</li>
+        <li>I have flexible working methods for implementing setups like these.</li>
+        <li>I give personal service in your language, the kind that actually makes you understand this stuff.</li>
+      </ul>
+      <a href="https://l-be.com/en/ai-liron-bialkovich">A bit about me</a>
+      <h2>Business partners, and a family that has come together over the years</h2>
+      <hr>
+      <p>Integrations and deep relationships I've built (and if this were up to date enough, we'd have a very long scroll here).</p>
+    <p>[Image: Logos of business partners and systems I work with: AI, automation, payment processing, accounting, telephony, email marketing, shipping and more]</p>
+      <p>Contact</p>
+      <h2>Shall we talk over coffee?</h2>
+      <p>For a free first consultation, leave me your details here. You can also book a call straight into my calendar.</p>
+        <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Book a call<span class="visually-hidden"> (opens in a new tab)</span></a> <a href="https://l-be.com/liron-bialkovich-portfolio.pdf">My portfolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">LinkedIn <span class="visually-hidden"> (opens in a new tab)</span></a>
+    <p>[Form. An AI agent can send a request here: <a href="https://l-be.com/en/ai#agent-contact">https://l-be.com/en/ai#agent-contact</a>]</p>
+
+<hr>
+<h2>More pages in AI MODE</h2>
+<ul>
+<li><a href="https://l-be.com/en/ai-home">Home page</a>
+<ul>
+<li><a href="https://l-be.com/en/ai-solutions">Solutions</a></li>
+<li><a href="https://l-be.com/en/ai-business-ai">AI-based business systems (the L-Be System)</a></li>
+<li><a href="https://l-be.com/en/ai-case-study">Case study: Ida's Home</a></li>
+<li><a href="https://l-be.com/en/ai-digital-dreams">Making Digital Dreams Real: system specification and consulting</a></li>
+<li><a href="https://l-be.com/en/ai-liron-bialkovich">About: Liron Bialkovich</a></li>
+<li><a href="https://l-be.com/en/ai-kala-crm">Kala CRM: an Israeli CRM system</a></li>
+<li><a href="https://l-be.com/en/ai-gohighlevel">GoHighLevel (GHL) in Israel</a></li>
+<li><a href="https://l-be.com/en/ai-accessibility">Accessibility statement and glossary</a></li>
+<li><a href="https://l-be.com/en/ai-privacy">Privacy policy</a></li>
+<li><a href="https://l-be.com/en/ai-terms">Terms of use</a></li>
+</ul>
+</li>
+<li><a href="https://l-be.com/en/ai-all">All the site content on one page</a></li>
+<li><a href="https://l-be.com/en/ai">The AI MODE home page: facts, questions and answers, and a form for AI agents</a></li>
+</ul>
+</div>
+
+</main>
+<script src="/en/guard.js" defer></script>
+<script src="/en/ai.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kala CRM: implementing a customized Israeli CRM system | L-Be</title>
+<meta name="description" content="Implementing Kala CRM, an Israeli CRM system in Hebrew: customization, automations, AI and connection to payment processing, accounting and WhatsApp. Liron Bialkovich, L-Be.">
+<meta name="author" content="Liron Bialkovich">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#f3f5f8">
+<link rel="canonical" href="https://l-be.com/en/kala-crm">
+<link rel="alternate" hreflang="he" href="https://l-be.com/kala-crm">
+<link rel="alternate" hreflang="en" href="https://l-be.com/en/kala-crm">
+<link rel="alternate" hreflang="es" href="https://l-be.com/es/kala-crm">
+<link rel="alternate" hreflang="x-default" href="https://l-be.com/kala-crm">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Kala CRM: implementing a customized Israeli CRM system | L-Be">
+<meta property="og:description" content="Implementing Kala CRM, an Israeli CRM system in Hebrew: customization, automations, AI and connection to payment processing, accounting and WhatsApp. Liron Bialkovich, L-Be.">
+<meta property="og:url" content="https://l-be.com/en/kala-crm">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L-Be: Implementing CRM and AI systems for companies. Liron Bialkovich">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kala CRM: implementing a customized Israeli CRM system | L-Be">
+<meta name="twitter:description" content="Implementing Kala CRM, an Israeli CRM system in Hebrew: customization, automations, AI and connection to payment processing, accounting and WhatsApp. Liron Bialkovich, L-Be.">
+<meta name="twitter:image" content="https://l-be.com/og.png">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-readable summary">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-hebrew-400-hebrew.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/frank-ruhl-libre-900-hebrew.woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script src="/a11y-early.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://l-be.com/#organization","name":"L-Be","alternateName":"SubK","url":"https://l-be.com/","logo":"https://l-be.com/logo.png","description":"Consulting and implementation of CRM, AI and business automation systems for companies.","slogan":"Implementing CRM and AI systems for companies","areaServed":{"@type":"Country","name":"Israel"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","CRM systems","AI agents","Business automation"],"founder":{"@id":"https://l-be.com/liron-bialkovich#person"},"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://subk.co.il/"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://l-be.com/#contact","availableLanguage":["he","en"]},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Solutions","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI agents and bots","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM, leads and sales","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Customer service and communication","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Orders, billing and finance","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automation and integrations","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Management, reports and team","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Specification, training and support","provider":{"@id":"https://l-be.com/#organization"}}}]}},{"@type":"Person","@id":"https://l-be.com/liron-bialkovich#person","name":"Liron Bialkovich","alternateName":"Liron Bialkovich","givenName":"Liron","familyName":"Bialkovich","jobTitle":"Independent consultant and developer: CRM, AI and automation","description":"Liron Bialkovich is an independent consultant and developer who builds AI systems, automations and CRM systems for companies. At L-Be he specifies, sets up and implements CRM systems, AI solutions and automated processes.","image":"https://l-be.com/liron-bialkovich.jpg","url":"https://l-be.com/liron-bialkovich","mainEntityOfPage":"https://l-be.com/liron-bialkovich","worksFor":{"@id":"https://l-be.com/#organization"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","CRM systems","AI agents","Business automation"],"knowsLanguage":["he","en"],"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://www.facebook.com/LironBia","https://www.youtube.com/@lironbialkovich679","https://github.com/lironbia","https://subk.co.il/"]},{"@type":"WebSite","@id":"https://l-be.com/#website","url":"https://l-be.com/","name":"L-Be","description":"Consulting and implementation of CRM, AI and business automation systems for companies.","inLanguage":"en","publisher":{"@id":"https://l-be.com/#organization"}},{"@type":"WebPage","@id":"https://l-be.com/kala-crm#webpage","url":"https://l-be.com/kala-crm","name":"Kala CRM: an Israeli CRM system","inLanguage":"en","isPartOf":{"@id":"https://l-be.com/#website"},"about":{"@id":"https://l-be.com/#organization"},"author":{"@id":"https://l-be.com/liron-bialkovich#person"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"L-Be","item":"https://l-be.com/"},{"@type":"ListItem","position":2,"name":"Kala CRM: an Israeli CRM system","item":"https://l-be.com/kala-crm"}]}},{"@type":"Service","@id":"https://l-be.com/kala-crm#service","name":"Kala CRM implementation","alternateName":["Kala CRM","Israeli CRM system","CRM system in Hebrew","CRM system implementation"],"serviceType":"Kala CRM implementation, customisation and support","description":"Implementing Kala CRM, an Israeli CRM system in Hebrew: customization, automations, AI and connection to payment processing, accounting and WhatsApp. Liron Bialkovich, L-Be.","provider":{"@id":"https://l-be.com/#organization"},"areaServed":{"@type":"Country","name":"Israel"},"availableLanguage":["he"]},{"@type":"FAQPage","@id":"https://l-be.com/kala-crm#faq","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What is Kala CRM?","acceptedAnswer":{"@type":"Answer","text":"Kala CRM is an Israeli system for managing, marketing and automating the business: inquiries, customers, sales, billing, calendars and communication with customers in one system, fully in Hebrew and customized."}},{"@type":"Question","name":"Who is Kala CRM for?","acceptedAnswer":{"@type":"Answer","text":"Israeli companies and businesses that want a CRM system in Hebrew, personal service, and processes tailored exactly to the way they work."}},{"@type":"Question","name":"What is the difference between Kala CRM and international CRM systems?","acceptedAnswer":{"@type":"Answer","text":"Kala is a system made in Israel: it is built in Hebrew, connected to the Israeli providers (payment processing, accounting, phone systems, Masav and WhatsApp), and can be deeply customized, with local service."}},{"@type":"Question","name":"Which systems does Kala CRM connect to?","acceptedAnswer":{"@type":"Answer","text":"Credit card processing and digital wallets, accounting systems, phone systems (PBX), Masav (Israel's bank clearing system), WhatsApp, SMS and email, WordPress sites, and other systems through custom integrations."}},{"@type":"Question","name":"Can Kala CRM be adapted to a process that is unique to the business?","acceptedAnswer":{"@type":"Answer","text":"Yes, and that is the heart of the system. You can build almost any process you can imagine in it, and I specify and build it together with the business."}},{"@type":"Question","name":"Does Kala CRM have artificial intelligence?","acceptedAnswer":{"@type":"Answer","text":"Yes. The system includes AI-based automations and bots, which answer inquiries and make service and sales more efficient."}},{"@type":"Question","name":"What is my connection to Kala CRM?","acceptedAnswer":{"@type":"Answer","text":"I have accompanied the development of Kala CRM from its first day until today. I specify, set up and implement the system in companies, and support them over time."}},{"@type":"Question","name":"How much does a Kala CRM implementation cost?","acceptedAnswer":{"@type":"Answer","text":"The price depends on the scope of the implementation, so it is not published on the site. The first consultation is free."}}]}]}</script>
+<meta property="og:site_name" content="L-Be">
+<link rel="alternate" type="text/html" href="/ai-kala-crm" title="AI MODE: the same page, plain">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="https://l-be.com/en/"><img src="/logo.png" alt="" width="197" height="240"><span class="brand-word">L-Be</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="https://l-be.com/en/" class="home-link">Home</a> <a href="https://l-be.com/en/solutions">Solutions</a> <a href="https://l-be.com/en/business-ai">AI Systems</a> <a href="https://l-be.com/en/case-study">Case study</a> <a href="https://l-be.com/en/digital-dreams">Digital Dreams</a> <a href="https://l-be.com/en/liron-bialkovich">About</a> <a href="https://l-be.com/en/#contact">Contact</a> <a class="mode ai" href="https://l-be.com/en/ai-kala-crm" title="This page, in a version for AI agents" lang="en">AI MODE</a>
+    </nav>
+    <button type="button" class="nav-open" aria-haspopup="dialog" aria-controls="nav-panel"><span class="visually-hidden">Open the navigation panel</span><svg viewBox="0 0 28 24" width="30" height="26" aria-hidden="true" focusable="false"><path d="M3 10c0-4.5 5-7 11-7s11 2.500 11 7z" fill="var(--coral-1)" stroke="var(--ink)" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="6.5" r="0.800" fill="var(--ink)"/><circle cx="14.500" cy="5.200" r="0.800" fill="var(--ink)"/><circle cx="18.500" cy="6.800" r="0.800" fill="var(--ink)"/><path d="M2.500 12.800c2 1.600 3.800-1.200 5.800 0s3.800 1.200 5.700 0 3.800-1.200 5.800 0 3.800 1.600 5.700 0" fill="none" stroke="var(--mint-3)" stroke-width="2.200" stroke-linecap="round"/><rect x="3" y="15" width="22" height="3.400" rx="1.700" fill="var(--inkb-2)" stroke="var(--ink)" stroke-width="1"/><path d="M3.500 20h21v0.500a2.500 2.500 0 0 1-2.500 2.500h-16a2.500 2.500 0 0 1-2.500-2.500z" fill="var(--coral-1)" stroke="var(--ink)" stroke-width="1.500" stroke-linejoin="round"/></svg></button>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="wrap">
+    <div class="split">
+      <div class="hero-text">
+    <p class="label"><span class="nb" lang="en" dir="ltr">Kala CRM</span> · made in Israel</p>
+    <h1 class="display">Implementing <span class="nb" lang="en" dir="ltr">Kala CRM</span>: an Israeli CRM system, truly customized</h1>
+    <p class="lead">I have accompanied the development of <span class="nb" lang="en" dir="ltr">Kala CRM</span> from its first day until today.<br>Together we developed a solution for Israeli companies that need personal service and truly personal customization: a system that lets you build almost any process you can imagine.</p>
+    <div class="actions">
+      <a class="btn" href="#contact">Free first consultation</a> <a class="link" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Book a call<span class="visually-hidden"> (opens in a pop-up window)</span></a>
+    </div>
+      </div>
+      <img class="art blend" src="/art/hub.webp" alt="Illustration: a dark central cube, and eight colorful cubes around it. Each one is connected to it by a continuous line" title="Illustration: a dark central cube, and eight colorful cubes around it. Each one is connected to it by a continuous line" width="1344" height="752">
+    </div>
+  </div>
+</section>
+<section class="section on-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">About the system</p>
+      <h2 class="display">What is <span class="nb" lang="en" dir="ltr">Kala CRM</span>?</h2>
+      <p>An Israeli system for managing, marketing and automating the business.<br>Inquiries, customers, sales, billing, calendars and communication with customers, in one system and fully in Hebrew.<br>In my view, one of the most advanced and comfortable systems in Israel.</p>
+    </div>
+    <ul class="svc">
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Gathering and managing inquiries and leads from all sources</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Customer database and customer files</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Orders and sales processes</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Quotes with automatic follow-up</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Accounting documents</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Credit card processing, digital wallets and direct debits (Masav, Israel's bank clearing system)</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Subscriptions and recurring billing</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Phone system (PBX), WhatsApp, SMS and email</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>AI-based automations and bots</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Calendars, tasks and self-service meeting scheduling</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Project, inventory and supplier management</span></li>
+      <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Connection to WordPress sites and to other systems</span></li>
+    </ul>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Made in Israel</p>
+      <h2 class="display">Why an Israeli CRM system</h2>
+      <p>An Israeli business works with Israeli payment processing, with Israeli accounting and with customers who speak Hebrew.<br>A system that was built here is already connected to all of that.</p>
+    </div>
+    <ul class="changes">
+      <li><b>Fully Hebrew</b><span>A system built in Hebrew, right to left, for businesses that work in Israel.</span></li>
+      <li><b>Israeli providers</b><span>Payment processing, accounting, phone systems (PBX), Masav (Israel's bank clearing system) and WhatsApp, connected from the system itself.</span></li>
+      <li><b>Truly personal customization</b><span>The fields, the screens and the processes are built around the way the business works, and not the other way around.</span></li>
+      <li><b>Personal service</b><span>Support in Hebrew, and a system that is updated and improved regularly.</span></li>
+    </ul>
+  </div>
+</section>
+<section class="section on-surface integrations">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Connections</p>
+      <h2 class="display">Connected to the providers an Israeli business needs</h2>
+      <p>These are the business partners and the systems I connect and know closely: payment processing, accounting, telephony, email marketing, shipping, automation and AI.</p>
+    </div>
+    <img src="/integrations.webp" alt="Logos of business partners and systems that connect to Kala CRM and to the processes I build: AI, automation, payment processing, accounting, telephony, email marketing, shipping and more" title="Logos of business partners and systems that connect to Kala CRM and to the processes I build: AI, automation, payment processing, accounting, telephony, email marketing, shipping and more" width="1500" height="1492" loading="lazy">
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">What I do</p>
+      <h2 class="display">From specification to a system that works for you</h2>
+      <p>I know <span class="nb" lang="en" dir="ltr">Kala CRM</span> from the inside, from its first day.<br>That is what lets me build processes in it that other systems don't allow.</p>
+    </div>
+    <ul class="offer">
+      <li><h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Specifying the processes</span></h3><p>We sit down together on the business, and define exactly what the system needs to do.</p></li>
+      <li><h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Setup and customization</span></h3><p>I build the system according to the specification: fields, screens, permissions and processes.</p></li>
+      <li><h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Automations, bots and AI</span></h3><p>What repeats itself moves to automation, and AI-based bots answer customers.</p></li>
+      <li><h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Connections, training and support</span></h3><p>I connect the providers the business works with, train the team and stay on to support.</p></li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn" href="#contact">Free first consultation</a> <a class="link" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Book a call<span class="visually-hidden"> (opens in a pop-up window)</span></a>
+    </div>
+  </div>
+</section>
+<section class="section on-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Frequently asked questions</p>
+      <h2 class="display">Questions and answers about <span class="nb" lang="en" dir="ltr">Kala CRM</span></h2>
+    </div>
+    <div class="prose faq">
+<h3>What is Kala CRM?</h3>
+<p>Kala CRM is an Israeli system for managing, marketing and automating the business: inquiries, customers, sales, billing, calendars and communication with customers in one system, fully in Hebrew and customized.</p>
+<h3>Who is Kala CRM for?</h3>
+<p>Israeli companies and businesses that want a CRM system in Hebrew, personal service, and processes tailored exactly to the way they work.</p>
+<h3>What is the difference between Kala CRM and international CRM systems?</h3>
+<p>Kala is a system made in Israel: it is built in Hebrew, connected to the Israeli providers (payment processing, accounting, phone systems, Masav and WhatsApp), and can be deeply customized, with local service.</p>
+<h3>Which systems does Kala CRM connect to?</h3>
+<p>Credit card processing and digital wallets, accounting systems, phone systems (PBX), Masav (Israel's bank clearing system), WhatsApp, SMS and email, WordPress sites, and other systems through custom integrations.</p>
+<h3>Can Kala CRM be adapted to a process that is unique to the business?</h3>
+<p>Yes, and that is the heart of the system.<br>You can build almost any process you can imagine in it, and I specify and build it together with the business.</p>
+<h3>Does Kala CRM have artificial intelligence?</h3>
+<p>Yes.<br>The system includes AI-based automations and bots, which answer inquiries and make service and sales more efficient.</p>
+<h3>What is my connection to Kala CRM?</h3>
+<p>I have accompanied the development of Kala CRM from its first day until today.<br>I specify, set up and implement the system in companies, and support them over time.</p>
+<h3>How much does a Kala CRM implementation cost?</h3>
+<p>The price depends on the scope of the implementation, so it is not published on the site.<br>The first consultation is free.</p>
+    </div>
+  </div>
+</section>
+<section class="section on-ink" id="contact">
+  <div class="wrap contact">
+    <div class="section-head">
+      <p class="label"><span class="nb" lang="en" dir="ltr">Kala CRM</span></p>
+      <h2 class="display">Shall we talk about <span class="nb" lang="en" dir="ltr">Kala CRM</span>?</h2>
+      <p>A few words about the business and what it is missing today, and I'll get back to you.<br>You can also book a call straight into my calendar.</p>
+      <div class="links">
+        <a class="plain primary" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Book a call<span class="visually-hidden"> (opens in a pop-up window)</span></a> <a class="plain" href="/liron-bialkovich-portfolio.pdf" data-portfolio>My portfolio</a> <a class="plain" href="https://www.linkedin.com/in/liron-bialkovich-2508a286" rel="me noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+    <form class="form" id="lead-form" data-hook="https://hook.eu1.make.com/2x9qdwv6kcwttznsn6tbl4dj2oolkaap" data-form-name="Kala CRM" data-form-id="kala-lead-form">
+      <div class="field"><label for="f-name">Full name <span class="req">(required)</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="f-business">Business name</label><input id="f-business" name="business_name" type="text" autocomplete="organization"></div>
+      <div class="field"><label for="f-phone">WhatsApp <span class="req">(required)</span></label><input id="f-phone" name="phone" type="tel" inputmode="tel" dir="ltr" autocomplete="tel" required></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" dir="ltr" autocomplete="email"></div>
+      <div class="field full"><label for="f-message">About the business, and what you need from the system</label><textarea id="f-message" name="message" rows="4" placeholder="For example: lead management, quotes, recurring billing or a process unique to the business."></textarea></div>
+      <div class="visually-hidden" aria-hidden="true"><label for="f-site">Please leave this empty</label><input id="f-site" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Send inquiry</button>
+      <p class="form-status" aria-hidden="true"></p>
+      <p class="visually-hidden form-live" role="status"></p>
+      <button class="btn btn-light form-again" type="button">Send another inquiry</button>
+      <p class="form-note">Your details are sent to me so I can get back to you.<br><a href="https://l-be.com/en/privacy">Privacy policy</a></p>
+    </form>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <p class="scores-note">The official site of the system: <a href="https://www.kala-crm.co.il/" target="_blank" rel="noopener">kala-crm.co.il <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>. Looking for an international system? I also have a <a href="https://l-be.com/en/gohighlevel">GoHighLevel agency</a>.</p>
+  </div>
+</section>
+</main>
+<aside class="later" aria-label="Read later">
+  <div class="wrap">
+    <div class="later-head">
+      <p class="label">Read later</p>
+      <h2 class="display" id="later-title-foot">No time right now?</h2>
+    </div>
+    <form class="later-form" id="later-form-foot" data-hook="https://hook.eu1.make.com/2x9qdwv6kcwttznsn6tbl4dj2oolkaap">
+      <div class="field"><label for="later-email-foot">Your email</label><input id="later-email-foot" name="email" type="email" dir="ltr" autocomplete="email" required></div>
+      <div class="visually-hidden" aria-hidden="true"><label for="later-site-foot">Please leave this empty</label><input id="later-site-foot" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Email me so I can come back and read about you later</button>
+      <p class="form-status" aria-hidden="true"></p>
+      <p class="visually-hidden" role="status"></p>
+      <p class="form-note one-line">One email, one time only. <a href="https://l-be.com/en/privacy">Privacy policy</a></p>
+    </form>
+  </div>
+</aside>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 L-Be · <span lang="en" dir="ltr">Liron Bialkovich</span> · Implementing CRM and AI systems for companies</p>
+    <nav aria-label="Links">
+      <a href="https://l-be.com/en/" data-label="Home">Home</a> <a href="https://l-be.com/en/solutions" data-label="Solutions">Solutions</a> <a href="https://l-be.com/en/business-ai" data-label="AI Systems">AI Systems</a> <a href="https://l-be.com/en/case-study" data-label="Case study">Case study</a> <a href="https://l-be.com/en/digital-dreams" data-label="Digital Dreams">Digital Dreams</a> <a href="https://l-be.com/en/liron-bialkovich" data-label="About">About</a> <a href="https://l-be.com/en/#contact" data-label="Contact">Contact</a> <a href="/liron-bialkovich-portfolio.pdf" data-portfolio data-label="Portfolio">Portfolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" rel="me noopener" data-label="LinkedIn" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a> <a href="https://l-be.com/en/kala-crm" data-label="Kala CRM" aria-current="page">Kala CRM</a> <a href="https://l-be.com/en/gohighlevel" data-label="GoHighLevel">GoHighLevel</a> <a href="https://l-be.com/en/accessibility" data-label="Accessibility statement">Accessibility statement</a> <a href="https://l-be.com/en/privacy" data-label="Privacy policy">Privacy policy</a> <a href="https://l-be.com/en/terms" data-label="Terms of use">Terms of use</a>
+    </nav>
+    <nav class="langs" aria-label="Language">
+      <a href="/kala-crm" hreflang="he" lang="he" translate="no">עברית</a>
+      <a href="/en/kala-crm" hreflang="en" lang="en" translate="no" aria-current="true">English</a>
+      <a href="/es/kala-crm" hreflang="es" lang="es" translate="no">Español</a>
+    </nav>
+  </div>
+</footer>
+<span class="guide" aria-hidden="true"></span>
+<dialog id="portfolio" class="pdf-dialog" aria-labelledby="pdf-title">
+  <header>
+    <h2 id="pdf-title" lang="en" dir="ltr">Liron Bialkovich · Portfolio</h2>
+    <a class="link" href="/liron-bialkovich-portfolio.pdf" target="_blank" rel="noopener" aria-label="Open the portfolio file (PDF) in a new tab">Open in a new tab</a>
+    <button type="button" class="btn btn-light" data-close aria-label="Close the portfolio window">Close</button>
+  </header>
+  <div class="pdf-pages" dir="ltr"><p class="pdf-note">Loading the portfolio…</p></div>
+</dialog>
+<dialog id="nav-panel" class="nav-panel" aria-labelledby="nav-panel-title">
+  <header>
+    <h2 id="nav-panel-title">Site navigation</h2>
+    <button type="button" class="btn btn-light" data-nav-close>Close</button>
+  </header>
+  <nav aria-label="Navigation panel">
+    <ul class="nav-main">
+      <li><a href="https://l-be.com/en/"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Home</span></a></li>
+      <li><a href="https://l-be.com/en/solutions"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Solutions</span></a></li>
+      <li><a href="https://l-be.com/en/business-ai"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>AI Systems</span></a></li>
+      <li><a href="https://l-be.com/en/case-study"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Case study</span></a></li>
+      <li><a href="https://l-be.com/en/digital-dreams"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Digital Dreams</span></a></li>
+      <li><a href="https://l-be.com/en/liron-bialkovich"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>About</span></a></li>
+      <li><a href="https://l-be.com/en/#contact"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Contact</span></a></li>
+    </ul>
+    <p class="label">Systems</p>
+    <ul class="nav-more">
+      <li><a href="https://l-be.com/en/kala-crm" aria-current="page">Kala CRM: an Israeli CRM system</a></li>
+      <li><a href="https://l-be.com/en/gohighlevel">GoHighLevel (GHL) in Israel</a></li>
+    </ul>
+    <p class="label">More on the site</p>
+    <ul class="nav-more">
+      <li><a href="/liron-bialkovich-portfolio.pdf" data-portfolio>Portfolio</a></li>
+      <li><a href="https://l-be.com/en/accessibility">Accessibility statement</a></li>
+      <li><a href="https://l-be.com/en/privacy">Privacy policy</a></li>
+      <li><a href="https://l-be.com/en/terms">Terms of use</a></li>
+    </ul>
+  </nav>
+  <div class="links">
+    <a class="plain primary" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Book a call<span class="visually-hidden"> (opens in a pop-up window)</span></a>
+  </div>
+  <nav class="langs" aria-label="Language">
+      <a href="/kala-crm" hreflang="he" lang="he" translate="no">עברית</a>
+      <a href="/en/kala-crm" hreflang="en" lang="en" translate="no" aria-current="true">English</a>
+      <a href="/es/kala-crm" hreflang="es" lang="es" translate="no">Español</a>
+    </nav>
+</dialog>
+<script src="/en/site.js" defer></script>
+<script src="/en/a11y.js" defer></script>
+<script src="/en/guard.js" defer></script>
+<script src="/en/later.js" defer></script>
+<script src="/en/lead.js" defer></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
   const motionQuery = matchMedia("(prefers-reduced-motion: reduce)");
   const calm = () => motionQuery.matches || root.classList.contains("a11y-calm");
   // pdf.js is served from this site (vendor/), next to this script wherever the page lives.
-  const PDFJS = new URL("vendor/", document.currentScript.src).href;
+  const PDFJS = new URL("/vendor/", location.href).href;
 
   // --- Scroll: --sp (0..1) drives the logo gradient; [data-parallax] elements drift at their own speed.
   const drifters = [...document.querySelectorAll("[data-parallax]")].map((el) => ({

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página de inicio · AI MODE · L-Be</title>
+<meta name="description" content="Versión AI MODE de la página “Página de inicio” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://l-be.com/es/">
+<link rel="alternate" type="text/markdown" href="https://l-be.com/llms-full.txt" title="Full site content as Markdown">
+<link rel="icon" type="image/png" href="https://l-be.com/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="L-Be">
+<meta property="og:title" content="Página de inicio · AI MODE · L-Be">
+<meta property="og:description" content="Versión AI MODE de la página “Página de inicio” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta property="og:url" content="https://l-be.com/es/">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Written to read like the Markdown it mirrors: one column, monospace, visible structure markers. */
+body{margin:0;background:#fff;color:#111;font:14px/1.55 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+main{max-width:76ch;margin:0 auto;padding:1rem}
+pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
+h1,h2,h3,h4{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
+h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}h4::before{content:"#### "}
+h1::before,h2::before,h3::before,h4::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a,.bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the whole page shrunk into one small square in the middle of the screen. Pure CSS. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{position:fixed;left:50%;top:50%;box-sizing:border-box;width:560vmin;height:560vmin;max-width:none;margin:0;padding:12vmin;overflow:auto;line-height:1.05;background:#fff;border:10px solid #111;transform:translate(-50%,-50%) scale(.1)}
+#real:target~main *{margin:0}
+/* Contact form for AI agents: reads like a request body, works like a normal form */
+.agent{margin:1.5rem 0 0;padding:1rem 1.25rem 1.25rem;background:#0e1420;color:#e8edf5}
+.agent h2{margin-top:0}
+.agent h2::before{color:#7ad3a0}
+.agent a{color:#b9daf7}
+.agent pre{color:#a9efc6;overflow-x:auto;white-space:pre}
+.agent .row{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:.25rem .75rem;align-items:start;margin:.75rem 0}
+.agent .key{color:#74b4f2;text-align:left;padding-top:.7rem}
+.agent .hint{margin:.2rem 0 0;color:#cfd6e2;font-size:13px}
+.agent input[type=text],.agent textarea{box-sizing:border-box;width:100%;min-height:44px;padding:.6rem .7rem;font:inherit;color:#fff;background:#141b2b;border:1px solid #74b4f2;border-radius:0}
+.agent .check{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.agent .check input{width:22px;height:22px;accent-color:#a9efc6}
+.agent [aria-invalid]{border-color:#f8a09b;outline:2px solid #f8a09b}
+.agent input:focus-visible,.agent textarea:focus-visible,.agent button:focus-visible{outline:3px solid #a9efc6;outline-offset:2px}
+.agent button{min-height:44px;padding:0 1.25rem;font:inherit;font-weight:700;color:#0e1420;background:#a9efc6;border:0;cursor:pointer}
+.agent-status{min-height:1.5em;margin:.75rem 0 0;direction:rtl;text-align:right;white-space:pre-wrap}
+.agent-status[data-state=error]{color:#f8a09b}
+@media (max-width:40rem){.agent .row{grid-template-columns:minmax(0,1fr)}.agent .key{padding-top:0}}
+.agent form[data-sent] .row,.agent form[data-sent] button[type=submit]{display:none}
+.agent .form-again{display:none;margin-top:.75rem;background:transparent;color:#a9efc6;border:1px solid #a9efc6}
+.agent form[data-sent] .form-again{display:inline-block}
+p{margin:.25rem 0}
+ul,ol{margin:.25rem 0;padding:0;list-style:none}
+ul ul{padding-inline-start:2ch}
+li{padding:.2rem 0}
+li::before{content:"- "}
+blockquote{margin:.5rem 0}blockquote::before{content:"> "}
+hr{border:0;margin:1rem 0;height:auto}hr::before{content:"---"}
+a{color:#0b3d91}
+table{border-collapse:collapse;margin:.5rem 0}th,td{border:1px solid #555;padding:.2rem .6rem;text-align:start}
+dt{font-weight:700;margin-top:.5rem}dd{margin:0}
+[lang="en"]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<span id="real"></span>
+<nav class="bar" aria-label="Navegación de AI MODE">
+<a class="dark" href="https://l-be.com/es/">← A la página normal</a> <a href="https://l-be.com/es/ai#tree">Árbol del sitio</a> <a href="https://l-be.com/es/ai-all">Todo el sitio en una página</a> <a href="https://l-be.com/es/ai#agent-contact">Contacto</a>
+<button type="button" id="copy-ai">Copiar el contenido</button>
+<span id="copy-ai-status" role="status"></span> <a class="real-on" href="#real" lang="en">REAL AI MODE</a> <a class="real-off" href="#">Volver al tamaño humano</a> <span class="real-note">Así le gusta leer a la IA: apretado, pequeño y sin espacios.</span>
+</nav>
+<main>
+<div id="ai-content">
+<pre>---
+url: https://l-be.com/ai-home
+canonical: https://l-be.com/
+site_tree: https://l-be.com/ai#tree
+whole_site: https://l-be.com/ai-all
+language: he
+updated: 2026-10-08
+---</pre>
+<p>Hasta un negocio pequeño debe pensar en grande</p>
+      <h1>Implementación de sistemas CRM e IA para empresas</h1>
+      <p>Me ocuparé de que su negocio funcione de forma metódica, uniforme, automática y bien afinada.</p>
+        <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/es/ai-home#tachles">Resúmelo, quiero lo esencial</a>
+      <p><a href="https://l-be.com/es/ai-liron-bialkovich">Liron Bialkovich</a> · Implementación de sistemas CRM e IA para empresas</p>
+      <p>Cómo es trabajar conmigo</p>
+      <h2>Implementar sistemas de información e IA es un proceso largo, engorroso y agotador. Conmigo es divertido.</h2>
+      <p>Es un proceso muy complejo. Conmigo se recorre con gusto, y se aprende muchísimo por el camino.</p>
+    <ul>
+      <li><b>11</b> años seguidos Tengo clientes que llevan ya 11 años conmigo.</li>
+      <li><b>3%</b> de abandono Mi tasa de abandono es del 3%, y me esfuerzo por mantenerla por debajo de esa cifra.</li>
+      <li>Regalos en las fiestas Hay clientes que me traen regalos en las fiestas, como si fuera de la familia o trabajara en su empresa.</li>
+    </ul>
+      <p>Soluciones</p>
+      <h2>A cada cliente le preparo el paquete de soluciones ideal para su caso</h2>
+      <p>Tengo una gran variedad de soluciones para ustedes, quienes dirigen un negocio y quieren mejorar un poco su calidad de vida empresarial, en todas las áreas que interesan.</p>
+      <ul>
+        <li>Agentes de IA y bots</li>
+        <li>CRM, leads y ventas</li>
+        <li>Atención y comunicación con clientes</li>
+        <li>Pedidos, cobros y finanzas</li>
+        <li>Automatización e integraciones</li>
+        <li>Gestión, informes y equipo</li>
+        <li>Especificación, formación y acompañamiento</li>
+      </ul>
+      <p>[Imagen: Ilustración: un cubo central unido con líneas discontinuas a seis módulos a su alrededor]</p>
+    <p><a href="https://l-be.com/es/ai-solutions">Ver todas las soluciones</a></p>
+      <p>IA en el negocio</p>
+      <h2>Una capa de IA conectada a los datos de todo el negocio</h2>
+      <p>Así funciona hoy en uno de mis clientes, una empresa de 30 personas.</p>
+    <ul>
+      <li><b>Se pregunta en hebreo sencillo</b> Alguien del equipo pregunta en hebreo sencillo, por ejemplo “¿qué pedidos están retrasados en el proveedor?”, y recibe una respuesta basada en los datos de la empresa.</li>
+      <li><b>Informe con un clic</b> Un informe útil se guarda y se puede volver a ejecutar con un clic.</li>
+      <li><b>Panel de control con palabras</b> La gerencia pide un panel de control con palabras, y el sistema lo construye.</li>
+      <li><b>Una definición para cada cifra</b> Detrás de cada cifra hay una única definición de negocio acordada, de modo que todo el mundo habla del mismo “vendido” y del mismo “con retraso”.</li>
+    </ul>
+      <p>IA responsable</p>
+      <ul>
+        <li>La IA propone, y una persona aprueba</li>
+        <li>Cada persona ve solo lo que su puesto le permite</li>
+        <li>El acceso es con verificación en dos pasos</li>
+        <li>Los datos personales de los clientes no salen fuera</li>
+        <li>Cada acción queda registrada</li>
+      </ul>
+      <a href="https://l-be.com/es/ai-business-ai">Conocer el sistema</a> <a href="https://l-be.com/es/ai-case-study">Leer la historia completa</a>
+      <p>Consultoría para empresas</p>
+      <h2>Una sesión. Un informe. Un plan de trabajo.</h2>
+      <p>Una sesión de unas horas y, después, un informe final completo con recomendaciones y un plan de trabajo para mejoras inmediatas.</p>
+    <ol>
+      <li><b>Sesión</b> Unas horas de trabajo conjunto, sobre el negocio y sus procesos.</li>
+      <li><b>Informe final completo</b> Con recomendaciones.</li>
+      <li><b>Plan de trabajo</b> Para mejoras inmediatas.</li>
+    </ol>
+      <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/es/ai#agent-contact">o dejar los datos</a>
+      <p>Proyectos</p>
+      <h2>De dónde vengo y qué he hecho ya</h2>
+    <ul>
+      <li><b>300+</b> proyectos que he tenido la suerte de acompañar, pequeños y grandes</li>
+      <li><b>80+</b> personas al frente de negocios y empresas, desde el negocio pequeño hasta 100 personas en plantilla, a las que acompaño desde 2017, Hands On</li>
+      <li><b>2013</b> desde entonces desarrollo empresas y negocios</li>
+    </ul>
+      <p>He construido para distintas empresas sistemas de automatización complejos para procesos de negocio de lo más variopintos, y he dirigido proyectos de desarrollo web enormes, pequeños y para muchos y muy diversos tipos de negocios.</p>
+        <p>En el pasado dirigí proyectos tecnológicos en el entorno de internet para cientos de marcas, desde algunas de las que quizá nunca oirán hablar hasta nombres que todo el mundo conoce. Estos son algunos de los clientes con los que trabajé en mi etapa en Restart IT, entre 2013 y 2015:</p>
+        <p>[Imagen: Logotipos de algunos de los clientes de la etapa de Restart IT: Microsoft Israel R&amp;D Center, Applied Materials, Bank of America, mako, Grupo Azrieli, LR Group, Africa Israel Residences, Eldan, HP, Discount, Mifal HaPais, Strauss, Cafe Cafe, College of Management, Walt Disney Pictures, Azorim, Leumi, Blonde 2.0, Gindi Holdings, Burgus Burger Bar, HOT, Moses, Tradis Gat, Hoteles Fattal, mobli, Colmobil, Maybelline New York, L'Oréal Paris, Garnier, Ferrocarriles de Israel, Municipalidad de Jerusalén, ALUT, Bezeq International, Rhodium]</p>
+      <p>Caso de estudio · Ida's Home</p>
+      <h3>Todo el negocio en un solo proceso, de la venta al cobro. Y, por encima, una capa de IA conectada a todas las áreas.</h3>
+      <p>Ida's Home diseña y vende mobiliario para el hogar: sofás y sillones a medida, iluminación, alfombras y textiles. La empresa tiene 30 personas en plantilla y trabaja con varios almacenes, una carpintería y muchos proveedores.</p>
+      <ul>
+        <li><b>Un proceso continuo</b> De la venta al cobro, en lugar de información dispersa entre personas y archivos.</li>
+        <li><b>Actualización desde el terreno</b> El almacén, el reparto y ventas actualizan el sistema mientras trabajan, desde el móvil.</li>
+        <li><b>Una sola imagen para toda la empresa</b> Cada área ve el mismo pedido, en el mismo estado y al mismo tiempo.</li>
+        <li><b>Una imagen fiable para la dirección</b> De pedidos, inventario y deudas. El sistema sacó a la luz desajustes que antes no se veían, y se resolvieron.</li>
+      </ul>
+      <a href="https://l-be.com/es/ai-case-study">Leer la historia completa</a>
+      <p>Clientes</p>
+      <h2>Clientes que quizá conozcan</h2>
+      <p>Algunos simplemente disfrutan más hoy de su vida en el negocio, y otros han duplicado y triplicado su negocio. Me encantará estar ahí también para el negocio de ustedes.</p>
+    <p><a href="https://l-be.com/es/ai#agent-contact">[Imagen: Aquí hay sitio para ti y, si no lo hubiera, haré que lo haya :)]</a></p>
+    <ul>
+      <li>El Estudio de Cocina</li>
+      <li>Ida's Home</li>
+      <li>FlyEast</li>
+      <li>Tor Olam</li>
+      <li>Dr. Zchuyot</li>
+      <li>AICC Sistemas</li>
+      <li>IB Comunicaciones</li>
+      <li>Razor Ingeniería y Consultoría</li>
+      <li>Linder Hipotecas</li>
+      <li>Autovik</li>
+      <li>Afikim Mayim</li>
+      <li>Marketing AVC</li>
+      <li>Triple D Illustrations</li>
+      <li>Welcome</li>
+      <li>Rampa - Ascensores y accesibilidad</li>
+      <li>Olam Nistar</li>
+      <li>TTM</li>
+      <li>Natalie Somech - Formación, coaching y consultoría organizacional</li>
+      <li>Project X</li>
+      <li>Hoshaya - Red de jardines de infancia</li>
+    </ul>
+    <p>y más...</p>
+      <p>Palabras amables</p>
+      <h2>A lo largo del camino he ido guardando, aquí y allá, alguna palabra amable que recibí</h2>
+      <p>Y también matzá shmurá o flores. Las capturas de aquí son los mensajes originales.</p>
+      <p><a href="https://l-be.com/kudos/kudos-02.webp">[Imagen: Captura de pantalla de WhatsApp: ¡Te deseo medio millón de dólares en efectivo y el resto a plazos! Has hecho una revolución ayudando a la gente. Créeme, hay un cambio tremendo]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-09.webp">[Imagen: Captura de pantalla de WhatsApp: Me encanta Liron, gracias por el día en que me lo presentaste]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-06.webp">[Imagen: Captura de pantalla de WhatsApp. Liron: Y eso ya es directamente conmigo como implementador. El cliente: Eso es un extra. Liron: ¿Cuál es el extra, el traspaso o yo? El cliente: Tú como implementador]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-05.webp">[Imagen: Captura de pantalla de un correo electrónico, 2019: He entrado en el sistema y, a primera vista, impresiona. Por supuesto, necesitaremos un poco de tiempo para acostumbrarnos. Pero, en una vista general, me han gustado mucho los pequeños detalles y que se haya pensado en cada pormenor, porque a veces son decisivos más adelante. Me refiero incluso a campos pequeños que parecen no tener importancia. Precisamente porque fui yo quien especificó el sistema actual con el que trabajamos hoy, ahora entiendo mejor lo que eso significa.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-07.webp">[Imagen: Captura de pantalla de WhatsApp: Si hubiera palabras, te las escribiría, pero no las tengo. Lo que sí puedo es desearte que solo tengas cosas buenas en la vida, porque tu esencia es hacer solo el bien. Me alegro del momento en que te conocí.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-01.webp">[Imagen: Captura de pantalla de un correo electrónico: Gracias por las respuestas y por la conversación de hoy. Me siento muy a gusto con el sistema y tengo la certeza de que nos dará una solución de muy alta calidad. Voy a jugar con los ajustes en los próximos días, y el domingo empezarán a trabajar con lo que hay]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-03.webp">[Imagen: Captura de pantalla de WhatsApp: De verdad, gracias, muchas gracias; has hecho un trabajo excelente y el servicio ha sido excelente. Seguiremos en contacto más adelante, gracias.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-04.webp">[Imagen: Captura de pantalla de un correo electrónico, 2018: ¡Tiene muy buena pinta! Y ya es una mejora considerable frente a lo que hay hoy (incluso antes de la conexión con la centralita telefónica y con las finanzas)]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-08.webp">[Imagen: Captura de pantalla de un correo electrónico, 2023: Gracias, Liron, eres un grande]</a></p>
+    <p>[Imagen: Liron Bialkovich]</p>
+      <p>Entonces, ¿por qué les conviene implementar conmigo?</p>
+      <h2>Liron Bialkovich</h2>
+      <p lang="en">Liron Bialkovich</p>
+      <p>Mucho gusto, soy Liron Bialkovich. Ayudo a los negocios a crecer, sobre todo cuando les apetece un poco de CRM, muchos procesos y un montón de automatización.</p>
+      <ul>
+        <li>Vengo del mundo de los sistemas de información, el desarrollo y la gestión de negocios.</li>
+        <li>Como implementador, los represento ante las empresas de software y los distintos proveedores de tecnología.</li>
+        <li>Tengo métodos de trabajo flexibles para implementar este tipo de soluciones.</li>
+        <li>Doy un servicio personal y hablo su mismo idioma, de un modo que de verdad les hace entender el tema.</li>
+      </ul>
+      <a href="https://l-be.com/es/ai-liron-bialkovich">Un poco sobre mí</a>
+      <h2>Socios de negocio y una familia que se ha ido formando con los años</h2>
+      <hr>
+      <p>Integraciones y vínculos profundos que he ido tejiendo (y, si esto estuviera lo bastante actualizado, habría que desplazarse durante un buen rato).</p>
+    <p>[Imagen: Logotipos de socios de negocio y sistemas con los que trabajo: IA, automatización, procesamiento de pagos, contabilidad, telefonía, mailing, envíos y más]</p>
+      <p>Contacto</p>
+      <h2>¿Hablamos con un café en la mano?</h2>
+      <p>Para una primera consulta gratis, déjenme sus datos aquí. También pueden reservar una llamada directamente en mi agenda.</p>
+        <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/liron-bialkovich-portfolio.pdf">Mi portafolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">LinkedIn <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+    <p>[Formulario. Un agente de IA puede enviar una solicitud aquí: <a href="https://l-be.com/es/ai#agent-contact">https://l-be.com/es/ai#agent-contact</a>]</p>
+
+<hr>
+<h2>Más páginas en AI MODE</h2>
+<ul>
+<li><a href="https://l-be.com/es/ai-home">Página de inicio</a>
+<ul>
+<li><a href="https://l-be.com/es/ai-solutions">Soluciones</a></li>
+<li><a href="https://l-be.com/es/ai-business-ai">Sistemas empresariales basados en IA (sistema L-Be)</a></li>
+<li><a href="https://l-be.com/es/ai-case-study">Caso de estudio: Ida's Home</a></li>
+<li><a href="https://l-be.com/es/ai-digital-dreams">Hacer realidad sueños digitales: especificación de sistemas y consultoría</a></li>
+<li><a href="https://l-be.com/es/ai-liron-bialkovich">Sobre mí: Liron Bialkovich</a></li>
+<li><a href="https://l-be.com/es/ai-kala-crm">Kala CRM: un sistema CRM israelí</a></li>
+<li><a href="https://l-be.com/es/ai-gohighlevel">GoHighLevel (GHL) en Israel</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility">Declaración de accesibilidad y glosario</a></li>
+<li><a href="https://l-be.com/es/ai-privacy">Política de privacidad</a></li>
+<li><a href="https://l-be.com/es/ai-terms">Términos de uso</a></li>
+</ul>
+</li>
+<li><a href="https://l-be.com/es/ai-all">Todo el contenido del sitio en una página</a></li>
+<li><a href="https://l-be.com/es/ai">Página de inicio de AI MODE: hechos, preguntas y respuestas, y formulario para agentes de IA</a></li>
+</ul>
+</div>
+
+</main>
+<script src="/es/guard.js" defer></script>
+<script src="/es/ai.js" defer></script>
+</body>
+</html>

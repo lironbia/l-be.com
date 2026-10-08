@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todo el contenido del sitio en una página · AI MODE · L-Be</title>
+<meta name="description" content="Todo el contenido del sitio L-Be (Liron Bialkovich) en una página, sin diseño, para que lo lean agentes de IA.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://l-be.com/es/ai-all">
+<link rel="alternate" type="text/markdown" href="https://l-be.com/llms-full.txt" title="Full site content as Markdown">
+<link rel="icon" type="image/png" href="https://l-be.com/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="L-Be">
+<meta property="og:title" content="Todo el contenido del sitio en una página · AI MODE · L-Be">
+<meta property="og:description" content="Todo el contenido del sitio L-Be (Liron Bialkovich) en una página, sin diseño, para que lo lean agentes de IA.">
+<meta property="og:url" content="https://l-be.com/es/ai-all">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Written to read like the Markdown it mirrors: one column, monospace, visible structure markers. */
+body{margin:0;background:#fff;color:#111;font:14px/1.55 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+main{max-width:76ch;margin:0 auto;padding:1rem}
+pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
+h1,h2,h3,h4{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
+h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}h4::before{content:"#### "}
+h1::before,h2::before,h3::before,h4::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a,.bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the whole page shrunk into one small square in the middle of the screen. Pure CSS. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{position:fixed;left:50%;top:50%;box-sizing:border-box;width:560vmin;height:560vmin;max-width:none;margin:0;padding:12vmin;overflow:auto;line-height:1.05;background:#fff;border:10px solid #111;transform:translate(-50%,-50%) scale(.1)}
+#real:target~main *{margin:0}
+/* Contact form for AI agents: reads like a request body, works like a normal form */
+.agent{margin:1.5rem 0 0;padding:1rem 1.25rem 1.25rem;background:#0e1420;color:#e8edf5}
+.agent h2{margin-top:0}
+.agent h2::before{color:#7ad3a0}
+.agent a{color:#b9daf7}
+.agent pre{color:#a9efc6;overflow-x:auto;white-space:pre}
+.agent .row{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:.25rem .75rem;align-items:start;margin:.75rem 0}
+.agent .key{color:#74b4f2;text-align:left;padding-top:.7rem}
+.agent .hint{margin:.2rem 0 0;color:#cfd6e2;font-size:13px}
+.agent input[type=text],.agent textarea{box-sizing:border-box;width:100%;min-height:44px;padding:.6rem .7rem;font:inherit;color:#fff;background:#141b2b;border:1px solid #74b4f2;border-radius:0}
+.agent .check{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.agent .check input{width:22px;height:22px;accent-color:#a9efc6}
+.agent [aria-invalid]{border-color:#f8a09b;outline:2px solid #f8a09b}
+.agent input:focus-visible,.agent textarea:focus-visible,.agent button:focus-visible{outline:3px solid #a9efc6;outline-offset:2px}
+.agent button{min-height:44px;padding:0 1.25rem;font:inherit;font-weight:700;color:#0e1420;background:#a9efc6;border:0;cursor:pointer}
+.agent-status{min-height:1.5em;margin:.75rem 0 0;direction:rtl;text-align:right;white-space:pre-wrap}
+.agent-status[data-state=error]{color:#f8a09b}
+@media (max-width:40rem){.agent .row{grid-template-columns:minmax(0,1fr)}.agent .key{padding-top:0}}
+.agent form[data-sent] .row,.agent form[data-sent] button[type=submit]{display:none}
+.agent .form-again{display:none;margin-top:.75rem;background:transparent;color:#a9efc6;border:1px solid #a9efc6}
+.agent form[data-sent] .form-again{display:inline-block}
+p{margin:.25rem 0}
+ul,ol{margin:.25rem 0;padding:0;list-style:none}
+ul ul{padding-inline-start:2ch}
+li{padding:.2rem 0}
+li::before{content:"- "}
+blockquote{margin:.5rem 0}blockquote::before{content:"> "}
+hr{border:0;margin:1rem 0;height:auto}hr::before{content:"---"}
+a{color:#0b3d91}
+table{border-collapse:collapse;margin:.5rem 0}th,td{border:1px solid #555;padding:.2rem .6rem;text-align:start}
+dt{font-weight:700;margin-top:.5rem}dd{margin:0}
+[lang="en"]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<span id="real"></span>
+<nav class="bar" aria-label="Navegación de AI MODE">
+<a class="dark" href="https://l-be.com/es/">← Volver al sitio</a> <a href="https://l-be.com/es/ai#tree">Árbol del sitio</a> <a href="https://l-be.com/es/ai-all">Todo el sitio en una página</a> <a href="https://l-be.com/es/ai#agent-contact">Contacto</a>
+<button type="button" id="copy-ai">Copiar el contenido</button>
+<span id="copy-ai-status" role="status"></span> <a class="real-on" href="#real" lang="en">REAL AI MODE</a> <a class="real-off" href="#">Volver al tamaño humano</a> <span class="real-note">Así le gusta leer a la IA: apretado, pequeño y sin espacios.</span>
+</nav>
+<main>
+<div id="ai-content">
+<pre>---
+url: https://l-be.com/ai-all
+canonical: https://l-be.com/ai-all
+site_tree: https://l-be.com/ai#tree
+whole_site: https://l-be.com/ai-all
+language: he
+updated: 2026-10-08
+---</pre>
+<blockquote>Todas las páginas del sitio, una tras otra.<br>Cada parte empieza con la dirección de la página de la que procede.</blockquote>
+<hr>
+<pre>--- page: https://l-be.com/ ---</pre>
+<p>Hasta un negocio pequeño debe pensar en grande</p>
+      <h1>Implementación de sistemas CRM e IA para empresas</h1>
+      <p>Me ocuparé de que su negocio funcione de forma metódica, uniforme, automática y bien afinada.</p>
+        <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/es/ai-home#tachles">Resúmelo, quiero lo esencial</a>
+      <p><a href="https://l-be.com/es/ai-liron-bialkovich">Liron Bialkovich</a> · Implementación de sistemas CRM e IA para empresas</p>
+      <p>Cómo es trabajar conmigo</p>
+      <h2>Implementar sistemas de información e IA es un proceso largo, engorroso y agotador. Conmigo es divertido.</h2>
+      <p>Es un proceso muy complejo. Conmigo se recorre con gusto, y se aprende muchísimo por el camino.</p>
+    <ul>
+      <li><b>11</b> años seguidos Tengo clientes que llevan ya 11 años conmigo.</li>
+      <li><b>3%</b> de abandono Mi tasa de abandono es del 3%, y me esfuerzo por mantenerla por debajo de esa cifra.</li>
+      <li>Regalos en las fiestas Hay clientes que me traen regalos en las fiestas, como si fuera de la familia o trabajara en su empresa.</li>
+    </ul>
+      <p>Soluciones</p>
+      <h2>A cada cliente le preparo el paquete de soluciones ideal para su caso</h2>
+      <p>Tengo una gran variedad de soluciones para ustedes, quienes dirigen un negocio y quieren mejorar un poco su calidad de vida empresarial, en todas las áreas que interesan.</p>
+      <ul>
+        <li>Agentes de IA y bots</li>
+        <li>CRM, leads y ventas</li>
+        <li>Atención y comunicación con clientes</li>
+        <li>Pedidos, cobros y finanzas</li>
+        <li>Automatización e integraciones</li>
+        <li>Gestión, informes y equipo</li>
+        <li>Especificación, formación y acompañamiento</li>
+      </ul>
+      <p>[Imagen: Ilustración: un cubo central unido con líneas discontinuas a seis módulos a su alrededor]</p>
+    <p><a href="https://l-be.com/es/ai-solutions">Ver todas las soluciones</a></p>
+      <p>IA en el negocio</p>
+      <h2>Una capa de IA conectada a los datos de todo el negocio</h2>
+      <p>Así funciona hoy en uno de mis clientes, una empresa de 30 personas.</p>
+    <ul>
+      <li><b>Se pregunta en hebreo sencillo</b> Alguien del equipo pregunta en hebreo sencillo, por ejemplo “¿qué pedidos están retrasados en el proveedor?”, y recibe una respuesta basada en los datos de la empresa.</li>
+      <li><b>Informe con un clic</b> Un informe útil se guarda y se puede volver a ejecutar con un clic.</li>
+      <li><b>Panel de control con palabras</b> La gerencia pide un panel de control con palabras, y el sistema lo construye.</li>
+      <li><b>Una definición para cada cifra</b> Detrás de cada cifra hay una única definición de negocio acordada, de modo que todo el mundo habla del mismo “vendido” y del mismo “con retraso”.</li>
+    </ul>
+      <p>IA responsable</p>
+      <ul>
+        <li>La IA propone, y una persona aprueba</li>
+        <li>Cada persona ve solo lo que su puesto le permite</li>
+        <li>El acceso es con verificación en dos pasos</li>
+        <li>Los datos personales de los clientes no salen fuera</li>
+        <li>Cada acción queda registrada</li>
+      </ul>
+      <a href="https://l-be.com/es/ai-business-ai">Conocer el sistema</a> <a href="https://l-be.com/es/ai-case-study">Leer la historia completa</a>
+      <p>Consultoría para empresas</p>
+      <h2>Una sesión. Un informe. Un plan de trabajo.</h2>
+      <p>Una sesión de unas horas y, después, un informe final completo con recomendaciones y un plan de trabajo para mejoras inmediatas.</p>
+    <ol>
+      <li><b>Sesión</b> Unas horas de trabajo conjunto, sobre el negocio y sus procesos.</li>
+      <li><b>Informe final completo</b> Con recomendaciones.</li>
+      <li><b>Plan de trabajo</b> Para mejoras inmediatas.</li>
+    </ol>
+      <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/es/ai#agent-contact">o dejar los datos</a>
+      <p>Proyectos</p>
+      <h2>De dónde vengo y qué he hecho ya</h2>
+    <ul>
+      <li><b>300+</b> proyectos que he tenido la suerte de acompañar, pequeños y grandes</li>
+      <li><b>80+</b> personas al frente de negocios y empresas, desde el negocio pequeño hasta 100 personas en plantilla, a las que acompaño desde 2017, Hands On</li>
+      <li><b>2013</b> desde entonces desarrollo empresas y negocios</li>
+    </ul>
+      <p>He construido para distintas empresas sistemas de automatización complejos para procesos de negocio de lo más variopintos, y he dirigido proyectos de desarrollo web enormes, pequeños y para muchos y muy diversos tipos de negocios.</p>
+        <p>En el pasado dirigí proyectos tecnológicos en el entorno de internet para cientos de marcas, desde algunas de las que quizá nunca oirán hablar hasta nombres que todo el mundo conoce. Estos son algunos de los clientes con los que trabajé en mi etapa en Restart IT, entre 2013 y 2015:</p>
+        <p>[Imagen: Logotipos de algunos de los clientes de la etapa de Restart IT: Microsoft Israel R&amp;D Center, Applied Materials, Bank of America, mako, Grupo Azrieli, LR Group, Africa Israel Residences, Eldan, HP, Discount, Mifal HaPais, Strauss, Cafe Cafe, College of Management, Walt Disney Pictures, Azorim, Leumi, Blonde 2.0, Gindi Holdings, Burgus Burger Bar, HOT, Moses, Tradis Gat, Hoteles Fattal, mobli, Colmobil, Maybelline New York, L'Oréal Paris, Garnier, Ferrocarriles de Israel, Municipalidad de Jerusalén, ALUT, Bezeq International, Rhodium]</p>
+      <p>Caso de estudio · Ida's Home</p>
+      <h3>Todo el negocio en un solo proceso, de la venta al cobro. Y, por encima, una capa de IA conectada a todas las áreas.</h3>
+      <p>Ida's Home diseña y vende mobiliario para el hogar: sofás y sillones a medida, iluminación, alfombras y textiles. La empresa tiene 30 personas en plantilla y trabaja con varios almacenes, una carpintería y muchos proveedores.</p>
+      <ul>
+        <li><b>Un proceso continuo</b> De la venta al cobro, en lugar de información dispersa entre personas y archivos.</li>
+        <li><b>Actualización desde el terreno</b> El almacén, el reparto y ventas actualizan el sistema mientras trabajan, desde el móvil.</li>
+        <li><b>Una sola imagen para toda la empresa</b> Cada área ve el mismo pedido, en el mismo estado y al mismo tiempo.</li>
+        <li><b>Una imagen fiable para la dirección</b> De pedidos, inventario y deudas. El sistema sacó a la luz desajustes que antes no se veían, y se resolvieron.</li>
+      </ul>
+      <a href="https://l-be.com/es/ai-case-study">Leer la historia completa</a>
+      <p>Clientes</p>
+      <h2>Clientes que quizá conozcan</h2>
+      <p>Algunos simplemente disfrutan más hoy de su vida en el negocio, y otros han duplicado y triplicado su negocio. Me encantará estar ahí también para el negocio de ustedes.</p>
+    <p><a href="https://l-be.com/es/ai#agent-contact">[Imagen: Aquí hay sitio para ti y, si no lo hubiera, haré que lo haya :)]</a></p>
+    <ul>
+      <li>El Estudio de Cocina</li>
+      <li>Ida's Home</li>
+      <li>FlyEast</li>
+      <li>Tor Olam</li>
+      <li>Dr. Zchuyot</li>
+      <li>AICC Sistemas</li>
+      <li>IB Comunicaciones</li>
+      <li>Razor Ingeniería y Consultoría</li>
+      <li>Linder Hipotecas</li>
+      <li>Autovik</li>
+      <li>Afikim Mayim</li>
+      <li>Marketing AVC</li>
+      <li>Triple D Illustrations</li>
+      <li>Welcome</li>
+      <li>Rampa - Ascensores y accesibilidad</li>
+      <li>Olam Nistar</li>
+      <li>TTM</li>
+      <li>Natalie Somech - Formación, coaching y consultoría organizacional</li>
+      <li>Project X</li>
+      <li>Hoshaya - Red de jardines de infancia</li>
+    </ul>
+    <p>y más...</p>
+      <p>Palabras amables</p>
+      <h2>A lo largo del camino he ido guardando, aquí y allá, alguna palabra amable que recibí</h2>
+      <p>Y también matzá shmurá o flores. Las capturas de aquí son los mensajes originales.</p>
+      <p><a href="https://l-be.com/kudos/kudos-02.webp">[Imagen: Captura de pantalla de WhatsApp: ¡Te deseo medio millón de dólares en efectivo y el resto a plazos! Has hecho una revolución ayudando a la gente. Créeme, hay un cambio tremendo]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-09.webp">[Imagen: Captura de pantalla de WhatsApp: Me encanta Liron, gracias por el día en que me lo presentaste]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-06.webp">[Imagen: Captura de pantalla de WhatsApp. Liron: Y eso ya es directamente conmigo como implementador. El cliente: Eso es un extra. Liron: ¿Cuál es el extra, el traspaso o yo? El cliente: Tú como implementador]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-05.webp">[Imagen: Captura de pantalla de un correo electrónico, 2019: He entrado en el sistema y, a primera vista, impresiona. Por supuesto, necesitaremos un poco de tiempo para acostumbrarnos. Pero, en una vista general, me han gustado mucho los pequeños detalles y que se haya pensado en cada pormenor, porque a veces son decisivos más adelante. Me refiero incluso a campos pequeños que parecen no tener importancia. Precisamente porque fui yo quien especificó el sistema actual con el que trabajamos hoy, ahora entiendo mejor lo que eso significa.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-07.webp">[Imagen: Captura de pantalla de WhatsApp: Si hubiera palabras, te las escribiría, pero no las tengo. Lo que sí puedo es desearte que solo tengas cosas buenas en la vida, porque tu esencia es hacer solo el bien. Me alegro del momento en que te conocí.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-01.webp">[Imagen: Captura de pantalla de un correo electrónico: Gracias por las respuestas y por la conversación de hoy. Me siento muy a gusto con el sistema y tengo la certeza de que nos dará una solución de muy alta calidad. Voy a jugar con los ajustes en los próximos días, y el domingo empezarán a trabajar con lo que hay]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-03.webp">[Imagen: Captura de pantalla de WhatsApp: De verdad, gracias, muchas gracias; has hecho un trabajo excelente y el servicio ha sido excelente. Seguiremos en contacto más adelante, gracias.]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-04.webp">[Imagen: Captura de pantalla de un correo electrónico, 2018: ¡Tiene muy buena pinta! Y ya es una mejora considerable frente a lo que hay hoy (incluso antes de la conexión con la centralita telefónica y con las finanzas)]</a></p>
+      <p><a href="https://l-be.com/kudos/kudos-08.webp">[Imagen: Captura de pantalla de un correo electrónico, 2023: Gracias, Liron, eres un grande]</a></p>
+    <p>[Imagen: Liron Bialkovich]</p>
+      <p>Entonces, ¿por qué les conviene implementar conmigo?</p>
+      <h2>Liron Bialkovich</h2>
+      <p lang="en">Liron Bialkovich</p>
+      <p>Mucho gusto, soy Liron Bialkovich. Ayudo a los negocios a crecer, sobre todo cuando les apetece un poco de CRM, muchos procesos y un montón de automatización.</p>
+      <ul>
+        <li>Vengo del mundo de los sistemas de información, el desarrollo y la gestión de negocios.</li>
+        <li>Como implementador, los represento ante las empresas de software y los distintos proveedores de tecnología.</li>
+        <li>Tengo métodos de trabajo flexibles para implementar este tipo de soluciones.</li>
+        <li>Doy un servicio personal y hablo su mismo idioma, de un modo que de verdad les hace entender el tema.</li>
+      </ul>
+      <a href="https://l-be.com/es/ai-liron-bialkovich">Un poco sobre mí</a>
+      <h2>Socios de negocio y una familia que se ha ido formando con los años</h2>
+      <hr>
+      <p>Integraciones y vínculos profundos que he ido tejiendo (y, si esto estuviera lo bastante actualizado, habría que desplazarse durante un buen rato).</p>
+    <p>[Imagen: Logotipos de socios de negocio y sistemas con los que trabajo: IA, automatización, procesamiento de pagos, contabilidad, telefonía, mailing, envíos y más]</p>
+      <p>Contacto</p>
+      <h2>¿Hablamos con un café en la mano?</h2>
+      <p>Para una primera consulta gratis, déjenme sus datos aquí. También pueden reservar una llamada directamente en mi agenda.</p>
+        <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/liron-bialkovich-portfolio.pdf">Mi portafolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">LinkedIn <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+    <p>[Formulario. Un agente de IA puede enviar una solicitud aquí: <a href="https://l-be.com/es/ai#agent-contact">https://l-be.com/es/ai#agent-contact</a>]</p>
+<hr>
+<pre>--- page: https://l-be.com/solutions ---</pre>
+<p>Soluciones</p>
+        <h1>El paquete de soluciones: IA, CRM y automatización, a la medida de tu negocio</h1>
+        <p>Cada negocio empieza desde un punto distinto. Se elige lo más urgente, se empieza por ahí y se va añadiendo después.</p>
+          <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>[Imagen: Ilustración: una bandeja con compartimentos y, en cada uno, un módulo distinto de cubos. Otros tres módulos están a punto de entrar en los compartimentos libres]</p>
+      <ul>
+        <li><a href="https://l-be.com/es/ai-solutions#ai">Agentes de IA y bots</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#crm">CRM, leads y ventas</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#service">Atención y comunicación con clientes</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#money">Pedidos, cobros y finanzas</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#automation">Automatización e integraciones</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#manage">Gestión, informes y equipo</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#guide">Especificación, formación y acompañamiento</a></li>
+      </ul>
+      <p>01</p>
+      <h2>Agentes de IA y bots</h2>
+      <p>Inteligencia artificial que trabaja dentro de los procesos del negocio, y no al lado de ellos.</p>
+      <h3>Bot de atención y ventas en WhatsApp</h3><p>Responde a las consultas las 24 horas, recoge los datos y pasa al equipo solo lo que requiere a una persona.</p>
+      <h3>Agente de IA sobre los datos del negocio</h3><p>Se pregunta en lenguaje sencillo y se recibe una respuesta, un informe o un panel de control basados en los datos de la empresa.</p>
+      <h3>Análisis de consultas entrantes</h3><p>Los correos y los mensajes se convierten en leads ordenados, con los datos en los campos correctos.</p>
+      <h3>IA responsable</h3><p>La IA propone y una persona aprueba, con permisos según el puesto y registro de cada acción.</p>
+      <p>02</p>
+      <h2>CRM, leads y ventas</h2>
+      <p>Cada consulta llega a un solo lugar, y ninguna se pierde.</p>
+      <h3>Captación y gestión de leads</h3><p>Todas las consultas, de todas las fuentes, entran en un único sistema y llegan a quien debe atenderlas.</p>
+      <h3>Expediente completo del cliente</h3><p>Las llamadas, los mensajes, los pedidos y los documentos de cada cliente, en un solo lugar.</p>
+      <h3>Embudos de venta y flujos de trabajo</h3><p>Estados, guiones de gestión y tareas, para que ninguna consulta se quede en tierra de nadie.</p>
+      <h3>Presupuestos y seguimiento</h3><p>Un presupuesto bien diseñado sale en segundos, y su seguimiento corre solo.</p>
+      <h3>Medición del marketing</h3><p>Se ve de qué campaña llegó quien acabó pagando, y no solo quien dejó sus datos.</p>
+      <p>03</p>
+      <h2>Atención y comunicación con clientes</h2>
+      <p>Cada canal que usan los clientes, registrado y conectado.</p>
+      <h3>WhatsApp, SMS, correo electrónico y redes sociales</h3><p>Mensajes salientes y entrantes de todos los canales, registrados en el expediente del cliente.</p>
+      <h3>Centralita telefónica en la nube</h3><p>Una llamada entrante abre la ficha del cliente, y la grabación se guarda en ella.</p>
+      <h3>Reserva de citas y confirmaciones de asistencia</h3><p>Los clientes eligen por su cuenta un horario libre, y los recordatorios salen solos.</p>
+      <h3>Encuestas de satisfacción</h3><p>Se pregunta a los clientes con un formulario o con un bot, y las respuestas vuelven al sistema.</p>
+      <h3>Área personal para clientes y proveedores</h3><p>Consultar datos y hacer gestiones, sin levantar el teléfono.</p>
+      <p>04</p>
+      <h2>Pedidos, cobros y finanzas</h2>
+      <p>Desde el cierre de la venta hasta el cobro, en un solo proceso.</p>
+      <h3>Gestión de pedidos</h3><p>Productos, operaciones, envío y pago, desde el cierre de la venta hasta la entrega.</p>
+      <h3>Procesamiento de pagos y cobros</h3><p>Tarjetas de crédito, billeteras digitales y domiciliaciones bancarias, directamente desde el sistema.</p>
+      <h3>Suscripciones y cobro recurrente</h3><p>Los retainers y las suscripciones se cobran automáticamente, con seguimiento de lo que no se ha cobrado.</p>
+      <h3>Documentos contables</h3><p>Las facturas y los recibos salen del propio proceso y se sincronizan con la contabilidad.</p>
+      <h3>Inventario, compras y proveedores</h3><p>Catálogo, almacenes y órdenes de compra, conectados con los pedidos de los clientes.</p>
+      <p>05</p>
+      <h2>Automatización e integraciones</h2>
+      <p>Lo que se repite pasa al sistema, y los sistemas separados empiezan a hablar entre sí.</p>
+      <h3>Automatización de procesos</h3><p>Las tareas, las alertas, los mensajes y los cambios de estado ocurren solos, en el momento oportuno.</p>
+      <h3>Conexión con cualquier sistema que tenga API</h3><p>La información pasa entre los sistemas del negocio sin teclear dos veces.</p>
+      <h3>Tiendas y sitios web</h3><p>Los pedidos y las consultas del sitio web y de la tienda online entran directamente en el sistema.</p>
+      <h3>Formularios inteligentes</h3><p>Inscripción, firma de un documento, actualización de datos y compra, en un formulario que actualiza el sistema.</p>
+      <h3>Empresas de envíos</h3><p>El envío se abre desde el propio pedido, y su seguimiento vuelve a él.</p>
+      <p>06</p>
+      <h2>Gestión, informes y equipo</h2>
+      <p>Una sola imagen del negocio, en la que se puede confiar.</p>
+      <h3>Paneles de control e informes</h3><p>Una imagen actualizada del negocio, adaptada a cada puesto.</p>
+      <h3>Gestión de tareas y proyectos</h3><p>Quién hace qué y para cuándo, con agenda y seguimiento de la ejecución.</p>
+      <h3>Registro de horas de trabajo</h3><p>Horas por cliente, proyecto o pedido, para saber cuánto cuesta de verdad el trabajo.</p>
+      <h3>Procedimientos y protocolos</h3><p>Procedimientos de trabajo por escrito, para formar al personal rápido y crecer sin desorden.</p>
+      <p>07</p>
+      <h2>Especificación, formación y acompañamiento</h2>
+      <p>Un buen sistema empieza por la planificación y termina en un equipo que sabe trabajar con él.</p>
+      <h3>Especificación de procesos</h3><p>Se estudia el proceso a fondo antes de construir, hasta que queda claro cómo funciona en la práctica.</p>
+      <h3>Especificación de sistemas complejos</h3><p>De una idea a un plan con el que se puede construir.</p>
+      <h3>Formación e implementación sobre el terreno</h3><p>El equipo aprende a trabajar en el sistema, y yo estoy ahí hasta que se vuelve un hábito.</p>
+      <h3>Acompañamiento continuo</h3><p>El sistema sigue mejorando junto con el negocio.</p>
+      <h3>Consultoría para empresas</h3><p>Una sesión de unas horas y, después, un informe final con recomendaciones y un plan de trabajo.</p>
+      <p>Por dónde empezar</p>
+      <h2>No hace falta empezar por todo</h2>
+      <p>En una primera conversación se entiende qué es lo que más duele hoy en el negocio, y desde ahí se construye. La primera consulta es gratis.</p>
+      <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/es/ai-case-study">Cómo se ve en una empresa de 30 personas</a>
+<hr>
+<pre>--- page: https://l-be.com/business-ai ---</pre>
+<p>Sistema L-Be</p>
+      <h1>Sistemas empresariales basados en IA: un servidor dedicado y seguro para tu negocio</h1>
+      <p>Un servidor dedicado y seguro, basado en IA, con un entorno de desarrollo empresarial. Complementa los sistemas de gestión y operaciones que el negocio ya tiene, y se adapta a sus necesidades.</p>
+        <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>La idea</p>
+      <h2>Sus sistemas se quedan. Por encima se construye una sola capa que conoce todo el negocio.</h2>
+      <p>El CRM, la contabilidad y el inventario siguen funcionando como siempre. El servidor se conecta a ellos, reúne sus datos y pone IA a trabajar sobre ellos. En ese mismo entorno se construye lo que le falta al negocio: informes, paneles de control y aplicaciones.</p>
+      <p>Componentes centrales</p>
+      <h2>Qué se implementa en cada negocio</h2>
+      <p>Cada implementación es a medida, pero estos son los componentes que están en la base de todas ellas.</p>
+    <ul>
+      <li><h3>Base de datos central</h3><p>Los datos de todos los sistemas del negocio se reúnen en un solo lugar, con una única definición de negocio acordada para cada cifra.</p></li>
+      <li><h3>Sistema de BI</h3><p>Se pregunta en lenguaje sencillo y se recibe una respuesta basada en los datos de la empresa. Un informe útil se guarda y se vuelve a ejecutar con un clic.</p></li>
+      <li><h3>Paneles de control</h3><p>Paneles de control para cada puesto. Se pide un panel con palabras, y el sistema lo construye.</p></li>
+      <li><h3>Gestión de proyectos de desarrollo de negocio</h3><p>Hoja de ruta, decisiones y resoluciones, sprints, tareas e hitos, en un solo lugar.</p></li>
+      <li><h3>Base de conocimiento</h3><p>Los procedimientos, las decisiones y los documentos del negocio en un solo lugar, del que también lee la IA.</p></li>
+      <li><h3>Gestión del tráfico de IA</h3><p>Control centralizado del uso de la IA: quién pregunta, qué se puede ver y qué pasa por el sistema.</p></li>
+      <li><h3>Interfaces e integraciones</h3><p>Conexión con los sistemas que ya funcionan en el negocio, para que la información fluya sola entre ellos.</p></li>
+      <li><h3>Desarrollo de aplicaciones web basadas en IA</h3><p>Aplicaciones empresariales a medida, por ejemplo para el almacén, para el trabajo de campo o para la dirección, que se construyen sobre el mismo entorno y los mismos datos.</p></li>
+    </ul>
+      <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>Seguridad y control</p>
+      <h2>Una IA que trabaja dentro de límites claros</h2>
+      <p>Un sistema de IA conectado a los datos de una empresa tiene que ser seguro y estar controlado. Así está construido.</p>
+    <ul>
+      <li>Un servidor dedicado al negocio, y no un entorno compartido</li>
+      <li>La IA propone, y una persona aprueba</li>
+      <li>Cada persona ve solo lo que su puesto le permite</li>
+      <li>El acceso es con verificación en dos pasos</li>
+      <li>Los datos personales de los clientes no salen fuera</li>
+      <li>Cada acción queda registrada</li>
+    </ul>
+      <p>Cómo empieza</p>
+      <h2>De la especificación a un sistema que crece con el negocio</h2>
+    <ol>
+      <li><b>Especificación</b> Repasamos en conjunto los procesos y los sistemas existentes, y definimos qué necesita el negocio.</li>
+      <li><b>Puesta en marcha y conexión</b> Monto el servidor, conecto los sistemas e implemento los componentes centrales.</li>
+      <li><b>Construcción y acompañamiento</b> Construimos las aplicaciones y los informes que el negocio necesita, y seguimos desarrollando según haga falta.</li>
+    </ol>
+      <a href="https://l-be.com/es/ai-case-study">Así funciona en una empresa de 30 personas</a> <a href="https://l-be.com/es/ai-solutions">Ver todas las soluciones</a>
+      <p>Preguntas frecuentes</p>
+      <h2>Preguntas y respuestas sobre el sistema</h2>
+<h3>¿Qué es un sistema empresarial basado en IA?</h3>
+<p>Un servidor dedicado y seguro para el negocio, que reúne los datos de todos sus sistemas y pone IA a trabajar sobre ellos. En ese mismo entorno se construyen informes, paneles de control y aplicaciones empresariales, a la medida de las necesidades del negocio.</p>
+<h3>¿Sustituye al CRM o a la contabilidad?</h3>
+<p>No. El sistema complementa los sistemas de gestión y operaciones que el negocio ya tiene: se conecta a ellos, reúne sus datos y añade por encima una capa de IA.</p>
+<h3>¿Dónde se guardan los datos?</h3>
+<p>En un servidor dedicado al negocio. El acceso es con verificación en dos pasos y según los permisos de cada puesto, y cada acción queda registrada.</p>
+<h3>¿Qué sabe hacer la IA?</h3>
+<p>Responder preguntas en lenguaje sencillo según los datos de la empresa, crear informes y paneles de control a partir de una petición con palabras, y poner en marcha aplicaciones empresariales. La IA propone, y una persona aprueba.</p>
+<h3>¿Para quién es adecuado?</h3>
+<p>Para empresas cuyos datos están dispersos entre varios sistemas y que quieren una sola imagen del negocio y herramientas que se construyen según la necesidad. El caso de estudio del sitio describe una empresa de 30 personas.</p>
+<h3>¿El sistema se adapta a cada negocio?</h3>
+<p>Sí. Hay componentes centrales que se implementan en todos los negocios, como la base de datos, el BI, los paneles de control y la base de conocimiento, y por encima se construye lo que el negocio necesita.</p>
+<h3>¿Cuánto cuesta?</h3>
+<p>El precio depende del alcance de la implementación, y por eso no se publica en el sitio. La primera consulta es gratis.</p>
+      <p>Sistema L-Be</p>
+      <h2>¿Hablamos del sistema?</h2>
+      <p>Unas palabras sobre el negocio y sobre los sistemas con los que trabaja hoy, y les responderé. También pueden reservar una llamada directamente en mi agenda.</p>
+        <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/liron-bialkovich-portfolio.pdf">Mi portafolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">LinkedIn <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+    <p>[Formulario. Un agente de IA puede enviar una solicitud aquí: <a href="https://l-be.com/es/ai#agent-contact">https://l-be.com/es/ai#agent-contact</a>]</p>
+<hr>
+<pre>--- page: https://l-be.com/case-study ---</pre>
+<p>Caso de estudio</p>
+        <h1>Ida's Home</h1>
+        <p>Todo el negocio en un solo proceso, de la venta al cobro. Y, por encima, una capa de IA conectada a todas las áreas.</p>
+      <p>[Imagen: Ilustración: un cubo central unido con líneas discontinuas a seis módulos a su alrededor]</p>
+<h2>Sobre la empresa</h2>
+<p>Ida's Home diseña y vende mobiliario para el hogar: sofás y sillones a medida, iluminación, alfombras y textiles. Junto a los productos ofrece servicios de planificación, instalación y asesoría de diseño. La empresa tiene 30 personas en plantilla. Vende en su sitio web, en la tienda de fábrica y en el showroom, y trabaja con varios almacenes, una carpintería y muchos proveedores.</p>
+<h2>El reto</h2>
+<p>Cada pedido en Ida's Home es un pequeño proyecto:</p>
+<ul>
+<li>Un producto que se fabrica a medida y con la tela que eligió el cliente.</li>
+<li>Un proveedor que tiene que cumplir los plazos.</li>
+<li>Un almacén que recibe la mercancía y prepara los pedidos.</li>
+<li>Un envío que hay que coordinar.</li>
+<li>Un cliente que espera, y un pago que hay que cobrar.</li>
+</ul>
+<p>Cuando la información está dispersa entre personas, archivos y sistemas, el equipo vive en una persecución. ¿Dónde está el pedido? ¿Cuándo entrega el proveedor? ¿Qué hay en inventario? ¿Quién ha pagado?</p>
+<p>Vender lleva tiempo, porque es difícil encontrar el producto adecuado. Una persona nueva en ventas necesita meses para aprender el trabajo. Y la dirección no ve una sola imagen en la que se pueda confiar.</p>
+<p>La dirección definió una prueba sencilla:</p>
+<blockquote>Si el equipo sigue persiguiendo clientes, estados, envíos, listas de precios y documentos, el proyecto ha fracasado.</blockquote>
+      <p>El enfoque</p>
+      <h2>Cómo lo abordamos</h2>
+      <h3>Especificación antes de construir</h3><p>Nos sentamos con la dirección y repasamos cada proceso, hasta que quedó claro cómo funciona en la práctica.</p>
+      <h3>Una sola fuente para cada dato</h3><p>Cada sistema se actualiza automáticamente desde los demás. No hay que teclear dos veces y no hay “versiones”.</p>
+      <h3>Un proceso hasta el final</h3><p>Primero funciona sobre el terreno, y solo después se amplía al siguiente proceso.</p>
+      <h3>Automatización con aprobación humana</h3><p>Automatización donde la regla es clara. Una persona aprueba donde hay dinero o un cliente.</p>
+      <p>Qué se construyó</p>
+      <h2>Los procesos centrales del negocio, conectados de extremo a extremo</h2>
+        <h3>Venta en todos los canales</h3>
+        <ul>
+          <li>Sitio web, tienda de fábrica, showroom y puntos de venta.</li>
+          <li>Un punto de venta propio (POS) con procesamiento de pagos con tarjeta y pago mediante enlace.</li>
+          <li>Cada pedido, de cualquier canal, entra en el mismo recorrido.</li>
+        </ul>
+        <p>Un cliente, un pedido y una sola imagen, sin importar dónde haya comprado.</p>
+        <h3>Compras y proveedores</h3>
+        <ul>
+          <li>Las órdenes de compra salen a los proveedores automáticamente, según lo que pidió el cliente.</li>
+          <li>Cada proveedor recibe de forma periódica una imagen de lo que tiene abierto.</li>
+        </ul>
+        <p>Ningún pedido se olvida de camino al proveedor.</p>
+        <h3>SLA con proveedores y con clientes</h3>
+        <ul>
+          <li>Cada producto tiene una fecha de entrega calculada, y se hace seguimiento de todo lo que se sale de ella.</li>
+        </ul>
+        <p>En todo momento se ve qué se retrasa y dónde, antes de que el cliente llame.</p>
+        <h3>Inventario y almacenes</h3>
+        <ul>
+          <li>Gestión de inventario en varios almacenes.</li>
+          <li>Un producto que ya está en inventario se asigna al pedido automáticamente.</li>
+        </ul>
+        <p>Se vende lo que hay, y no se vuelve a pedir lo que ya está en la estantería.</p>
+        <h3>Escáneres inteligentes</h3>
+        <ul>
+          <li>Escaneo con el móvil en cada etapa: recepción del proveedor, preparación de pedidos, salida a reparto, devoluciones y reparaciones.</li>
+          <li>Cada escaneo hace avanzar el pedido automáticamente.</li>
+        </ul>
+        <p>El almacén mantiene al día a toda la empresa mientras trabaja, sin teclear.</p>
+        <h3>Envíos y coordinación de entregas</h3>
+        <ul>
+          <li>El cliente fija la fecha por su cuenta, mediante un enlace.</li>
+          <li>El personal de reparto se asigna a una ruta.</li>
+          <li>La aplicación de reparto documenta cada entrega con foto y firma.</li>
+          <li>Una interfaz para gestionar al personal de reparto y pagarle.</li>
+        </ul>
+        <p>Cada envío queda coordinado y documentado desde el inicio hasta la entrega.</p>
+        <h3>Marketing y atención al cliente</h3>
+        <ul>
+          <li>Mensajes automáticos al cliente en cada etapa del pedido.</li>
+          <li>Aviso proactivo al cliente, y solicitud de opinión al final.</li>
+        </ul>
+        <p>El cliente sabe qué está pasando sin preguntar, y el equipo de atención queda libre para ocuparse de lo que de verdad lo requiere.</p>
+        <h3>Productos complementarios</h3>
+        <ul>
+          <li>Una propuesta al cliente para completar su pedido, con un enlace personal.</li>
+        </ul>
+        <p>El pedido crece sin trabajo manual.</p>
+        <h3>Cobros y contabilidad</h3>
+        <ul>
+          <li>Sincronización con la contabilidad.</li>
+          <li>Procesamiento de pagos con tarjeta.</li>
+          <li>Seguimiento de cobros, y detección de desajustes entre los sistemas.</li>
+        </ul>
+        <p>Una imagen real de la deuda, y no una cifra de la que hay que adivinar qué hay detrás.</p>
+        <h3>BI y gestión</h3>
+        <ul>
+          <li>Paneles de control, flujo de caja y conclusiones que se actualizan solos.</li>
+        </ul>
+        <p>La dirección ve el negocio en tiempo real y decide con datos.</p>
+<h2>La capa de IA</h2>
+<p>Por encima de todos estos procesos hay un sistema de IA conectado a los datos de todas las áreas.</p>
+<ul>
+<li>Alguien del equipo pregunta en hebreo sencillo, por ejemplo “¿qué pedidos están retrasados en el proveedor?”, y recibe una respuesta basada en los datos de la empresa.</li>
+<li>Un informe útil se guarda y se puede volver a ejecutar con un clic.</li>
+<li>La gerencia pide un panel de control con palabras, y el sistema lo construye.</li>
+<li>Detrás de cada cifra hay una única definición de negocio acordada, de modo que todo el mundo habla del mismo “vendido” y del mismo “con retraso”.</li>
+</ul>
+<p><strong>IA responsable.</strong>  Un sistema de IA conectado a los datos de una empresa tiene que trabajar dentro de límites claros. El control viene integrado:</p>
+<ul>
+<li>La IA propone, y una persona aprueba.</li>
+<li>Cada persona ve solo lo que su puesto le permite.</li>
+<li>El acceso es con verificación en dos pasos.</li>
+<li>Los datos personales de los clientes no salen fuera.</li>
+<li>Cada acción queda registrada.</li>
+</ul>
+      <p>El resultado</p>
+      <h2>Qué cambió</h2>
+    <ul>
+      <li><b>Un proceso continuo</b> De la venta al cobro, en lugar de información dispersa entre personas y archivos.</li>
+      <li><b>Actualización desde el terreno</b> El almacén, el reparto y ventas actualizan el sistema mientras trabajan, desde el móvil.</li>
+      <li><b>Una sola imagen para toda la empresa</b> Cada área ve el mismo pedido, en el mismo estado y al mismo tiempo.</li>
+      <li><b>Una imagen fiable para la dirección</b> De pedidos, inventario y deudas. El sistema sacó a la luz desajustes que antes no se veían, y se resolvieron.</li>
+    </ul>
+<h2>Mi papel</h2>
+<ul>
+<li>Especificación de los procesos con la dirección.</li>
+<li>Puesta en marcha del CRM desde cero.</li>
+<li>Conexión de todos los sistemas entre sí.</li>
+<li>Construcción de la capa de IA y de las aplicaciones.</li>
+<li>Implementación sobre el terreno.</li>
+<li>Acompañamiento continuo.</li>
+</ul>
+      <a href="https://l-be.com/es/ai#agent-contact">¿Hablamos con un café en la mano?</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+<hr>
+<pre>--- page: https://l-be.com/digital-dreams ---</pre>
+<p>Especificación de sistemas y consultoría tecnológica</p>
+        <h1>Hacer realidad sueños digitales</h1>
+        <p>Soy consultor y especifico sistemas. Tomo la idea de un sistema complejo y la convierto en un plan con el que se puede construir.</p>
+        <p>Para personas emprendedoras y creativas que creen en sí mismas y quieren un amigo cercano y tecnológico que las acompañe en el camino.</p>
+          <a href="https://l-be.com/es/ai#agent-contact">Cuéntenme su sueño</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>[Imagen: Ilustración: un plano sobre una hoja, y de él se alza una estructura hecha de bloques]</p>
+      <p>Qué hago por ustedes</p>
+      <h2>Especifico, planifico y acompaño. Hasta que el sueño funciona.</h2>
+      <p>Antes de invertir en desarrollo, conviene saber exactamente qué se va a construir. Ese es mi trabajo.</p>
+    <ul>
+      <li><h3>Especificación del sistema</h3><p>Convierto el sueño en un documento de especificación ordenado: qué hace el sistema, para quién y cómo. De lo macro a lo micro.</p></li>
+      <li><h3>Arquitectura y planificación</h3><p>Planifico la estructura del sistema antes de que se escriba una sola línea de código. Mi especialidad: SaaS, automatización, IA y CRM.</p></li>
+      <li><h3>Plan de trabajo</h3><p>Divido el camino en un Roadmap, en decisiones y resoluciones, en sprints, en tareas y en hitos.</p></li>
+      <li><h3>Consultoría y acompañamiento</h3><p>Me quedo a su lado como un amigo cercano y tecnológico, y los represento ante las empresas de software y los proveedores de tecnología.</p></li>
+    </ul>
+      <a href="https://l-be.com/es/ai#agent-contact">Cuéntenme su sueño</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>Por qué planificar</p>
+      <h2>Planificar cuesta mucho menos que ejecutar</h2>
+      <p>Lo importante que es planificar, y planificar bien: cuando se planifican mejor los procesos que se quieren desarrollar, se ahorra mucho más adelante.</p>
+        <p><b>La mayoría de la gente en el mundo</b>  planifica un año y construye nueve.</p>
+        <p><b>Los chinos</b>  planifican nueve años y construyen uno.</p>
+      <p>Planificación Construcción</p>
+      <p>Conviene aprender de los chinos, porque invierten muchísimos recursos en la planificación en comparación con la ejecución. El coste de planificar es muy inferior al de ejecutar.</p>
+    <p>[Imagen: Liron Bialkovich]</p>
+      <p>Quién hará la especificación y los acompañará</p>
+      <h2>Alguien que sabe del tema, y cercano a tu corazón</h2>
+      <p>Es importante tener al lado a alguien que conozca tus necesidades, tus limitaciones y tus ventajas, y que sepa sacarles partido.</p>
+      <p>Especifico sistemas y bajo al detalle, con mucha experiencia en sistemas de información, en sistemas fintech y en Product Management. Soy arquitecto de sistemas web, especializado en SaaS y en los mundos de la automatización, la IA y el CRM.</p>
+      <a href="https://l-be.com/es/ai-liron-bialkovich">Un poco sobre mí</a>
+      <p>Así trabajo</p>
+      <h2>5 consejos ganadores</h2>
+      <p>Cinco reglas sacadas de mi experiencia, con las que especifico y planifico cada sistema.</p>
+    <ol>
+      <li>
+        <h3>Planificación y especificación jerárquicas y minuciosas</h3>
+        <p>De lo macro a lo micro.</p>
+      </li>
+      <li>
+        <h3>Un solo archivo que mapea todo el sistema</h3>
+        <p>Un único archivo dinámico que mapea y reúne toda la arquitectura del sistema, los servicios y los puntos clave. Uno que permite a cualquier agente de IA sumergirse en un segundo y conocer todo el sistema leyendo un solo archivo breve, que se actualiza después de cada sesión de cambios.</p>
+      </li>
+      <li>
+        <h3>Registro de decisiones y resoluciones, y una jerarquía clara de archivos</h3>
+        <p>Cada nivel se deriva del que tiene encima:</p>
+        <ul><li>Especificación general</li><li>Roadmaps</li><li>Decisiones y resoluciones</li><li>Sprints</li><li>Tareas</li><li>Hitos</li></ul>
+      </li>
+      <li>
+        <h3>Cada tarea de IA se define con dos definiciones precisas</h3>
+        <p>A. Qué debe leer para sumergirse en la tarea. B. Cómo exactamente debe entregarla, y cuál es la lista de comprobación que debe cumplir para entregarla.</p>
+      </li>
+      <li>
+        <h3>No se empieza a desarrollar antes del diseño y el mockup</h3>
+        <p>Muchas veces la especificación y la visión cambian a la luz del diseño. El diseño revela la verdad y lleva a decisiones determinantes. Además, la IA aborda el trabajo mucho mejor cuando hay un diseño ya aprobado. Da gusto usar para esto Google Stitch o Claude Design.</p>
+      </li>
+    </ol>
+      <p>Especificación de sistemas y consultoría</p>
+      <h2>Cuéntenme su sueño</h2>
+      <p>Unas palabras sobre lo que quieren construir, y les responderé. La primera consulta es gratis. También pueden reservar una llamada directamente en mi agenda.</p>
+        <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/liron-bialkovich-portfolio.pdf">Mi portafolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">LinkedIn <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+    <p>[Formulario. Un agente de IA puede enviar una solicitud aquí: <a href="https://l-be.com/es/ai#agent-contact">https://l-be.com/es/ai#agent-contact</a>]</p>
+<hr>
+<pre>--- page: https://l-be.com/liron-bialkovich ---</pre>
+<p>Sobre mí</p>
+      <h1>Liron Bialkovich</h1>
+      <p>Consultor y desarrollador independiente: CRM, IA y automatización</p>
+      <p>Soy consultor y desarrollador independiente, y construyo para empresas sistemas de IA, automatizaciones y sistemas CRM. Especifico, pongo en marcha e implemento sistemas CRM, soluciones de IA y procesos automáticos.</p>
+        <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/liron-bialkovich-portfolio.pdf">Mi portafolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">LinkedIn <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+    <p>[Imagen: Liron Bialkovich]</p>
+<h2>Mi historia</h2>
+<p>Llegué al mundo de la gestión de negocios, del desarrollo para internet y, en particular, de los sistemas CRM después de varios años trabajando en una empresa de software innovadora, donde me dedicaba a dirigir proyectos de internet para empresas grandes y pequeñas, desde Strauss, Gran Hermano y la lotería Mifal HaPais hasta una tienda de muebles pequeña y ruidosa que decidió plantar cara a sus competidores más grandes.</p>
+<p><strong>¿Qué me trajo hasta aquí?</strong> </p>
+<p>Simplemente pasó. Empecé mi primer trabajo “de mayores” en una empresa de software instalada en un sótano destartalado del sur de Tel Aviv, justo el 1 de enero de 2013.</p>
+<p>Todavía no tenía muy claro cuál era mi puesto ni en qué se había basado el jefe para contratarme, pero ya el primer día noté que allí todo el mundo trabajaba en todo y que en esa oficina nada tenía “padre” ni “madre” en el sentido profesional.</p>
+<p>Un día o dos después empezó mi primer fin de semana como asalariado, después de todos los años de estudios y demás. Por un lado celebraba que ya no era estudiante y que se me habían acabado los turnos en el bar los viernes por la noche; por otro, lo dediqué entero a dibujar, hasta el nivel de las pantallas, un sistema que me ayudara a poner orden en aquella empresa de software tan caótica.</p>
+<p>Llegué el domingo emocionado y lleno de energía, y desplegué ante mi jefe el plan, escrito en hojas A4 amarillas; lo que cuenta es la intención. Le expliqué lo importante que sería construir un sistema así, que gestionara los proyectos con los clientes y con el que el equipo de programación supiera qué hay que hacer sin preguntarme a cada segundo y demás.</p>
+<p>Enseguida me dijo: “Ahhh, jeje... eso se llama CRM, lo probamos una vez y nadie tuvo ganas de usarlo”. Y yo que creía haber descubierto América.</p>
+<p>No discutí con él; era un jefe digno de admiración, lo seguí y aprendí de todo lo que pude. Pero le dije, con estas palabras: “Llegará el día en que construya un sistema así, que ayude a las empresas a poner orden en su trabajo, ya verás” (y mira, Yos, con la esperanza de que estés leyendo esto: han pasado los años y mira lo que ha sido de mí :)</p>
+<p>Al final, y con el paso de los años, poco después de viajar y cruzar continentes, me encontré trabajando en una gran empresa israelí de turismo que quería crecer y lidiaba con los dolores del crecimiento. Ya había probado varios sistemas CRM que no la habían ayudado a despegar.</p>
+<p>El jefe quería hacer allí un MOVE y, de algún modo, a través de la madre de un compañero de estudios, aquello llegó hasta mí. Me pidió que lo ayudara a encontrar y adoptar una solución de verdad, de una vez por todas: un sistema CRM con un servicio singular con el que se pudiera crecer de la mano, de esos que realmente cumplen.</p>
+<p>Me pagó de verdad por hacerlo y me contrató a jornada completa para encontrarle una solución así, como si mi camino estuviera trazado de antemano. Tras una investigación especialmente a fondo, encontré respuesta en dos tipos de proveedores:</p>
+<p><strong>El primer tipo</strong>  era muy caro y rimbombante: quería un montón de dinero y exigía demasiada paciencia. Además, ponía la atención sobre todo en las grandes empresas de bolsillos profundos, así que siempre sentí que yo era demasiado pequeño para él y que eso me pasaría factura en el futuro, cuando de verdad lo necesitáramos.</p>
+<p><strong>El segundo tipo</strong>  llegó al mercado para morder una parte del pastel del primero y ofrecía una solución barata, prefabricada y que casi encaja, con una capacidad mínima para funcionar de forma autónoma, metódica y adaptada a nuestras necesidades. Además, cuando quisiéramos mejorar, toparíamos con un montón de dificultades y limitaciones que, en muchos casos, nos obligarían o a ceder, y mucho, o a seguir buscando la siguiente solución, lo que nos haría retroceder y nos impediría avanzar.</p>
+<p>Esta dicotomía entre las soluciones hace que, casi siempre, quienes tienen un negocio con recursos más modestos se conformen con la solución barata. Incluso cuando tienen liquidez para invertir en el negocio. Y es solo porque no encontraron el servicio adecuado. Renuncian a demasiadas características del sistema que querrían tener y, como resultado, quizá avanzan, pero ni de lejos al ritmo deseado.</p>
+<p>En definitiva, los resultados de la investigación mostraron que el mercado está saturado de sistemas, pero es muy deficiente en las tres cosas que, en realidad, más le importan al mercado israelí: capacidades de sistema suficientes, acompañamiento/servicio personal y personalización.</p>
+<h2>Qué hice</h2>
+<p>Bueno, ya venía con mucha experiencia trabajando con empresas de software y desarrollando sistemas en la nube para internet. Así que localicé la empresa de software más adecuada para la misión y juntos desarrollamos un sistema, un servicio y un método con el que no solo proporciono herramientas para impulsar el negocio, sino que además entro a fondo en sus cimientos y le enseño a enderezar el rumbo hacia arriba y a crecer de forma medible y gradual.</p>
+<p>Dirigiré para ustedes un proyecto integral de implementación de un sistema CRM que hará por su negocio lo que un sistema CRM debe hacer de verdad: trabajar para ustedes y supervisar por ustedes, 24/7</p>
+<p>Eso significa que no solo tendrán un sistema de gestión de clientes que impulse su actividad; tendrán también a un profesional a su lado, pensado para quedarse cerca y ayudarlos a aplicar y mejorar cada vez más procesos, hasta que funcionen como una institución bien engrasada. Así se hacen hoy los negocios sostenibles.</p>
+<h2>Un poco más sobre mí, mi trayectoria y mi visión</h2>
+<p>Tras unos años como cocinero y encargado en restaurantes de chef, estudios de cocina, una licenciatura en Comunicación, una trayectoria variada y un gran interés por la gestión de negocios y la economía, cambié de profesión, y desde 2013 desarrollo empresas y negocios.</p>
+<p>En mis primeros años en el sector trabajé como asalariado, y en 2017 me di de alta oficialmente como autónomo: un independiente que va de negocio en negocio y ayuda a su gente a correr más rápido.</p>
+<p>He construido para distintas empresas sistemas de automatización complejos para procesos de negocio de lo más variopintos, y he dirigido proyectos de desarrollo web enormes, pequeños y para muchos y muy diversos tipos de negocios. He acompañado a empresas que vivieron una gran transformación digital, y algunas duplicaron y triplicaron su actividad en uno o dos años.</p>
+<p>En el pasado dirigí proyectos tecnológicos en el entorno de internet, desde el lado de la gestión, el técnico, el creativo, el financiero y el operativo, para cientos de marcas (desde algunas de las que quizá nunca oirán hablar hasta bancos, centros universitarios, Gran Hermano, los Ferrocarriles de Israel, Strauss, Disney Israel y grandes agencias de publicidad, entre 2013 y 2015).</p>
+<p>He tenido la suerte de acompañar más de 300 proyectos, pequeños y grandes, cada uno pensado para impulsar un negocio concreto, tanto en su funcionamiento interno como en su relación con el mundo exterior.</p>
+<p>Desde 2017 me dedico sobre todo a la consultoría, la especificación, la puesta en marcha y la implementación de sistemas de gestión de clientes y de procesos de negocio (CRM/ERP/BPM) a medida, tras un análisis minucioso que hago de todos los procesos importantes que podemos gestionar con métodos algo más innovadores y eficientes que aquellos a los que estamos acostumbrados.</p>
+<p>En este tiempo he acompañado a más de 80 personas al frente de negocios y empresas (desde el negocio pequeño hasta empresas de 100 personas), a las que ayudé a implantar cambios significativos a lo largo y ancho del negocio, Hands On.</p>
+<p>Conozco a mis clientes por dentro: a su gente, sus procedimientos, sus presiones y lo que funciona bien.</p>
+<p>A cada cliente lo trato como si yo fuera socio de su negocio: su éxito es mi éxito, y estoy tan ligado al negocio como si trabajara en él como uno más.</p>
+<h2>En qué puedo ayudar</h2>
+<h3>Automatización</h3>
+<p>Automatización, en una palabra. Si algo se puede especificar y ocurre en el mundo digital, se le puede construir una automatización.</p>
+<h3>Mover las cosas</h3>
+<p>Que en nuestro mundo se pueda hacer de todo, y que al final todo sea tiempo y dinero, no significa que todo se mueva solo: estoy aquí para mover las cosas y, si hace falta, también me levanto y las muevo yo.</p>
+<h3>Procesos de atención al cliente</h3>
+<p>Desde los canales de comunicación con los clientes hasta el método de atención y todas las herramientas digitales que ayudan a que el servicio se acerque a la perfección.</p>
+<h3>Ventas</h3>
+<p>Desde herramientas que ayudan al equipo de ventas a mejorar día a día hasta “vendedores automáticos”, incluida formación en ventas a medida.</p>
+<h3>Marketing y todo lo que lo conecta con los demás departamentos, y de vuelta</h3>
+<p>Desde incorporar a los proveedores de marketing adecuados hasta la creatividad para difundir nuestros mensajes hacia fuera.</p>
+<h3>Planificación, especificación y gestión de proyectos digitales y sistemas de información</h3>
+<p>Toda necesidad tiene respuesta; la cuestión es dónde buscarla y cómo planificar su puesta en práctica.</p>
+<h3>Ayuda para impulsar los intereses importantes del negocio</h3>
+<p>Ya sea para reforzar el área de desarrollo de negocio, las relaciones públicas, la creación de programas de socios, o la captación de comercializadores, distribuidores, inversores y miembros para listas de distribución o congresos.</p>
+<h3>Contenido, contenido, contenido</h3>
+<p>Hoy todo negocio necesita saber generar contenido, y de la mayor calidad posible. Herramientas digitales para mejorar el funcionamiento general.</p>
+<h3>Planificación y redacción de protocolos para gestionar el trabajo</h3>
+<p>Muy útil para empresas que quieren crecer más rápido y formar a su personal con facilidad.</p>
+<h3>Selección de personal</h3>
+<p>Selección de personal y filtrado eficaz de candidaturas.</p>
+<h3>Refuerzo del área de operaciones</h3>
+<p>Implementación de sistemas para gestionar inventarios, compras, suministro y notas de entrega, gestión de proveedores, colaboraciones, gestión de pedidos, automatización de la recogida de opiniones, envíos y más.</p>
+      <a href="https://l-be.com/es/ai#agent-contact">¿Hablamos con un café en la mano?</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/es/ai-case-study">Caso de estudio: mi cliente número 1</a>
+    <p lang="en">Liron Bialkovich is an independent consultant and developer who builds AI systems, automations and CRM systems for companies. At L-Be he specifies, sets up and implements CRM systems, AI solutions and automated processes.</p>
+<hr>
+<pre>--- page: https://l-be.com/kala-crm ---</pre>
+<p>Kala CRM · hecho en Israel</p>
+    <h1>Implementación de Kala CRM: un sistema CRM israelí, con una personalización de verdad</h1>
+    <p>He acompañado el desarrollo de Kala CRM desde su primer día hasta hoy. Juntos desarrollamos una solución para empresas israelíes que necesitan un servicio personal y una personalización de verdad: un sistema que permite construir casi cualquier proceso que se pueda imaginar.</p>
+      <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>[Imagen: Ilustración: un cubo central oscuro y ocho cubos de colores a su alrededor. Cada uno está unido a él con una línea continua]</p>
+      <p>Sobre el sistema</p>
+      <h2>¿Qué es Kala CRM?</h2>
+      <p>Un sistema israelí para la gestión, el marketing y la automatización del negocio. Consultas, clientes, ventas, cobros, agendas y comunicación con clientes, en un solo sistema y completamente en hebreo. En mi opinión, uno de los sistemas más avanzados y cómodos de Israel.</p>
+    <ul>
+      <li>Centralización y gestión de consultas y leads de todas las fuentes</li>
+      <li>Base de clientes y expedientes de cliente</li>
+      <li>Pedidos y procesos de venta</li>
+      <li>Presupuestos con seguimiento automático</li>
+      <li>Documentos contables</li>
+      <li>Procesamiento de pagos con tarjeta, billeteras digitales y domiciliaciones bancarias (Masav)</li>
+      <li>Suscripciones y cobro recurrente</li>
+      <li>Centralita telefónica, WhatsApp, SMS y correo electrónico</li>
+      <li>Automatizaciones y bots basados en IA</li>
+      <li>Agendas, tareas y reserva de citas en autoservicio</li>
+      <li>Gestión de proyectos, inventario y proveedores</li>
+      <li>Conexión con sitios WordPress y con otros sistemas</li>
+    </ul>
+      <p>Hecho en Israel</p>
+      <h2>Por qué un sistema CRM israelí</h2>
+      <p>Un negocio israelí trabaja con procesamiento de pagos israelí, con contabilidad israelí y con clientes que hablan hebreo. Un sistema construido aquí ya está conectado a todo eso.</p>
+    <ul>
+      <li><b>Completamente en hebreo</b> Un sistema construido en hebreo, de derecha a izquierda, para negocios que trabajan en Israel.</li>
+      <li><b>Proveedores israelíes</b> Procesamiento de pagos, contabilidad, centralitas telefónicas, Masav (el sistema israelí de compensación bancaria) y WhatsApp, conectados desde el propio sistema.</li>
+      <li><b>Una personalización de verdad</b> Los campos, las pantallas y los procesos se construyen según la forma en que trabaja el negocio, y no al revés.</li>
+      <li><b>Servicio personal</b> Soporte en hebreo, y un sistema que se actualiza y mejora de forma constante.</li>
+    </ul>
+      <p>Conexiones</p>
+      <h2>Conectado a los proveedores que un negocio israelí necesita</h2>
+      <p>Estos son los socios de negocio y los sistemas que conecto y conozco de cerca: procesamiento de pagos, contabilidad, telefonía, mailing, envíos, automatización e IA.</p>
+    <p>[Imagen: Logotipos de socios de negocio y sistemas que se conectan a Kala CRM y a los procesos que construyo: IA, automatización, procesamiento de pagos, contabilidad, telefonía, mailing, envíos y más]</p>
+      <p>Qué hago yo</p>
+      <h2>De la especificación a un sistema que trabaja para ustedes</h2>
+      <p>Conozco Kala CRM por dentro, desde su primer día. Eso es lo que me permite construir en él procesos que otros sistemas no permiten.</p>
+    <ul>
+      <li><h3>Especificación de los procesos</h3><p>Nos sentamos a repasar el negocio y definimos exactamente qué debe hacer el sistema.</p></li>
+      <li><h3>Puesta en marcha y personalización</h3><p>Construyo el sistema según la especificación: campos, pantallas, permisos y procesos.</p></li>
+      <li><h3>Automatizaciones, bots e IA</h3><p>Lo que se repite pasa a automatización, y los bots basados en IA responden a los clientes.</p></li>
+      <li><h3>Conexiones, formación y acompañamiento</h3><p>Conecto con los proveedores con los que trabaja el negocio, formo al equipo y me quedo para acompañar.</p></li>
+    </ul>
+      <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>Preguntas frecuentes</p>
+      <h2>Preguntas y respuestas sobre Kala CRM</h2>
+<h3>¿Qué es Kala CRM?</h3>
+<p>Kala CRM es un sistema israelí para la gestión, el marketing y la automatización del negocio: consultas, clientes, ventas, cobros, agendas y comunicación con clientes en un solo sistema, completamente en hebreo y a medida.</p>
+<h3>¿Para quién es adecuado Kala CRM?</h3>
+<p>Para empresas y negocios israelíes que quieren un sistema CRM en hebreo, un servicio personal y procesos adaptados exactamente a su forma de trabajar.</p>
+<h3>¿En qué se diferencia Kala CRM de los sistemas CRM internacionales?</h3>
+<p>Kala es un sistema hecho en Israel: está construido en hebreo, conectado a los proveedores israelíes (procesamiento de pagos, contabilidad, centralitas telefónicas, Masav y WhatsApp) y admite una personalización profunda con servicio local.</p>
+<h3>¿Con qué sistemas se conecta Kala CRM?</h3>
+<p>Con el procesamiento de pagos con tarjeta y las billeteras digitales, con sistemas de contabilidad, con centralitas telefónicas, con Masav (el sistema israelí de compensación bancaria), con WhatsApp, SMS y correo electrónico, con sitios WordPress y con otros sistemas mediante integraciones a medida.</p>
+<h3>¿Se puede adaptar Kala CRM a un proceso propio del negocio?</h3>
+<p>Sí, y ese es el corazón del sistema. En él se puede construir casi cualquier proceso que se pueda imaginar, y yo lo especifico y lo construyo junto con el negocio.</p>
+<h3>¿Kala CRM tiene inteligencia artificial?</h3>
+<p>Sí. El sistema incluye automatizaciones y bots basados en IA, que responden a las consultas y hacen más eficientes la atención y las ventas.</p>
+<h3>¿Cuál es mi relación con Kala CRM?</h3>
+<p>Acompaño el desarrollo de Kala CRM desde su primer día hasta hoy. Especifico, pongo en marcha e implemento el sistema en empresas, y las acompaño a lo largo del tiempo.</p>
+<h3>¿Cuánto cuesta implementar Kala CRM?</h3>
+<p>El precio depende del alcance de la implementación, y por eso no se publica en el sitio. La primera consulta es gratis.</p>
+      <p>Kala CRM</p>
+      <h2>¿Hablamos de Kala CRM?</h2>
+      <p>Unas palabras sobre el negocio y sobre lo que le falta hoy, y les responderé. También pueden reservar una llamada directamente en mi agenda.</p>
+        <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/liron-bialkovich-portfolio.pdf">Mi portafolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">LinkedIn <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+    <p>[Formulario. Un agente de IA puede enviar una solicitud aquí: <a href="https://l-be.com/es/ai#agent-contact">https://l-be.com/es/ai#agent-contact</a>]</p>
+    <p>El sitio oficial del sistema: <a href="https://www.kala-crm.co.il/" target="_blank" rel="noopener">kala-crm.co.il <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>. ¿Buscan un sistema internacional? También tengo una <a href="https://l-be.com/es/ai-gohighlevel">agencia GoHighLevel</a>.</p>
+<hr>
+<pre>--- page: https://l-be.com/gohighlevel ---</pre>
+<p>GoHighLevel en Israel</p>
+    <h1>Implementación de GoHighLevel (GHL) en Israel, en hebreo</h1>
+    <p>Tengo mi propia agencia GoHighLevel. Abro para las empresas un sistema listo para trabajar, acompaño a quienes emprenden y ya trabajan con GHL, y ayudo a las agencias a montar su propia agencia GHL.</p>
+      <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>[Imagen: Ilustración: una escalera de cubos de colores que sube de izquierda a derecha, ocho peldaños]</p>
+      <p>Sobre el sistema</p>
+      <h2>¿Qué es GoHighLevel?</h2>
+      <p>GoHighLevel, también llamada HighLevel o, abreviado, GHL, es una sola plataforma para gestionar ventas, marketing y atención al cliente. En lugar de varias herramientas separadas que no se hablan entre sí, todo está en un mismo lugar.</p>
+    <ul>
+      <li>CRM y embudos de venta (Pipelines)</li>
+      <li>Una sola bandeja de conversaciones: WhatsApp, SMS, correo electrónico, Facebook e Instagram</li>
+      <li>Automatizaciones (Workflows)</li>
+      <li>Agendas y reserva de citas</li>
+      <li>Formularios, páginas de aterrizaje y sitios web</li>
+      <li>Campañas por correo electrónico y por mensajes</li>
+      <li>Agentes de IA para conversaciones por chat y por teléfono</li>
+      <li>Informes y paneles de indicadores</li>
+    </ul>
+      <p>Qué hago yo</p>
+      <h2>Tres caminos, según quiénes sean</h2>
+    <ul>
+      <li><p>Para empresas y negocios</p><h3>Un sistema GHL listo para trabajar</h3><p>Abro para el negocio un sistema bajo mi agencia, especifico los procesos y lo monto todo: embudos de venta, automatizaciones, WhatsApp, agendas y formularios. El equipo recibe formación, y yo me quedo para acompañar.</p></li>
+      <li><p>Para quienes emprenden y ya trabajan con GHL</p><h3>Orden, automatizaciones e IA en un sistema existente</h3><p>¿El sistema ya existe, pero no funciona como debería? Lo ordeno, construyo las automatizaciones que faltan, conecto sistemas externos y añado agentes de IA.</p></li>
+      <li><p>Para agencias</p><h3>Montar su propia agencia GHL</h3><p>Monto con ustedes una agencia desde cero: cuenta de agencia, subcuentas (Sub-accounts) para los clientes, plantillas listas para duplicar (Snapshots) y la marca del sistema con el nombre de la agencia (White Label). Para quien quiera vender el sistema como producto, también SaaS Mode.</p></li>
+    </ul>
+      <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>GHL en Israel</p>
+      <h2>Qué conviene saber antes de implementar GHL en Israel</h2>
+      <p>El sistema se construyó para el mercado estadounidense, y por eso implementarlo en Israel requiere algunas adaptaciones. Estas son las cosas que configuro en cada puesta en marcha.</p>
+    <ul>
+      <li><b>Hebreo y RTL</b> Los formularios, los mensajes, las páginas y las automatizaciones se construyen en hebreo, con alineación a la derecha.</li>
+      <li><b>WhatsApp</b> En Israel es el canal de comunicación principal. Está conectado a la bandeja de conversaciones y a las automatizaciones.</li>
+      <li><b>Telefonía y mensajes</b> Los números israelíes y el envío de mensajes requieren una configuración correcta, o la conexión con un proveedor local.</li>
+      <li><b>Procesamiento de pagos y facturas</b> Se conecta con los sistemas israelíes con los que el negocio ya trabaja.</li>
+      <li><b>Zona horaria, moneda e idioma</b> Se configuran de antemano en cada cuenta, para que las agendas, los precios y los mensajes sean correctos.</li>
+    </ul>
+      <p>Cómo empezar</p>
+      <h2>De la primera conversación a un sistema en funcionamiento</h2>
+    <ol>
+      <li><b>Llamada de presentación</b> Se entiende qué necesita el negocio. La primera consulta es gratis.</li>
+      <li><b>Especificación y puesta en marcha</b> Especifico los procesos y monto el sistema.</li>
+      <li><b>Formación y acompañamiento</b> El equipo aprende a trabajar en el sistema, y yo sigo acompañando.</li>
+    </ol>
+      <p>Implemento sistemas CRM desde 2017, y desarrollo empresas y negocios desde 2013. Tengo clientes que llevan ya 11 años conmigo. Más sobre mí: <a href="https://l-be.com/es/ai-liron-bialkovich">Liron Bialkovich</a>. Y cómo es un proyecto completo: <a href="https://l-be.com/es/ai-case-study">el caso de estudio</a>.</p>
+      <p>Preguntas frecuentes</p>
+      <h2>Preguntas y respuestas sobre GHL</h2>
+<h3>¿Qué es GoHighLevel (GHL)?</h3>
+<p>GoHighLevel es una sola plataforma para gestionar ventas, marketing y atención al cliente: CRM, embudos de venta, bandeja de conversaciones, automatizaciones, agendas, formularios, páginas de aterrizaje y agentes de IA. También se la llama HighLevel y, abreviado, GHL.</p>
+<h3>¿GHL es adecuada para negocios en Israel?</h3>
+<p>Sí, con adaptaciones. El sistema se construyó para el mercado estadounidense, y por eso hay que configurar bien el hebreo, WhatsApp, la telefonía, el procesamiento de pagos y las facturas. Esa es la parte que hago yo.</p>
+<h3>¿Se puede trabajar con GHL en hebreo?</h3>
+<p>Todo lo que ven los clientes se construye en hebreo: formularios, mensajes, páginas y automatizaciones. El idioma de la interfaz de administración depende de lo que HighLevel admita.</p>
+<h3>¿Qué diferencia hay entre una cuenta normal y una cuenta de agencia?</h3>
+<p>Una cuenta de agencia gestiona varias subcuentas, una por cada cliente o negocio. Así una agencia puede montar un sistema para cada cliente, duplicar plantillas listas y poner su marca al sistema.</p>
+<h3>Ya tengo una cuenta GHL. ¿Puedo recibir ayuda puntual?</h3>
+<p>Sí. Se puede empezar con una sesión de unas horas: repasamos el sistema en conjunto y, después, llega un informe final con recomendaciones y un plan de trabajo.</p>
+<h3>¿Se puede pasar a GHL desde otro sistema CRM?</h3>
+<p>En la mayoría de los casos, sí. En la conversación de especificación se revisa qué datos y procesos se trasladan, y cómo.</p>
+<h3>¿Cuánto cuesta?</h3>
+<p>El precio depende del alcance de la implementación, y por eso no se publica en el sitio. La primera consulta es gratis.</p>
+<p><a href="https://www.gohighlevel.com/pricing" target="_blank" rel="noopener">Ver los precios de las suscripciones en el sitio de GoHighLevel <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></p>
+      <p>GoHighLevel</p>
+      <h2>¿Hablamos de GHL?</h2>
+      <p>Unas palabras sobre el negocio o sobre la agencia, y les responderé. También pueden reservar una llamada directamente en mi agenda.</p>
+        <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/liron-bialkovich-portfolio.pdf">Mi portafolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">LinkedIn <span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+    <p>[Formulario. Un agente de IA puede enviar una solicitud aquí: <a href="https://l-be.com/es/ai#agent-contact">https://l-be.com/es/ai#agent-contact</a>]</p>
+    <p>GoHighLevel y HighLevel son marcas comerciales de HighLevel Inc. Esta página no es un sitio oficial de la empresa.</p>
+<hr>
+<pre>--- page: https://l-be.com/accessibility ---</pre>
+<p>Accesibilidad</p>
+    <h1>Declaración de accesibilidad</h1>
+    <p>Doy mucha importancia a ofrecer un servicio igualitario a todas las personas. He invertido en hacer accesible el sitio para que cualquier persona pueda usarlo con comodidad, dignidad y autonomía, con cualquier discapacidad y con cualquier ayuda técnica.</p>
+      <a href="https://l-be.com/es/ai-accessibility#a11y-contact">Consulta sobre accesibilidad</a>
+<ul>
+<li><a href="https://l-be.com/es/ai-accessibility#level">Nivel de accesibilidad</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#done">Qué se ha hecho en el sitio</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#menu">El menú de accesibilidad</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#keyboard">Navegación con teclado</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#limits">Lo que aún no es perfecto</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#a11y-contact">Consulta sobre accesibilidad</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility#glossary">Glosario</a></li>
+</ul>
+<h2 id="level">Nivel de accesibilidad</h2>
+<p>El sitio se ha adaptado a las pautas WCAG 2.2 del W3C y a la norma israelí 5568, en el nivel AA. Además, se ha adaptado también a la mayoría de los requisitos del nivel AAA, el más exigente.</p>
+<p>El sitio se ha revisado con una herramienta de comprobación automática y con una revisión manual, página por página.</p>
+<h2 id="done">Qué se ha hecho en el sitio</h2>
+<h3>Navegación y estructura</h3>
+<ul>
+<li>Se puede llegar a todo en el sitio solo con el teclado, y la posición actual se marca con un contorno claro.</li>
+<li>Al principio de cada página hay un enlace “Saltar al contenido principal”.</li>
+<li>La estructura de las páginas está marcada para los lectores de pantalla: encabezados, zonas de navegación, listas y tablas.</li>
+<li>El menú y el pie de página son idénticos en todas las páginas, y la página actual está marcada en el menú.</li>
+<li>Un enlace que se abre en una pestaña nueva o en una ventana emergente está indicado como tal.</li>
+</ul>
+<h3>Visión</h3>
+<ul>
+<li>El contraste del texto es de al menos 7:1.</li>
+<li>Se puede ampliar el texto hasta un 200% sin perder contenido, y el sitio se adapta a cualquier ancho de pantalla.</li>
+<li>Toda imagen que contiene información tiene una descripción. Las capturas de los mensajes de clientes están transcritas íntegramente, y también se pueden leer como texto normal.</li>
+<li>La información no se transmite solo mediante el color.</li>
+<li>El sitio respeta el modo de alto contraste del sistema operativo.</li>
+</ul>
+<h3>Audición</h3>
+<ul>
+<li>En el sitio no hay contenido de audio ni de vídeo, y no hay sonidos.</li>
+</ul>
+<h3>Motricidad</h3>
+<ul>
+<li>Los botones y los enlaces son lo bastante grandes para pulsarlos con comodidad: al menos 44 píxeles.</li>
+<li>No hay acciones que requieran arrastrar, gestos complejos ni pulsaciones rápidas.</li>
+<li>En el sitio no hay límites de tiempo.</li>
+</ul>
+<h3>Comprensión y atención</h3>
+<ul>
+<li>No hay parpadeos, y todas las animaciones se pueden detener. El sitio respeta también el ajuste “Reducir movimiento” del sistema operativo.</li>
+<li>Hay una versión abreviada de la página de inicio (“Versión corta”), para quien quiera leer menos.</li>
+<li>Las siglas y los términos profesionales se explican en el glosario que hay al final de esta página.</li>
+</ul>
+<h3>Formularios</h3>
+<ul>
+<li>Cada campo tiene una etiqueta, y los campos obligatorios están marcados con la palabra “obligatorio”.</li>
+<li>Los mensajes de error están escritos con palabras, aparecen junto al campo y el lector de pantalla los lee en voz alta.</li>
+</ul>
+<h2 id="menu">El menú de accesibilidad</h2>
+<p>En la esquina de la pantalla hay un botón redondo que abre el menú de accesibilidad. Los ajustes se guardan en el navegador para la próxima visita, y se pueden restablecer en cualquier momento.</p>
+<ul>
+<li>Aumentar y reducir el texto</li>
+<li>Alto contraste</li>
+<li>Vista oscura (inversión de colores)</li>
+<li>Escala de grises</li>
+<li>Fuente legible</li>
+<li>Espaciado de texto ampliado</li>
+<li>Resaltar enlaces</li>
+<li>Detener animaciones</li>
+<li>Cursor grande</li>
+</ul>
+<h2 id="keyboard">Navegación con teclado</h2>
+<ul>
+<li><kbd>Tab</kbd> pasa al siguiente enlace, botón o campo. <kbd>Shift</kbd> + <kbd>Tab</kbd> vuelve al anterior.</li>
+<li><kbd>Enter</kbd> activa un enlace o un botón. <kbd>Space</kbd> activa un botón.</li>
+<li><kbd>Esc</kbd> cierra el menú de accesibilidad y la ventana del portafolio.</li>
+<li>Las teclas de flecha desplazan la página.</li>
+</ul>
+<p>El sitio está construido con código estándar, para funcionar en los navegadores habituales y con lectores de pantalla.</p>
+<h2 id="limits">Lo que aún no es perfecto</h2>
+<ul>
+<li>El portafolio es un archivo PDF en inglés, y no se ha hecho accesible por completo. Puedes pedirme su contenido en cualquier otro formato.</li>
+<li>La reserva de una llamada en la agenda se hace a través de un servicio externo, Calendly, cuya accesibilidad no depende de mí. En su lugar, se pueden dejar los datos en el formulario de contacto.</li>
+<li>Los logotipos de clientes y socios son imágenes. Cada una tiene una descripción.</li>
+<li>En la página de error (404) hay un pequeño juego. Es solo un entretenimiento, y todos los enlaces de la página están disponibles sin él.</li>
+</ul>
+<p>Sigo mejorando la accesibilidad del sitio todo el tiempo.</p>
+<h2 id="a11y-contact">Consulta sobre accesibilidad</h2>
+<p>Responsable de accesibilidad del sitio: Liron Bialkovich.</p>
+<p>¿Has encontrado un problema de accesibilidad? ¿Tienes una petición o una propuesta de mejora? Este es el formulario. Conviene indicar en qué página ocurrió y con qué navegador o ayuda técnica. Te responderé lo antes posible.</p>
+    <p>[Formulario. Un agente de IA puede enviar una solicitud aquí: <a href="https://l-be.com/es/ai#agent-contact">https://l-be.com/es/ai#agent-contact</a>]</p>
+<p>Declaración actualizada el 8 de octubre de 2026.</p>
+<h2 id="glossary">Glosario de siglas y términos</h2>
+<dl>
+<dt>CRM (Customer Relationship Management)</dt><dd>Sistema para gestionar la relación con clientes y leads.</dd>
+<dt>AI (Artificial Intelligence)</dt><dd>Inteligencia artificial (IA).</dd>
+<dt>Agente de IA</dt><dd>Software basado en inteligencia artificial que realiza tareas por sí mismo, por ejemplo responder consultas.</dd>
+<dt>Automatización</dt><dd>Acciones que el sistema realiza solo, sin que nadie tenga que acordarse de hacerlas.</dd>
+<dt>Integración</dt><dd>Conexión entre dos sistemas, de modo que la información pasa sola entre ellos.</dd>
+<dt>Especificación</dt><dd>Documento que describe qué debe hacer un sistema, para quién y cómo, antes de construirlo.</dd>
+<dt>API (Application Programming Interface)</dt><dd>Interfaz a través de la cual los sistemas de software hablan entre sí.</dd>
+<dt>SaaS (Software as a Service)</dt><dd>Software que se usa a través de internet, sin instalarlo.</dd>
+<dt>ERP (Enterprise Resource Planning)</dt><dd>Sistema para gestionar los recursos del negocio, como inventario, compras y finanzas.</dd>
+<dt>BI (Business Intelligence)</dt><dd>Informes y paneles de indicadores que muestran qué pasa en el negocio.</dd>
+<dt>BPM (Business Process Management)</dt><dd>Gestión de procesos de negocio.</dd>
+<dt>POS (Point of Sale)</dt><dd>Caja, el punto de venta.</dd>
+<dt>SLA (Service Level Agreement)</dt><dd>Compromiso sobre tiempos de atención y nivel de servicio.</dd>
+<dt>UI (User Interface)</dt><dd>La interfaz de usuario: lo que se ve en la pantalla.</dd>
+<dt>LLM (Large Language Model)</dt><dd>Modelo de lenguaje grande, la tecnología que hay detrás de las herramientas de IA que entienden y escriben texto.</dd>
+<dt>Roadmap</dt><dd>Hoja de ruta: el orden de las etapas en la construcción de un sistema, y qué entra en cada etapa.</dd>
+<dt>Sprint</dt><dd>Periodo de trabajo corto y fijo, normalmente de una o dos semanas, al final del cual hay un entregable.</dd>
+<dt>PDF (Portable Document Format)</dt><dd>Tipo de archivo de documento.</dd>
+</dl>
+<hr>
+<pre>--- page: https://l-be.com/privacy ---</pre>
+<p>Privacidad</p>
+    <h1>Política de privacidad</h1>
+    <p>En resumen: el sitio no te rastrea. No tiene cookies, no tiene herramientas de seguimiento y no tiene publicidad. La única información que me llega es la que decides enviar en un formulario.</p>
+<h2>Quién es responsable de la información</h2>
+<p>El sitio l-be.com está operado por Liron Bialkovich (L-Be), un negocio independiente en Israel. Para cualquier pregunta o solicitud sobre privacidad, puedes escribirme a través del <a href="https://l-be.com/es/ai#agent-contact">formulario de contacto</a>.</p>
+<h2>Lo que el sitio no hace</h2>
+<ul>
+<li>No guarda cookies.</li>
+<li>No usa herramientas de seguimiento ni de estadísticas, ni píxeles publicitarios.</li>
+<li>No crea perfiles de visitantes ni toma decisiones automatizadas sobre ellos.</li>
+<li>No vende información ni la cede a empresas de publicidad.</li>
+<li>No carga fuentes ni código desde servidores de otras empresas. Todo se sirve desde el propio sitio.</li>
+</ul>
+<h2>Qué información se recoge, y cuándo</h2>
+<h3>Cuando se envía un formulario</h3>
+<ul>
+<li>Formulario de contacto: nombre, nombre del negocio, número de WhatsApp, correo electrónico y mensaje. Solo es obligatorio rellenar el nombre y el WhatsApp.</li>
+<li>“Envíame un correo para volver a leer sobre ti más tarde”: solo la dirección de correo electrónico.</li>
+<li>Formulario de consulta sobre accesibilidad: nombre, correo electrónico o teléfono, y descripción de la consulta.</li>
+<li>El formulario para agentes de IA: nombre de la persona representada, una vía de contacto y el contenido de la solicitud.</li>
+</ul>
+<p>Con cada formulario se envían también la dirección de la página desde la que se envió, la página desde la que llegaste al sitio y los datos de campaña, si los había en el enlace por el que llegaste.</p>
+<h3>Lo que se guarda solo en tu dispositivo</h3>
+<p>Los ajustes que elegiste en el menú de accesibilidad, tu récord en el juego de la página de error y cuándo se envió por última vez un formulario desde este navegador (para evitar envíos duplicados). Esta información se guarda solo en tu navegador, y no se me envía.</p>
+<h3>Alojamiento del sitio</h3>
+<p>El sitio está alojado en un proveedor de alojamiento externo (GitHub). Como cualquier servidor web, recibe la dirección IP y datos técnicos del navegador para mostrar la página, y puede guardarlos en registros de seguridad. No tengo acceso a esos registros.</p>
+<h3>Servicios externos que solo se abren al hacer clic</h3>
+<p>Al hacer clic en “Reservar una llamada” se abre una ventana de Calendly, un servicio externo con sus propias cookies y su propia política de privacidad. Los enlaces a otros sitios, como LinkedIn, llevan a sitios con sus propias políticas.</p>
+<h2>Para qué uso la información, y con qué base</h2>
+<ul>
+<li>Para responder a tu consulta y preparar una propuesta: pasos previos a un contrato, a petición tuya.</li>
+<li>Para enviar el correo “Leer más tarde”: sobre la base de tu consentimiento. Es un solo correo.</li>
+<li>Para atender consultas de accesibilidad: una obligación legal, y un interés legítimo en mejorar el sitio.</li>
+</ul>
+<p>No uso los datos para envíos de marketing sin un consentimiento expreso.</p>
+<h2>Quién recibe la información</h2>
+<p>Solo proveedores de servicios que la tratan por mi cuenta: un servicio de automatización que me hace llegar el formulario, mi servicio de correo electrónico y mi sistema de gestión de clientes. Algunos de los proveedores guardan información en servidores de la Unión Europea y de Estados Unidos.</p>
+<h2>Cuánto tiempo se conserva la información</h2>
+<p>Mientras sea necesaria para atender la consulta y para la relación comercial que surja de ella. Puedes pedirme que la elimine en cualquier momento.</p>
+<h2>Tus derechos</h2>
+<ul>
+<li>Recibir una copia de la información que tengo sobre ti.</li>
+<li>Corregir información incorrecta.</li>
+<li>Solicitar la eliminación de la información.</li>
+<li>Limitar el uso de la información, u oponerte a él.</li>
+<li>Recibir la información en un archivo que se pueda transferir a un tercero.</li>
+<li>Retirar un consentimiento que hayas dado, en cualquier momento.</li>
+</ul>
+<p>Para ejercer un derecho, escríbeme en el <a href="https://l-be.com/es/ai#agent-contact">formulario de contacto</a>. Responderé en el plazo de un mes. También puedes presentar una reclamación ante la Autoridad de Protección de la Privacidad de Israel, o ante la autoridad de protección de datos de tu país en la Unión Europea.</p>
+<h2>Seguridad de la información</h2>
+<p>El sitio en sí es un sitio estático: no tiene base de datos ni área personal, y por eso no se guarda en él información personal. Los formularios se envían por una conexión cifrada. La información se guarda en proveedores reconocidos, y el acceso a ella está restringido.</p>
+<p>Ningún sistema está protegido al cien por cien. Si se produce un incidente de seguridad que afecte a tu información, te avisaré.</p>
+<h2>Menores</h2>
+<p>El sitio está pensado para negocios, y no se dirige a niños.</p>
+<h2>Cambios en la política</h2>
+<p>Si la política cambia, por ejemplo si se añade al sitio una herramienta de estadísticas, esta página se actualizará antes del cambio.</p>
+<p>Actualizado el 8 de octubre de 2026.</p>
+<hr>
+<pre>--- page: https://l-be.com/terms ---</pre>
+<p>Política del sitio</p>
+    <h1>Términos de uso</h1>
+    <p>Unas reglas sencillas para usar el sitio. Usar el sitio supone aceptarlas.</p>
+<h2>Quién opera el sitio</h2>
+<p>El sitio l-be.com está operado por Liron Bialkovich (L-Be), un negocio independiente en Israel.</p>
+<h2>El contenido del sitio</h2>
+<p>El sitio presenta información general sobre mis servicios. No es una oferta vinculante ni sustituye a un asesoramiento profesional adaptado a un negocio concreto. La contratación conmigo se hace únicamente mediante un acuerdo aparte.</p>
+<p>Las cifras, el caso de estudio y los mensajes de clientes describen trabajo real mío. Los resultados en un negocio no son una promesa de resultados en otro.</p>
+<h2>Derechos de autor y marcas comerciales</h2>
+<p>Los textos, el diseño, el logotipo y las ilustraciones del sitio me pertenecen. Se pueden citar fragmentos breves del sitio indicando la fuente. Cualquier otro uso requiere mi autorización.</p>
+<p>Los logotipos de clientes y de socios pertenecen a sus titulares, y se muestran para describir mi trabajo.</p>
+<h2>Enlaces y servicios externos</h2>
+<p>En el sitio hay enlaces a sitios y servicios de terceros, como la agenda de citas y LinkedIn. No tengo control sobre ellos, y su uso está sujeto a sus propias condiciones.</p>
+<h2>Uso adecuado</h2>
+<ul>
+<li>No se debe enviar en los formularios información falsa, spam ni datos de otra persona sin su permiso.</li>
+<li>No se debe intentar alterar el funcionamiento del sitio ni de sus formularios.</li>
+<li>Los agentes de IA pueden leer el sitio y citarlo. Un formulario solo se envía con la aprobación de la persona en cuyo nombre actúa el agente.</li>
+</ul>
+<h2>Responsabilidad</h2>
+<p>Procuro que la información del sitio sea exacta y esté actualizada, pero el sitio se ofrece tal cual. No soy responsable de daños causados por basarse únicamente en la información del sitio, ni por un fallo temporal en su funcionamiento.</p>
+<h2>Privacidad y accesibilidad</h2>
+<p>El sitio no rastrea a sus visitantes. El detalle completo está en la <a href="https://l-be.com/es/ai-privacy">Política de privacidad</a>. Lo que se ha hecho para que el sitio sea accesible para todas las personas: <a href="https://l-be.com/es/ai-accessibility">Declaración de accesibilidad</a>.</p>
+<h2>Ley aplicable</h2>
+<p>Estos términos se rigen por la ley israelí.</p>
+<h2>Contacto</h2>
+<p>Para cualquier pregunta sobre los términos: <a href="https://l-be.com/es/ai#agent-contact">formulario de contacto</a>.</p>
+<p>Actualizado el 8 de octubre de 2026.</p>
+</div>
+
+</main>
+<script src="/es/guard.js" defer></script>
+<script src="/es/ai.js" defer></script>
+</body>
+</html>

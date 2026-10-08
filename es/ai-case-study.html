@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caso de estudio: Ida's Home · AI MODE · L-Be</title>
+<meta name="description" content="Versión AI MODE de la página “Caso de estudio: Ida's Home” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://l-be.com/es/case-study">
+<link rel="alternate" type="text/markdown" href="https://l-be.com/llms-full.txt" title="Full site content as Markdown">
+<link rel="icon" type="image/png" href="https://l-be.com/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="L-Be">
+<meta property="og:title" content="Caso de estudio: Ida's Home · AI MODE · L-Be">
+<meta property="og:description" content="Versión AI MODE de la página “Caso de estudio: Ida's Home” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta property="og:url" content="https://l-be.com/es/case-study">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Written to read like the Markdown it mirrors: one column, monospace, visible structure markers. */
+body{margin:0;background:#fff;color:#111;font:14px/1.55 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+main{max-width:76ch;margin:0 auto;padding:1rem}
+pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
+h1,h2,h3,h4{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
+h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}h4::before{content:"#### "}
+h1::before,h2::before,h3::before,h4::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a,.bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the whole page shrunk into one small square in the middle of the screen. Pure CSS. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{position:fixed;left:50%;top:50%;box-sizing:border-box;width:560vmin;height:560vmin;max-width:none;margin:0;padding:12vmin;overflow:auto;line-height:1.05;background:#fff;border:10px solid #111;transform:translate(-50%,-50%) scale(.1)}
+#real:target~main *{margin:0}
+/* Contact form for AI agents: reads like a request body, works like a normal form */
+.agent{margin:1.5rem 0 0;padding:1rem 1.25rem 1.25rem;background:#0e1420;color:#e8edf5}
+.agent h2{margin-top:0}
+.agent h2::before{color:#7ad3a0}
+.agent a{color:#b9daf7}
+.agent pre{color:#a9efc6;overflow-x:auto;white-space:pre}
+.agent .row{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:.25rem .75rem;align-items:start;margin:.75rem 0}
+.agent .key{color:#74b4f2;text-align:left;padding-top:.7rem}
+.agent .hint{margin:.2rem 0 0;color:#cfd6e2;font-size:13px}
+.agent input[type=text],.agent textarea{box-sizing:border-box;width:100%;min-height:44px;padding:.6rem .7rem;font:inherit;color:#fff;background:#141b2b;border:1px solid #74b4f2;border-radius:0}
+.agent .check{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.agent .check input{width:22px;height:22px;accent-color:#a9efc6}
+.agent [aria-invalid]{border-color:#f8a09b;outline:2px solid #f8a09b}
+.agent input:focus-visible,.agent textarea:focus-visible,.agent button:focus-visible{outline:3px solid #a9efc6;outline-offset:2px}
+.agent button{min-height:44px;padding:0 1.25rem;font:inherit;font-weight:700;color:#0e1420;background:#a9efc6;border:0;cursor:pointer}
+.agent-status{min-height:1.5em;margin:.75rem 0 0;direction:rtl;text-align:right;white-space:pre-wrap}
+.agent-status[data-state=error]{color:#f8a09b}
+@media (max-width:40rem){.agent .row{grid-template-columns:minmax(0,1fr)}.agent .key{padding-top:0}}
+.agent form[data-sent] .row,.agent form[data-sent] button[type=submit]{display:none}
+.agent .form-again{display:none;margin-top:.75rem;background:transparent;color:#a9efc6;border:1px solid #a9efc6}
+.agent form[data-sent] .form-again{display:inline-block}
+p{margin:.25rem 0}
+ul,ol{margin:.25rem 0;padding:0;list-style:none}
+ul ul{padding-inline-start:2ch}
+li{padding:.2rem 0}
+li::before{content:"- "}
+blockquote{margin:.5rem 0}blockquote::before{content:"> "}
+hr{border:0;margin:1rem 0;height:auto}hr::before{content:"---"}
+a{color:#0b3d91}
+table{border-collapse:collapse;margin:.5rem 0}th,td{border:1px solid #555;padding:.2rem .6rem;text-align:start}
+dt{font-weight:700;margin-top:.5rem}dd{margin:0}
+[lang="en"]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<span id="real"></span>
+<nav class="bar" aria-label="Navegación de AI MODE">
+<a class="dark" href="https://l-be.com/es/case-study">← A la página normal</a> <a href="https://l-be.com/es/ai#tree">Árbol del sitio</a> <a href="https://l-be.com/es/ai-all">Todo el sitio en una página</a> <a href="https://l-be.com/es/ai#agent-contact">Contacto</a>
+<button type="button" id="copy-ai">Copiar el contenido</button>
+<span id="copy-ai-status" role="status"></span> <a class="real-on" href="#real" lang="en">REAL AI MODE</a> <a class="real-off" href="#">Volver al tamaño humano</a> <span class="real-note">Así le gusta leer a la IA: apretado, pequeño y sin espacios.</span>
+</nav>
+<main>
+<div id="ai-content">
+<pre>---
+url: https://l-be.com/ai-case-study
+canonical: https://l-be.com/case-study
+site_tree: https://l-be.com/ai#tree
+whole_site: https://l-be.com/ai-all
+language: he
+updated: 2026-10-08
+---</pre>
+<p>Caso de estudio</p>
+        <h1>Ida's Home</h1>
+        <p>Todo el negocio en un solo proceso, de la venta al cobro. Y, por encima, una capa de IA conectada a todas las áreas.</p>
+      <p>[Imagen: Ilustración: un cubo central unido con líneas discontinuas a seis módulos a su alrededor]</p>
+<h2>Sobre la empresa</h2>
+<p>Ida's Home diseña y vende mobiliario para el hogar: sofás y sillones a medida, iluminación, alfombras y textiles. Junto a los productos ofrece servicios de planificación, instalación y asesoría de diseño. La empresa tiene 30 personas en plantilla. Vende en su sitio web, en la tienda de fábrica y en el showroom, y trabaja con varios almacenes, una carpintería y muchos proveedores.</p>
+<h2>El reto</h2>
+<p>Cada pedido en Ida's Home es un pequeño proyecto:</p>
+<ul>
+<li>Un producto que se fabrica a medida y con la tela que eligió el cliente.</li>
+<li>Un proveedor que tiene que cumplir los plazos.</li>
+<li>Un almacén que recibe la mercancía y prepara los pedidos.</li>
+<li>Un envío que hay que coordinar.</li>
+<li>Un cliente que espera, y un pago que hay que cobrar.</li>
+</ul>
+<p>Cuando la información está dispersa entre personas, archivos y sistemas, el equipo vive en una persecución. ¿Dónde está el pedido? ¿Cuándo entrega el proveedor? ¿Qué hay en inventario? ¿Quién ha pagado?</p>
+<p>Vender lleva tiempo, porque es difícil encontrar el producto adecuado. Una persona nueva en ventas necesita meses para aprender el trabajo. Y la dirección no ve una sola imagen en la que se pueda confiar.</p>
+<p>La dirección definió una prueba sencilla:</p>
+<blockquote>Si el equipo sigue persiguiendo clientes, estados, envíos, listas de precios y documentos, el proyecto ha fracasado.</blockquote>
+      <p>El enfoque</p>
+      <h2>Cómo lo abordamos</h2>
+      <h3>Especificación antes de construir</h3><p>Nos sentamos con la dirección y repasamos cada proceso, hasta que quedó claro cómo funciona en la práctica.</p>
+      <h3>Una sola fuente para cada dato</h3><p>Cada sistema se actualiza automáticamente desde los demás. No hay que teclear dos veces y no hay “versiones”.</p>
+      <h3>Un proceso hasta el final</h3><p>Primero funciona sobre el terreno, y solo después se amplía al siguiente proceso.</p>
+      <h3>Automatización con aprobación humana</h3><p>Automatización donde la regla es clara. Una persona aprueba donde hay dinero o un cliente.</p>
+      <p>Qué se construyó</p>
+      <h2>Los procesos centrales del negocio, conectados de extremo a extremo</h2>
+        <h3>Venta en todos los canales</h3>
+        <ul>
+          <li>Sitio web, tienda de fábrica, showroom y puntos de venta.</li>
+          <li>Un punto de venta propio (POS) con procesamiento de pagos con tarjeta y pago mediante enlace.</li>
+          <li>Cada pedido, de cualquier canal, entra en el mismo recorrido.</li>
+        </ul>
+        <p>Un cliente, un pedido y una sola imagen, sin importar dónde haya comprado.</p>
+        <h3>Compras y proveedores</h3>
+        <ul>
+          <li>Las órdenes de compra salen a los proveedores automáticamente, según lo que pidió el cliente.</li>
+          <li>Cada proveedor recibe de forma periódica una imagen de lo que tiene abierto.</li>
+        </ul>
+        <p>Ningún pedido se olvida de camino al proveedor.</p>
+        <h3>SLA con proveedores y con clientes</h3>
+        <ul>
+          <li>Cada producto tiene una fecha de entrega calculada, y se hace seguimiento de todo lo que se sale de ella.</li>
+        </ul>
+        <p>En todo momento se ve qué se retrasa y dónde, antes de que el cliente llame.</p>
+        <h3>Inventario y almacenes</h3>
+        <ul>
+          <li>Gestión de inventario en varios almacenes.</li>
+          <li>Un producto que ya está en inventario se asigna al pedido automáticamente.</li>
+        </ul>
+        <p>Se vende lo que hay, y no se vuelve a pedir lo que ya está en la estantería.</p>
+        <h3>Escáneres inteligentes</h3>
+        <ul>
+          <li>Escaneo con el móvil en cada etapa: recepción del proveedor, preparación de pedidos, salida a reparto, devoluciones y reparaciones.</li>
+          <li>Cada escaneo hace avanzar el pedido automáticamente.</li>
+        </ul>
+        <p>El almacén mantiene al día a toda la empresa mientras trabaja, sin teclear.</p>
+        <h3>Envíos y coordinación de entregas</h3>
+        <ul>
+          <li>El cliente fija la fecha por su cuenta, mediante un enlace.</li>
+          <li>El personal de reparto se asigna a una ruta.</li>
+          <li>La aplicación de reparto documenta cada entrega con foto y firma.</li>
+          <li>Una interfaz para gestionar al personal de reparto y pagarle.</li>
+        </ul>
+        <p>Cada envío queda coordinado y documentado desde el inicio hasta la entrega.</p>
+        <h3>Marketing y atención al cliente</h3>
+        <ul>
+          <li>Mensajes automáticos al cliente en cada etapa del pedido.</li>
+          <li>Aviso proactivo al cliente, y solicitud de opinión al final.</li>
+        </ul>
+        <p>El cliente sabe qué está pasando sin preguntar, y el equipo de atención queda libre para ocuparse de lo que de verdad lo requiere.</p>
+        <h3>Productos complementarios</h3>
+        <ul>
+          <li>Una propuesta al cliente para completar su pedido, con un enlace personal.</li>
+        </ul>
+        <p>El pedido crece sin trabajo manual.</p>
+        <h3>Cobros y contabilidad</h3>
+        <ul>
+          <li>Sincronización con la contabilidad.</li>
+          <li>Procesamiento de pagos con tarjeta.</li>
+          <li>Seguimiento de cobros, y detección de desajustes entre los sistemas.</li>
+        </ul>
+        <p>Una imagen real de la deuda, y no una cifra de la que hay que adivinar qué hay detrás.</p>
+        <h3>BI y gestión</h3>
+        <ul>
+          <li>Paneles de control, flujo de caja y conclusiones que se actualizan solos.</li>
+        </ul>
+        <p>La dirección ve el negocio en tiempo real y decide con datos.</p>
+<h2>La capa de IA</h2>
+<p>Por encima de todos estos procesos hay un sistema de IA conectado a los datos de todas las áreas.</p>
+<ul>
+<li>Alguien del equipo pregunta en hebreo sencillo, por ejemplo “¿qué pedidos están retrasados en el proveedor?”, y recibe una respuesta basada en los datos de la empresa.</li>
+<li>Un informe útil se guarda y se puede volver a ejecutar con un clic.</li>
+<li>La gerencia pide un panel de control con palabras, y el sistema lo construye.</li>
+<li>Detrás de cada cifra hay una única definición de negocio acordada, de modo que todo el mundo habla del mismo “vendido” y del mismo “con retraso”.</li>
+</ul>
+<p><strong>IA responsable.</strong>  Un sistema de IA conectado a los datos de una empresa tiene que trabajar dentro de límites claros. El control viene integrado:</p>
+<ul>
+<li>La IA propone, y una persona aprueba.</li>
+<li>Cada persona ve solo lo que su puesto le permite.</li>
+<li>El acceso es con verificación en dos pasos.</li>
+<li>Los datos personales de los clientes no salen fuera.</li>
+<li>Cada acción queda registrada.</li>
+</ul>
+      <p>El resultado</p>
+      <h2>Qué cambió</h2>
+    <ul>
+      <li><b>Un proceso continuo</b> De la venta al cobro, en lugar de información dispersa entre personas y archivos.</li>
+      <li><b>Actualización desde el terreno</b> El almacén, el reparto y ventas actualizan el sistema mientras trabajan, desde el móvil.</li>
+      <li><b>Una sola imagen para toda la empresa</b> Cada área ve el mismo pedido, en el mismo estado y al mismo tiempo.</li>
+      <li><b>Una imagen fiable para la dirección</b> De pedidos, inventario y deudas. El sistema sacó a la luz desajustes que antes no se veían, y se resolvieron.</li>
+    </ul>
+<h2>Mi papel</h2>
+<ul>
+<li>Especificación de los procesos con la dirección.</li>
+<li>Puesta en marcha del CRM desde cero.</li>
+<li>Conexión de todos los sistemas entre sí.</li>
+<li>Construcción de la capa de IA y de las aplicaciones.</li>
+<li>Implementación sobre el terreno.</li>
+<li>Acompañamiento continuo.</li>
+</ul>
+      <a href="https://l-be.com/es/ai#agent-contact">¿Hablamos con un café en la mano?</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+
+<hr>
+<h2>Más páginas en AI MODE</h2>
+<ul>
+<li><a href="https://l-be.com/es/ai-home">Página de inicio</a>
+<ul>
+<li><a href="https://l-be.com/es/ai-solutions">Soluciones</a></li>
+<li><a href="https://l-be.com/es/ai-business-ai">Sistemas empresariales basados en IA (sistema L-Be)</a></li>
+<li><a href="https://l-be.com/es/ai-case-study">Caso de estudio: Ida's Home</a></li>
+<li><a href="https://l-be.com/es/ai-digital-dreams">Hacer realidad sueños digitales: especificación de sistemas y consultoría</a></li>
+<li><a href="https://l-be.com/es/ai-liron-bialkovich">Sobre mí: Liron Bialkovich</a></li>
+<li><a href="https://l-be.com/es/ai-kala-crm">Kala CRM: un sistema CRM israelí</a></li>
+<li><a href="https://l-be.com/es/ai-gohighlevel">GoHighLevel (GHL) en Israel</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility">Declaración de accesibilidad y glosario</a></li>
+<li><a href="https://l-be.com/es/ai-privacy">Política de privacidad</a></li>
+<li><a href="https://l-be.com/es/ai-terms">Términos de uso</a></li>
+</ul>
+</li>
+<li><a href="https://l-be.com/es/ai-all">Todo el contenido del sitio en una página</a></li>
+<li><a href="https://l-be.com/es/ai">Página de inicio de AI MODE: hechos, preguntas y respuestas, y formulario para agentes de IA</a></li>
+</ul>
+</div>
+
+</main>
+<script src="/es/guard.js" defer></script>
+<script src="/es/ai.js" defer></script>
+</body>
+</html>

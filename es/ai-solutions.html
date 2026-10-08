@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soluciones · AI MODE · L-Be</title>
+<meta name="description" content="Versión AI MODE de la página “Soluciones” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://l-be.com/es/solutions">
+<link rel="alternate" type="text/markdown" href="https://l-be.com/llms-full.txt" title="Full site content as Markdown">
+<link rel="icon" type="image/png" href="https://l-be.com/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="L-Be">
+<meta property="og:title" content="Soluciones · AI MODE · L-Be">
+<meta property="og:description" content="Versión AI MODE de la página “Soluciones” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta property="og:url" content="https://l-be.com/es/solutions">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Written to read like the Markdown it mirrors: one column, monospace, visible structure markers. */
+body{margin:0;background:#fff;color:#111;font:14px/1.55 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+main{max-width:76ch;margin:0 auto;padding:1rem}
+pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
+h1,h2,h3,h4{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
+h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}h4::before{content:"#### "}
+h1::before,h2::before,h3::before,h4::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a,.bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the whole page shrunk into one small square in the middle of the screen. Pure CSS. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{position:fixed;left:50%;top:50%;box-sizing:border-box;width:560vmin;height:560vmin;max-width:none;margin:0;padding:12vmin;overflow:auto;line-height:1.05;background:#fff;border:10px solid #111;transform:translate(-50%,-50%) scale(.1)}
+#real:target~main *{margin:0}
+/* Contact form for AI agents: reads like a request body, works like a normal form */
+.agent{margin:1.5rem 0 0;padding:1rem 1.25rem 1.25rem;background:#0e1420;color:#e8edf5}
+.agent h2{margin-top:0}
+.agent h2::before{color:#7ad3a0}
+.agent a{color:#b9daf7}
+.agent pre{color:#a9efc6;overflow-x:auto;white-space:pre}
+.agent .row{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:.25rem .75rem;align-items:start;margin:.75rem 0}
+.agent .key{color:#74b4f2;text-align:left;padding-top:.7rem}
+.agent .hint{margin:.2rem 0 0;color:#cfd6e2;font-size:13px}
+.agent input[type=text],.agent textarea{box-sizing:border-box;width:100%;min-height:44px;padding:.6rem .7rem;font:inherit;color:#fff;background:#141b2b;border:1px solid #74b4f2;border-radius:0}
+.agent .check{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.agent .check input{width:22px;height:22px;accent-color:#a9efc6}
+.agent [aria-invalid]{border-color:#f8a09b;outline:2px solid #f8a09b}
+.agent input:focus-visible,.agent textarea:focus-visible,.agent button:focus-visible{outline:3px solid #a9efc6;outline-offset:2px}
+.agent button{min-height:44px;padding:0 1.25rem;font:inherit;font-weight:700;color:#0e1420;background:#a9efc6;border:0;cursor:pointer}
+.agent-status{min-height:1.5em;margin:.75rem 0 0;direction:rtl;text-align:right;white-space:pre-wrap}
+.agent-status[data-state=error]{color:#f8a09b}
+@media (max-width:40rem){.agent .row{grid-template-columns:minmax(0,1fr)}.agent .key{padding-top:0}}
+.agent form[data-sent] .row,.agent form[data-sent] button[type=submit]{display:none}
+.agent .form-again{display:none;margin-top:.75rem;background:transparent;color:#a9efc6;border:1px solid #a9efc6}
+.agent form[data-sent] .form-again{display:inline-block}
+p{margin:.25rem 0}
+ul,ol{margin:.25rem 0;padding:0;list-style:none}
+ul ul{padding-inline-start:2ch}
+li{padding:.2rem 0}
+li::before{content:"- "}
+blockquote{margin:.5rem 0}blockquote::before{content:"> "}
+hr{border:0;margin:1rem 0;height:auto}hr::before{content:"---"}
+a{color:#0b3d91}
+table{border-collapse:collapse;margin:.5rem 0}th,td{border:1px solid #555;padding:.2rem .6rem;text-align:start}
+dt{font-weight:700;margin-top:.5rem}dd{margin:0}
+[lang="en"]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<span id="real"></span>
+<nav class="bar" aria-label="Navegación de AI MODE">
+<a class="dark" href="https://l-be.com/es/solutions">← A la página normal</a> <a href="https://l-be.com/es/ai#tree">Árbol del sitio</a> <a href="https://l-be.com/es/ai-all">Todo el sitio en una página</a> <a href="https://l-be.com/es/ai#agent-contact">Contacto</a>
+<button type="button" id="copy-ai">Copiar el contenido</button>
+<span id="copy-ai-status" role="status"></span> <a class="real-on" href="#real" lang="en">REAL AI MODE</a> <a class="real-off" href="#">Volver al tamaño humano</a> <span class="real-note">Así le gusta leer a la IA: apretado, pequeño y sin espacios.</span>
+</nav>
+<main>
+<div id="ai-content">
+<pre>---
+url: https://l-be.com/ai-solutions
+canonical: https://l-be.com/solutions
+site_tree: https://l-be.com/ai#tree
+whole_site: https://l-be.com/ai-all
+language: he
+updated: 2026-10-08
+---</pre>
+<p>Soluciones</p>
+        <h1>El paquete de soluciones: IA, CRM y automatización, a la medida de tu negocio</h1>
+        <p>Cada negocio empieza desde un punto distinto. Se elige lo más urgente, se empieza por ahí y se va añadiendo después.</p>
+          <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <p>[Imagen: Ilustración: una bandeja con compartimentos y, en cada uno, un módulo distinto de cubos. Otros tres módulos están a punto de entrar en los compartimentos libres]</p>
+      <ul>
+        <li><a href="https://l-be.com/es/ai-solutions#ai">Agentes de IA y bots</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#crm">CRM, leads y ventas</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#service">Atención y comunicación con clientes</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#money">Pedidos, cobros y finanzas</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#automation">Automatización e integraciones</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#manage">Gestión, informes y equipo</a></li>
+        <li><a href="https://l-be.com/es/ai-solutions#guide">Especificación, formación y acompañamiento</a></li>
+      </ul>
+      <p>01</p>
+      <h2>Agentes de IA y bots</h2>
+      <p>Inteligencia artificial que trabaja dentro de los procesos del negocio, y no al lado de ellos.</p>
+      <h3>Bot de atención y ventas en WhatsApp</h3><p>Responde a las consultas las 24 horas, recoge los datos y pasa al equipo solo lo que requiere a una persona.</p>
+      <h3>Agente de IA sobre los datos del negocio</h3><p>Se pregunta en lenguaje sencillo y se recibe una respuesta, un informe o un panel de control basados en los datos de la empresa.</p>
+      <h3>Análisis de consultas entrantes</h3><p>Los correos y los mensajes se convierten en leads ordenados, con los datos en los campos correctos.</p>
+      <h3>IA responsable</h3><p>La IA propone y una persona aprueba, con permisos según el puesto y registro de cada acción.</p>
+      <p>02</p>
+      <h2>CRM, leads y ventas</h2>
+      <p>Cada consulta llega a un solo lugar, y ninguna se pierde.</p>
+      <h3>Captación y gestión de leads</h3><p>Todas las consultas, de todas las fuentes, entran en un único sistema y llegan a quien debe atenderlas.</p>
+      <h3>Expediente completo del cliente</h3><p>Las llamadas, los mensajes, los pedidos y los documentos de cada cliente, en un solo lugar.</p>
+      <h3>Embudos de venta y flujos de trabajo</h3><p>Estados, guiones de gestión y tareas, para que ninguna consulta se quede en tierra de nadie.</p>
+      <h3>Presupuestos y seguimiento</h3><p>Un presupuesto bien diseñado sale en segundos, y su seguimiento corre solo.</p>
+      <h3>Medición del marketing</h3><p>Se ve de qué campaña llegó quien acabó pagando, y no solo quien dejó sus datos.</p>
+      <p>03</p>
+      <h2>Atención y comunicación con clientes</h2>
+      <p>Cada canal que usan los clientes, registrado y conectado.</p>
+      <h3>WhatsApp, SMS, correo electrónico y redes sociales</h3><p>Mensajes salientes y entrantes de todos los canales, registrados en el expediente del cliente.</p>
+      <h3>Centralita telefónica en la nube</h3><p>Una llamada entrante abre la ficha del cliente, y la grabación se guarda en ella.</p>
+      <h3>Reserva de citas y confirmaciones de asistencia</h3><p>Los clientes eligen por su cuenta un horario libre, y los recordatorios salen solos.</p>
+      <h3>Encuestas de satisfacción</h3><p>Se pregunta a los clientes con un formulario o con un bot, y las respuestas vuelven al sistema.</p>
+      <h3>Área personal para clientes y proveedores</h3><p>Consultar datos y hacer gestiones, sin levantar el teléfono.</p>
+      <p>04</p>
+      <h2>Pedidos, cobros y finanzas</h2>
+      <p>Desde el cierre de la venta hasta el cobro, en un solo proceso.</p>
+      <h3>Gestión de pedidos</h3><p>Productos, operaciones, envío y pago, desde el cierre de la venta hasta la entrega.</p>
+      <h3>Procesamiento de pagos y cobros</h3><p>Tarjetas de crédito, billeteras digitales y domiciliaciones bancarias, directamente desde el sistema.</p>
+      <h3>Suscripciones y cobro recurrente</h3><p>Los retainers y las suscripciones se cobran automáticamente, con seguimiento de lo que no se ha cobrado.</p>
+      <h3>Documentos contables</h3><p>Las facturas y los recibos salen del propio proceso y se sincronizan con la contabilidad.</p>
+      <h3>Inventario, compras y proveedores</h3><p>Catálogo, almacenes y órdenes de compra, conectados con los pedidos de los clientes.</p>
+      <p>05</p>
+      <h2>Automatización e integraciones</h2>
+      <p>Lo que se repite pasa al sistema, y los sistemas separados empiezan a hablar entre sí.</p>
+      <h3>Automatización de procesos</h3><p>Las tareas, las alertas, los mensajes y los cambios de estado ocurren solos, en el momento oportuno.</p>
+      <h3>Conexión con cualquier sistema que tenga API</h3><p>La información pasa entre los sistemas del negocio sin teclear dos veces.</p>
+      <h3>Tiendas y sitios web</h3><p>Los pedidos y las consultas del sitio web y de la tienda online entran directamente en el sistema.</p>
+      <h3>Formularios inteligentes</h3><p>Inscripción, firma de un documento, actualización de datos y compra, en un formulario que actualiza el sistema.</p>
+      <h3>Empresas de envíos</h3><p>El envío se abre desde el propio pedido, y su seguimiento vuelve a él.</p>
+      <p>06</p>
+      <h2>Gestión, informes y equipo</h2>
+      <p>Una sola imagen del negocio, en la que se puede confiar.</p>
+      <h3>Paneles de control e informes</h3><p>Una imagen actualizada del negocio, adaptada a cada puesto.</p>
+      <h3>Gestión de tareas y proyectos</h3><p>Quién hace qué y para cuándo, con agenda y seguimiento de la ejecución.</p>
+      <h3>Registro de horas de trabajo</h3><p>Horas por cliente, proyecto o pedido, para saber cuánto cuesta de verdad el trabajo.</p>
+      <h3>Procedimientos y protocolos</h3><p>Procedimientos de trabajo por escrito, para formar al personal rápido y crecer sin desorden.</p>
+      <p>07</p>
+      <h2>Especificación, formación y acompañamiento</h2>
+      <p>Un buen sistema empieza por la planificación y termina en un equipo que sabe trabajar con él.</p>
+      <h3>Especificación de procesos</h3><p>Se estudia el proceso a fondo antes de construir, hasta que queda claro cómo funciona en la práctica.</p>
+      <h3>Especificación de sistemas complejos</h3><p>De una idea a un plan con el que se puede construir.</p>
+      <h3>Formación e implementación sobre el terreno</h3><p>El equipo aprende a trabajar en el sistema, y yo estoy ahí hasta que se vuelve un hábito.</p>
+      <h3>Acompañamiento continuo</h3><p>El sistema sigue mejorando junto con el negocio.</p>
+      <h3>Consultoría para empresas</h3><p>Una sesión de unas horas y, después, un informe final con recomendaciones y un plan de trabajo.</p>
+      <p>Por dónde empezar</p>
+      <h2>No hace falta empezar por todo</h2>
+      <p>En una primera conversación se entiende qué es lo que más duele hoy en el negocio, y desde ahí se construye. La primera consulta es gratis.</p>
+      <a href="https://l-be.com/es/ai#agent-contact">Primera consulta gratis</a> <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">Reservar una llamada<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/es/ai-case-study">Cómo se ve en una empresa de 30 personas</a>
+
+<hr>
+<h2>Más páginas en AI MODE</h2>
+<ul>
+<li><a href="https://l-be.com/es/ai-home">Página de inicio</a>
+<ul>
+<li><a href="https://l-be.com/es/ai-solutions">Soluciones</a></li>
+<li><a href="https://l-be.com/es/ai-business-ai">Sistemas empresariales basados en IA (sistema L-Be)</a></li>
+<li><a href="https://l-be.com/es/ai-case-study">Caso de estudio: Ida's Home</a></li>
+<li><a href="https://l-be.com/es/ai-digital-dreams">Hacer realidad sueños digitales: especificación de sistemas y consultoría</a></li>
+<li><a href="https://l-be.com/es/ai-liron-bialkovich">Sobre mí: Liron Bialkovich</a></li>
+<li><a href="https://l-be.com/es/ai-kala-crm">Kala CRM: un sistema CRM israelí</a></li>
+<li><a href="https://l-be.com/es/ai-gohighlevel">GoHighLevel (GHL) en Israel</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility">Declaración de accesibilidad y glosario</a></li>
+<li><a href="https://l-be.com/es/ai-privacy">Política de privacidad</a></li>
+<li><a href="https://l-be.com/es/ai-terms">Términos de uso</a></li>
+</ul>
+</li>
+<li><a href="https://l-be.com/es/ai-all">Todo el contenido del sitio en una página</a></li>
+<li><a href="https://l-be.com/es/ai">Página de inicio de AI MODE: hechos, preguntas y respuestas, y formulario para agentes de IA</a></li>
+</ul>
+</div>
+
+</main>
+<script src="/es/guard.js" defer></script>
+<script src="/es/ai.js" defer></script>
+</body>
+</html>

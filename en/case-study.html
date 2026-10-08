@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case study: Ida's Home – the whole business in one process, with an AI layer above it | L-Be</title>
+<meta name="description" content="A case study by Liron Bialkovich: Ida's Home. The whole business in one process, from sale to payment collection. And above it, an AI layer connected to every department.">
+<meta name="author" content="Liron Bialkovich">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#f3f5f8">
+<link rel="canonical" href="https://l-be.com/en/case-study">
+<link rel="alternate" hreflang="he" href="https://l-be.com/case-study">
+<link rel="alternate" hreflang="en" href="https://l-be.com/en/case-study">
+<link rel="alternate" hreflang="es" href="https://l-be.com/es/case-study">
+<link rel="alternate" hreflang="x-default" href="https://l-be.com/case-study">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Case study: Ida's Home – the whole business in one process, with an AI layer above it | L-Be">
+<meta property="og:description" content="A case study by Liron Bialkovich: Ida's Home. The whole business in one process, from sale to payment collection. And above it, an AI layer connected to every department.">
+<meta property="og:url" content="https://l-be.com/en/case-study">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L-Be: Implementing CRM and AI systems for companies. Liron Bialkovich">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case study: Ida's Home – the whole business in one process, with an AI layer above it | L-Be">
+<meta name="twitter:description" content="A case study by Liron Bialkovich: Ida's Home. The whole business in one process, from sale to payment collection. And above it, an AI layer connected to every department.">
+<meta name="twitter:image" content="https://l-be.com/og.png">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-readable summary">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-hebrew-400-hebrew.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/frank-ruhl-libre-900-hebrew.woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script src="/a11y-early.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://l-be.com/#organization","name":"L-Be","alternateName":"SubK","url":"https://l-be.com/","logo":"https://l-be.com/logo.png","description":"Consulting and implementation of CRM, AI and business automation systems for companies.","slogan":"Implementing CRM and AI systems for companies","areaServed":{"@type":"Country","name":"Israel"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","CRM systems","AI agents","Business automation"],"founder":{"@id":"https://l-be.com/liron-bialkovich#person"},"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://subk.co.il/"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://l-be.com/#contact","availableLanguage":["he","en"]},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Solutions","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI agents and bots","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM, leads and sales","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Customer service and communication","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Orders, billing and finance","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automation and integrations","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Management, reports and team","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Specification, training and support","provider":{"@id":"https://l-be.com/#organization"}}}]}},{"@type":"Person","@id":"https://l-be.com/liron-bialkovich#person","name":"Liron Bialkovich","alternateName":"Liron Bialkovich","givenName":"Liron","familyName":"Bialkovich","jobTitle":"Independent consultant and developer: CRM, AI and automation","description":"Liron Bialkovich is an independent consultant and developer who builds AI systems, automations and CRM systems for companies. At L-Be he specifies, sets up and implements CRM systems, AI solutions and automated processes.","image":"https://l-be.com/liron-bialkovich.jpg","url":"https://l-be.com/liron-bialkovich","mainEntityOfPage":"https://l-be.com/liron-bialkovich","worksFor":{"@id":"https://l-be.com/#organization"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","CRM systems","AI agents","Business automation"],"knowsLanguage":["he","en"],"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://www.facebook.com/LironBia","https://www.youtube.com/@lironbialkovich679","https://github.com/lironbia","https://subk.co.il/"]},{"@type":"WebSite","@id":"https://l-be.com/#website","url":"https://l-be.com/","name":"L-Be","description":"Consulting and implementation of CRM, AI and business automation systems for companies.","inLanguage":"en","publisher":{"@id":"https://l-be.com/#organization"}},{"@type":"WebPage","@id":"https://l-be.com/case-study#webpage","url":"https://l-be.com/case-study","name":"Case study: Ida's Home","inLanguage":"en","isPartOf":{"@id":"https://l-be.com/#website"},"about":{"@id":"https://l-be.com/#organization"},"author":{"@id":"https://l-be.com/liron-bialkovich#person"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"L-Be","item":"https://l-be.com/"},{"@type":"ListItem","position":2,"name":"Case study: Ida's Home","item":"https://l-be.com/case-study"}]}}]}</script>
+<meta property="og:site_name" content="L-Be">
+<link rel="alternate" type="text/html" href="/ai-case-study" title="AI MODE: the same page, plain">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="https://l-be.com/en/"><img src="/logo.png" alt="" width="197" height="240"><span class="brand-word">L-Be</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="https://l-be.com/en/" class="home-link">Home</a> <a href="https://l-be.com/en/solutions">Solutions</a> <a href="https://l-be.com/en/business-ai">AI Systems</a> <a href="https://l-be.com/en/case-study" aria-current="page">Case study</a> <a href="https://l-be.com/en/digital-dreams">Digital Dreams</a> <a href="https://l-be.com/en/liron-bialkovich">About</a> <a href="https://l-be.com/en/#contact">Contact</a> <a class="mode ai" href="https://l-be.com/en/ai-case-study" title="This page, in a version for AI agents" lang="en">AI MODE</a>
+    </nav>
+    <button type="button" class="nav-open" aria-haspopup="dialog" aria-controls="nav-panel"><span class="visually-hidden">Open the navigation panel</span><svg viewBox="0 0 28 24" width="30" height="26" aria-hidden="true" focusable="false"><path d="M3 10c0-4.5 5-7 11-7s11 2.500 11 7z" fill="var(--coral-1)" stroke="var(--ink)" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="6.5" r="0.800" fill="var(--ink)"/><circle cx="14.500" cy="5.200" r="0.800" fill="var(--ink)"/><circle cx="18.500" cy="6.800" r="0.800" fill="var(--ink)"/><path d="M2.500 12.800c2 1.600 3.800-1.200 5.800 0s3.800 1.200 5.700 0 3.800-1.200 5.800 0 3.800 1.600 5.700 0" fill="none" stroke="var(--mint-3)" stroke-width="2.200" stroke-linecap="round"/><rect x="3" y="15" width="22" height="3.400" rx="1.700" fill="var(--inkb-2)" stroke="var(--ink)" stroke-width="1"/><path d="M3.500 20h21v0.500a2.500 2.500 0 0 1-2.500 2.500h-16a2.500 2.500 0 0 1-2.500-2.500z" fill="var(--coral-1)" stroke="var(--ink)" stroke-width="1.500" stroke-linejoin="round"/></svg></button>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="wrap">
+    <div class="split">
+      <div class="hero-text">
+        <p class="label">Case study</p>
+        <h1 class="display">Ida's Home</h1>
+        <p class="lead">The whole business in one process, from sale to payment collection.<br>And above it, an AI layer connected to every department.</p>
+      </div>
+      <img class="art blend" src="/art/core.webp" alt="Illustration: a central cube connected by dashed lines to six modules around it" title="Illustration: a central cube connected by dashed lines to six modules around it" width="900" height="900">
+    </div>
+  </div>
+</section>
+<section class="section on-surface">
+  <div class="wrap">
+    <div class="prose">
+<h2>About the company</h2>
+<p>Ida's Home designs and sells home furniture: made-to-order sofas and armchairs, lighting, rugs and textiles.<br>Alongside the products it provides planning, installation and design consulting services.<br>The company has 30 employees.<br>It sells on its website, in the factory store and in the showroom, and works with several warehouses, a carpentry workshop and many suppliers.</p>
+<h2>The challenge</h2>
+<p>Every order at Ida's Home is a small project:</p>
+<ul>
+<li>A product made to measure and in the fabric the customer chose.</li>
+<li>A supplier that has to meet deadlines.</li>
+<li>A warehouse that receives and picks.</li>
+<li>A delivery that has to be coordinated.</li>
+<li>A customer who is waiting, and a payment that has to be collected.</li>
+</ul>
+<p>When the information is scattered across people, files and systems, the team is busy chasing.<br>Where is the order?<br>When does the supplier deliver?<br>What's in stock?<br>Who has paid?</p>
+<p>A sale takes time, because it's hard to find the right product.<br>A new salesperson needs months to learn the job.<br>And management doesn't see one picture it can rely on.</p>
+<p>Management set a simple test:</p>
+<blockquote class="pull">If the team is still chasing customers, statuses, deliveries, price lists and documents — the project has failed.</blockquote>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">The approach</p>
+      <h2 class="display">How we approached it</h2>
+    </div>
+    <div class="sol-grid">
+      <article class="sol"><h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Specification before building</span></h3><p>We sat with management and went through every process, until it was clear how it works in practice.</p></article>
+      <article class="sol"><h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>One source for every piece of data</span></h3><p>Every system is updated from the others automatically.<br>No double entry and no "versions".</p></article>
+      <article class="sol"><h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>One process, all the way through</span></h3><p>First it works in the field, and only then do we expand to the next process.</p></article>
+      <article class="sol"><h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Automation with human approval</span></h3><p>Automation where the rule is clear.<br>A person approves where there is money or a customer involved.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section on-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">What was built</p>
+      <h2 class="display">The core processes of the business, connected end to end</h2>
+    </div>
+    <div class="proc-grid">
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Sales in every channel</span></h3>
+        <ul>
+          <li>Website, factory store, showroom and points of sale.</li>
+          <li>A dedicated point of sale (POS) with credit card processing and payment by link.</li>
+          <li>Every order, from every channel, enters the same track.</li>
+        </ul>
+        <p class="outcome">One customer, one order and one picture, no matter where they bought.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Purchasing and suppliers</span></h3>
+        <ul>
+          <li>Purchase orders go out to suppliers automatically, according to what the customer ordered.</li>
+          <li>Every supplier regularly receives a picture of what is open with them.</li>
+        </ul>
+        <p class="outcome">No order is forgotten on the way to the supplier.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>SLA with suppliers and with customers</span></h3>
+        <ul>
+          <li>Every product has a calculated delivery date, and everything that goes past it is tracked.</li>
+        </ul>
+        <p class="outcome">At any moment you can see what is delayed and with whom, before the customer calls.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Inventory and warehouses</span></h3>
+        <ul>
+          <li>Inventory management across several warehouses.</li>
+          <li>A product that is already in stock is allocated to an order automatically.</li>
+        </ul>
+        <p class="outcome">You sell what you have, and don't reorder what is already on the shelf.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Smart scanners</span></h3>
+        <ul>
+          <li>Scanning on a phone at every stage: receiving from a supplier, picking, dispatch for delivery, returns and repairs.</li>
+          <li>Every scan moves the order forward automatically.</li>
+        </ul>
+        <p class="outcome">The warehouse updates the whole company as it works, without typing.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Shipping and delivery coordination</span></h3>
+        <ul>
+          <li>The customer sets a time themselves, through a link.</li>
+          <li>The couriers are assigned to a route.</li>
+          <li>The courier app documents every delivery with a photo and a signature.</li>
+          <li>An interface for managing the couriers and paying them.</li>
+        </ul>
+        <p class="outcome">Every delivery is coordinated and documented from the start to the handover.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Marketing and customer service</span></h3>
+        <ul>
+          <li>Automatic messages to the customer at every stage of the order.</li>
+          <li>A proactive update to the customer, and a request for feedback at the end.</li>
+        </ul>
+        <p class="outcome">The customer knows what is happening without asking, and the service team is free to handle what really needs handling.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Complementary products</span></h3>
+        <ul>
+          <li>An offer to the customer to complete their order, with a personal link.</li>
+        </ul>
+        <p class="outcome">The basket grows without manual work.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Payment collection and accounting</span></h3>
+        <ul>
+          <li>Sync with accounting.</li>
+          <li>Credit card processing.</li>
+          <li>Collection tracking, and detection of gaps between the systems.</li>
+        </ul>
+        <p class="outcome">A true picture of the debt, not a number where you have to guess what is behind it.</p>
+      </article>
+      <article class="proc">
+        <h3><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>BI and management</span></h3>
+        <ul>
+          <li>Dashboards, cash flow and insights that update themselves.</li>
+        </ul>
+        <p class="outcome">Management sees the business in real time and decides based on data.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="prose">
+<h2 class="first">The AI layer</h2>
+<p>Above all these processes stands an AI system connected to the data of every department.</p>
+<ul>
+<li>An employee asks in plain Hebrew, for example "Which orders are delayed at a supplier?", and gets an answer based on the company's data.</li>
+<li>A useful report is saved, and can be run again with one click.</li>
+<li>A manager asks for a dashboard in words, and the system builds it.</li>
+<li>Behind every number stands one agreed business definition, so everyone is talking about the same "sold" and the same "late".</li>
+</ul>
+<p><strong>Responsible AI.</strong> An AI system connected to a company's data has to work within clear boundaries.<br>The control is built in:</p>
+<ul>
+<li>The AI suggests, and a person approves.</li>
+<li>Every employee sees only what their role allows.</li>
+<li>Sign-in uses two-step verification.</li>
+<li>Customers' personal details do not leave the company.</li>
+<li>Every action is logged.</li>
+</ul>
+    </div>
+  </div>
+</section>
+<section class="section on-ink">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">The result</p>
+      <h2 class="display">What changed</h2>
+    </div>
+    <ul class="changes">
+      <li><b>One continuous process</b><span>From sale to payment collection, instead of information scattered across people and files.</span></li>
+      <li><b>Updates from the field</b><span>The warehouse, the couriers and sales update the system as they work, from their phones.</span></li>
+      <li><b>One picture for the whole company</b><span>Every department sees the same order, in the same status, at the same time.</span></li>
+      <li><b>A reliable picture for management</b><span>Of orders, inventory and debts.<br>The system exposed gaps that had not been visible before, and they were dealt with.</span></li>
+    </ul>
+  </div>
+</section>
+<section class="section on-surface">
+  <div class="wrap">
+    <div class="prose">
+<h2 class="first">My role</h2>
+<ul>
+<li>Specifying the processes with management.</li>
+<li>Setting up the CRM from scratch.</li>
+<li>Connecting all the systems to each other.</li>
+<li>Building the AI layer and the apps.</li>
+<li>Implementation on the ground.</li>
+<li>Ongoing support.</li>
+</ul>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="https://l-be.com/en/#contact">Shall we talk over coffee?</a> <a class="link" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Book a call<span class="visually-hidden"> (opens in a pop-up window)</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<aside class="later" aria-label="Read later">
+  <div class="wrap">
+    <div class="later-head">
+      <p class="label">Read later</p>
+      <h2 class="display" id="later-title-foot">No time right now?</h2>
+    </div>
+    <form class="later-form" id="later-form-foot" data-hook="https://hook.eu1.make.com/2x9qdwv6kcwttznsn6tbl4dj2oolkaap">
+      <div class="field"><label for="later-email-foot">Your email</label><input id="later-email-foot" name="email" type="email" dir="ltr" autocomplete="email" required></div>
+      <div class="visually-hidden" aria-hidden="true"><label for="later-site-foot">Please leave this empty</label><input id="later-site-foot" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Email me so I can come back and read about you later</button>
+      <p class="form-status" aria-hidden="true"></p>
+      <p class="visually-hidden" role="status"></p>
+      <p class="form-note one-line">One email, one time only. <a href="https://l-be.com/en/privacy">Privacy policy</a></p>
+    </form>
+  </div>
+</aside>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 L-Be · <span lang="en" dir="ltr">Liron Bialkovich</span> · Implementing CRM and AI systems for companies</p>
+    <nav aria-label="Links">
+      <a href="https://l-be.com/en/" data-label="Home">Home</a> <a href="https://l-be.com/en/solutions" data-label="Solutions">Solutions</a> <a href="https://l-be.com/en/business-ai" data-label="AI Systems">AI Systems</a> <a href="https://l-be.com/en/case-study" data-label="Case study">Case study</a> <a href="https://l-be.com/en/digital-dreams" data-label="Digital Dreams">Digital Dreams</a> <a href="https://l-be.com/en/liron-bialkovich" data-label="About">About</a> <a href="https://l-be.com/en/#contact" data-label="Contact">Contact</a> <a href="/liron-bialkovich-portfolio.pdf" data-portfolio data-label="Portfolio">Portfolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" rel="me noopener" data-label="LinkedIn" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a> <a href="https://l-be.com/en/kala-crm" data-label="Kala CRM">Kala CRM</a> <a href="https://l-be.com/en/gohighlevel" data-label="GoHighLevel">GoHighLevel</a> <a href="https://l-be.com/en/accessibility" data-label="Accessibility statement">Accessibility statement</a> <a href="https://l-be.com/en/privacy" data-label="Privacy policy">Privacy policy</a> <a href="https://l-be.com/en/terms" data-label="Terms of use">Terms of use</a>
+    </nav>
+    <nav class="langs" aria-label="Language">
+      <a href="/case-study" hreflang="he" lang="he" translate="no">עברית</a>
+      <a href="/en/case-study" hreflang="en" lang="en" translate="no" aria-current="true">English</a>
+      <a href="/es/case-study" hreflang="es" lang="es" translate="no">Español</a>
+    </nav>
+  </div>
+</footer>
+<span class="guide" aria-hidden="true"></span>
+<dialog id="portfolio" class="pdf-dialog" aria-labelledby="pdf-title">
+  <header>
+    <h2 id="pdf-title" lang="en" dir="ltr">Liron Bialkovich · Portfolio</h2>
+    <a class="link" href="/liron-bialkovich-portfolio.pdf" target="_blank" rel="noopener" aria-label="Open the portfolio file (PDF) in a new tab">Open in a new tab</a>
+    <button type="button" class="btn btn-light" data-close aria-label="Close the portfolio window">Close</button>
+  </header>
+  <div class="pdf-pages" dir="ltr"><p class="pdf-note">Loading the portfolio…</p></div>
+</dialog>
+<dialog id="nav-panel" class="nav-panel" aria-labelledby="nav-panel-title">
+  <header>
+    <h2 id="nav-panel-title">Site navigation</h2>
+    <button type="button" class="btn btn-light" data-nav-close>Close</button>
+  </header>
+  <nav aria-label="Navigation panel">
+    <ul class="nav-main">
+      <li><a href="https://l-be.com/en/"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Home</span></a></li>
+      <li><a href="https://l-be.com/en/solutions"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Solutions</span></a></li>
+      <li><a href="https://l-be.com/en/business-ai"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>AI Systems</span></a></li>
+      <li><a href="https://l-be.com/en/case-study" aria-current="page"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Case study</span></a></li>
+      <li><a href="https://l-be.com/en/digital-dreams"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Digital Dreams</span></a></li>
+      <li><a href="https://l-be.com/en/liron-bialkovich"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>About</span></a></li>
+      <li><a href="https://l-be.com/en/#contact"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Contact</span></a></li>
+    </ul>
+    <p class="label">Systems</p>
+    <ul class="nav-more">
+      <li><a href="https://l-be.com/en/kala-crm">Kala CRM: an Israeli CRM system</a></li>
+      <li><a href="https://l-be.com/en/gohighlevel">GoHighLevel (GHL) in Israel</a></li>
+    </ul>
+    <p class="label">More on the site</p>
+    <ul class="nav-more">
+      <li><a href="/liron-bialkovich-portfolio.pdf" data-portfolio>Portfolio</a></li>
+      <li><a href="https://l-be.com/en/accessibility">Accessibility statement</a></li>
+      <li><a href="https://l-be.com/en/privacy">Privacy policy</a></li>
+      <li><a href="https://l-be.com/en/terms">Terms of use</a></li>
+    </ul>
+  </nav>
+  <div class="links">
+    <a class="plain primary" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Book a call<span class="visually-hidden"> (opens in a pop-up window)</span></a>
+  </div>
+  <nav class="langs" aria-label="Language">
+      <a href="/case-study" hreflang="he" lang="he" translate="no">עברית</a>
+      <a href="/en/case-study" hreflang="en" lang="en" translate="no" aria-current="true">English</a>
+      <a href="/es/case-study" hreflang="es" lang="es" translate="no">Español</a>
+    </nav>
+</dialog>
+<script src="/en/site.js" defer></script>
+<script src="/en/a11y.js" defer></script>
+<script src="/en/guard.js" defer></script>
+<script src="/en/later.js" defer></script>
+</body>
+</html>

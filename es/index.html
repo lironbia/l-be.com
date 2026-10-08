@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L-Be | Implementación de sistemas CRM e IA para empresas – Liron Bialkovich</title>
+<meta name="description" content="Liron Bialkovich, L-Be – consultoría e implementación de sistemas CRM, IA y automatización empresarial para empresas. Me ocuparé de que su negocio funcione de forma metódica, uniforme, automática y bien afinada.">
+<meta name="author" content="Liron Bialkovich">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#f3f5f8">
+<link rel="canonical" href="https://l-be.com/es/">
+<link rel="alternate" hreflang="he" href="https://l-be.com/">
+<link rel="alternate" hreflang="en" href="https://l-be.com/en/">
+<link rel="alternate" hreflang="es" href="https://l-be.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://l-be.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="L-Be | Implementación de sistemas CRM e IA para empresas – Liron Bialkovich">
+<meta property="og:description" content="Liron Bialkovich, L-Be – consultoría e implementación de sistemas CRM, IA y automatización empresarial para empresas. Me ocuparé de que su negocio funcione de forma metódica, uniforme, automática y bien afinada.">
+<meta property="og:url" content="https://l-be.com/es/">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L-Be: implementación de sistemas CRM e IA para empresas. Liron Bialkovich">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="L-Be | Implementación de sistemas CRM e IA para empresas – Liron Bialkovich">
+<meta name="twitter:description" content="Liron Bialkovich, L-Be – consultoría e implementación de sistemas CRM, IA y automatización empresarial para empresas. Me ocuparé de que su negocio funcione de forma metódica, uniforme, automática y bien afinada.">
+<meta name="twitter:image" content="https://l-be.com/og.png">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-readable summary">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-hebrew-400-hebrew.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/frank-ruhl-libre-900-hebrew.woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script src="/a11y-early.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://l-be.com/#organization","name":"L-Be","alternateName":"SubK","url":"https://l-be.com/","logo":"https://l-be.com/logo.png","description":"Consultoría e implementación de sistemas CRM, IA y automatización empresarial para empresas.","slogan":"Implementación de sistemas CRM e IA para empresas","areaServed":{"@type":"Country","name":"Israel"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","Sistemas CRM","Agentes de IA","Automatización empresarial"],"founder":{"@id":"https://l-be.com/liron-bialkovich#person"},"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://subk.co.il/"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://l-be.com/#contact","availableLanguage":["he","en"]},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Soluciones","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Agentes de IA y bots","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM, leads y ventas","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Atención y comunicación con clientes","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pedidos, cobros y finanzas","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatización e integraciones","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Gestión, informes y equipo","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Especificación, formación y acompañamiento","provider":{"@id":"https://l-be.com/#organization"}}}]}},{"@type":"Person","@id":"https://l-be.com/liron-bialkovich#person","name":"Liron Bialkovich","alternateName":"Liron Bialkovich","givenName":"Liron","familyName":"Bialkovich","jobTitle":"Consultor y desarrollador independiente: CRM, IA y automatización","description":"Liron Bialkovich es un consultor y desarrollador independiente que construye para empresas sistemas de IA, automatizaciones y sistemas CRM. En L-Be especifica, pone en marcha e implementa sistemas CRM, soluciones de IA y procesos automáticos.","image":"https://l-be.com/liron-bialkovich.jpg","url":"https://l-be.com/liron-bialkovich","mainEntityOfPage":"https://l-be.com/liron-bialkovich","worksFor":{"@id":"https://l-be.com/#organization"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","Sistemas CRM","Agentes de IA","Automatización empresarial"],"knowsLanguage":["he","en"],"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://www.facebook.com/LironBia","https://www.youtube.com/@lironbialkovich679","https://github.com/lironbia","https://subk.co.il/"]},{"@type":"WebSite","@id":"https://l-be.com/#website","url":"https://l-be.com/","name":"L-Be","description":"Consultoría e implementación de sistemas CRM, IA y automatización empresarial para empresas.","inLanguage":"es","publisher":{"@id":"https://l-be.com/#organization"}}]}</script>
+<meta property="og:site_name" content="L-Be">
+<link rel="alternate" type="text/html" href="/ai-home" title="AI MODE: the same page, plain">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido principal</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="https://l-be.com/es/"><img src="/logo.png" alt="" width="197" height="240"><span class="brand-word">L-Be</span></a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="https://l-be.com/es/" class="home-link" aria-current="page">Inicio</a> <a href="https://l-be.com/es/solutions">Soluciones</a> <a href="https://l-be.com/es/business-ai">Sistemas de IA</a> <a href="https://l-be.com/es/case-study">Caso de estudio</a> <a href="https://l-be.com/es/digital-dreams">Sueños digitales</a> <a href="https://l-be.com/es/liron-bialkovich">Sobre mí</a> <a href="https://l-be.com/es/#contact">Contacto</a> <a class="mode" href="https://l-be.com/es/#tachles" data-tachles-toggle title="Resúmelo, quiero lo esencial">Versión corta</a> <a class="mode ai" href="https://l-be.com/es/ai-home" title="Esta página, en versión para agentes de IA" lang="en">AI MODE</a>
+    </nav>
+    <button type="button" class="nav-open" aria-haspopup="dialog" aria-controls="nav-panel"><span class="visually-hidden">Abrir el panel de navegación</span><svg viewBox="0 0 28 24" width="30" height="26" aria-hidden="true" focusable="false"><path d="M3 10c0-4.5 5-7 11-7s11 2.500 11 7z" fill="var(--coral-1)" stroke="var(--ink)" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="6.5" r="0.800" fill="var(--ink)"/><circle cx="14.500" cy="5.200" r="0.800" fill="var(--ink)"/><circle cx="18.500" cy="6.800" r="0.800" fill="var(--ink)"/><path d="M2.500 12.800c2 1.600 3.800-1.200 5.800 0s3.800 1.200 5.700 0 3.800-1.200 5.800 0 3.800 1.600 5.700 0" fill="none" stroke="var(--mint-3)" stroke-width="2.200" stroke-linecap="round"/><rect x="3" y="15" width="22" height="3.400" rx="1.700" fill="var(--inkb-2)" stroke="var(--ink)" stroke-width="1"/><path d="M3.500 20h21v0.500a2.500 2.500 0 0 1-2.500 2.500h-16a2.500 2.500 0 0 1-2.500-2.500z" fill="var(--coral-1)" stroke="var(--ink)" stroke-width="1.500" stroke-linejoin="round"/></svg></button>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="label">Hasta un negocio pequeño debe pensar en grande</p>
+      <h1 class="display">Implementación de sistemas <span class="hl mint">CRM</span> e <span class="hl">IA</span> para empresas</h1>
+      <p class="lead">Me ocuparé de que su negocio funcione de forma metódica, uniforme, automática y bien afinada.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Primera consulta gratis</a> <a class="link" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Reservar una llamada<span class="visually-hidden"> (se abre en una ventana emergente)</span></a> <a class="link" href="#tachles" data-tachles-toggle>Resúmelo, quiero lo esencial</a>
+      </div>
+      <p class="byline"><a href="https://l-be.com/es/liron-bialkovich">Liron Bialkovich</a><span lang="en" dir="ltr"></span> · Implementación de sistemas CRM e IA para empresas</p>
+    </div>
+    <div class="hero-art"><svg class="iso stack" viewBox="0 0 450 338" role="img" aria-label="Agentes de IA, sistemas CRM, automatización empresarial, integraciones"><g class="layer"><g class="slab" style="--join:-62.3px"><polygon points="14.1,247.5 118.0,307.5 118.0,324.0 14.1,264.0" style="fill:var(--inkb-2)"/><polygon points="221.9,247.5 118.0,307.5 118.0,324.0 221.9,264.0" style="fill:var(--inkb-3)"/><polygon points="118.0,187.5 221.9,247.5 118.0,307.5 14.1,247.5" style="fill:var(--inkb-1)"/></g><line class="leader" x1="231.9" y1="255.8" x2="267.9" y2="255.8"/><text x="277.9" y="262.8" text-anchor="start">Integraciones</text></g><g class="layer"><g class="slab" style="--join:-20.8px"><polygon points="14.1,189.5 118.0,249.5 118.0,266.0 14.1,206.0" style="fill:var(--coral-2)"/><polygon points="221.9,189.5 118.0,249.5 118.0,266.0 221.9,206.0" style="fill:var(--coral-3)"/><polygon points="118.0,129.5 221.9,189.5 118.0,249.5 14.1,189.5" style="fill:var(--coral-1)"/></g><line class="leader" x1="231.9" y1="197.8" x2="267.9" y2="197.8"/><text x="277.9" y="204.8" text-anchor="start">Automatización empresarial</text></g><g class="layer"><g class="slab" style="--join:20.8px"><polygon points="14.1,131.5 118.0,191.5 118.0,208.0 14.1,148.0" style="fill:var(--mint-2)"/><polygon points="221.9,131.5 118.0,191.5 118.0,208.0 221.9,148.0" style="fill:var(--mint-3)"/><polygon points="118.0,71.5 221.9,131.5 118.0,191.5 14.1,131.5" style="fill:var(--mint-1)"/></g><line class="leader" x1="231.9" y1="139.8" x2="267.9" y2="139.8"/><text x="277.9" y="146.8" text-anchor="start">Sistemas CRM</text></g><g class="layer"><g class="slab" style="--join:62.3px"><polygon points="14.1,73.5 118.0,133.5 118.0,150.0 14.1,90.0" style="fill:var(--sky-2)"/><polygon points="221.9,73.5 118.0,133.5 118.0,150.0 221.9,90.0" style="fill:var(--sky-3)"/><polygon points="118.0,13.5 221.9,73.5 118.0,133.5 14.1,73.5" style="fill:var(--sky-1)"/></g><line class="leader" x1="231.9" y1="81.8" x2="267.9" y2="81.8"/><text x="277.9" y="88.8" text-anchor="start">Agentes de IA</text></g></svg></div>
+  </div>
+</section>
+<section class="section on-surface" id="tachles" data-tachles>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Cómo es trabajar conmigo</p>
+      <h2 class="display">Implementar sistemas de información e IA es un proceso largo, engorroso y agotador. Conmigo es divertido.</h2>
+      <p>Es un proceso muy complejo.<br>Conmigo se recorre con gusto, y se aprende muchísimo por el camino.</p>
+    </div>
+    <svg class="iso untangle" viewBox="0 0 1344 752" role="img" aria-label="Ilustración: una maraña de hilos y cubos dispersos. De la maraña salen cinco líneas continuas, por ellas viajan cubos pequeños y, al final, se colocan en una pila ordenada de bloques">
+  <g class="threads"><path class="thread" d="M280.6 326.8Q303.6 226.0 219.2 172.5"/><g class="loose" style="animation-delay:-0.0s"><polygon points="204.5,164.0 219.2,172.5 219.2,189.5 204.5,181.0" style="fill:var(--inkb-2)"/><polygon points="233.9,164.0 219.2,172.5 219.2,189.5 233.9,181.0" style="fill:var(--inkb-3)"/><polygon points="219.2,155.5 233.9,164.0 219.2,172.5 204.5,164.0" style="fill:var(--inkb-1)"/></g><path class="thread" d="M327.2 329.7Q434.2 268.8 418.8 175.2"/><g class="loose" style="animation-delay:-0.7s"><polygon points="404.1,166.7 418.8,175.2 418.8,192.2 404.1,183.7" style="fill:var(--coral-2)"/><polygon points="433.6,166.7 418.8,175.2 418.8,192.2 433.6,183.7" style="fill:var(--coral-3)"/><polygon points="418.8,158.2 433.6,166.7 418.8,175.2 404.1,166.7" style="fill:var(--coral-1)"/></g><path class="thread" d="M356.4 358.2Q470.8 376.0 529.2 304.0"/><g class="loose" style="animation-delay:-1.4s"><polygon points="514.5,295.5 529.2,304.0 529.2,321.0 514.5,312.5" style="fill:var(--sky-2)"/><polygon points="543.9,295.5 529.2,304.0 529.2,321.0 543.9,312.5" style="fill:var(--sky-3)"/><polygon points="529.2,287.0 543.9,295.5 529.2,304.0 514.5,295.5" style="fill:var(--sky-1)"/></g><path class="thread" d="M251.9 407.1Q128.4 420.2 94.9 507.8"/><g class="loose" style="animation-delay:-2.1s"><polygon points="80.2,499.3 94.9,507.8 94.9,524.8 80.2,516.3" style="fill:var(--mint-2)"/><polygon points="109.6,499.3 94.9,507.8 94.9,524.8 109.6,516.3" style="fill:var(--mint-3)"/><polygon points="94.9,490.8 109.6,499.3 94.9,507.8 80.2,499.3" style="fill:var(--mint-1)"/></g><path class="thread" d="M240.8 367.8Q139.8 299.5 41.3 340.5"/><g class="loose" style="animation-delay:-2.8s"><polygon points="26.6,332.0 41.3,340.5 41.3,357.5 26.6,349.0" style="fill:var(--sky-2)"/><polygon points="56.0,332.0 41.3,340.5 41.3,357.5 56.0,349.0" style="fill:var(--sky-3)"/><polygon points="41.3,323.5 56.0,332.0 41.3,340.5 26.6,332.0" style="fill:var(--sky-1)"/></g><path class="thread" d="M304.2 427.9Q251.8 520.2 317.7 590.5"/><g class="loose" style="animation-delay:-3.5s"><polygon points="303.0,582.0 317.7,590.5 317.7,607.5 303.0,599.0" style="fill:var(--coral-2)"/><polygon points="332.4,582.0 317.7,590.5 317.7,607.5 332.4,599.0" style="fill:var(--coral-3)"/><polygon points="317.7,573.5 332.4,582.0 317.7,590.5 303.0,582.0" style="fill:var(--coral-1)"/></g><path class="thread" d="M272.3 422.1Q178.2 471.6 191.2 556.1"/><g class="loose" style="animation-delay:-4.2s"><polygon points="176.5,547.6 191.2,556.1 191.2,573.1 176.5,564.6" style="fill:var(--inkb-2)"/><polygon points="205.9,547.6 191.2,556.1 191.2,573.1 205.9,564.6" style="fill:var(--inkb-3)"/><polygon points="191.2,539.1 205.9,547.6 191.2,556.1 176.5,547.6" style="fill:var(--inkb-1)"/></g><path class="thread" d="M245.8 353.8Q176.0 268.4 72.2 283.4"/><g class="loose" style="animation-delay:-4.9s"><polygon points="57.5,274.9 72.2,283.4 72.2,300.4 57.5,291.9" style="fill:var(--mint-2)"/><polygon points="86.9,274.9 72.2,283.4 72.2,300.4 86.9,291.9" style="fill:var(--mint-3)"/><polygon points="72.2,266.4 86.9,274.9 72.2,283.4 57.5,274.9" style="fill:var(--mint-1)"/></g></g>
+  <g class="lanes"><path class="lane" d="M300 376C450 220 490 250 550 250S820 302 996 372"/><path class="lane" d="M300 376C450 286 490 316 550 316S820 380 990 410"/><path class="lane" d="M300 376C450 346 490 376 550 376S820 484 984 448"/><path class="lane" d="M300 376C450 406 490 436 550 436S820 496 978 486"/><path class="lane" d="M300 376C450 470 490 500 550 500S820 584 972 524"/></g>
+  <g class="knots"><path class="knot k0" d="M349.6,376.0L362.1,383.9L374.1,391.7L385.7,399.5L396.8,407.2L407.3,414.8L417.1,422.4L426.2,429.8L434.5,437.0L442.0,444.1L448.6,451.0L454.3,457.7L459.0,464.2L462.8,470.4L465.5,476.4L467.3,482.1L468.0,487.5L467.7,492.6L466.3,497.4L463.9,501.8L460.5,505.9L456.1,509.7L450.8,513.0L444.5,516.0L437.3,518.7L429.3,520.9L420.5,522.7L410.9,524.2L400.7,525.2L389.8,525.8L378.4,526.0L366.5,525.8L354.2,525.2L341.5,524.2L328.6,522.7L315.6,520.9L302.4,518.7L289.2,516.0L276.1,513.0L263.1,509.7L250.4,505.9L237.9,501.8L225.9,497.4L214.3,492.6L203.2,487.5L192.7,482.1L182.9,476.4L173.8,470.4L165.5,464.2L158.0,457.7L151.4,451.0L145.7,444.1L141.0,437.0L137.2,429.8L134.5,422.4L132.7,414.8L132.0,407.2L132.3,399.5L133.7,391.7L136.1,383.9L139.5,376.0L143.9,368.1L149.2,360.3L155.5,352.5L162.7,344.8L170.7,337.2L179.5,329.6L189.1,322.2L199.3,315.0L210.2,307.9L221.6,301.0L233.5,294.3L245.8,287.8L258.5,281.6L271.4,275.6L284.4,269.9L297.6,264.5L310.8,259.4L323.9,254.6L336.9,250.2L349.6,246.1L362.1,242.3L374.1,239.0L385.7,236.0L396.8,233.3L407.3,231.1L417.1,229.3L426.2,227.8L434.5,226.8L442.0,226.2L448.6,226.0L454.3,226.2L459.0,226.8L462.8,227.8L465.5,229.3L467.3,231.1L468.0,233.3L467.7,236.0L466.3,239.0L463.9,242.3L460.5,246.1L456.1,250.2L450.8,254.6L444.5,259.4L437.3,264.5L429.3,269.9L420.5,275.6L410.9,281.6L400.7,287.8L389.8,294.3L378.4,301.0L366.5,307.9L354.2,315.0L341.5,322.2L328.6,329.6L315.6,337.2L302.4,344.8L289.2,352.5L276.1,360.3L263.1,368.1L250.4,376.0L237.9,383.9L225.9,391.7L214.3,399.5L203.2,407.2L192.7,414.8L182.9,422.4L173.8,429.8L165.5,437.0L158.0,444.1L151.4,451.0L145.7,457.7L141.0,464.2L137.2,470.4L134.5,476.4L132.7,482.1L132.0,487.5L132.3,492.6L133.7,497.4L136.1,501.8L139.5,505.9L143.9,509.7L149.2,513.0L155.5,516.0L162.7,518.7L170.7,520.9L179.5,522.7L189.1,524.2L199.3,525.2L210.2,525.8L221.6,526.0L233.5,525.8L245.8,525.2L258.5,524.2L271.4,522.7L284.4,520.9L297.6,518.7L310.8,516.0L323.9,513.0L336.9,509.7L349.6,505.9L362.1,501.8L374.1,497.4L385.7,492.6L396.8,487.5L407.3,482.1L417.1,476.4L426.2,470.4L434.5,464.2L442.0,457.7L448.6,451.0L454.3,444.1L459.0,437.0L462.8,429.8L465.5,422.4L467.3,414.8L468.0,407.2L467.7,399.5L466.3,391.7L463.9,383.9L460.5,376.0L456.1,368.1L450.8,360.3L444.5,352.5L437.3,344.8L429.3,337.2L420.5,329.6L410.9,322.2L400.7,315.0L389.8,307.9L378.4,301.0L366.5,294.3L354.2,287.8L341.5,281.6L328.6,275.6L315.6,269.9L302.4,264.5L289.2,259.4L276.1,254.6L263.1,250.2L250.4,246.1L237.9,242.3L225.9,239.0L214.3,236.0L203.2,233.3L192.7,231.1L182.9,229.3L173.8,227.8L165.5,226.8L158.0,226.2L151.4,226.0L145.7,226.2L141.0,226.8L137.2,227.8L134.5,229.3L132.7,231.1L132.0,233.3L132.3,236.0L133.7,239.0L136.1,242.3L139.5,246.1L143.9,250.2L149.2,254.6L155.5,259.4L162.7,264.5L170.7,269.9L179.5,275.6L189.1,281.6L199.3,287.8L210.2,294.3L221.6,301.0L233.5,307.9L245.8,315.0L258.5,322.2L271.4,329.6L284.4,337.2L297.6,344.8L310.8,352.5L323.9,360.3L336.9,368.1Z"/><path class="knot k1" d="M462.2,376.0L471.6,390.4L478.0,404.7L481.4,418.6L481.7,432.1L478.9,445.0L473.1,457.1L464.2,468.3L452.6,478.6L438.3,487.6L421.7,495.5L403.0,502.1L382.6,507.2L360.7,511.0L337.8,513.2L314.2,514.0L290.4,513.2L266.8,511.0L243.7,507.2L221.6,502.1L200.8,495.5L181.7,487.6L164.7,478.6L150.0,468.3L137.8,457.1L128.4,445.0L122.0,432.1L118.6,418.6L118.3,404.7L121.1,390.4L126.9,376.0L135.8,361.6L147.4,347.3L161.7,333.4L178.3,319.9L197.0,307.0L217.4,294.9L239.3,283.7L262.2,273.4L285.8,264.4L309.6,256.5L333.2,249.9L356.3,244.8L378.4,241.0L399.2,238.8L418.3,238.0L435.3,238.8L450.0,241.0L462.2,244.8L471.6,249.9L478.0,256.5L481.4,264.4L481.7,273.4L478.9,283.7L473.1,294.9L464.2,307.0L452.6,319.9L438.3,333.4L421.7,347.3L403.0,361.6L382.6,376.0L360.7,390.4L337.8,404.7L314.2,418.6L290.4,432.1L266.8,445.0L243.7,457.1L221.6,468.3L200.8,478.6L181.7,487.6L164.7,495.5L150.0,502.1L137.8,507.2L128.4,511.0L122.0,513.2L118.6,514.0L118.3,513.2L121.1,511.0L126.9,507.2L135.8,502.1L147.4,495.5L161.7,487.6L178.3,478.6L197.0,468.3L217.4,457.1L239.3,445.0L262.2,432.1L285.8,418.6L309.6,404.7L333.2,390.4L356.3,376.0L378.4,361.6L399.2,347.3L418.3,333.4L435.3,319.9L450.0,307.0L462.2,294.9L471.6,283.7L478.0,273.4L481.4,264.4L481.7,256.5L478.9,249.9L473.1,244.8L464.2,241.0L452.6,238.8L438.3,238.0L421.7,238.8L403.0,241.0L382.6,244.8L360.7,249.9L337.8,256.5L314.2,264.4L290.4,273.4L266.8,283.7L243.7,294.9L221.6,307.0L200.8,319.9L181.7,333.4L164.7,347.3L150.0,361.6L137.8,376.0L128.4,390.4L122.0,404.7L118.6,418.6L118.3,432.1L121.1,445.0L126.9,457.1L135.8,468.3L147.4,478.6L161.7,487.6L178.3,495.5L197.0,502.1L217.4,507.2L239.3,511.0L262.2,513.2L285.8,514.0L309.6,513.2L333.2,511.0L356.3,507.2L378.4,502.1L399.2,495.5L418.3,487.6L435.3,478.6L450.0,468.3L462.2,457.1L471.6,445.0L478.0,432.1L481.4,418.6L481.7,404.7L478.9,390.4L473.1,376.0L464.2,361.6L452.6,347.3L438.3,333.4L421.7,319.9L403.0,307.0L382.6,294.9L360.7,283.7L337.8,273.4L314.2,264.4L290.4,256.5L266.8,249.9L243.7,244.8L221.6,241.0L200.8,238.8L181.7,238.0L164.7,238.8L150.0,241.0L137.8,244.8L128.4,249.9L122.0,256.5L118.6,264.4L118.3,273.4L121.1,283.7L126.9,294.9L135.8,307.0L147.4,319.9L161.7,333.4L178.3,347.3L197.0,361.6L217.4,376.0L239.3,390.4L262.2,404.7L285.8,418.6L309.6,432.1L333.2,445.0L356.3,457.1L378.4,468.3L399.2,478.6L418.3,487.6L435.3,495.5L450.0,502.1L462.2,507.2L471.6,511.0L478.0,513.2L481.4,514.0L481.7,513.2L478.9,511.0L473.1,507.2L464.2,502.1L452.6,495.5L438.3,487.6L421.7,478.6L403.0,468.3L382.6,457.1L360.7,445.0L337.8,432.1L314.2,418.6L290.4,404.7L266.8,390.4L243.7,376.0L221.6,361.6L200.8,347.3L181.7,333.4L164.7,319.9L150.0,307.0L137.8,294.9L128.4,283.7L122.0,273.4L118.6,264.4L118.3,256.5L121.1,249.9L126.9,244.8L135.8,241.0L147.4,238.8L161.7,238.0L178.3,238.8L197.0,241.0L217.4,244.8L239.3,249.9L262.2,256.5L285.8,264.4L309.6,273.4L333.2,283.7L356.3,294.9L378.4,307.0L399.2,319.9L418.3,333.4L435.3,347.3L450.0,361.6Z"/><path class="knot k2" d="M436.4,376.0L432.9,389.2L429.1,402.3L425.0,415.2L420.4,427.9L415.6,440.3L410.4,452.3L405.0,463.8L399.2,474.7L393.2,485.1L386.9,494.8L380.4,503.7L373.7,511.9L366.7,519.2L359.6,525.7L352.3,531.2L344.9,535.8L337.3,539.4L329.7,541.9L321.9,543.5L314.1,544.0L306.3,543.5L298.5,541.9L290.6,539.4L282.8,535.8L275.0,531.2L267.3,525.7L259.7,519.2L252.2,511.9L244.8,503.7L237.6,494.8L230.5,485.1L223.7,474.7L217.0,463.8L210.6,452.3L204.4,440.3L198.5,427.9L192.8,415.2L187.5,402.3L182.5,389.2L177.7,376.0L173.4,362.8L169.3,349.7L165.7,336.8L162.3,324.1L159.4,311.7L156.9,299.7L154.7,288.2L153.0,277.3L151.6,266.9L150.7,257.2L150.1,248.3L150.0,240.1L150.3,232.8L151.0,226.3L152.1,220.8L153.6,216.2L155.5,212.6L157.8,210.1L160.5,208.5L163.6,208.0L167.1,208.5L170.9,210.1L175.0,212.6L179.6,216.2L184.4,220.8L189.6,226.3L195.0,232.8L200.8,240.1L206.8,248.3L213.1,257.2L219.6,266.9L226.3,277.3L233.3,288.2L240.4,299.7L247.7,311.7L255.1,324.1L262.7,336.8L270.3,349.7L278.1,362.8L285.9,376.0L293.7,389.2L301.5,402.3L309.4,415.2L317.2,427.9L325.0,440.3L332.7,452.3L340.3,463.8L347.8,474.7L355.2,485.1L362.4,494.8L369.5,503.7L376.3,511.9L383.0,519.2L389.4,525.7L395.6,531.2L401.5,535.8L407.2,539.4L412.5,541.9L417.5,543.5L422.3,544.0L426.6,543.5L430.7,541.9L434.3,539.4L437.7,535.8L440.6,531.2L443.1,525.7L445.3,519.2L447.0,511.9L448.4,503.7L449.3,494.8L449.9,485.1L450.0,474.7L449.7,463.8L449.0,452.3L447.9,440.3L446.4,427.9L444.5,415.2L442.2,402.3L439.5,389.2L436.4,376.0L432.9,362.8L429.1,349.7L425.0,336.8L420.4,324.1L415.6,311.7L410.4,299.7L405.0,288.2L399.2,277.3L393.2,266.9L386.9,257.2L380.4,248.3L373.7,240.1L366.7,232.8L359.6,226.3L352.3,220.8L344.9,216.2L337.3,212.6L329.7,210.1L321.9,208.5L314.1,208.0L306.3,208.5L298.5,210.1L290.6,212.6L282.8,216.2L275.0,220.8L267.3,226.3L259.7,232.8L252.2,240.1L244.8,248.3L237.6,257.2L230.5,266.9L223.7,277.3L217.0,288.2L210.6,299.7L204.4,311.7L198.5,324.1L192.8,336.8L187.5,349.7L182.5,362.8L177.7,376.0L173.4,389.2L169.3,402.3L165.7,415.2L162.3,427.9L159.4,440.3L156.9,452.3L154.7,463.8L153.0,474.7L151.6,485.1L150.7,494.8L150.1,503.7L150.0,511.9L150.3,519.2L151.0,525.7L152.1,531.2L153.6,535.8L155.5,539.4L157.8,541.9L160.5,543.5L163.6,544.0L167.1,543.5L170.9,541.9L175.0,539.4L179.6,535.8L184.4,531.2L189.6,525.7L195.0,519.2L200.8,511.9L206.8,503.7L213.1,494.8L219.6,485.1L226.3,474.7L233.3,463.8L240.4,452.3L247.7,440.3L255.1,427.9L262.7,415.2L270.3,402.3L278.1,389.2L285.9,376.0L293.7,362.8L301.5,349.7L309.4,336.8L317.2,324.1L325.0,311.7L332.7,299.7L340.3,288.2L347.8,277.3L355.2,266.9L362.4,257.2L369.5,248.3L376.3,240.1L383.0,232.8L389.4,226.3L395.6,220.8L401.5,216.2L407.2,212.6L412.5,210.1L417.5,208.5L422.3,208.0L426.6,208.5L430.7,210.1L434.3,212.6L437.7,216.2L440.6,220.8L443.1,226.3L445.3,232.8L447.0,240.1L448.4,248.3L449.3,257.2L449.9,266.9L450.0,277.3L449.7,288.2L449.0,299.7L447.9,311.7L446.4,324.1L444.5,336.8L442.2,349.7L439.5,362.8Z"/><path class="knot k3" d="M413.4,376.0L426.8,392.2L438.9,408.1L449.4,423.5L458.3,438.0L465.5,451.5L470.9,463.7L474.3,474.4L475.9,483.4L475.5,490.6L473.3,495.8L469.1,498.9L463.1,500.0L455.2,498.9L445.7,495.8L434.6,490.6L422.0,483.4L408.1,474.4L393.0,463.7L376.9,451.5L359.9,438.0L342.3,423.5L324.2,408.1L305.8,392.2L287.4,376.0L269.1,359.8L251.2,343.9L233.8,328.5L217.1,314.0L201.3,300.5L186.6,288.3L173.2,277.6L161.1,268.6L150.6,261.4L141.7,256.2L134.5,253.1L129.1,252.0L125.7,253.1L124.1,256.2L124.5,261.4L126.7,268.6L130.9,277.6L136.9,288.3L144.8,300.5L154.3,314.0L165.4,328.5L178.0,343.9L191.9,359.8L207.0,376.0L223.1,392.2L240.1,408.1L257.7,423.5L275.8,438.0L294.2,451.5L312.6,463.7L330.9,474.4L348.8,483.4L366.2,490.6L382.9,495.8L398.7,498.9L413.4,500.0L426.8,498.9L438.9,495.8L449.4,490.6L458.3,483.4L465.5,474.4L470.9,463.7L474.3,451.5L475.9,438.0L475.5,423.5L473.3,408.1L469.1,392.2L463.1,376.0L455.2,359.8L445.7,343.9L434.6,328.5L422.0,314.0L408.1,300.5L393.0,288.3L376.9,277.6L359.9,268.6L342.3,261.4L324.2,256.2L305.8,253.1L287.4,252.0L269.1,253.1L251.2,256.2L233.8,261.4L217.1,268.6L201.3,277.6L186.6,288.3L173.2,300.5L161.1,314.0L150.6,328.5L141.7,343.9L134.5,359.8L129.1,376.0L125.7,392.2L124.1,408.1L124.5,423.5L126.7,438.0L130.9,451.5L136.9,463.7L144.8,474.4L154.3,483.4L165.4,490.6L178.0,495.8L191.9,498.9L207.0,500.0L223.1,498.9L240.1,495.8L257.7,490.6L275.8,483.4L294.2,474.4L312.6,463.7L330.9,451.5L348.8,438.0L366.2,423.5L382.9,408.1L398.7,392.2L413.4,376.0L426.8,359.8L438.9,343.9L449.4,328.5L458.3,314.0L465.5,300.5L470.9,288.3L474.3,277.6L475.9,268.6L475.5,261.4L473.3,256.2L469.1,253.1L463.1,252.0L455.2,253.1L445.7,256.2L434.6,261.4L422.0,268.6L408.1,277.6L393.0,288.3L376.9,300.5L359.9,314.0L342.3,328.5L324.2,343.9L305.8,359.8L287.4,376.0L269.1,392.2L251.2,408.1L233.8,423.5L217.1,438.0L201.3,451.5L186.6,463.7L173.2,474.4L161.1,483.4L150.6,490.6L141.7,495.8L134.5,498.9L129.1,500.0L125.7,498.9L124.1,495.8L124.5,490.6L126.7,483.4L130.9,474.4L136.9,463.7L144.8,451.5L154.3,438.0L165.4,423.5L178.0,408.1L191.9,392.2L207.0,376.0L223.1,359.8L240.1,343.9L257.7,328.5L275.8,314.0L294.2,300.5L312.6,288.3L330.9,277.6L348.8,268.6L366.2,261.4L382.9,256.2L398.7,253.1L413.4,252.0L426.8,253.1L438.9,256.2L449.4,261.4L458.3,268.6L465.5,277.6L470.9,288.3L474.3,300.5L475.9,314.0L475.5,328.5L473.3,343.9L469.1,359.8L463.1,376.0L455.2,392.2L445.7,408.1L434.6,423.5L422.0,438.0L408.1,451.5L393.0,463.7L376.9,474.4L359.9,483.4L342.3,490.6L324.2,495.8L305.8,498.9L287.4,500.0L269.1,498.9L251.2,495.8L233.8,490.6L217.1,483.4L201.3,474.4L186.6,463.7L173.2,451.5L161.1,438.0L150.6,423.5L141.7,408.1L134.5,392.2L129.1,376.0L125.7,359.8L124.1,343.9L124.5,328.5L126.7,314.0L130.9,300.5L136.9,288.3L144.8,277.6L154.3,268.6L165.4,261.4L178.0,256.2L191.9,253.1L207.0,252.0L223.1,253.1L240.1,256.2L257.7,261.4L275.8,268.6L294.2,277.6L312.6,288.3L330.9,300.5L348.8,314.0L366.2,328.5L382.9,343.9L398.7,359.8Z"/></g>
+  <g class="stack"><polygon points="1088.2,381.0 1128.0,404.0 1128.0,450.0 1088.2,427.0" style="fill:var(--sky-2)"/><polygon points="1167.8,381.0 1128.0,404.0 1128.0,450.0 1167.8,427.0" style="fill:var(--sky-3)"/><polygon points="1128.0,358.0 1167.8,381.0 1128.0,404.0 1088.2,381.0" style="fill:var(--sky-1)"/><polygon points="1088.2,335.0 1128.0,358.0 1128.0,404.0 1088.2,381.0" style="fill:var(--inkb-2)"/><polygon points="1167.8,335.0 1128.0,358.0 1128.0,404.0 1167.8,381.0" style="fill:var(--inkb-3)"/><polygon points="1128.0,312.0 1167.8,335.0 1128.0,358.0 1088.2,335.0" style="fill:var(--inkb-1)"/><polygon points="1088.2,289.0 1128.0,312.0 1128.0,358.0 1088.2,335.0" style="fill:var(--coral-2)"/><polygon points="1167.8,289.0 1128.0,312.0 1128.0,358.0 1167.8,335.0" style="fill:var(--coral-3)"/><polygon points="1128.0,266.0 1167.8,289.0 1128.0,312.0 1088.2,289.0" style="fill:var(--coral-1)"/><g class="landing"><polygon points="1088.2,243.0 1128.0,266.0 1128.0,312.0 1088.2,289.0" style="fill:var(--mint-2)"/><polygon points="1167.8,243.0 1128.0,266.0 1128.0,312.0 1167.8,289.0" style="fill:var(--mint-3)"/><polygon points="1128.0,220.0 1167.8,243.0 1128.0,266.0 1088.2,243.0" style="fill:var(--mint-1)"/></g><polygon points="1128.0,404.0 1167.8,427.0 1167.8,473.0 1128.0,450.0" style="fill:var(--mint-2)"/><polygon points="1207.7,404.0 1167.8,427.0 1167.8,473.0 1207.7,450.0" style="fill:var(--mint-3)"/><polygon points="1167.8,381.0 1207.7,404.0 1167.8,427.0 1128.0,404.0" style="fill:var(--mint-1)"/><polygon points="1048.3,404.0 1088.2,427.0 1088.2,473.0 1048.3,450.0" style="fill:var(--coral-2)"/><polygon points="1128.0,404.0 1088.2,427.0 1088.2,473.0 1128.0,450.0" style="fill:var(--coral-3)"/><polygon points="1088.2,381.0 1128.0,404.0 1088.2,427.0 1048.3,404.0" style="fill:var(--coral-1)"/><polygon points="1128.0,358.0 1167.8,381.0 1167.8,427.0 1128.0,404.0" style="fill:var(--sky-2)"/><polygon points="1207.7,358.0 1167.8,381.0 1167.8,427.0 1207.7,404.0" style="fill:var(--sky-3)"/><polygon points="1167.8,335.0 1207.7,358.0 1167.8,381.0 1128.0,358.0" style="fill:var(--sky-1)"/><polygon points="1048.3,358.0 1088.2,381.0 1088.2,427.0 1048.3,404.0" style="fill:var(--mint-2)"/><polygon points="1128.0,358.0 1088.2,381.0 1088.2,427.0 1128.0,404.0" style="fill:var(--mint-3)"/><polygon points="1088.2,335.0 1128.0,358.0 1088.2,381.0 1048.3,358.0" style="fill:var(--mint-1)"/><polygon points="1128.0,312.0 1167.8,335.0 1167.8,381.0 1128.0,358.0" style="fill:var(--inkb-2)"/><polygon points="1207.7,312.0 1167.8,335.0 1167.8,381.0 1207.7,358.0" style="fill:var(--inkb-3)"/><polygon points="1167.8,289.0 1207.7,312.0 1167.8,335.0 1128.0,312.0" style="fill:var(--inkb-1)"/><polygon points="1048.3,312.0 1088.2,335.0 1088.2,381.0 1048.3,358.0" style="fill:var(--sky-2)"/><polygon points="1128.0,312.0 1088.2,335.0 1088.2,381.0 1128.0,358.0" style="fill:var(--sky-3)"/><polygon points="1088.2,289.0 1128.0,312.0 1088.2,335.0 1048.3,312.0" style="fill:var(--sky-1)"/><polygon points="1167.8,427.0 1207.7,450.0 1207.7,496.0 1167.8,473.0" style="fill:var(--coral-2)"/><polygon points="1247.5,427.0 1207.7,450.0 1207.7,496.0 1247.5,473.0" style="fill:var(--coral-3)"/><polygon points="1207.7,404.0 1247.5,427.0 1207.7,450.0 1167.8,427.0" style="fill:var(--coral-1)"/><polygon points="1088.2,427.0 1128.0,450.0 1128.0,496.0 1088.2,473.0" style="fill:var(--inkb-2)"/><polygon points="1167.8,427.0 1128.0,450.0 1128.0,496.0 1167.8,473.0" style="fill:var(--inkb-3)"/><polygon points="1128.0,404.0 1167.8,427.0 1128.0,450.0 1088.2,427.0" style="fill:var(--inkb-1)"/><polygon points="1008.5,427.0 1048.3,450.0 1048.3,496.0 1008.5,473.0" style="fill:var(--sky-2)"/><polygon points="1088.2,427.0 1048.3,450.0 1048.3,496.0 1088.2,473.0" style="fill:var(--sky-3)"/><polygon points="1048.3,404.0 1088.2,427.0 1048.3,450.0 1008.5,427.0" style="fill:var(--sky-1)"/><polygon points="1088.2,381.0 1128.0,404.0 1128.0,450.0 1088.2,427.0" style="fill:var(--coral-2)"/><polygon points="1167.8,381.0 1128.0,404.0 1128.0,450.0 1167.8,427.0" style="fill:var(--coral-3)"/><polygon points="1128.0,358.0 1167.8,381.0 1128.0,404.0 1088.2,381.0" style="fill:var(--coral-1)"/><polygon points="1008.5,381.0 1048.3,404.0 1048.3,450.0 1008.5,427.0" style="fill:var(--inkb-2)"/><polygon points="1088.2,381.0 1048.3,404.0 1048.3,450.0 1088.2,427.0" style="fill:var(--inkb-3)"/><polygon points="1048.3,358.0 1088.2,381.0 1048.3,404.0 1008.5,381.0" style="fill:var(--inkb-1)"/><polygon points="1128.0,450.0 1167.8,473.0 1167.8,519.0 1128.0,496.0" style="fill:var(--sky-2)"/><polygon points="1207.7,450.0 1167.8,473.0 1167.8,519.0 1207.7,496.0" style="fill:var(--sky-3)"/><polygon points="1167.8,427.0 1207.7,450.0 1167.8,473.0 1128.0,450.0" style="fill:var(--sky-1)"/><polygon points="1048.3,450.0 1088.2,473.0 1088.2,519.0 1048.3,496.0" style="fill:var(--mint-2)"/><polygon points="1128.0,450.0 1088.2,473.0 1088.2,519.0 1128.0,496.0" style="fill:var(--mint-3)"/><polygon points="1088.2,427.0 1128.0,450.0 1088.2,473.0 1048.3,450.0" style="fill:var(--mint-1)"/></g>
+  <g class="riders"><g class="rider" style="offset-path:path('M300 376C450 220 490 250 550 250S820 302 996 372');--at:12%;animation-duration:11.0s;animation-delay:-1.32s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--sky-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--sky-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--sky-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 220 490 250 550 250S820 302 996 372');--at:62%;animation-duration:11.0s;animation-delay:-6.82s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--coral-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--coral-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--coral-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 286 490 316 550 316S820 380 990 410');--at:29%;animation-duration:12.3s;animation-delay:-3.57s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--mint-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--mint-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--mint-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 286 490 316 550 316S820 380 990 410');--at:79%;animation-duration:12.3s;animation-delay:-9.72s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--inkb-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--inkb-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--inkb-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 346 490 376 550 376S820 484 984 448');--at:46%;animation-duration:13.6s;animation-delay:-6.26s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--coral-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--coral-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--coral-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 346 490 376 550 376S820 484 984 448');--at:96%;animation-duration:13.6s;animation-delay:-13.06s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--sky-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--sky-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--sky-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 406 490 436 550 436S820 496 978 486');--at:63%;animation-duration:14.9s;animation-delay:-9.39s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--inkb-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--inkb-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--inkb-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 406 490 436 550 436S820 496 978 486');--at:13%;animation-duration:14.9s;animation-delay:-1.94s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--mint-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--mint-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--mint-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 470 490 500 550 500S820 584 972 524');--at:80%;animation-duration:16.2s;animation-delay:-12.96s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--sky-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--sky-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--sky-1)"/></g><g class="rider" style="offset-path:path('M300 376C450 470 490 500 550 500S820 584 972 524');--at:30%;animation-duration:16.2s;animation-delay:-4.86s"><polygon points="-13.0,-7.5 0.0,0.0 0.0,15.0 -13.0,7.5" style="fill:var(--coral-2)"/><polygon points="13.0,-7.5 0.0,0.0 0.0,15.0 13.0,7.5" style="fill:var(--coral-3)"/><polygon points="0.0,-15.0 13.0,-7.5 0.0,0.0 -13.0,-7.5" style="fill:var(--coral-1)"/></g></g>
+</svg>
+    <ul class="stats light">
+      <li class="stat"><div class="figure"><b>11</b><small>años seguidos</small></div><span>Tengo clientes que llevan ya 11 años conmigo.</span></li>
+      <li class="stat"><div class="figure"><b>3%</b><small>de abandono</small></div><span>Mi tasa de abandono es del 3%, y me esfuerzo por mantenerla por debajo de esa cifra.</span></li>
+      <li class="stat"><div class="figure"><img src="/art/gift.webp" alt="" width="640" height="640" loading="lazy"><small>Regalos en las fiestas</small></div><span>Hay clientes que me traen regalos en las fiestas, como si fuera de la familia o trabajara en su empresa.</span></li>
+    </ul>
+  </div>
+</section>
+<aside class="later" aria-label="Leer más tarde, al principio de la página">
+  <div class="wrap">
+    <div class="later-head">
+      <p class="label">Leer más tarde</p>
+      <h2 class="display" id="later-title-top">¿Ahora no tienes tiempo?</h2>
+    </div>
+    <form class="later-form" id="later-form-top" data-hook="https://hook.eu1.make.com/2x9qdwv6kcwttznsn6tbl4dj2oolkaap">
+      <div class="field"><label for="later-email-top">Tu correo electrónico</label><input id="later-email-top" name="email" type="email" dir="ltr" autocomplete="email" required></div>
+      <div class="visually-hidden" aria-hidden="true"><label for="later-site-top">Por favor, deja este campo vacío</label><input id="later-site-top" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Envíame un correo para volver a leer sobre ti más tarde</button>
+      <p class="form-status" aria-hidden="true"></p>
+      <p class="visually-hidden" role="status"></p>
+      <p class="form-note one-line">Un solo correo, una única vez. <a href="https://l-be.com/es/privacy">Política de privacidad</a></p>
+    </form>
+  </div>
+</aside>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Soluciones</p>
+      <h2 class="display">A cada cliente le preparo el paquete de soluciones ideal para su caso</h2>
+      <p>Tengo una gran variedad de soluciones para ustedes, quienes dirigen un negocio y quieren mejorar un poco su calidad de vida empresarial, en todas las áreas que interesan.</p>
+    </div>
+    <div class="split">
+      <ul class="svc one">
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Agentes de IA y bots</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>CRM, leads y ventas</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Atención y comunicación con clientes</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Pedidos, cobros y finanzas</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Automatización e integraciones</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Gestión, informes y equipo</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Especificación, formación y acompañamiento</span></li>
+      </ul>
+      <img class="art blend" src="/art/core.webp" alt="Ilustración: un cubo central unido con líneas discontinuas a seis módulos a su alrededor" title="Ilustración: un cubo central unido con líneas discontinuas a seis módulos a su alrededor" width="900" height="900" loading="lazy">
+    </div>
+    <p><a class="btn" href="https://l-be.com/es/solutions">Ver todas las soluciones</a></p>
+  </div>
+</section>
+<section class="section on-ink">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">IA en el negocio</p>
+      <h2 class="display">Una capa de IA conectada a los datos de todo el negocio</h2>
+      <p>Así funciona hoy en uno de mis clientes, una empresa de 30 personas.</p>
+    </div>
+    <ul class="changes">
+      <li><b>Se pregunta en hebreo sencillo</b><span>Alguien del equipo pregunta en hebreo sencillo, por ejemplo “¿qué pedidos están retrasados en el proveedor?”, y recibe una respuesta basada en los datos de la empresa.</span></li>
+      <li><b>Informe con un clic</b><span>Un informe útil se guarda y se puede volver a ejecutar con un clic.</span></li>
+      <li><b>Panel de control con palabras</b><span>La gerencia pide un panel de control con palabras, y el sistema lo construye.</span></li>
+      <li><b>Una definición para cada cifra</b><span>Detrás de cada cifra hay una única definición de negocio acordada, de modo que todo el mundo habla del mismo “vendido” y del mismo “con retraso”.</span></li>
+    </ul>
+    <div class="ai-rules">
+      <p class="label">IA responsable</p>
+      <ul class="chain plain">
+        <li>La IA propone, y una persona aprueba</li>
+        <li>Cada persona ve solo lo que su puesto le permite</li>
+        <li>El acceso es con verificación en dos pasos</li>
+        <li>Los datos personales de los clientes no salen fuera</li>
+        <li>Cada acción queda registrada</li>
+      </ul>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-light" href="https://l-be.com/es/business-ai">Conocer el sistema</a> <a class="link" href="https://l-be.com/es/case-study" aria-label="Leer la historia completa del caso de estudio: Ida's Home">Leer la historia completa</a>
+    </div>
+  </div>
+</section>
+<section class="section on-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Consultoría para empresas</p>
+      <h2 class="display">Una sesión. Un informe. Un plan de trabajo.</h2>
+      <p>Una sesión de unas horas y, después, un informe final completo con recomendaciones y un plan de trabajo para mejoras inmediatas.</p>
+    </div>
+    <ol class="steps">
+      <li><b>Sesión</b><span>Unas horas de trabajo conjunto, sobre el negocio y sus procesos.</span></li>
+      <li><b>Informe final completo</b><span>Con recomendaciones.</span></li>
+      <li><b>Plan de trabajo</b><span>Para mejoras inmediatas.</span></li>
+    </ol>
+    <div class="cta-row">
+      <a class="btn" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Reservar una llamada<span class="visually-hidden"> (se abre en una ventana emergente)</span></a> <a class="link" href="#contact" aria-label="o dejar los datos en el formulario de contacto">o dejar los datos</a>
+    </div>
+  </div>
+</section>
+<section class="section on-ink">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Proyectos</p>
+      <h2 class="display">De dónde vengo y qué he hecho ya</h2>
+    </div>
+    <ul class="stats">
+      <li class="stat"><b>300+</b><span>proyectos que he tenido la suerte de acompañar, pequeños y grandes</span></li>
+      <li class="stat"><b>80+</b><span>personas al frente de negocios y empresas, desde el negocio pequeño hasta 100 personas en plantilla, a las que acompaño desde 2017, Hands On</span></li>
+      <li class="stat"><b>2013</b><span>desde entonces desarrollo empresas y negocios</span></li>
+    </ul>
+    <div class="record">
+      <p class="record-lead">He construido para distintas empresas sistemas de automatización complejos para procesos de negocio de lo más variopintos, y he dirigido proyectos de desarrollo web enormes, pequeños y para muchos y muy diversos tipos de negocios.</p>
+      <div class="brands">
+        <p class="muted">En el pasado dirigí proyectos tecnológicos en el entorno de internet para cientos de marcas, desde algunas de las que quizá nunca oirán hablar hasta nombres que todo el mundo conoce.<br>Estos son algunos de los clientes con los que trabajé en mi etapa en Restart IT, entre 2013 y 2015:</p>
+        <img class="past-clients" src="/past-clients.webp" alt="Logotipos de algunos de los clientes de la etapa de Restart IT: Microsoft Israel R&amp;D Center, Applied Materials, Bank of America, mako, Grupo Azrieli, LR Group, Africa Israel Residences, Eldan, HP, Discount, Mifal HaPais, Strauss, Cafe Cafe, College of Management, Walt Disney Pictures, Azorim, Leumi, Blonde 2.0, Gindi Holdings, Burgus Burger Bar, HOT, Moses, Tradis Gat, Hoteles Fattal, mobli, Colmobil, Maybelline New York, L'Oréal Paris, Garnier, Ferrocarriles de Israel, Municipalidad de Jerusalén, ALUT, Bezeq International, Rhodium" title="Logotipos de algunos de los clientes de la etapa de Restart IT: Microsoft Israel R&amp;D Center, Applied Materials, Bank of America, mako, Grupo Azrieli, LR Group, Africa Israel Residences, Eldan, HP, Discount, Mifal HaPais, Strauss, Cafe Cafe, College of Management, Walt Disney Pictures, Azorim, Leumi, Blonde 2.0, Gindi Holdings, Burgus Burger Bar, HOT, Moses, Tradis Gat, Hoteles Fattal, mobli, Colmobil, Maybelline New York, L'Oréal Paris, Garnier, Ferrocarriles de Israel, Municipalidad de Jerusalén, ALUT, Bezeq International, Rhodium" width="855" height="450" loading="lazy">
+      </div>
+    </div>
+    <article class="case">
+      <p class="label">Caso de estudio · Ida's Home</p>
+      <h3 class="display">Todo el negocio en un solo proceso, de la venta al cobro. Y, por encima, una capa de IA conectada a todas las áreas.</h3>
+      <p>Ida's Home diseña y vende mobiliario para el hogar: sofás y sillones a medida, iluminación, alfombras y textiles.<br>La empresa tiene 30 personas en plantilla y trabaja con varios almacenes, una carpintería y muchos proveedores.</p>
+      <ul class="changes">
+        <li><b>Un proceso continuo</b><span>De la venta al cobro, en lugar de información dispersa entre personas y archivos.</span></li>
+        <li><b>Actualización desde el terreno</b><span>El almacén, el reparto y ventas actualizan el sistema mientras trabajan, desde el móvil.</span></li>
+        <li><b>Una sola imagen para toda la empresa</b><span>Cada área ve el mismo pedido, en el mismo estado y al mismo tiempo.</span></li>
+        <li><b>Una imagen fiable para la dirección</b><span>De pedidos, inventario y deudas.<br>El sistema sacó a la luz desajustes que antes no se veían, y se resolvieron.</span></li>
+      </ul>
+      <a class="btn" href="https://l-be.com/es/case-study" aria-label="Leer la historia completa del caso de estudio: Ida's Home">Leer la historia completa</a>
+    </article>
+  </div>
+</section>
+<section class="section on-surface">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Clientes</p>
+      <h2 class="display">Clientes que quizá conozcan</h2>
+      <p>Algunos simplemente disfrutan más hoy de su vida en el negocio, y otros han duplicado y triplicado su negocio.<br>Me encantará estar ahí también para el negocio de ustedes.</p>
+    </div>
+    <a class="spot" href="#contact" data-guide><img src="/clients/your-spot.webp" alt="Aquí hay sitio para ti y, si no lo hubiera, haré que lo haya :)" title="Aquí hay sitio para ti y, si no lo hubiera, haré que lo haya :)" width="800" height="600" loading="lazy"></a>
+    <ul class="logos">
+      <li><img src="/clients/cooking-studio.webp" alt="El Estudio de Cocina" title="El Estudio de Cocina" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/ida-home.webp" alt="Ida's Home" title="Ida's Home" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/flyeast.webp" alt="FlyEast" title="FlyEast" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/tor-olam.webp" alt="Tor Olam" title="Tor Olam" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/dr-zchuyot.webp" alt="Dr. Zchuyot" title="Dr. Zchuyot" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/aicc-systems.webp" alt="AICC Sistemas" title="AICC Sistemas" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/ib-communications.webp" alt="IB Comunicaciones" title="IB Comunicaciones" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/razor-engineering.webp" alt="Razor Ingeniería y Consultoría" title="Razor Ingeniería y Consultoría" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/linder-mortgages.webp" alt="Linder Hipotecas" title="Linder Hipotecas" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/autovik.webp" alt="Autovik" title="Autovik" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/afikim-mayim.webp" alt="Afikim Mayim" title="Afikim Mayim" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/marketing-avc.webp" alt="Marketing AVC" title="Marketing AVC" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/triple-d-illustrations.webp" alt="Triple D Illustrations" title="Triple D Illustrations" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/welcome.webp" alt="Welcome" title="Welcome" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/rampa.webp" alt="Rampa - Ascensores y accesibilidad" title="Rampa - Ascensores y accesibilidad" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/olam-nistar.webp" alt="Olam Nistar" title="Olam Nistar" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/ttm.webp" alt="TTM" title="TTM" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/natali-somech.webp" alt="Natalie Somech - Formación, coaching y consultoría organizacional" title="Natalie Somech - Formación, coaching y consultoría organizacional" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/project-x.webp" alt="Project X" title="Project X" width="400" height="300" loading="lazy"></li>
+      <li><img src="/clients/hoshaya.webp" alt="Hoshaya - Red de jardines de infancia" title="Hoshaya - Red de jardines de infancia" width="400" height="300" loading="lazy"></li>
+    </ul>
+    <p class="more">y más...</p>
+  </div>
+</section>
+<section class="section on-mint" data-tachles>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Palabras amables</p>
+      <h2 class="display">A lo largo del camino he ido guardando, aquí y allá, alguna palabra amable que recibí</h2>
+      <p>Y también matzá shmurá o flores.<br>Las capturas de aquí son los mensajes originales.</p>
+    </div>
+    <div class="shots">
+      <a class="shot" href="/kudos/kudos-02.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-02.webp" alt="Captura de pantalla de WhatsApp: ¡Te deseo medio millón de dólares en efectivo y el resto a plazos! Has hecho una revolución ayudando a la gente. Créeme, hay un cambio tremendo" title="Captura de pantalla de WhatsApp: ¡Te deseo medio millón de dólares en efectivo y el resto a plazos! Has hecho una revolución ayudando a la gente. Créeme, hay un cambio tremendo" width="939" height="622" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <a class="shot" href="/kudos/kudos-09.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-09.webp" alt="Captura de pantalla de WhatsApp: Me encanta Liron, gracias por el día en que me lo presentaste" title="Captura de pantalla de WhatsApp: Me encanta Liron, gracias por el día en que me lo presentaste" width="720" height="606" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <a class="shot" href="/kudos/kudos-06.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-06.webp" alt="Captura de pantalla de WhatsApp. Liron: Y eso ya es directamente conmigo como implementador. El cliente: Eso es un extra. Liron: ¿Cuál es el extra, el traspaso o yo? El cliente: Tú como implementador" title="Captura de pantalla de WhatsApp. Liron: Y eso ya es directamente conmigo como implementador. El cliente: Eso es un extra. Liron: ¿Cuál es el extra, el traspaso o yo? El cliente: Tú como implementador" width="1003" height="704" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <a class="shot wide" href="/kudos/kudos-05.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-05.webp" alt="Captura de pantalla de un correo electrónico, 2019: He entrado en el sistema y, a primera vista, impresiona. Por supuesto, necesitaremos un poco de tiempo para acostumbrarnos. Pero, en una vista general, me han gustado mucho los pequeños detalles y que se haya pensado en cada pormenor, porque a veces son decisivos más adelante. Me refiero incluso a campos pequeños que parecen no tener importancia. Precisamente porque fui yo quien especificó el sistema actual con el que trabajamos hoy, ahora entiendo mejor lo que eso significa." title="Captura de pantalla de un correo electrónico, 2019: He entrado en el sistema y, a primera vista, impresiona. Por supuesto, necesitaremos un poco de tiempo para acostumbrarnos. Pero, en una vista general, me han gustado mucho los pequeños detalles y que se haya pensado en cada pormenor, porque a veces son decisivos más adelante. Me refiero incluso a campos pequeños que parecen no tener importancia. Precisamente porque fui yo quien especificó el sistema actual con el que trabajamos hoy, ahora entiendo mejor lo que eso significa." width="1473" height="229" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <a class="shot wide" href="/kudos/kudos-07.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-07.webp" alt="Captura de pantalla de WhatsApp: Si hubiera palabras, te las escribiría, pero no las tengo. Lo que sí puedo es desearte que solo tengas cosas buenas en la vida, porque tu esencia es hacer solo el bien. Me alegro del momento en que te conocí." title="Captura de pantalla de WhatsApp: Si hubiera palabras, te las escribiría, pero no las tengo. Lo que sí puedo es desearte que solo tengas cosas buenas en la vida, porque tu esencia es hacer solo el bien. Me alegro del momento en que te conocí." width="1256" height="566" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <a class="shot wide" href="/kudos/kudos-01.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-01.webp" alt="Captura de pantalla de un correo electrónico: Gracias por las respuestas y por la conversación de hoy. Me siento muy a gusto con el sistema y tengo la certeza de que nos dará una solución de muy alta calidad. Voy a jugar con los ajustes en los próximos días, y el domingo empezarán a trabajar con lo que hay" title="Captura de pantalla de un correo electrónico: Gracias por las respuestas y por la conversación de hoy. Me siento muy a gusto con el sistema y tengo la certeza de que nos dará una solución de muy alta calidad. Voy a jugar con los ajustes en los próximos días, y el domingo empezarán a trabajar con lo que hay" width="1418" height="301" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <a class="shot wide" href="/kudos/kudos-03.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-03.webp" alt="Captura de pantalla de WhatsApp: De verdad, gracias, muchas gracias; has hecho un trabajo excelente y el servicio ha sido excelente. Seguiremos en contacto más adelante, gracias." title="Captura de pantalla de WhatsApp: De verdad, gracias, muchas gracias; has hecho un trabajo excelente y el servicio ha sido excelente. Seguiremos en contacto más adelante, gracias." width="1345" height="312" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <a class="shot wide" href="/kudos/kudos-04.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-04.webp" alt="Captura de pantalla de un correo electrónico, 2018: ¡Tiene muy buena pinta! Y ya es una mejora considerable frente a lo que hay hoy (incluso antes de la conexión con la centralita telefónica y con las finanzas)" title="Captura de pantalla de un correo electrónico, 2018: ¡Tiene muy buena pinta! Y ya es una mejora considerable frente a lo que hay hoy (incluso antes de la conexión con la centralita telefónica y con las finanzas)" width="929" height="155" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      <a class="shot wide" href="/kudos/kudos-08.webp" target="_blank" rel="noopener"><img src="/kudos/kudos-08.webp" alt="Captura de pantalla de un correo electrónico, 2023: Gracias, Liron, eres un grande" title="Captura de pantalla de un correo electrónico, 2023: Gracias, Liron, eres un grande" width="820" height="148" loading="lazy"><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+    </div>
+    <details class="transcript">
+      <summary><span class="when-closed">Los mensajes como texto</span><span class="when-open">Volver a las capturas</span></summary>
+      <ol>
+        <li>Captura de pantalla de WhatsApp: ¡Te deseo medio millón de dólares en efectivo y el resto a plazos!<br>Has hecho una revolución ayudando a la gente.<br>Créeme, hay un cambio tremendo</li>
+        <li>Captura de pantalla de WhatsApp: Me encanta Liron, gracias por el día en que me lo presentaste</li>
+        <li>Captura de pantalla de WhatsApp.<br>Liron: Y eso ya es directamente conmigo como implementador.<br>El cliente: Eso es un extra.<br>Liron: ¿Cuál es el extra, el traspaso o yo?<br>El cliente: Tú como implementador</li>
+        <li>Captura de pantalla de un correo electrónico, 2019: He entrado en el sistema y, a primera vista, impresiona.<br>Por supuesto, necesitaremos un poco de tiempo para acostumbrarnos.<br>Pero, en una vista general, me han gustado mucho los pequeños detalles y que se haya pensado en cada pormenor, porque a veces son decisivos más adelante.<br>Me refiero incluso a campos pequeños que parecen no tener importancia.<br>Precisamente porque fui yo quien especificó el sistema actual con el que trabajamos hoy, ahora entiendo mejor lo que eso significa.</li>
+        <li>Captura de pantalla de WhatsApp: Si hubiera palabras, te las escribiría, pero no las tengo.<br>Lo que sí puedo es desearte que solo tengas cosas buenas en la vida, porque tu esencia es hacer solo el bien.<br>Me alegro del momento en que te conocí.</li>
+        <li>Captura de pantalla de un correo electrónico: Gracias por las respuestas y por la conversación de hoy.<br>Me siento muy a gusto con el sistema y tengo la certeza de que nos dará una solución de muy alta calidad.<br>Voy a jugar con los ajustes en los próximos días, y el domingo empezarán a trabajar con lo que hay</li>
+        <li>Captura de pantalla de WhatsApp: De verdad, gracias, muchas gracias; has hecho un trabajo excelente y el servicio ha sido excelente.<br>Seguiremos en contacto más adelante, gracias.</li>
+        <li>Captura de pantalla de un correo electrónico, 2018: ¡Tiene muy buena pinta!<br>Y ya es una mejora considerable frente a lo que hay hoy (incluso antes de la conexión con la centralita telefónica y con las finanzas)</li>
+        <li>Captura de pantalla de un correo electrónico, 2023: Gracias, Liron, eres un grande</li>
+      </ol>
+    </details>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap founder">
+    <div class="portrait"><img src="/liron-bialkovich.webp" alt="Liron Bialkovich" title="Liron Bialkovich" width="900" height="1125"></div>
+    <div class="founder-text">
+      <p class="label">Entonces, ¿por qué les conviene implementar conmigo?</p>
+      <h2 class="display">Liron Bialkovich</h2>
+      <p class="latin" lang="en">Liron Bialkovich</p>
+      <p>Mucho gusto, soy Liron Bialkovich.<br>Ayudo a los negocios a crecer, sobre todo cuando les apetece un poco de CRM, muchos procesos y un montón de automatización.</p>
+      <ul class="checks">
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Vengo del mundo de los sistemas de información, el desarrollo y la gestión de negocios.</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Como implementador, los represento ante las empresas de software y los distintos proveedores de tecnología.</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Tengo métodos de trabajo flexibles para implementar este tipo de soluciones.</span></li>
+        <li><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Doy un servicio personal y hablo su mismo idioma, de un modo que de verdad les hace entender el tema.</span></li>
+      </ul>
+      <a class="btn" href="https://l-be.com/es/liron-bialkovich">Un poco sobre mí</a>
+    </div>
+  </div>
+</section>
+<section class="section on-surface integrations">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display">Socios de negocio y una familia que se ha ido formando con los años</h2>
+      <hr class="short">
+      <p>Integraciones y vínculos profundos que he ido tejiendo (y, si esto estuviera lo bastante actualizado, habría que desplazarse durante un buen rato).</p>
+    </div>
+    <img src="/integrations.webp" alt="Logotipos de socios de negocio y sistemas con los que trabajo: IA, automatización, procesamiento de pagos, contabilidad, telefonía, mailing, envíos y más" title="Logotipos de socios de negocio y sistemas con los que trabajo: IA, automatización, procesamiento de pagos, contabilidad, telefonía, mailing, envíos y más" width="1500" height="1492" loading="lazy">
+  </div>
+</section>
+<section class="section on-ink" id="contact" data-tachles>
+  <div class="wrap contact">
+    <div class="section-head">
+      <p class="label">Contacto</p>
+      <h2 class="display">¿Hablamos con un café en la mano?</h2>
+      <p>Para una primera consulta gratis, déjenme sus datos aquí.<br>También pueden reservar una llamada directamente en mi agenda.</p>
+      <div class="links">
+        <a class="plain primary" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Reservar una llamada<span class="visually-hidden"> (se abre en una ventana emergente)</span></a> <a class="plain" href="/liron-bialkovich-portfolio.pdf" data-portfolio>Mi portafolio</a> <a class="plain" href="https://www.linkedin.com/in/liron-bialkovich-2508a286" rel="me noopener" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+      </div>
+    </div>
+    <form class="form" id="lead-form" data-hook="https://hook.eu1.make.com/2x9qdwv6kcwttznsn6tbl4dj2oolkaap" data-form-name="עמוד הבית" data-form-id="home-lead-form">
+      <div class="field"><label for="f-name">Nombre completo <span class="req">(obligatorio)</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="f-business">Nombre del negocio</label><input id="f-business" name="business_name" type="text" autocomplete="organization"></div>
+      <div class="field"><label for="f-phone">WhatsApp <span class="req">(obligatorio)</span></label><input id="f-phone" name="phone" type="tel" inputmode="tel" dir="ltr" autocomplete="tel" required></div>
+      <div class="field"><label for="f-email">Correo electrónico</label><input id="f-email" name="email" type="email" dir="ltr" autocomplete="email"></div>
+      <div class="field full"><label for="f-message">Sobre el negocio y su actividad</label><textarea id="f-message" name="message" rows="4" placeholder="Me encantará leer un poco antes de que hablemos..."></textarea></div>
+      <div class="visually-hidden" aria-hidden="true"><label for="f-site">Por favor, deja este campo vacío</label><input id="f-site" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Enviar consulta</button>
+      <p class="form-status" aria-hidden="true"></p>
+      <p class="visually-hidden form-live" role="status"></p>
+      <button class="btn btn-light form-again" type="button">Enviar otra consulta</button>
+      <p class="form-note">Los datos se me envían para que pueda responderte.<br><a href="https://l-be.com/es/privacy">Política de privacidad</a></p>
+    </form>
+  </div>
+</section>
+</main>
+<aside class="later" aria-label="Leer más tarde">
+  <div class="wrap">
+    <div class="later-head">
+      <p class="label">Leer más tarde</p>
+      <h2 class="display" id="later-title-foot">¿Ahora no tienes tiempo?</h2>
+    </div>
+    <form class="later-form" id="later-form-foot" data-hook="https://hook.eu1.make.com/2x9qdwv6kcwttznsn6tbl4dj2oolkaap">
+      <div class="field"><label for="later-email-foot">Tu correo electrónico</label><input id="later-email-foot" name="email" type="email" dir="ltr" autocomplete="email" required></div>
+      <div class="visually-hidden" aria-hidden="true"><label for="later-site-foot">Por favor, deja este campo vacío</label><input id="later-site-foot" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Envíame un correo para volver a leer sobre ti más tarde</button>
+      <p class="form-status" aria-hidden="true"></p>
+      <p class="visually-hidden" role="status"></p>
+      <p class="form-note one-line">Un solo correo, una única vez. <a href="https://l-be.com/es/privacy">Política de privacidad</a></p>
+    </form>
+  </div>
+</aside>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 L-Be · <span lang="en" dir="ltr">Liron Bialkovich</span> · Implementación de sistemas CRM e IA para empresas</p>
+    <nav aria-label="Enlaces">
+      <a href="https://l-be.com/es/" data-label="Inicio">Inicio</a> <a href="https://l-be.com/es/solutions" data-label="Soluciones">Soluciones</a> <a href="https://l-be.com/es/business-ai" data-label="Sistemas de IA">Sistemas de IA</a> <a href="https://l-be.com/es/case-study" data-label="Caso de estudio">Caso de estudio</a> <a href="https://l-be.com/es/digital-dreams" data-label="Sueños digitales">Sueños digitales</a> <a href="https://l-be.com/es/liron-bialkovich" data-label="Sobre mí">Sobre mí</a> <a href="https://l-be.com/es/#contact" data-label="Contacto">Contacto</a> <a href="/liron-bialkovich-portfolio.pdf" data-portfolio data-label="Portafolio">Portafolio</a> <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" rel="me noopener" data-label="LinkedIn" target="_blank">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a> <a href="https://l-be.com/es/kala-crm" data-label="Kala CRM">Kala CRM</a> <a href="https://l-be.com/es/gohighlevel" data-label="GoHighLevel">GoHighLevel</a> <a href="https://l-be.com/es/accessibility" data-label="Declaración de accesibilidad">Declaración de accesibilidad</a> <a href="https://l-be.com/es/privacy" data-label="Política de privacidad">Política de privacidad</a> <a href="https://l-be.com/es/terms" data-label="Términos de uso">Términos de uso</a>
+    </nav>
+    <nav class="langs" aria-label="Language">
+      <a href="/" hreflang="he" lang="he" translate="no">עברית</a>
+      <a href="/en/" hreflang="en" lang="en" translate="no">English</a>
+      <a href="/es/" hreflang="es" lang="es" translate="no" aria-current="true">Español</a>
+    </nav>
+  </div>
+</footer>
+<span class="guide" aria-hidden="true"></span>
+<dialog id="portfolio" class="pdf-dialog" aria-labelledby="pdf-title">
+  <header>
+    <h2 id="pdf-title" lang="en" dir="ltr">Liron Bialkovich · Portfolio</h2>
+    <a class="link" href="/liron-bialkovich-portfolio.pdf" target="_blank" rel="noopener" aria-label="Abrir en una pestaña nueva el archivo del portafolio (PDF)">Abrir en una pestaña nueva</a>
+    <button type="button" class="btn btn-light" data-close aria-label="Cerrar la ventana del portafolio">Cerrar</button>
+  </header>
+  <div class="pdf-pages" dir="ltr"><p class="pdf-note">Cargando el portafolio…</p></div>
+</dialog>
+<dialog id="nav-panel" class="nav-panel" aria-labelledby="nav-panel-title">
+  <header>
+    <h2 id="nav-panel-title">Navegación del sitio</h2>
+    <button type="button" class="btn btn-light" data-nav-close>Cerrar</button>
+  </header>
+  <nav aria-label="Panel de navegación">
+    <ul class="nav-main">
+      <li><a href="https://l-be.com/es/" aria-current="page"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Inicio</span></a></li>
+      <li><a href="https://l-be.com/es/solutions"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Soluciones</span></a></li>
+      <li><a href="https://l-be.com/es/business-ai"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Sistemas de IA</span></a></li>
+      <li><a href="https://l-be.com/es/case-study"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Caso de estudio</span></a></li>
+      <li><a href="https://l-be.com/es/digital-dreams"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--mint-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--mint-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--mint-1)"/></svg><span>Sueños digitales</span></a></li>
+      <li><a href="https://l-be.com/es/liron-bialkovich"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--coral-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--coral-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--coral-1)"/></svg><span>Sobre mí</span></a></li>
+      <li><a href="https://l-be.com/es/#contact"><svg class="iso cube" viewBox="0 0 18 20" aria-hidden="true"><polygon points="1.2,5.5 9.0,10.0 9.0,19.0 1.2,14.5" style="fill:var(--sky-2)"/><polygon points="16.8,5.5 9.0,10.0 9.0,19.0 16.8,14.5" style="fill:var(--sky-3)"/><polygon points="9.0,1.0 16.8,5.5 9.0,10.0 1.2,5.5" style="fill:var(--sky-1)"/></svg><span>Contacto</span></a></li>
+    </ul>
+    <p class="label">Sistemas</p>
+    <ul class="nav-more">
+      <li><a href="https://l-be.com/es/kala-crm">Kala CRM: un sistema CRM israelí</a></li>
+      <li><a href="https://l-be.com/es/gohighlevel">GoHighLevel (GHL) en Israel</a></li>
+    </ul>
+    <p class="label">Más en el sitio</p>
+    <ul class="nav-more">
+      <li><a href="/liron-bialkovich-portfolio.pdf" data-portfolio>Portafolio</a></li>
+      <li><a href="https://l-be.com/es/accessibility">Declaración de accesibilidad</a></li>
+      <li><a href="https://l-be.com/es/privacy">Política de privacidad</a></li>
+      <li><a href="https://l-be.com/es/terms">Términos de uso</a></li>
+    </ul>
+  </nav>
+  <div class="links">
+    <a class="plain primary" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">Reservar una llamada<span class="visually-hidden"> (se abre en una ventana emergente)</span></a>
+  </div>
+  <nav class="langs" aria-label="Language">
+      <a href="/" hreflang="he" lang="he" translate="no">עברית</a>
+      <a href="/en/" hreflang="en" lang="en" translate="no">English</a>
+      <a href="/es/" hreflang="es" lang="es" translate="no" aria-current="true">Español</a>
+    </nav>
+</dialog>
+<script src="/es/site.js" defer></script>
+<script src="/es/a11y.js" defer></script>
+<script src="/es/guard.js" defer></script>
+<script src="/es/later.js" defer></script>
+<script src="/es/lead.js" defer></script>
+</body>
+</html>

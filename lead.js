@@ -80,7 +80,7 @@
     const button = form.querySelector('button[type="submit"]');
     const data = new FormData(form);
     const payload = {
-      type: "contact", page_title: document.title,
+      type: "contact", page_title: document.title, page_lang: document.documentElement.lang,
       name: data.get("name") || "", business_name: data.get("business_name") || "", phone: data.get("phone") || "",
       email: data.get("email") || "", message: data.get("message") || "",
       form_name: form.dataset.formName, form_id: form.dataset.formId, page_url: location.href,

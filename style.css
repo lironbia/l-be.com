@@ -651,3 +651,20 @@ html.a11y-big.js .nav-open { display: inline-flex; }
 .form-note.one-line { white-space: nowrap; }
 
 .more { font-size: 0.9375rem; color: var(--ink-soft); }
+
+/* Language switcher */
+.langs { display: flex; flex-wrap: wrap; gap: 0 1.25rem; width: 100%; }
+.langs a { display: inline-flex; align-items: center; min-height: 2.75rem; text-underline-offset: 0.3em; }
+.langs a[aria-current] { font-weight: 700; text-decoration: none; }
+.nav-panel .langs { padding: 0 1rem 1rem; }
+
+/* Left-to-right languages */
+[dir="ltr"] .stat b, [dir="ltr"] .person h1 .en, [dir="ltr"] .kpis b { text-align: left; }
+[dir="ltr"] .chain li:not(:last-child)::after, [dir="ltr"] .outcome::before { content: "→"; }
+[dir="ltr"] .chain.plain li::after { content: none; }
+[dir="ltr"] .skip { right: auto; left: 0.5rem; }
+[dir="ltr"] .site-footer nav a::after { right: auto; left: 0; }
+[dir="ltr"] .display { letter-spacing: -0.02em; line-height: 1.06; }
+[dir="ltr"] .hero h1 { font-size: clamp(2.375rem, 6vw, 4.25rem); }
+[dir="ltr"] .page-hero h1 { font-size: clamp(2.25rem, 5.6vw, 4rem); }
+[dir="ltr"] .scores td:last-child, [dir="ltr"] .scores thead th:last-child { text-align: right; }

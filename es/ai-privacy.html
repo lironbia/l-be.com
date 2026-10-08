@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · AI MODE · L-Be</title>
+<meta name="description" content="Versión AI MODE de la página “Política de privacidad” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://l-be.com/es/privacy">
+<link rel="alternate" type="text/markdown" href="https://l-be.com/llms-full.txt" title="Full site content as Markdown">
+<link rel="icon" type="image/png" href="https://l-be.com/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="L-Be">
+<meta property="og:title" content="Política de privacidad · AI MODE · L-Be">
+<meta property="og:description" content="Versión AI MODE de la página “Política de privacidad” del sitio L-Be: el contenido completo de la página, sin diseño.">
+<meta property="og:url" content="https://l-be.com/es/privacy">
+<meta property="og:image" content="https://l-be.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Written to read like the Markdown it mirrors: one column, monospace, visible structure markers. */
+body{margin:0;background:#fff;color:#111;font:14px/1.55 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+main{max-width:76ch;margin:0 auto;padding:1rem}
+pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
+h1,h2,h3,h4{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
+h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}h4::before{content:"#### "}
+h1::before,h2::before,h3::before,h4::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a,.bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the whole page shrunk into one small square in the middle of the screen. Pure CSS. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{position:fixed;left:50%;top:50%;box-sizing:border-box;width:560vmin;height:560vmin;max-width:none;margin:0;padding:12vmin;overflow:auto;line-height:1.05;background:#fff;border:10px solid #111;transform:translate(-50%,-50%) scale(.1)}
+#real:target~main *{margin:0}
+/* Contact form for AI agents: reads like a request body, works like a normal form */
+.agent{margin:1.5rem 0 0;padding:1rem 1.25rem 1.25rem;background:#0e1420;color:#e8edf5}
+.agent h2{margin-top:0}
+.agent h2::before{color:#7ad3a0}
+.agent a{color:#b9daf7}
+.agent pre{color:#a9efc6;overflow-x:auto;white-space:pre}
+.agent .row{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:.25rem .75rem;align-items:start;margin:.75rem 0}
+.agent .key{color:#74b4f2;text-align:left;padding-top:.7rem}
+.agent .hint{margin:.2rem 0 0;color:#cfd6e2;font-size:13px}
+.agent input[type=text],.agent textarea{box-sizing:border-box;width:100%;min-height:44px;padding:.6rem .7rem;font:inherit;color:#fff;background:#141b2b;border:1px solid #74b4f2;border-radius:0}
+.agent .check{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.agent .check input{width:22px;height:22px;accent-color:#a9efc6}
+.agent [aria-invalid]{border-color:#f8a09b;outline:2px solid #f8a09b}
+.agent input:focus-visible,.agent textarea:focus-visible,.agent button:focus-visible{outline:3px solid #a9efc6;outline-offset:2px}
+.agent button{min-height:44px;padding:0 1.25rem;font:inherit;font-weight:700;color:#0e1420;background:#a9efc6;border:0;cursor:pointer}
+.agent-status{min-height:1.5em;margin:.75rem 0 0;direction:rtl;text-align:right;white-space:pre-wrap}
+.agent-status[data-state=error]{color:#f8a09b}
+@media (max-width:40rem){.agent .row{grid-template-columns:minmax(0,1fr)}.agent .key{padding-top:0}}
+.agent form[data-sent] .row,.agent form[data-sent] button[type=submit]{display:none}
+.agent .form-again{display:none;margin-top:.75rem;background:transparent;color:#a9efc6;border:1px solid #a9efc6}
+.agent form[data-sent] .form-again{display:inline-block}
+p{margin:.25rem 0}
+ul,ol{margin:.25rem 0;padding:0;list-style:none}
+ul ul{padding-inline-start:2ch}
+li{padding:.2rem 0}
+li::before{content:"- "}
+blockquote{margin:.5rem 0}blockquote::before{content:"> "}
+hr{border:0;margin:1rem 0;height:auto}hr::before{content:"---"}
+a{color:#0b3d91}
+table{border-collapse:collapse;margin:.5rem 0}th,td{border:1px solid #555;padding:.2rem .6rem;text-align:start}
+dt{font-weight:700;margin-top:.5rem}dd{margin:0}
+[lang="en"]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<span id="real"></span>
+<nav class="bar" aria-label="Navegación de AI MODE">
+<a class="dark" href="https://l-be.com/es/privacy">← A la página normal</a> <a href="https://l-be.com/es/ai#tree">Árbol del sitio</a> <a href="https://l-be.com/es/ai-all">Todo el sitio en una página</a> <a href="https://l-be.com/es/ai#agent-contact">Contacto</a>
+<button type="button" id="copy-ai">Copiar el contenido</button>
+<span id="copy-ai-status" role="status"></span> <a class="real-on" href="#real" lang="en">REAL AI MODE</a> <a class="real-off" href="#">Volver al tamaño humano</a> <span class="real-note">Así le gusta leer a la IA: apretado, pequeño y sin espacios.</span>
+</nav>
+<main>
+<div id="ai-content">
+<pre>---
+url: https://l-be.com/ai-privacy
+canonical: https://l-be.com/privacy
+site_tree: https://l-be.com/ai#tree
+whole_site: https://l-be.com/ai-all
+language: he
+updated: 2026-10-08
+---</pre>
+<p>Privacidad</p>
+    <h1>Política de privacidad</h1>
+    <p>En resumen: el sitio no te rastrea. No tiene cookies, no tiene herramientas de seguimiento y no tiene publicidad. La única información que me llega es la que decides enviar en un formulario.</p>
+<h2>Quién es responsable de la información</h2>
+<p>El sitio l-be.com está operado por Liron Bialkovich (L-Be), un negocio independiente en Israel. Para cualquier pregunta o solicitud sobre privacidad, puedes escribirme a través del <a href="https://l-be.com/es/ai#agent-contact">formulario de contacto</a>.</p>
+<h2>Lo que el sitio no hace</h2>
+<ul>
+<li>No guarda cookies.</li>
+<li>No usa herramientas de seguimiento ni de estadísticas, ni píxeles publicitarios.</li>
+<li>No crea perfiles de visitantes ni toma decisiones automatizadas sobre ellos.</li>
+<li>No vende información ni la cede a empresas de publicidad.</li>
+<li>No carga fuentes ni código desde servidores de otras empresas. Todo se sirve desde el propio sitio.</li>
+</ul>
+<h2>Qué información se recoge, y cuándo</h2>
+<h3>Cuando se envía un formulario</h3>
+<ul>
+<li>Formulario de contacto: nombre, nombre del negocio, número de WhatsApp, correo electrónico y mensaje. Solo es obligatorio rellenar el nombre y el WhatsApp.</li>
+<li>“Envíame un correo para volver a leer sobre ti más tarde”: solo la dirección de correo electrónico.</li>
+<li>Formulario de consulta sobre accesibilidad: nombre, correo electrónico o teléfono, y descripción de la consulta.</li>
+<li>El formulario para agentes de IA: nombre de la persona representada, una vía de contacto y el contenido de la solicitud.</li>
+</ul>
+<p>Con cada formulario se envían también la dirección de la página desde la que se envió, la página desde la que llegaste al sitio y los datos de campaña, si los había en el enlace por el que llegaste.</p>
+<h3>Lo que se guarda solo en tu dispositivo</h3>
+<p>Los ajustes que elegiste en el menú de accesibilidad, tu récord en el juego de la página de error y cuándo se envió por última vez un formulario desde este navegador (para evitar envíos duplicados). Esta información se guarda solo en tu navegador, y no se me envía.</p>
+<h3>Alojamiento del sitio</h3>
+<p>El sitio está alojado en un proveedor de alojamiento externo (GitHub). Como cualquier servidor web, recibe la dirección IP y datos técnicos del navegador para mostrar la página, y puede guardarlos en registros de seguridad. No tengo acceso a esos registros.</p>
+<h3>Servicios externos que solo se abren al hacer clic</h3>
+<p>Al hacer clic en “Reservar una llamada” se abre una ventana de Calendly, un servicio externo con sus propias cookies y su propia política de privacidad. Los enlaces a otros sitios, como LinkedIn, llevan a sitios con sus propias políticas.</p>
+<h2>Para qué uso la información, y con qué base</h2>
+<ul>
+<li>Para responder a tu consulta y preparar una propuesta: pasos previos a un contrato, a petición tuya.</li>
+<li>Para enviar el correo “Leer más tarde”: sobre la base de tu consentimiento. Es un solo correo.</li>
+<li>Para atender consultas de accesibilidad: una obligación legal, y un interés legítimo en mejorar el sitio.</li>
+</ul>
+<p>No uso los datos para envíos de marketing sin un consentimiento expreso.</p>
+<h2>Quién recibe la información</h2>
+<p>Solo proveedores de servicios que la tratan por mi cuenta: un servicio de automatización que me hace llegar el formulario, mi servicio de correo electrónico y mi sistema de gestión de clientes. Algunos de los proveedores guardan información en servidores de la Unión Europea y de Estados Unidos.</p>
+<h2>Cuánto tiempo se conserva la información</h2>
+<p>Mientras sea necesaria para atender la consulta y para la relación comercial que surja de ella. Puedes pedirme que la elimine en cualquier momento.</p>
+<h2>Tus derechos</h2>
+<ul>
+<li>Recibir una copia de la información que tengo sobre ti.</li>
+<li>Corregir información incorrecta.</li>
+<li>Solicitar la eliminación de la información.</li>
+<li>Limitar el uso de la información, u oponerte a él.</li>
+<li>Recibir la información en un archivo que se pueda transferir a un tercero.</li>
+<li>Retirar un consentimiento que hayas dado, en cualquier momento.</li>
+</ul>
+<p>Para ejercer un derecho, escríbeme en el <a href="https://l-be.com/es/ai#agent-contact">formulario de contacto</a>. Responderé en el plazo de un mes. También puedes presentar una reclamación ante la Autoridad de Protección de la Privacidad de Israel, o ante la autoridad de protección de datos de tu país en la Unión Europea.</p>
+<h2>Seguridad de la información</h2>
+<p>El sitio en sí es un sitio estático: no tiene base de datos ni área personal, y por eso no se guarda en él información personal. Los formularios se envían por una conexión cifrada. La información se guarda en proveedores reconocidos, y el acceso a ella está restringido.</p>
+<p>Ningún sistema está protegido al cien por cien. Si se produce un incidente de seguridad que afecte a tu información, te avisaré.</p>
+<h2>Menores</h2>
+<p>El sitio está pensado para negocios, y no se dirige a niños.</p>
+<h2>Cambios en la política</h2>
+<p>Si la política cambia, por ejemplo si se añade al sitio una herramienta de estadísticas, esta página se actualizará antes del cambio.</p>
+<p>Actualizado el 8 de octubre de 2026.</p>
+
+<hr>
+<h2>Más páginas en AI MODE</h2>
+<ul>
+<li><a href="https://l-be.com/es/ai-home">Página de inicio</a>
+<ul>
+<li><a href="https://l-be.com/es/ai-solutions">Soluciones</a></li>
+<li><a href="https://l-be.com/es/ai-business-ai">Sistemas empresariales basados en IA (sistema L-Be)</a></li>
+<li><a href="https://l-be.com/es/ai-case-study">Caso de estudio: Ida's Home</a></li>
+<li><a href="https://l-be.com/es/ai-digital-dreams">Hacer realidad sueños digitales: especificación de sistemas y consultoría</a></li>
+<li><a href="https://l-be.com/es/ai-liron-bialkovich">Sobre mí: Liron Bialkovich</a></li>
+<li><a href="https://l-be.com/es/ai-kala-crm">Kala CRM: un sistema CRM israelí</a></li>
+<li><a href="https://l-be.com/es/ai-gohighlevel">GoHighLevel (GHL) en Israel</a></li>
+<li><a href="https://l-be.com/es/ai-accessibility">Declaración de accesibilidad y glosario</a></li>
+<li><a href="https://l-be.com/es/ai-privacy">Política de privacidad</a></li>
+<li><a href="https://l-be.com/es/ai-terms">Términos de uso</a></li>
+</ul>
+</li>
+<li><a href="https://l-be.com/es/ai-all">Todo el contenido del sitio en una página</a></li>
+<li><a href="https://l-be.com/es/ai">Página de inicio de AI MODE: hechos, preguntas y respuestas, y formulario para agentes de IA</a></li>
+</ul>
+</div>
+
+</main>
+<script src="/es/guard.js" defer></script>
+<script src="/es/ai.js" defer></script>
+</body>
+</html>

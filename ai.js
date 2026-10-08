@@ -80,7 +80,7 @@
     const agent = field("agent").value.trim();
     const param = (name) => new URLSearchParams(location.search).get(name) || "";
     const payload = {
-      type: "contact", page_title: document.title,
+      type: "contact", page_title: document.title, page_lang: document.documentElement.lang,
       name: field("on_behalf_of").value.trim(), business_name: field("business_name").value.trim(),
       phone: isEmail(contact) ? "" : contact, email: isEmail(contact) ? contact : "",
       message: "נשלח דרך סוכן AI" + (agent ? " (" + agent + ")" : "") + ", באישור האדם שבשמו הפנייה.\n\n" + field("request").value.trim(),

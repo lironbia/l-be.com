@@ -68,7 +68,7 @@
       phone: isEmail(contact) ? "" : contact, email: isEmail(contact) ? contact : "",
       message: (details.length ? details.join("\n") + "\n\n" : "") + field("af-message").value.trim(),
       form_name: "פנייה בנושא נגישות", form_id: "accessibility-form",
-      page_url: location.href, page_title: document.title,
+      page_url: location.href, page_title: document.title, page_lang: document.documentElement.lang,
       ref: param("ref") || document.referrer || "",
       utm_source: param("utm_source"), utm_campaign: param("utm_campaign"), utm_medium: param("utm_medium"),
       utm_content: param("utm_content"), utm_term: param("utm_term"), utm_adset: param("utm_adset"),
