@@ -64,6 +64,10 @@
   }
   addEventListener("load", updateGuide);
 
+  // The hero stack: its layers come together as the opener scrolls away (--jp runs 0..1).
+  const stack = document.querySelector(".hero-art svg");
+  const stackHost = stack ? stack.closest(".hero") : null;
+
   let queued = false;
   function frame() {
     queued = false;
@@ -71,6 +75,10 @@
     root.style.setProperty("--sp", max > 0 ? (scrollY / max).toFixed(4) : "0");
     root.style.setProperty("--sy", String(Math.round(scrollY)));
     updateGuide();
+    if (stack) {
+      const span = (stackHost.offsetHeight || innerHeight) * 0.55;
+      stack.style.setProperty("--jp", Math.min(Math.max(scrollY / span, 0), 1).toFixed(3));
+    }
     if (reduceMotion) return;
     const mid = innerHeight / 2;
     for (const { el, speed, ref } of drifters) {

@@ -126,12 +126,13 @@ html.tachles #tachles { border-top: 0; }
 .hero-art .leader { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 2 5; stroke-linecap: round; }
 /* The whole stack floats as one piece; pointing at it slowly joins the layers into a single block. */
 .hero-art svg { animation: float 7s ease-in-out infinite; }
-.hero-art [data-parallax] { transition: transform 0.6s ease-out; }
-.hero-art .slab { transition: transform 1.6s cubic-bezier(0.3, 0.6, 0.2, 1); }
-.hero-art .leader { transition: opacity 0.8s ease; }
-.hero-art svg:hover [data-parallax] { transform: none !important; }
-.hero-art svg:hover .slab { transform: translateY(var(--join)); }
-.hero-art svg:hover .leader { opacity: 0; }
+/* --jp (0..1, set by site.js from the scroll position) brings the slabs together; pointing at the
+   stack sets it to 1 and the slabs close up slowly. */
+.hero-art .slab { transform: translateY(calc(var(--join) * var(--jp, 0))); transition: transform 0.45s ease-out; }
+.hero-art .leader { opacity: calc(1 - var(--jp, 0)); transition: opacity 0.45s ease-out; }
+.hero-art svg:hover { --jp: 1 !important; }
+.hero-art svg:hover .slab { transition-duration: 1.6s; transition-timing-function: cubic-bezier(0.3, 0.6, 0.2, 1); }
+.hero-art svg:hover .leader { transition-duration: 0.8s; }
 .hero-art .leader { animation: flow 1.4s linear infinite; }
 @keyframes flow { to { stroke-dashoffset: -14; } }
 @keyframes float { 50% { transform: translateY(-5px); } }
@@ -141,6 +142,8 @@ html.tachles #tachles { border-top: 0; }
 .hero { background-image: radial-gradient(circle at 1px 1px, var(--dot) 1.3px, transparent 0); background-size: 28px 28px; background-position: 0 calc(var(--sy, 0) * 0.35px); }
 .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(var(--gs, 15rem) circle at var(--mx, 22%) var(--my, 45%), var(--glow), transparent 65%); }
 .hero .wrap { position: relative; }
+/* The glow follows a mouse; on touch screens there is nothing for it to follow */
+@media (hover: none), (pointer: coarse) { .hero::before { display: none; } }
 
 /* The guide: one small dot that keeps the reader company and settles on the main button in view */
 .guide { position: fixed; left: 0; top: 0; z-index: 15; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--ink-soft); color: var(--ink-soft); pointer-events: none; opacity: 0; transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease; }
@@ -175,6 +178,9 @@ html.tachles #tachles { border-top: 0; }
 .record-lead { font-size: clamp(1.25rem, 2.4vw, 1.625rem); line-height: 1.5; max-width: 50rem; text-wrap: balance; }
 .brands { display: grid; gap: 1rem; border-top: 1.5px solid var(--on-ink); padding-top: 1.5rem; }
 .brands > p { font-size: 1.0625rem; max-width: 46rem; }
+.past-clients { width: 100%; max-width: 54rem; border: 1.5px solid var(--on-ink); }
+.brands .names { display: flex; flex-wrap: wrap; gap: 0.25rem 0; font-size: 0.9375rem; color: var(--on-ink-soft); max-width: 54rem; }
+.brands .names li:not(:last-child)::after { content: "·"; margin-inline: 0.5rem; color: var(--sky-2); }
 .brands ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
 .brands li { display: inline-flex; align-items: center; gap: 0.625rem; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3.4vw, 2.375rem); line-height: 1.25; }
 .brands .cube { width: 1.125rem; }
@@ -222,10 +228,18 @@ html.tachles #tachles { border-top: 0; }
 .field label { font-size: 0.9375rem; font-weight: 600; }
 .field input, .field textarea { font: inherit; color: var(--ink); background: var(--surface); border: var(--rule); border-radius: 0; padding: 0.75rem 0.875rem; width: 100%; }
 .form .btn { justify-self: start; }
-.form-status { grid-column: 1 / -1; font-weight: 600; }
+/* Form messages, in the voice of an agent reporting back: a marker, the text, a blinking cursor */
+.field-msg { display: flex; gap: 0.375rem; align-items: baseline; font-size: 0.8125rem; font-weight: 500; line-height: 1.45; color: var(--coral-ink); }
+.field-msg::before { content: "›"; font-family: var(--font-mono); font-weight: 700; }
+.field input[aria-invalid], .field textarea[aria-invalid] { border-color: var(--coral-3); box-shadow: -3px 3px 0 var(--coral-1); }
+.form-status { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 0.625rem; background: var(--ink); color: var(--on-ink); border-inline-start: 4px solid var(--state, var(--sky-2)); padding: 0.75rem 1rem; font-size: 0.9375rem; font-weight: 500; line-height: 1.5; }
 .form-status:empty { display: none; }
-.form-status[data-state="ok"] { color: var(--mint-ink); }
-.form-status[data-state="error"] { color: var(--coral-ink); }
+.form-status::before { content: ""; flex: none; width: 0.5rem; height: 0.5rem; background: var(--state, var(--sky-2)); transform: translateY(-0.05em); }
+.form-status::after { content: ""; flex: none; width: 0.5em; height: 1.05em; align-self: center; background: var(--state, var(--sky-2)); animation: caret 1s steps(2, jump-none) infinite; }
+.form-status[data-state="ok"] { --state: var(--mint-2); }
+.form-status[data-state="error"] { --state: var(--coral-2); }
+.form-status[data-state="busy"] { --state: var(--sky-2); }
+@keyframes caret { 50% { opacity: 0; } }
 .profiles { display: flex; flex-wrap: wrap; gap: 0.625rem; }
 .profiles a { display: inline-flex; gap: 0.75rem; padding: 0.5rem 0.875rem; border: 1.5px solid var(--on-ink); font-family: var(--font-mono); font-weight: 500; font-size: 0.9375rem; text-decoration: none; }
 .profiles a:hover { background: var(--on-ink); color: var(--ink); }
@@ -365,8 +379,8 @@ html.tachles #tachles { border-top: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-art svg, .hero-art .leader, .guide.is-docked::after { animation: none; }
-  .hero-art .slab, .hero-art [data-parallax] { transition: none; }
+  .hero-art svg, .hero-art .leader, .guide.is-docked::after, .form-status::after { animation: none; }
+  .hero-art .slab, .hero-art .leader { transition: none; }
   .site-footer nav a::after { transition: none; }
   .btn { transition: none; }
 }
