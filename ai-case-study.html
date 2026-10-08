@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מקרה בוחן: הבית של עידה · AI MODE · L-Be</title>
+<meta name="description" content="גרסת AI MODE של העמוד &quot;מקרה בוחן: הבית של עידה&quot; באתר L-Be: התוכן המלא של העמוד, בלי עיצוב.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://l-be.com/case-study">
+<link rel="alternate" type="text/markdown" href="https://l-be.com/llms-full.txt" title="Full site content as Markdown">
+<link rel="icon" type="image/png" href="https://l-be.com/favicon.png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: blob: https://assets.calendly.com; font-src 'self'; connect-src 'self' https://hook.eu1.make.com; frame-src https://calendly.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Written to read like the Markdown it mirrors: one column, monospace, visible structure markers. */
+body{margin:0;background:#fff;color:#111;font:14px/1.55 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace}
+main{max-width:76ch;margin:0 auto;padding:1rem}
+pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
+h1,h2,h3,h4{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
+h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}h4::before{content:"#### "}
+h1::before,h2::before,h3::before,h4::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a,.bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the whole page shrunk into one small square in the middle of the screen. Pure CSS. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{position:fixed;left:50%;top:50%;box-sizing:border-box;width:560vmin;height:560vmin;max-width:none;margin:0;padding:12vmin;overflow:auto;line-height:1.05;background:#fff;border:10px solid #111;transform:translate(-50%,-50%) scale(.1)}
+#real:target~main *{margin:0}
+/* Contact form for AI agents: reads like a request body, works like a normal form */
+.agent{margin:1.5rem 0 0;padding:1rem 1.25rem 1.25rem;background:#0e1420;color:#e8edf5}
+.agent h2{margin-top:0}
+.agent h2::before{color:#7ad3a0}
+.agent a{color:#b9daf7}
+.agent pre{color:#a9efc6;overflow-x:auto;white-space:pre}
+.agent .row{display:grid;grid-template-columns:16ch minmax(0,1fr);gap:.25rem .75rem;align-items:start;margin:.75rem 0}
+.agent .key{color:#74b4f2;text-align:left;padding-top:.7rem}
+.agent .hint{margin:.2rem 0 0;color:#cfd6e2;font-size:13px}
+.agent input[type=text],.agent textarea{box-sizing:border-box;width:100%;min-height:44px;padding:.6rem .7rem;font:inherit;color:#fff;background:#141b2b;border:1px solid #74b4f2;border-radius:0}
+.agent .check{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.agent .check input{width:22px;height:22px;accent-color:#a9efc6}
+.agent [aria-invalid]{border-color:#f8a09b;outline:2px solid #f8a09b}
+.agent input:focus-visible,.agent textarea:focus-visible,.agent button:focus-visible{outline:3px solid #a9efc6;outline-offset:2px}
+.agent button{min-height:44px;padding:0 1.25rem;font:inherit;font-weight:700;color:#0e1420;background:#a9efc6;border:0;cursor:pointer}
+.agent-status{min-height:1.5em;margin:.75rem 0 0;direction:rtl;text-align:right;white-space:pre-wrap}
+.agent-status[data-state=error]{color:#f8a09b}
+@media (max-width:40rem){.agent .row{grid-template-columns:minmax(0,1fr)}.agent .key{padding-top:0}}
+.agent form[data-sent] .row,.agent form[data-sent] button[type=submit]{display:none}
+.agent .form-again{display:none;margin-top:.75rem;background:transparent;color:#a9efc6;border:1px solid #a9efc6}
+.agent form[data-sent] .form-again{display:inline-block}
+p{margin:.25rem 0}
+ul,ol{margin:.25rem 0;padding:0;list-style:none}
+ul ul{padding-inline-start:2ch}
+li{padding:.2rem 0}
+li::before{content:"- "}
+blockquote{margin:.5rem 0}blockquote::before{content:"> "}
+hr{border:0;margin:1rem 0;height:auto}hr::before{content:"---"}
+a{color:#0b3d91}
+table{border-collapse:collapse;margin:.5rem 0}th,td{border:1px solid #555;padding:.2rem .6rem;text-align:start}
+dt{font-weight:700;margin-top:.5rem}dd{margin:0}
+[lang="en"]{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<span id="real"></span>
+<nav class="bar" aria-label="ניווט AI MODE">
+<a class="dark" href="https://l-be.com/case-study">→ לעמוד הרגיל</a>
+<a href="https://l-be.com/ai#tree">עץ האתר</a>
+<a href="https://l-be.com/ai-all">כל האתר בעמוד אחד</a>
+<a href="https://l-be.com/ai#agent-contact">צור קשר</a>
+<button type="button" id="copy-ai">העתקת התוכן</button>
+<span id="copy-ai-status" role="status"></span>
+<a class="real-on" href="#real" lang="en">REAL AI MODE</a>
+<a class="real-off" href="#">חזרה לגודל אנושי</a>
+<span class="real-note">ככה AI אוהב לקרוא: צפוף, קטן ובלי רווחים.</span>
+</nav>
+<main>
+<div id="ai-content">
+<pre>---
+url: https://l-be.com/ai-case-study
+canonical: https://l-be.com/case-study
+site_tree: https://l-be.com/ai#tree
+whole_site: https://l-be.com/ai-all
+language: he
+updated: 2026-10-08
+---</pre>
+<p>מקרה בוחן</p>
+        <h1>הבית של עידה</h1>
+        <p>כל העסק בתהליך אחד, מהמכירה ועד הגבייה. ומעליו שכבת AI שמחוברת לכל האגפים.</p>
+      <p>[תמונה: איור: קוביה מרכזית שמחוברת בקווים מקווקווים לשישה מודולים סביבה]</p>
+<h2>על החברה</h2>
+<p>הבית של עידה מעצבת ומוכרת ריהוט לבית: ספות וכורסאות בהזמנה אישית, תאורה, שטיחים וטקסטיל. לצד המוצרים היא נותנת שירותי תכנון, התקנה וייעוץ עיצובי. בחברה 30 עובדים. היא מוכרת באתר, בחנות המפעל ובשואו-רום, ועובדת עם כמה מחסנים, נגרייה וספקים רבים.</p>
+<h2>האתגר</h2>
+<p>כל הזמנה בבית של עידה היא פרויקט קטן:</p>
+<ul>
+<li>מוצר שמיוצר לפי מידה ולפי הבד שהלקוח בחר.</li>
+<li>ספק שצריך לעמוד בזמנים.</li>
+<li>מחסן שקולט ומלקט.</li>
+<li>משלוח שצריך לתאם.</li>
+<li>לקוח שמחכה, ותשלום שצריך לגבות.</li>
+</ul>
+<p>כשהמידע מפוזר בין אנשים, קבצים ומערכות, הצוות עסוק במרדף. איפה ההזמנה? מתי הספק מספק? מה יש במלאי? מי שילם?</p>
+<p>מכירה לוקחת זמן, כי קשה למצוא את המוצר הנכון. איש מכירות חדש צריך חודשים כדי ללמוד את העבודה. וההנהלה לא רואה תמונה אחת שאפשר לסמוך עליה.</p>
+<p>ההנהלה הגדירה מבחן פשוט:</p>
+<blockquote>אם הצוות עדיין רודף אחרי לקוחות, סטטוסים, משלוחים, מחירונים ומסמכים — הפרויקט נכשל.</blockquote>
+      <p>הגישה</p>
+      <h2>איך ניגשנו לזה</h2>
+      <h3>אפיון לפני בנייה</h3><p>ישבנו עם ההנהלה ועברנו על כל תהליך, עד שהיה ברור איך הוא עובד בפועל.</p>
+      <h3>מקור אחד לכל נתון</h3><p>כל מערכת מתעדכנת מהאחרות אוטומטית. אין הקלדה כפולה ואין &quot;גרסאות&quot;.</p>
+      <h3>תהליך אחד עד הסוף</h3><p>קודם הוא עובד בשטח, ורק אחר כך מתרחבים לתהליך הבא.</p>
+      <h3>אוטומציה עם אישור אנושי</h3><p>אוטומציה איפה שהכלל ברור. אדם מאשר איפה שיש כסף או לקוח.</p>
+      <p>מה נבנה</p>
+      <h2>תהליכי הליבה של העסק, מחוברים מקצה לקצה</h2>
+        <h3>מכירה בכל ערוץ</h3>
+        <ul>
+          <li>אתר, חנות המפעל, שואו-רום ונקודות מכירה.</li>
+          <li>קופה ייעודית (POS) עם סליקת אשראי ותשלום בקישור.</li>
+          <li>כל הזמנה, מכל ערוץ, נכנסת לאותו מסלול.</li>
+        </ul>
+        <p>לקוח אחד, הזמנה אחת ותמונה אחת, לא משנה איפה הוא קנה.</p>
+        <h3>רכש וספקים</h3>
+        <ul>
+          <li>הזמנות רכש יוצאות לספקים אוטומטית, לפי מה שהלקוח הזמין.</li>
+          <li>כל ספק מקבל באופן קבוע תמונה של מה שפתוח אצלו.</li>
+        </ul>
+        <p>אף הזמנה לא נשכחת בדרך לספק.</p>
+        <h3>SLA מול ספקים ומול לקוחות</h3>
+        <ul>
+          <li>לכל מוצר יש מועד אספקה מחושב, ויש מעקב אחרי כל מה שחורג ממנו.</li>
+        </ul>
+        <p>רואים בכל רגע מה מתעכב ואצל מי, לפני שהלקוח מתקשר.</p>
+        <h3>מלאי ומחסנים</h3>
+        <ul>
+          <li>ניהול מלאי בכמה מחסנים.</li>
+          <li>מוצר שכבר נמצא במלאי מוקצה להזמנה אוטומטית.</li>
+        </ul>
+        <p>מוכרים את מה שיש, ולא מזמינים שוב את מה שכבר על המדף.</p>
+        <h3>סורקים חכמים</h3>
+        <ul>
+          <li>סריקה בנייד לכל שלב: קליטה מספק, ליקוט, יציאה למשלוח, החזרות ותיקונים.</li>
+          <li>כל סריקה מקדמת את ההזמנה אוטומטית.</li>
+        </ul>
+        <p>המחסן מעדכן את כל החברה תוך כדי עבודה, בלי להקליד.</p>
+        <h3>שילוח ותיאום משלוחים</h3>
+        <ul>
+          <li>הלקוח קובע מועד בעצמו, דרך קישור.</li>
+          <li>השליחים משובצים למסלול.</li>
+          <li>אפליקציית השליח מתעדת כל מסירה בתמונה ובחתימה.</li>
+          <li>ממשק לניהול השליחים ולתשלום להם.</li>
+        </ul>
+        <p>כל משלוח מתואם ומתועד מההתחלה ועד המסירה.</p>
+        <h3>שיווק ושירות לקוחות</h3>
+        <ul>
+          <li>הודעות אוטומטיות ללקוח בכל שלב בהזמנה.</li>
+          <li>עדכון יזום ללקוח, ובקשת משוב בסוף.</li>
+        </ul>
+        <p>הלקוח יודע מה קורה בלי לשאול, והשירות פנוי לטפל במה שבאמת דורש טיפול.</p>
+        <h3>מוצרים משלימים</h3>
+        <ul>
+          <li>הצעה ללקוח להשלים את ההזמנה שלו, בקישור אישי.</li>
+        </ul>
+        <p>הסל גדל בלי עבודה ידנית.</p>
+        <h3>גבייה והנהלת חשבונות</h3>
+        <ul>
+          <li>סנכרון עם הנהלת החשבונות.</li>
+          <li>סליקת אשראי.</li>
+          <li>מעקב גבייה, ואיתור פערים בין המערכות.</li>
+        </ul>
+        <p>תמונת חוב אמיתית, ולא מספר שצריך לנחש מה עומד מאחוריו.</p>
+        <h3>BI וניהול</h3>
+        <ul>
+          <li>דשבורדים, תזרים ותובנות שמתעדכנים לבד.</li>
+        </ul>
+        <p>ההנהלה רואה את העסק בזמן אמת ומחליטה לפי נתונים.</p>
+<h2>שכבת ה-AI</h2>
+<p>מעל כל התהליכים האלה עומדת מערכת AI שמחוברת לנתונים של כל האגפים.</p>
+<ul>
+<li>עובד שואל בעברית פשוטה, למשל &quot;אילו הזמנות מתעכבות אצל ספק?&quot;, ומקבל תשובה שמבוססת על נתוני החברה.</li>
+<li>דוח שימושי נשמר, ואפשר להריץ אותו שוב בלחיצה.</li>
+<li>מנהל מבקש דשבורד במילים, והמערכת בונה אותו.</li>
+<li>מאחורי כל מספר עומדת הגדרה עסקית אחת ומוסכמת, כך שכולם מדברים על אותו &quot;נמכר&quot; ואותו &quot;באיחור&quot;.</li>
+</ul>
+<p>הבקרה מובנית:</p>
+<ul>
+<li>ה-AI מציע, ואדם מאשר.</li>
+<li>כל עובד רואה רק את מה שהתפקיד שלו מאפשר.</li>
+<li>הכניסה היא באימות דו-שלבי.</li>
+<li>פרטים אישיים של לקוחות לא יוצאים החוצה.</li>
+<li>כל פעולה מתועדת.</li>
+</ul>
+      <p>התוצאה</p>
+      <h2>מה השתנה</h2>
+    <ul>
+      <li><b>תהליך אחד רציף</b> מהמכירה ועד הגבייה, במקום מידע שמפוזר בין אנשים וקבצים.</li>
+      <li><b>עדכון מהשטח</b> המחסן, השליחים והמכירות מעדכנים את המערכת תוך כדי העבודה, מהנייד.</li>
+      <li><b>תמונה אחת לכל החברה</b> כל אגף רואה את אותה הזמנה, באותו מצב ובאותו זמן.</li>
+      <li><b>תמונה אמינה להנהלה</b> של הזמנות, מלאי וחובות. המערכת חשפה פערים שלא נראו קודם, והם טופלו.</li>
+    </ul>
+<h2>התפקיד שלי</h2>
+<ul>
+<li>אפיון התהליכים עם ההנהלה.</li>
+<li>הקמת ה-CRM מאפס.</li>
+<li>חיבור כל המערכות זו לזו.</li>
+<li>בניית שכבת ה-AI והאפליקציות.</li>
+<li>הטמעה בשטח.</li>
+<li>ליווי שוטף.</li>
+</ul>
+      <a href="https://l-be.com/#contact">נדבר עם קפה ביד?</a>
+      <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">לתיאום שיחה ביומן<span class="visually-hidden"> (נפתח בלשונית חדשה)</span></a>
+
+<hr>
+<h2>עוד עמודים ב-AI MODE</h2>
+<ul>
+<li><a href="https://l-be.com/ai-home">עמוד הבית</a> (העמוד הרגיל: <a href="https://l-be.com/">https://l-be.com/</a>)
+<ul>
+<li><a href="https://l-be.com/ai-solutions">פתרונות</a> (העמוד הרגיל: <a href="https://l-be.com/solutions">https://l-be.com/solutions</a>)</li>
+<li><a href="https://l-be.com/ai-case-study">מקרה בוחן: הבית של עידה</a> (העמוד הרגיל: <a href="https://l-be.com/case-study">https://l-be.com/case-study</a>)</li>
+<li><a href="https://l-be.com/ai-digital-dreams">הגשמת חלומות דיגיטליים: אפיון מערכות וייעוץ</a> (העמוד הרגיל: <a href="https://l-be.com/digital-dreams">https://l-be.com/digital-dreams</a>)</li>
+<li><a href="https://l-be.com/ai-liron-bialkovich">אודות: לירון ביאלקוביץ</a> (העמוד הרגיל: <a href="https://l-be.com/liron-bialkovich">https://l-be.com/liron-bialkovich</a>)</li>
+<li><a href="https://l-be.com/ai-kala-crm">Kala CRM: מערכת CRM ישראלית</a> (העמוד הרגיל: <a href="https://l-be.com/kala-crm">https://l-be.com/kala-crm</a>)</li>
+<li><a href="https://l-be.com/ai-gohighlevel">GoHighLevel (GHL) בישראל</a> (העמוד הרגיל: <a href="https://l-be.com/gohighlevel">https://l-be.com/gohighlevel</a>)</li>
+<li><a href="https://l-be.com/ai-accessibility">הצהרת נגישות ומילון מונחים</a> (העמוד הרגיל: <a href="https://l-be.com/accessibility">https://l-be.com/accessibility</a>)</li>
+<li><a href="https://l-be.com/ai-privacy">מדיניות פרטיות</a> (העמוד הרגיל: <a href="https://l-be.com/privacy">https://l-be.com/privacy</a>)</li>
+<li><a href="https://l-be.com/ai-terms">תנאי שימוש</a> (העמוד הרגיל: <a href="https://l-be.com/terms">https://l-be.com/terms</a>)</li>
+</ul>
+</li>
+<li><a href="https://l-be.com/ai-all">כל תוכן האתר בעמוד אחד</a></li>
+<li><a href="https://l-be.com/ai">עמוד הבית של AI MODE: עובדות, שאלות ותשובות וטופס לסוכני AI</a></li>
+</ul>
+</div>
+
+</main>
+<script src="ai.js" defer></script>
+</body>
+</html>

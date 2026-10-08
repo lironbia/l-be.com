@@ -96,11 +96,20 @@
       const res = await fetch(form.dataset.hook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error("Webhook responded " + res.status);
       say("ok", ["status: 200", "✓ הפנייה התקבלה. לירון יחזור בהקדם האפשרי."]);
-      form.reset();
+      form.dataset.sent = "1";
     } catch (err) {
       say("error", ["status: 502", "✗ השליחה נכשלה. אפשר לנסות שוב, או לתאם שיחה ביומן."]);
     } finally {
       button.disabled = false;
     }
+  });
+
+  // "Send another": bring the fields back, empty.
+  const againButton = form.querySelector(".form-again");
+  if (againButton) againButton.addEventListener("click", () => {
+    form.reset();
+    delete form.dataset.sent;
+    status.textContent = "";
+    form.querySelector("input").focus();
   });
 })();

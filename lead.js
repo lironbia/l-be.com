@@ -77,7 +77,7 @@
       form.reset();
       return;
     }
-    const button = form.querySelector("button");
+    const button = form.querySelector('button[type="submit"]');
     const data = new FormData(form);
     const payload = {
       type: "contact", page_title: document.title,
@@ -95,11 +95,20 @@
       const res = await fetch(form.dataset.hook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error("Webhook responded " + res.status);
       say("ok", "תודה :) נהיה בקשר בהקדם האפשרי");
-      form.reset();
+      form.dataset.sent = "1"; // the fields close, which also lets the browser remember what was typed
     } catch (err) {
       say("error", "השליחה נכשלה. אפשר לנסות שוב, או לתאם שיחה ביומן.");
     } finally {
       button.disabled = false;
     }
+  });
+
+  // "Send another": bring the fields back, empty.
+  const againButton = form.querySelector(".form-again");
+  if (againButton) againButton.addEventListener("click", () => {
+    form.reset();
+    delete form.dataset.sent;
+    status.textContent = "";
+    form.querySelector("input").focus();
   });
 })();

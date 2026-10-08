@@ -11,11 +11,13 @@
 
 ## Pages
 
-- [AI mode: facts and FAQ](https://l-be.com/ai): one plain page written for AI agents
+- [AI mode: facts, FAQ and site tree](https://l-be.com/ai): the hub for AI agents; every page has a plain version at https://l-be.com/ai-<page>
+- [The whole site on one plain page](https://l-be.com/ai-all)
 - [About Liron Bialkovich](https://l-be.com/liron-bialkovich.md): story, background and vision
 - [Solutions](https://l-be.com/solutions.md): the detailed list of solutions
 - [Case study: הבית של עידה](https://l-be.com/case-study.md): a 30-person home furniture and design company; the whole business in one process from sale to collection, with an AI layer connected to every department
 - [Digital dreams: system specification for founders](https://l-be.com/digital-dreams): why planning costs less than building, and five working rules for specifying complex systems
+- [Kala CRM: an Israeli CRM system](https://l-be.com/kala-crm): Liron has accompanied its development since day one and implements it for Israeli companies
 - [GoHighLevel (GHL) in Israel](https://l-be.com/gohighlevel): GHL setup for companies, help for founders already on GHL, and setting up a GHL agency, in Hebrew
 - [Privacy policy](https://l-be.com/privacy): no cookies, no tracking; personal details are sent only through forms
 - [Terms of use](https://l-be.com/terms)

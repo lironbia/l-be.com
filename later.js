@@ -71,7 +71,7 @@
         const res = await fetch(form.dataset.hook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
         if (!res.ok) throw new Error("Webhook responded " + res.status);
         say("ok", "נשלח. המייל בדרך אליך :)");
-        form.reset();
+        form.dataset.sent = "1";
       } catch (err) {
         say("error", "השליחה נכשלה. אפשר לנסות שוב.");
       } finally {

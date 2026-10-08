@@ -245,6 +245,25 @@
     });
   }
 
+  // --- Navigation panel (the hamburger on small screens)
+  const navPanel = document.getElementById("nav-panel");
+  const navOpen = document.querySelector(".nav-open");
+  if (navPanel && navOpen && navPanel.showModal) {
+    navOpen.addEventListener("click", () => navPanel.showModal());
+    navPanel.addEventListener("click", (event) => {
+      // close on the backdrop, on the close button, and after choosing a link
+      if (event.target === navPanel || event.target.closest("[data-nav-close], a")) navPanel.close();
+    });
+  }
+
+  // --- Client messages: opening the text version puts the screenshots away
+  document.querySelectorAll("details.transcript").forEach((details) => {
+    details.addEventListener("toggle", () => {
+      const shots = details.parentElement.querySelector(".shots");
+      if (shots) shots.hidden = details.open;
+    });
+  });
+
   document.addEventListener("click", (event) => {
     const shortToggle = event.target.closest("[data-tachles-toggle]");
     if (shortToggle && hasShort) {

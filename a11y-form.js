@@ -5,7 +5,7 @@
   if (!form) return;
   const status = form.querySelector(".form-status");
   const live = form.querySelector('[role="status"]');
-  const button = form.querySelector("button");
+  const button = form.querySelector('button[type="submit"]');
   const field = (id) => document.getElementById(id);
   const param = (name) => new URLSearchParams(location.search).get(name) || "";
   const isEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
@@ -80,11 +80,20 @@
       const res = await fetch(form.dataset.hook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error("Webhook responded " + res.status);
       say("ok", "הפנייה התקבלה. תודה, אחזור אליך בהקדם האפשרי.");
-      form.reset();
+      form.dataset.sent = "1";
     } catch (err) {
       say("error", "השליחה נכשלה. אפשר לנסות שוב.");
     } finally {
       button.disabled = false;
     }
+  });
+
+  // "Send another": bring the fields back, empty.
+  const againButton = form.querySelector(".form-again");
+  if (againButton) againButton.addEventListener("click", () => {
+    form.reset();
+    delete form.dataset.sent;
+    status.textContent = "";
+    form.querySelector("input").focus();
   });
 })();
