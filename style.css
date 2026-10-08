@@ -187,6 +187,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .profiles.on-paper a { border-color: var(--ink); }
 .profiles.on-paper a:hover { background: var(--ink); color: var(--on-ink); }
 
+/* Case study */
+.pull { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.375rem, 3vw, 1.875rem); line-height: 1.35; border-inline-start: 6px solid var(--coral-2); padding-inline-start: 1.25rem; margin-block: 1.75rem; text-wrap: balance; }
+.prose h2.first, .prose > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.sol h3 { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 1.3125rem; font-weight: 700; line-height: 1.35; }
+.proc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.proc { display: grid; grid-template-rows: auto 1fr auto; gap: 0.875rem; background: var(--paper); border: var(--rule); padding: 1.5rem; }
+.proc h3 { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 1.25rem; font-weight: 700; line-height: 1.35; }
+.proc .cube { margin-top: 0.15rem; }
+.proc ul { list-style: square; padding-inline-start: 1.25rem; display: grid; gap: 0.375rem; align-content: start; color: var(--ink-soft); }
+.proc li::marker { color: var(--sky-3); }
+.outcome { display: flex; gap: 0.625rem; font-weight: 600; border-top: var(--rule); padding-top: 0.875rem; }
+.outcome::before { content: "←"; color: var(--sky-3); font-weight: 700; }
+.changes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; width: 100%; }
+.changes li { display: grid; gap: 0.5rem; align-content: start; border-top: 1.5px solid currentColor; padding-top: 1rem; }
+.changes b { font-size: 1.1875rem; line-height: 1.3; }
+.changes span { font-size: 1rem; }
+.on-ink .changes span { color: var(--on-ink-soft); }
+.case .changes span { color: var(--ink-soft); }
+
 /* Illustrations, split layouts, drifting cubes */
 .art { width: 100%; }
 .blend { mix-blend-mode: multiply; }
@@ -273,10 +292,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 @media (max-width: 56rem) {
   .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .changes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 46rem) {
   .hero .wrap, .founder, .contact, .two-col, .svc, .sol-grid, .person .wrap, .split { grid-template-columns: minmax(0, 1fr); }
-  .shots { grid-template-columns: minmax(0, 1fr); }
+  .shots, .proc-grid, .changes { grid-template-columns: minmax(0, 1fr); }
   .deco { display: none; }
   .masthead .wrap { flex-wrap: nowrap; padding-block: 0.625rem; }
   .brand { font-size: 1.25rem; }
