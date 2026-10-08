@@ -48,6 +48,7 @@
     "</ul>" +
     '<div class="a11y-foot"><button type="button" data-reset>איפוס ההגדרות</button>' +
     '<a href="' + statement + '">הצהרת נגישות</a>' +
+    '<a href="' + statement + '#a11y-contact">פנייה בנושא נגישות</a>' +
     '<button type="button" data-close>סגירת התפריט</button></div></div>';
   const skip = document.querySelector(".skip");
   if (skip) skip.after(box);

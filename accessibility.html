@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>הצהרת נגישות – L-Be | לירון ביאלקוביץ</title>
-<meta name="description" content="הצהרת הנגישות של אתר L-Be: מה נעשה כדי שהאתר יהיה נוח לכולם, תפריט הנגישות, מה עדיין לא מושלם ואיך פונים בנושא נגישות.">
+<meta name="description" content="הצהרת הנגישות של אתר L-Be: רמת הנגישות, ההתאמות שנעשו, תפריט הנגישות, ניווט במקלדת, אחראי הנגישות וטופס פנייה בנושא נגישות.">
 <meta name="author" content="לירון ביאלקוביץ (Liron Bialkovich)">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#f3f5f8">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="הצהרת נגישות – L-Be | לירון ביאלקוביץ">
-<meta property="og:description" content="הצהרת הנגישות של אתר L-Be: מה נעשה כדי שהאתר יהיה נוח לכולם, תפריט הנגישות, מה עדיין לא מושלם ואיך פונים בנושא נגישות.">
+<meta property="og:description" content="הצהרת הנגישות של אתר L-Be: רמת הנגישות, ההתאמות שנעשו, תפריט הנגישות, ניווט במקלדת, אחראי הנגישות וטופס פנייה בנושא נגישות.">
 <meta property="og:url" content="https://l-be.com/accessibility">
 <meta property="og:image" content="https://l-be.com/og.png">
 <meta property="og:image:width" content="1200">
@@ -52,34 +52,72 @@
   <div class="wrap">
     <p class="label">נגישות</p>
     <h1 class="display">הצהרת נגישות</h1>
-    <p class="lead">חשוב לי שכל אחד ואחת יוכלו להשתמש באתר הזה בנוחות, עם כל מוגבלות ובכל אמצעי עזר.</p>
+    <p class="lead">אני רואה חשיבות רבה בשירות שוויוני לכל אדם.<br>השקעתי בהנגשת האתר כדי שכל אחד ואחת יוכלו להשתמש בו בנוחות, בכבוד ובעצמאות, עם כל מוגבלות ובכל אמצעי עזר.</p>
+    <div class="actions">
+      <a class="btn" href="#a11y-contact">פנייה בנושא נגישות</a>
+    </div>
   </div>
 </section>
 <section class="section on-surface">
   <div class="wrap">
     <div class="prose">
-<h2 class="first">לפי מה האתר נבנה</h2>
-<p>האתר נבנה לפי הנחיות WCAG 2.2 של ארגון W3C ולפי התקן הישראלי ת"י 5568. היעד הוא רמה AA במלואה, ורמה AAA בכל מקום שבו זה אפשרי.</p>
-<p>הבדיקה נעשתה בכלי בדיקה אוטומטי ובבדיקה ידנית במקלדת. היא לא נעשתה על ידי מורשה נגישות.</p>
+<nav aria-label="בעמוד הזה">
+<ul class="toc">
+<li><a href="#level">רמת הנגישות</a></li>
+<li><a href="#done">מה נעשה באתר</a></li>
+<li><a href="#menu">תפריט הנגישות</a></li>
+<li><a href="#keyboard">ניווט במקלדת</a></li>
+<li><a href="#limits">מה עדיין לא מושלם</a></li>
+<li><a href="#a11y-contact">פנייה בנושא נגישות</a></li>
+<li><a href="#glossary">מילון מונחים</a></li>
+</ul>
+</nav>
 
-<h2>מה יש באתר</h2>
+<h2 class="first" id="level">רמת הנגישות</h2>
+<p>האתר הותאם להנחיות WCAG 2.2 של ארגון W3C ולתקן הישראלי ת"י 5568, ברמה AA.<br>מעבר לכך, הוא הותאם גם למרבית הדרישות של רמה AAA, הרמה המחמירה ביותר.</p>
+<p>האתר נבדק בכלי בדיקה אוטומטי ובבדיקה ידנית, עמוד אחר עמוד.</p>
+
+<h2 id="done">מה נעשה באתר</h2>
+<h3>ניווט ומבנה</h3>
 <ul>
 <li>אפשר להגיע לכל דבר באתר במקלדת בלבד, והמיקום הנוכחי מסומן במסגרת ברורה.</li>
 <li>בתחילת כל עמוד יש קישור "דילוג לתוכן הראשי".</li>
-<li>מבנה העמודים מסומן לקוראי מסך: כותרות, אזורי ניווט, רשימות ושדות טופס עם תוויות.</li>
-<li>לכל תמונה שיש בה מידע יש תיאור. צילומי ההודעות מלקוחות מתומללים במלואם, ואפשר לקרוא אותם גם כטקסט רגיל.</li>
+<li>מבנה העמודים מסומן לקוראי מסך: כותרות, אזורי ניווט, רשימות וטבלאות.</li>
+<li>התפריט והפוטר זהים בכל העמודים, והעמוד הנוכחי מסומן בתפריט.</li>
+<li>קישור שנפתח בלשונית חדשה או בחלון קופץ מסומן ככזה.</li>
+</ul>
+<h3>ראייה</h3>
+<ul>
 <li>ניגודיות הטקסט היא 7:1 לפחות.</li>
 <li>אפשר להגדיל את הטקסט עד 200% בלי לאבד תוכן, והאתר מתאים את עצמו לכל רוחב מסך.</li>
-<li>כפתורים וקישורים גדולים מספיק ללחיצה נוחה.</li>
-<li>אין באתר הגבלות זמן, אין הבהובים ואין צליל.</li>
-<li>הודעות השגיאה בטפסים כתובות במילים, מופיעות ליד השדה ומוקראות על ידי קורא המסך.</li>
-<li>קישור שנפתח בלשונית חדשה מסומן ככזה.</li>
-<li>האתר מכבד את ההגדרה "הפחתת תנועה" של מערכת ההפעלה ואת מצב הניגודיות הגבוהה של Windows.</li>
-<li>יש גרסה מקוצרת של עמוד הבית ("תקצר לי"), למי שמעדיף לקרוא פחות.</li>
+<li>לכל תמונה שיש בה מידע יש תיאור.<br>צילומי ההודעות מלקוחות מתומללים במלואם, ואפשר לקרוא אותם גם כטקסט רגיל.</li>
+<li>מידע לא מועבר בצבע בלבד.</li>
+<li>האתר מכבד את מצב הניגודיות הגבוהה של מערכת ההפעלה.</li>
+</ul>
+<h3>שמיעה</h3>
+<ul>
+<li>אין באתר תוכן קולי או וידאו, ואין צלילים.</li>
+</ul>
+<h3>מוטוריקה</h3>
+<ul>
+<li>כפתורים וקישורים גדולים מספיק ללחיצה נוחה, 44 פיקסלים לפחות.</li>
+<li>אין פעולות שדורשות גרירה, מחוות מורכבות או לחיצה מהירה.</li>
+<li>אין באתר הגבלות זמן.</li>
+</ul>
+<h3>הבנה וקשב</h3>
+<ul>
+<li>אין הבהובים, ואפשר לעצור את כל האנימציות.<br>האתר מכבד גם את ההגדרה "הפחתת תנועה" של מערכת ההפעלה.</li>
+<li>יש גרסה מקוצרת של עמוד הבית ("תקצר לי"), למי שרוצה לקרוא פחות.</li>
+<li>קיצורים ומונחים מקצועיים מוסברים במילון שבסוף העמוד הזה.</li>
+</ul>
+<h3>טפסים</h3>
+<ul>
+<li>לכל שדה יש תווית, ושדות חובה מסומנים במילה "חובה".</li>
+<li>הודעות השגיאה כתובות במילים, מופיעות ליד השדה ומוקראות על ידי קורא המסך.</li>
 </ul>
 
-<h2>תפריט הנגישות</h2>
-<p>בפינת המסך יש כפתור עגול שפותח את תפריט הנגישות. ההגדרות נשמרות בדפדפן שלך לביקור הבא.</p>
+<h2 id="menu">תפריט הנגישות</h2>
+<p>בפינת המסך יש כפתור עגול שפותח את תפריט הנגישות.<br>ההגדרות נשמרות בדפדפן לביקור הבא, ואפשר לאפס אותן בכל רגע.</p>
 <ul>
 <li>הגדלה והקטנה של הטקסט</li>
 <li>ניגודיות גבוהה</li>
@@ -92,16 +130,39 @@
 <li>סמן עכבר גדול</li>
 </ul>
 
-<h2>מה עדיין לא מושלם</h2>
+<h2 id="keyboard">ניווט במקלדת</h2>
 <ul>
-<li>הפורטפוליו הוא קובץ PDF באנגלית, והוא לא הונגש במלואו. אפשר לבקש ממני את התוכן שלו בכל צורה אחרת.</li>
-<li>תיאום שיחה ביומן נעשה דרך שירות חיצוני, Calendly, שהנגישות שלו לא בשליטתי. אפשר במקום זה להשאיר פרטים בטופס יצירת הקשר.</li>
-<li>הלוגואים של לקוחות ושותפים הם תמונות. לכל אחת מהן יש תיאור.</li>
-<li>הטקסט בעברית כתוב בלי ניקוד.</li>
+<li><kbd>Tab</kbd> מעביר לקישור, לכפתור או לשדה הבא.<br><kbd>Shift</kbd> + <kbd>Tab</kbd> מחזיר לקודם.</li>
+<li><kbd>Enter</kbd> מפעיל קישור או כפתור.<br><kbd>Space</kbd> מפעיל כפתור.</li>
+<li><kbd>Esc</kbd> סוגר את תפריט הנגישות ואת חלון הפורטפוליו.</li>
+<li>מקשי החצים גוללים את העמוד.</li>
 </ul>
+<p>האתר בנוי בקוד תקני, כדי לעבוד בדפדפנים הנפוצים ועם קוראי מסך.</p>
 
-<h2>נתקלתם בבעיה?</h2>
-<p>אם משהו באתר לא נגיש לך, אני רוצה לדעת ולתקן. אפשר לכתוב לי דרך <a href="./#contact">טופס יצירת הקשר</a>, ורצוי לציין באיזה עמוד זה קרה ובאיזה דפדפן או אמצעי עזר. אחראי הנגישות באתר: לירון ביאלקוביץ.</p>
+<h2 id="limits">מה עדיין לא מושלם</h2>
+<ul>
+<li>הפורטפוליו הוא קובץ PDF באנגלית, והוא לא הונגש במלואו.<br>אפשר לבקש ממני את התוכן שלו בכל צורה אחרת.</li>
+<li>תיאום שיחה ביומן נעשה דרך שירות חיצוני, Calendly, שהנגישות שלו לא בשליטתי.<br>אפשר במקום זה להשאיר פרטים בטופס יצירת הקשר.</li>
+<li>הלוגואים של לקוחות ושותפים הם תמונות.<br>לכל אחת מהן יש תיאור.</li>
+<li>בעמוד השגיאה (404) יש משחק קטן.<br>הוא שעשוע בלבד, וכל הקישורים בעמוד זמינים בלעדיו.</li>
+</ul>
+<p>אני ממשיך לשפר את הנגישות של האתר כל הזמן.</p>
+
+<h2 id="a11y-contact">פנייה בנושא נגישות</h2>
+<p>אחראי הנגישות באתר: לירון ביאלקוביץ.</p>
+<p>נתקלת בבעיית נגישות?<br>יש לך בקשה, או הצעה לשיפור?<br>זה הטופס.<br>כדאי לציין באיזה עמוד זה קרה, ובאיזה דפדפן או אמצעי עזר.<br>אחזור אליך בהקדם האפשרי.</p>
+    </div>
+    <form class="form on-paper" id="a11y-form" data-hook="https://hook.eu1.make.com/2x9qdwv6kcwttznsn6tbl4dj2oolkaap" aria-labelledby="a11y-contact">
+      <div class="field"><label for="af-name">שם מלא <span class="req">(חובה)</span></label><input id="af-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="af-contact">אימייל או טלפון <span class="req">(חובה)</span></label><input id="af-contact" name="contact" type="text" dir="ltr" required></div>
+      <div class="field"><label for="af-page">באיזה עמוד זה קרה</label><input id="af-page" name="page" type="text"></div>
+      <div class="field"><label for="af-tech">דפדפן או אמצעי עזר</label><input id="af-tech" name="tech" type="text"></div>
+      <div class="field full"><label for="af-message">מה קרה, או מה הבקשה <span class="req">(חובה)</span></label><textarea id="af-message" name="message" rows="5" required></textarea></div>
+      <button class="btn" type="submit">שליחת פנייה בנושא נגישות</button>
+      <p class="form-status" aria-hidden="true"></p>
+      <p class="visually-hidden" role="status"></p>
+    </form>
+    <div class="prose">
 <p>ההצהרה עודכנה בתאריך 8 באוקטובר 2026.</p>
 
 <h2 id="glossary">מילון קיצורים ומונחים</h2>
@@ -111,6 +172,7 @@
 <dt>סוכן AI</dt><dd>תוכנה מבוססת בינה מלאכותית שמבצעת משימות בעצמה, למשל מענה לפניות.</dd>
 <dt>אוטומציה</dt><dd>פעולות שהמערכת מבצעת לבד, בלי שמישהו יצטרך לזכור לעשות אותן.</dd>
 <dt>אינטגרציה</dt><dd>חיבור בין שתי מערכות, כך שמידע עובר ביניהן לבד.</dd>
+<dt>אפיון</dt><dd>מסמך שמתאר מה מערכת צריכה לעשות, בשביל מי ואיך, לפני שבונים אותה.</dd>
 <dt><span lang="en" dir="ltr">API</span> <span class="full" lang="en" dir="ltr">(Application Programming Interface)</span></dt><dd>ממשק שדרכו מערכות תוכנה מדברות זו עם זו.</dd>
 <dt><span lang="en" dir="ltr">SaaS</span> <span class="full" lang="en" dir="ltr">(Software as a Service)</span></dt><dd>תוכנה שמשתמשים בה דרך האינטרנט, בלי להתקין.</dd>
 <dt><span lang="en" dir="ltr">ERP</span> <span class="full" lang="en" dir="ltr">(Enterprise Resource Planning)</span></dt><dd>מערכת לניהול המשאבים של העסק, כמו מלאי, רכש וכספים.</dd>
@@ -120,6 +182,8 @@
 <dt><span lang="en" dir="ltr">SLA</span> <span class="full" lang="en" dir="ltr">(Service Level Agreement)</span></dt><dd>התחייבות לזמני טיפול ולרמת שירות.</dd>
 <dt><span lang="en" dir="ltr">UI</span> <span class="full" lang="en" dir="ltr">(User Interface)</span></dt><dd>ממשק המשתמש: מה שרואים על המסך.</dd>
 <dt><span lang="en" dir="ltr">LLM</span> <span class="full" lang="en" dir="ltr">(Large Language Model)</span></dt><dd>מודל שפה גדול, הטכנולוגיה שמאחורי כלי AI שמבינים וכותבים טקסט.</dd>
+<dt><span lang="en" dir="ltr">Roadmap</span></dt><dd>מפת דרכים: סדר השלבים בבניית מערכת, ומה נכנס לכל שלב.</dd>
+<dt>ספרינט</dt><dd>פרק עבודה קצר וקבוע, בדרך כלל שבוע או שבועיים, שבסופו יש תוצר.</dd>
 <dt><span lang="en" dir="ltr">PDF</span> <span class="full" lang="en" dir="ltr">(Portable Document Format)</span></dt><dd>סוג קובץ של מסמך.</dd>
 </dl>
     </div>
@@ -169,5 +233,6 @@
 <script src="site.js" defer></script>
 <script src="a11y.js" defer></script>
 <script src="later.js" defer></script>
+<script src="a11y-form.js" defer></script>
 </body>
 </html>

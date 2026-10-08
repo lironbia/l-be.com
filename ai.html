@@ -20,6 +20,17 @@ h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}
 h1::before,h2::before,h3::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
+/* Way back to the regular site, always in reach */
+.bar{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.5rem 1rem;background:#fff;border-bottom:1px solid #111;font-size:14px}
+.bar a{display:inline-flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid #111;color:#111;background:#fff;text-decoration:none;font-weight:700}
+.bar a.dark{background:#111;color:#fff}
+.bar .real-off,.bar .real-note{display:none}
+/* REAL AI MODE (a joke): the page as a machine would be happy to read it. Pure CSS, no scripts. */
+#real:target~.bar .real-on{display:none}
+#real:target~.bar .real-off{display:inline-flex}
+#real:target~.bar .real-note{display:inline}
+#real:target~main{zoom:.2;max-width:none;line-height:1.02;padding:.25rem}
+#real:target~main *{margin:0}
 p{margin:.25rem 0}
 ul{margin:.25rem 0;padding:0;list-style:none}
 li::before{content:"- "}
@@ -30,6 +41,15 @@ a{color:#0b3d91}
 </style>
 </head>
 <body>
+<span id="real"></span>
+<nav class="bar" aria-label="חזרה לאתר">
+<a class="dark" href="https://l-be.com/">→ חזרה לאתר</a>
+<a href="https://l-be.com/#contact">צור קשר</a>
+<a href="https://l-be.com/liron-bialkovich">אודות</a>
+<a class="real-on" href="#real" lang="en">REAL AI MODE</a>
+<a class="real-off" href="#">חזרה לגודל אנושי</a>
+<span class="real-note">ככה AI אוהב לקרוא: צפוף, קטן ובלי רווחים.</span>
+</nav>
 <main>
 <pre>---
 title: L-Be · Liron Bialkovich (לירון ביאלקוביץ)
