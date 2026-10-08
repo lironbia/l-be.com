@@ -14,7 +14,10 @@
   // --- The guide: a small dot that rests at the edge of the screen and, when a main button is in
   // view, glides over to its corner and marks it (in the contact area: the send button).
   const guide = document.querySelector(".guide");
-  const guideTargets = guide ? [...document.querySelectorAll("main .btn")] : [];
+  // The opener has its own effect, so the dot only appears once the opener has scrolled away,
+  // and the opener's buttons are not targets.
+  const opener = document.querySelector("main > section");
+  const guideTargets = guide ? [...document.querySelectorAll("main .btn")].filter((el) => !opener || !opener.contains(el)) : [];
   let gx = 0, gy = 0, tx = 0, ty = 0, guideMoving = false, guidePlaced = false;
   function guideStep() {
     gx += (tx - gx) * 0.12;
@@ -47,16 +50,17 @@
       ty = innerHeight * 0.62;
     }
     guide.classList.toggle("is-docked", !!best);
+    const pastOpener = !opener || opener.getBoundingClientRect().bottom < innerHeight * 0.45;
     if (!guidePlaced || reduceMotion) {
       gx = tx;
       gy = ty;
       guidePlaced = true;
       guide.style.transform = "translate3d(" + gx.toFixed(1) + "px," + gy.toFixed(1) + "px,0)";
-      guide.classList.add("is-on");
     } else if (!guideMoving) {
       guideMoving = true;
       requestAnimationFrame(guideStep);
     }
+    guide.classList.toggle("is-on", pastOpener);
   }
   addEventListener("load", updateGuide);
 

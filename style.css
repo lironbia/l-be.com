@@ -136,9 +136,9 @@ html.tachles #tachles { border-top: 0; }
 .hero .wrap { position: relative; }
 
 /* The guide: one small dot that keeps the reader company and settles on the main button in view */
-.guide { position: fixed; left: 0; top: 0; z-index: 15; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--sky-3); color: var(--sky-3); box-shadow: 0 0 0 3px rgb(255 255 255 / 0.65); pointer-events: none; opacity: 0; transition: background-color 0.5s ease, color 0.5s ease, opacity 0.4s ease; }
-.guide.is-on { opacity: 1; }
-.guide.is-docked { background: var(--coral-2); color: var(--coral-2); }
+.guide { position: fixed; left: 0; top: 0; z-index: 15; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--ink-soft); color: var(--ink-soft); pointer-events: none; opacity: 0; transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease; }
+.guide.is-on { opacity: 0.28; }
+.guide.is-on.is-docked { opacity: 1; background: var(--coral-2); color: var(--coral-2); box-shadow: 0 0 0 3px rgb(255 255 255 / 0.65); }
 .guide.is-docked::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 1.5px solid currentColor; animation: guide-ping 2s ease-out infinite; }
 @keyframes guide-ping { from { transform: scale(0.6); opacity: 0.8; } to { transform: scale(2.2); opacity: 0; } }
 
@@ -259,17 +259,6 @@ html.tachles #tachles { border-top: 0; }
 .on-ink .links a.plain:hover { background: var(--on-ink); color: var(--ink); border-color: var(--on-ink); }
 .en-note { border-top: var(--rule); padding-top: 1.5rem; max-width: 44rem; direction: ltr; text-align: left; color: var(--ink-soft); }
 
-/* Contact buttons: on hover a slanted echo of the label appears below, off to the right */
-.contact .links a.plain, .form .btn { position: relative; }
-.contact .links a.plain::after, .form .btn::after {
-  content: attr(data-label); position: absolute; top: 100%; right: 0; white-space: nowrap; pointer-events: none;
-  color: var(--sky-2); opacity: 0; transform: translate(0, -6px) skewX(-16deg);
-  transition: opacity 0.2s ease, transform 0.25s ease;
-}
-.form .btn::after { color: var(--sky-ink); }
-.contact .links a.plain:hover::after, .contact .links a.plain:focus-visible::after, .form .btn:hover::after, .form .btn:focus-visible::after { opacity: 0.7; transform: translate(16px, 6px) skewX(-16deg); }
-.contact .links { row-gap: 1.75rem; }
-
 /* Portfolio viewer */
 .pdf-dialog { width: min(58rem, calc(100vw - 1rem)); height: min(92vh, 64rem); max-width: none; max-height: none; padding: 0; border: var(--rule); background: var(--surface); color: var(--ink); }
 .pdf-dialog[open] { display: flex; flex-direction: column; }
@@ -319,6 +308,14 @@ html.tachles #tachles { border-top: 0; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1.5rem; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
 .site-footer a { text-underline-offset: 0.3em; }
+/* Footer links: on hover a faint, slanted echo of the label appears below, off to the right */
+.site-footer nav a { position: relative; }
+.site-footer nav a::after {
+  content: attr(data-label); position: absolute; top: 100%; right: 0; white-space: nowrap; pointer-events: none;
+  color: var(--ink); opacity: 0; transform: translate(0, -4px) skewX(-16deg);
+  transition: opacity 0.25s ease, transform 0.3s ease;
+}
+.site-footer nav a:hover::after, .site-footer nav a:focus-visible::after { opacity: 0.22; transform: translate(10px, 2px) skewX(-16deg); }
 
 /* Moved-site notice (subk.co.il) */
 .moved { min-height: 100vh; display: grid; place-content: center; gap: 1.25rem; justify-items: start; padding: var(--gutter); }
@@ -349,7 +346,7 @@ html.tachles #tachles { border-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .layer, .hero-art .leader, .guide.is-docked::after { animation: none; }
-  .contact .links a.plain::after, .form .btn::after { transition: none; }
+  .site-footer nav a::after { transition: none; }
   .btn { transition: none; }
 }
 
