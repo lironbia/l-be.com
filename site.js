@@ -11,11 +11,20 @@
     // Measure a parent that is not itself transformed, so the offset never feeds back into itself.
     ref: el.closest("[data-parallax-root]") || el.parentElement,
   }));
+  const pending = []; // elements waiting to be revealed
   let queued = false;
   function frame() {
     queued = false;
     const max = root.scrollHeight - innerHeight;
     root.style.setProperty("--sp", max > 0 ? (scrollY / max).toFixed(4) : "0");
+    root.style.setProperty("--sy", String(Math.round(scrollY)));
+    for (let i = pending.length - 1; i >= 0; i--) {
+      // offsetParent is null while a section is hidden by the short mode; leave those waiting.
+      if (pending[i].offsetParent !== null && pending[i].getBoundingClientRect().top < innerHeight * 0.92) {
+        pending[i].classList.add("is-in");
+        pending.splice(i, 1);
+      }
+    }
     if (reduceMotion) return;
     const mid = innerHeight / 2;
     for (const { el, speed, ref } of drifters) {
@@ -32,6 +41,34 @@
   addEventListener("scroll", onScroll, { passive: true });
   addEventListener("resize", onScroll);
   frame();
+
+  // --- Pointer glow in the opener (mouse only)
+  const hero = document.querySelector(".hero");
+  if (hero && !reduceMotion && matchMedia("(pointer: fine)").matches) {
+    hero.addEventListener("pointermove", (event) => {
+      const r = hero.getBoundingClientRect();
+      hero.style.setProperty("--mx", (event.clientX - r.left).toFixed(0) + "px");
+      hero.style.setProperty("--my", (event.clientY - r.top).toFixed(0) + "px");
+    });
+  }
+
+  // --- Reveal on scroll: cards and section heads rise into place the first time they are reached.
+  // Only elements that start below the fold are hidden, so the first screen never flickers,
+  // and nothing is hidden at all when the page loads in a background tab.
+  if (!reduceMotion && document.visibilityState === "visible") {
+    document.querySelectorAll(".section-head, .stats > li, .svc li, .case, .logos li, .shot, .founder-text, .proc, .sol, .changes li, .biz-panel").forEach((el) => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      const index = [...el.parentElement.children].indexOf(el);
+      el.style.setProperty("--rd", (index % 6) * 70 + "ms");
+      el.classList.add("reveal");
+      pending.push(el);
+    });
+    root.classList.add("motion");
+    // Safety net: if the page becomes hidden or is printed, show everything.
+    const showAll = () => pending.splice(0).forEach((el) => el.classList.add("is-in"));
+    addEventListener("beforeprint", showAll);
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState !== "visible") showAll(); });
+  }
 
   // --- "תקצר לי": the short version of the home page (process, client messages, contact).
   const hasShort = !!document.querySelector("[data-tachles]");

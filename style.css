@@ -26,6 +26,8 @@
   --inkb-2: #232c40;
   --inkb-3: #0e1420;
   --scrim: rgb(14 20 32 / 0.72);
+  --dot: rgb(14 20 32 / 0.14);
+  --glow: rgb(116 180 242 / 0.4);
 
   --font-display: "Frank Ruhl Libre", "David Libre", "Times New Roman", serif;
   --font-body: "IBM Plex Sans Hebrew", "Segoe UI", Arial, sans-serif;
@@ -127,6 +129,16 @@ html.tachles #tachles { border-top: 0; }
 @keyframes flow { to { stroke-dashoffset: -14; } }
 [data-parallax] { will-change: transform; }
 @keyframes float { 50% { transform: translateY(-5px); } }
+
+/* Depth in the opener: a dot grid that scrolls slower than the page (--sy from site.js),
+   and a soft glow that follows the pointer (--mx / --my). */
+.hero { background-image: radial-gradient(circle at 1px 1px, var(--dot) 1.3px, transparent 0); background-size: 28px 28px; background-position: 0 calc(var(--sy, 0) * 0.35px); }
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(28rem circle at var(--mx, 22%) var(--my, 45%), var(--glow), transparent 65%); }
+.hero .wrap { position: relative; }
+
+/* Reveal on scroll: site.js marks only elements that start below the fold */
+.motion .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--rd, 0ms); }
+.motion .reveal.is-in { opacity: 1; transform: none; }
 
 /* Sections */
 .section { border-top: var(--rule); }
@@ -329,4 +341,9 @@ html.tachles #tachles { border-top: 0; }
   html { scroll-behavior: auto; }
   .layer, .hero-art .leader { animation: none; }
   .btn { transition: none; }
+}
+
+@media print {
+  .motion .reveal { opacity: 1; transform: none; }
+  .masthead { position: static; }
 }
