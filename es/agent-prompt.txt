@@ -54,7 +54,7 @@ Soluciones
 
 # A cada cliente le preparo el paquete de soluciones ideal para su caso
 
-Tengo una gran variedad de soluciones para ustedes, quienes dirigen un negocio y quieren mejorar un poco su calidad de vida empresarial, en todas las áreas que interesan.
+Tengo una variedad de soluciones para quienes dirigen un negocio y quieren mejorar un poco la calidad de vida del negocio, en todas las áreas que importan.
 
 - Agentes de IA y bots
 
@@ -96,7 +96,7 @@ IA responsable
 
 - El acceso es con verificación en dos pasos
 
-- Los datos personales de los clientes no salen fuera
+- Los datos personales de los clientes están cifrados, para que no pasen a la IA ni salgan de la empresa
 
 - Cada acción queda registrada
 
@@ -443,7 +443,7 @@ Para quién es
 
 Para quienes dirigen o son dueños de una empresa y quieren un negocio que funcione con método, también cuando no están en la sala.
 
-Cada cliente recibe el sistema, y el equipo de L-Be construye sobre él lo que ese negocio necesita. Más adelante, los clientes también podrán desarrollar sobre el sistema por su cuenta.
+Cada cliente recibe el sistema, y el equipo de L-Be construye sobre él lo que su negocio necesita.
 
 Qué lo diferencia
 
@@ -542,6 +542,36 @@ Cada persona ve solo lo que su rol permite.
 Por ejemplo:  acceso en dos pasos para cada usuario.
 
 Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Qué se puede construir
+
+# Desarrollo muy rápido y flexible de lo que el negocio necesita
+
+Cada herramienta que se construye sobre el sistema está conectada desde el primer momento a los datos de la empresa. Algunos ejemplos de lo que se puede construir:
+
+- Punto de venta Un sistema de caja conectado a los datos de la empresa.
+
+- Coordinación de envíos Una sola interfaz para coordinar los envíos.
+
+- Aplicación para agentes de campo Calcula la ruta de viaje óptima, según el tráfico y según el recorrido del agente.
+
+- Escáneres y códigos de barras Un sistema de escáneres, y de generadores de códigos de barras.
+
+- Entradas y salidas del almacén Gestión de lo que entra al almacén, y de lo que sale de él.
+
+- Agente de IA para paneles e informes Genera paneles e informes de dirección.
+
+- Agente de control Verifica que las ventas se hicieron como se debe.
+
+- Bibliotecaria de archivo Reúne información de todos los lugares posibles, y la convierte en una base de conocimiento ordenada y lista para los agentes de IA.
+
+- Portal de proveedores y clientes Una entrada ordenada para los proveedores y los clientes de la empresa.
+
+- Calculadoras y formularios especiales Exactamente según la necesidad del negocio.
+
+- Cualquier aplicación web Cualquier herramienta que se quiera implementar, y que necesite una conexión natural con las bases de datos de la empresa.
+
+- Y más, y más, y más La capacidad de convertir la imaginación en una especificación es el único límite.
+
 Gestión del tráfico de IA
 
 # IA en el negocio sin sorpresas en la factura y sin decisiones que nadie aprobó
@@ -656,7 +686,7 @@ Una persona que lidere el sistema desde el lado del negocio, y respuestas sincer
 
 # ¿Podemos desarrollar sobre el sistema por nuestra cuenta?
 
-Hoy cada cliente recibe el sistema, y el equipo de L-Be construye sobre él lo que el negocio necesita. Más adelante, los clientes también podrán desarrollar sobre el sistema por su cuenta.
+Hoy cada cliente recibe el sistema, y el equipo de L-Be construye sobre él lo que el negocio necesita. Más adelante se abrirá la posibilidad de desarrollar sobre el sistema también para los propios clientes.
 
 # ¿Cuánto cuesta?
 
@@ -828,7 +858,7 @@ IA responsable.  Un sistema de IA conectado a los datos de una empresa tiene que
 
 - El acceso es con verificación en dos pasos.
 
-- Los datos personales de los clientes no salen fuera.
+- Los datos personales de los clientes están cifrados, para que no pasen a la IA ni salgan de la empresa.
 
 - Cada acción queda registrada.
 

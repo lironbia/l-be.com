@@ -710,3 +710,20 @@ html.a11y-big .changes.three, html.a11y-big .changes.five, html.a11y-big .steps.
   .lang-menu summary::before, .nav-open::before { content: ""; position: absolute; inset: -0.125rem; }
 }
 @media print { .agent-fab, .lang-menu { display: none; } }
+
+/* Read-later band: heading and form side by side, centred as one group */
+@media (min-width: 46.01rem) {
+  .later .wrap { grid-template-columns: max-content max-content; justify-content: center; gap: 1rem clamp(3rem, 10vw, 8.5rem); }
+}
+.later-form .form-note { text-align: center; }
+
+/* "Send to your AI agent" band: text on one side, the button on the other */
+@media (min-width: 56.01rem) {
+  .agent-band .wrap { grid-template-columns: minmax(0, 1fr) max-content; align-items: center; gap: 1rem clamp(2rem, 6vw, 5rem); padding-block: clamp(2rem, 4vw, 3rem); }
+  .agent-band .section-head { gap: 0.625rem; }
+  .agent-copy { position: relative; justify-items: center; }
+  .agent-status { position: absolute; inset-block-start: 100%; inset-inline: 0; margin-top: 0.625rem; min-height: 0; text-align: center; }
+}
+html.a11y-big .agent-band .wrap { grid-template-columns: minmax(0, 1fr); }
+html.a11y-big .agent-status { position: static; }
+.untangle { overflow: visible; }

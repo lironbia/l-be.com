@@ -54,7 +54,7 @@ Solutions
 
 # For every client I put together the set of solutions that fits them best
 
-I have a range of solutions for you - business owners who want to upgrade the quality of life in the business a little, in every department that matters.
+I have a range of solutions for business owners who want to upgrade the quality of their business life a little, in all the departments that matter.
 
 - AI agents and bots
 
@@ -96,7 +96,7 @@ Responsible AI
 
 - Sign-in uses two-step verification
 
-- Customers' personal details do not leave the company
+- Customers' personal details are encrypted, so that they do not pass to the AI or leave the company
 
 - Every action is logged
 
@@ -443,7 +443,7 @@ Who it is for
 
 For company owners and managers who want a business that runs by a method, even when they are not in the room.
 
-Every client gets the system, and the L-Be team builds on it what that business needs. Later on, clients will also be able to build on the system themselves.
+Every client gets the system, and the L-Be team builds on it what their business needs.
 
 What sets it apart
 
@@ -542,6 +542,36 @@ Everyone sees only what their role allows.
 For example:  two-step sign-in for every user.
 
 Free first consultation (https://l-be.com/en/ai#agent-contact) Book a call (https://calendly.com/subk/intro-call)
+What can be built
+
+# Very fast, flexible development of whatever the business needs
+
+Every tool built on the system is connected to the company's data from the first moment. A few examples of what can be built:
+
+- Point of sale A cash register system connected to the company's data.
+
+- Delivery coordination One interface for coordinating deliveries.
+
+- App for field agents Calculates the optimal driving route, by the traffic and by the agent's route.
+
+- Scanners and barcodes A system of scanners, and of barcode generators.
+
+- Warehouse receipts and issues Managing what comes into the warehouse, and what leaves it.
+
+- AI agent for dashboards and reports Generates dashboards and management reports.
+
+- Control agent Makes sure that sales were carried out properly.
+
+- Archive librarian Collects information from every possible place, and turns it into an organized knowledge base that is ready for AI agents.
+
+- Supplier and customer portal An orderly entrance for the company's suppliers and customers.
+
+- Special calculators and forms Exactly to the need of the business.
+
+- Any web application Any tool you want to implement, that needs a natural connection to the company's databases.
+
+- And more, and more, and more The ability to turn imagination into a specification is the only limit.
+
 AI traffic management
 
 # AI in the business with no surprises on the bill and no decisions that nobody approved
@@ -656,7 +686,7 @@ One person who leads the system on the business's side, and honest answers to th
 
 # Can we build on the system ourselves?
 
-Today every client gets the system, and the L-Be team builds on it what the business needs. Later on, clients will also be able to build on the system themselves.
+Today every client gets the system, and the L-Be team builds on it what the business needs. Later on, the option to develop on the system will open to the clients themselves too.
 
 # How much does it cost?
 
@@ -828,7 +858,7 @@ Responsible AI.  An AI system connected to a company's data has to work within c
 
 - Sign-in uses two-step verification.
 
-- Customers' personal details do not leave the company.
+- Customers' personal details are encrypted, so that they do not pass to the AI or leave the company.
 
 - Every action is logged.
 
