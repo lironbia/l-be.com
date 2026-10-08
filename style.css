@@ -649,3 +649,5 @@ html.a11y-big.js .nav-open { display: inline-flex; }
 /* Product page opener: same layout as the home opener, with a longer headline */
 .hero.product h1 { font-size: clamp(2.125rem, 4.6vw, 3.375rem); line-height: 1.1; }
 .form-note.one-line { white-space: nowrap; }
+
+.more { font-size: 0.9375rem; color: var(--ink-soft); }
