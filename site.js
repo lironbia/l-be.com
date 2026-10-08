@@ -110,6 +110,7 @@
       t = t * t * (3 - 2 * t); // ease in and out
       const mix = COOL.map((cool, i) => Math.round(cool + (WARM[i] - cool) * t));
       hero.style.setProperty("--glow", "rgb(" + mix.join(" ") + " / " + (0.4 + 0.2 * t).toFixed(2) + ")");
+      hero.style.setProperty("--gs", (11 + 21 * t).toFixed(1) + "rem"); // small and cool far away, large and warm up close
     });
   }
 

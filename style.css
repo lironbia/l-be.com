@@ -132,7 +132,7 @@ html.tachles #tachles { border-top: 0; }
 /* Depth in the opener: a dot grid that scrolls slower than the page (--sy from site.js),
    and a soft glow that follows the pointer (--mx / --my). */
 .hero { background-image: radial-gradient(circle at 1px 1px, var(--dot) 1.3px, transparent 0); background-size: 28px 28px; background-position: 0 calc(var(--sy, 0) * 0.35px); }
-.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(28rem circle at var(--mx, 22%) var(--my, 45%), var(--glow), transparent 65%); }
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(var(--gs, 15rem) circle at var(--mx, 22%) var(--my, 45%), var(--glow), transparent 65%); }
 .hero .wrap { position: relative; }
 
 /* The guide: one small dot that keeps the reader company and settles on the main button in view */
@@ -163,6 +163,15 @@ html.tachles #tachles { border-top: 0; }
 .stat:nth-child(1) b { color: var(--sky-2); }
 .stat:nth-child(2) b { color: var(--mint-2); }
 .stat:nth-child(3) b { color: var(--coral-2); }
+/* Track record: one lead sentence, then the brand names set large */
+.record { display: grid; gap: clamp(1.75rem, 4vw, 2.75rem); }
+.record-lead { font-size: clamp(1.25rem, 2.4vw, 1.625rem); line-height: 1.5; max-width: 50rem; text-wrap: balance; }
+.brands { display: grid; gap: 1rem; border-top: 1.5px solid var(--on-ink); padding-top: 1.5rem; }
+.brands > p { font-size: 1.0625rem; max-width: 46rem; }
+.brands ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
+.brands li { display: inline-flex; align-items: center; gap: 0.625rem; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3.4vw, 2.375rem); line-height: 1.25; }
+.brands .cube { width: 1.125rem; }
+.brands .years { color: var(--sky-2); letter-spacing: 0.14em; font-size: 0.9375rem; text-align: right; }
 .two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem clamp(1.5rem, 4vw, 3rem); }
 .two-col p { font-size: 1.125rem; }
 
