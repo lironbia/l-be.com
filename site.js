@@ -1,7 +1,9 @@
 // Shared behaviour: logo colour play + gentle parallax on scroll, Calendly popup, portfolio viewer.
 (() => {
   const root = document.documentElement;
-  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Motion is off when the system asks for it or when "עצירת אנימציות" is on in the accessibility menu.
+  const motionQuery = matchMedia("(prefers-reduced-motion: reduce)");
+  const calm = () => motionQuery.matches || root.classList.contains("a11y-calm");
   const PDFJS = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/";
 
   // --- Scroll: --sp (0..1) drives the logo gradient; [data-parallax] elements drift at their own speed.
@@ -51,7 +53,7 @@
     }
     guide.classList.toggle("is-docked", !!best);
     const pastOpener = !opener || opener.getBoundingClientRect().bottom < innerHeight * 0.45;
-    if (!guidePlaced || reduceMotion) {
+    if (!guidePlaced || calm()) {
       gx = tx;
       gy = ty;
       guidePlaced = true;
@@ -79,7 +81,7 @@
       const span = (stackHost.offsetHeight || innerHeight) * 0.55;
       stack.style.setProperty("--jp", Math.min(Math.max(scrollY / span, 0), 1).toFixed(3));
     }
-    if (reduceMotion) return;
+    if (calm()) return;
     const mid = innerHeight / 2;
     for (const { el, speed, ref } of drifters) {
       const r = ref.getBoundingClientRect();
@@ -94,16 +96,18 @@
   }
   addEventListener("scroll", onScroll, { passive: true });
   addEventListener("resize", onScroll);
+  addEventListener("a11y-change", onScroll);
   frame();
 
   // --- Pointer glow in the opener (mouse only). The glow follows the pointer and warms up as the
   // pointer nears the two main buttons: cool blue far away, warm coral right next to them.
   const hero = document.querySelector(".hero");
-  if (hero && !reduceMotion && matchMedia("(pointer: fine)").matches) {
+  if (hero && matchMedia("(pointer: fine)").matches) {
     const heroButtons = [...hero.querySelectorAll(".actions .btn, .actions [data-calendly]")];
     const COOL = [116, 180, 242];
     const WARM = [246, 138, 92];
     hero.addEventListener("pointermove", (event) => {
+      if (calm()) return;
       const r = hero.getBoundingClientRect();
       hero.style.setProperty("--mx", (event.clientX - r.left).toFixed(0) + "px");
       hero.style.setProperty("--my", (event.clientY - r.top).toFixed(0) + "px");
@@ -133,7 +137,20 @@
     });
     onScroll();
   }
-  if (hasShort && location.hash === "#tachles") setShort(true);
+  if (hasShort) {
+    // On the home page these links switch a mode in place, so they are announced as toggle buttons.
+    document.querySelectorAll("[data-tachles-toggle]").forEach((el) => {
+      el.setAttribute("role", "button");
+      el.setAttribute("aria-pressed", "false");
+      el.addEventListener("keydown", (event) => {
+        if (event.key === " ") {
+          event.preventDefault();
+          el.click();
+        }
+      });
+    });
+    if (location.hash === "#tachles") setShort(true);
+  }
 
   // --- Lazy script loader (each URL once)
   const loading = {};
@@ -207,7 +224,10 @@
         holder.className = "pdf-page";
         holder.dataset.page = n;
         holder.style.aspectRatio = size.width + " / " + size.height;
-        holder.appendChild(document.createElement("canvas"));
+        const canvas = document.createElement("canvas");
+        canvas.setAttribute("role", "img");
+        canvas.setAttribute("aria-label", "עמוד " + n + " מתוך " + doc.numPages + " בפורטפוליו");
+        holder.appendChild(canvas);
         pages.appendChild(holder);
         observer.observe(holder);
       }

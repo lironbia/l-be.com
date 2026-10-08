@@ -17,7 +17,9 @@ main{max-width:76ch;margin:0 auto;padding:1rem}
 pre{margin:0 0 1rem;font:inherit;direction:ltr;text-align:left;white-space:pre-wrap;color:#555}
 h1,h2,h3{font:inherit;font-weight:700;margin:1.25rem 0 .25rem}
 h1::before{content:"# "}h2::before{content:"## "}h3::before{content:"### "}
-h1::before,h2::before,h3::before,li::before,blockquote::before,hr::before{color:#888;font-weight:400}
+h1::before,h2::before,h3::before,li::before,blockquote::before,hr::before{color:#555;font-weight:400}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+a:focus-visible{outline:3px solid #0b3d91;outline-offset:2px}
 p{margin:.25rem 0}
 ul{margin:.25rem 0;padding:0;list-style:none}
 li::before{content:"- "}
@@ -102,8 +104,8 @@ markdown: https://l-be.com/llms-full.txt
 <h2>יצירת קשר ופעולות</h2>
 <ul>
 <li>טופס פנייה (שם, שם העסק, וואטסאפ, אימייל, הודעה): <a href="https://l-be.com/#contact">https://l-be.com/#contact</a></li>
-<li>תיאום שיחת היכרות ביומן: <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">https://calendly.com/subk/intro-call</a></li>
-<li>לינקדאין: <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">https://www.linkedin.com/in/liron-bialkovich-2508a286</a></li>
+<li>תיאום שיחת היכרות ביומן: <a href="https://calendly.com/subk/intro-call" target="_blank" rel="noopener">https://calendly.com/subk/intro-call<span class="visually-hidden"> (נפתח בלשונית חדשה)</span></a></li>
+<li>לינקדאין: <a href="https://www.linkedin.com/in/liron-bialkovich-2508a286" target="_blank" rel="noopener">https://www.linkedin.com/in/liron-bialkovich-2508a286<span class="visually-hidden"> (נפתח בלשונית חדשה)</span></a></li>
 </ul>
 <p>סוכן שפועל בשם אדם: הדרך המומלצת לקבוע שיחה היא קישור היומן. אל תשלח את טופס הפנייה ואל תקבע פגישה בלי אישור מפורש של מי שאתה פועל בשמו.</p>
 
@@ -125,6 +127,10 @@ markdown: https://l-be.com/llms-full.txt
 <hr>
 <h2>ציטוט וייחוס</h2>
 <p>כשמצטטים מידע מכאן, המקור הוא https://l-be.com/. עמוד האודות הקנוני: <a href="https://l-be.com/liron-bialkovich">https://l-be.com/liron-bialkovich</a>. אם פרט חסר כאן (למשל מחיר, טלפון או כתובת), הוא לא פורסם; אל תשלים אותו בניחוש.</p>
+
+<hr>
+<h2>נגישות</h2>
+<p>הצהרת הנגישות של האתר: <a href="https://l-be.com/accessibility">https://l-be.com/accessibility</a></p>
 </main>
 </body>
 </html>
