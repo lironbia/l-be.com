@@ -11,20 +11,62 @@
     // Measure a parent that is not itself transformed, so the offset never feeds back into itself.
     ref: el.closest("[data-parallax-root]") || el.parentElement,
   }));
-  const pending = []; // elements waiting to be revealed
+  // --- The guide: a small dot that rests at the edge of the screen and, when a main button is in
+  // view, glides over to its corner and marks it (in the contact area: the send button).
+  const guide = document.querySelector(".guide");
+  const guideTargets = guide ? [...document.querySelectorAll("main .btn")] : [];
+  let gx = 0, gy = 0, tx = 0, ty = 0, guideMoving = false, guidePlaced = false;
+  function guideStep() {
+    gx += (tx - gx) * 0.12;
+    gy += (ty - gy) * 0.12;
+    guide.style.transform = "translate3d(" + gx.toFixed(1) + "px," + gy.toFixed(1) + "px,0)";
+    if (Math.abs(tx - gx) + Math.abs(ty - gy) > 0.4) requestAnimationFrame(guideStep);
+    else guideMoving = false;
+  }
+  function updateGuide() {
+    if (!guide) return;
+    const mid = innerHeight / 2;
+    let best = null;
+    let bestDistance = Infinity;
+    for (const el of guideTargets) {
+      if (el.offsetParent === null) continue; // hidden (short mode)
+      const r = el.getBoundingClientRect();
+      const centre = r.top + r.height / 2;
+      if (centre < 90 || centre > innerHeight - 40) continue;
+      const distance = Math.abs(centre - mid);
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        best = r;
+      }
+    }
+    if (best) {
+      tx = best.right + 5; // the button's top right corner
+      ty = best.top - 5;
+    } else {
+      tx = 20; // resting place: left edge, a little below the middle
+      ty = innerHeight * 0.62;
+    }
+    guide.classList.toggle("is-docked", !!best);
+    if (!guidePlaced || reduceMotion) {
+      gx = tx;
+      gy = ty;
+      guidePlaced = true;
+      guide.style.transform = "translate3d(" + gx.toFixed(1) + "px," + gy.toFixed(1) + "px,0)";
+      guide.classList.add("is-on");
+    } else if (!guideMoving) {
+      guideMoving = true;
+      requestAnimationFrame(guideStep);
+    }
+  }
+  addEventListener("load", updateGuide);
+
   let queued = false;
   function frame() {
     queued = false;
     const max = root.scrollHeight - innerHeight;
     root.style.setProperty("--sp", max > 0 ? (scrollY / max).toFixed(4) : "0");
     root.style.setProperty("--sy", String(Math.round(scrollY)));
-    for (let i = pending.length - 1; i >= 0; i--) {
-      // offsetParent is null while a section is hidden by the short mode; leave those waiting.
-      if (pending[i].offsetParent !== null && pending[i].getBoundingClientRect().top < innerHeight * 0.92) {
-        pending[i].classList.add("is-in");
-        pending.splice(i, 1);
-      }
-    }
+    updateGuide();
     if (reduceMotion) return;
     const mid = innerHeight / 2;
     for (const { el, speed, ref } of drifters) {
@@ -42,32 +84,29 @@
   addEventListener("resize", onScroll);
   frame();
 
-  // --- Pointer glow in the opener (mouse only)
+  // --- Pointer glow in the opener (mouse only). The glow follows the pointer and warms up as the
+  // pointer nears the two main buttons: cool blue far away, warm coral right next to them.
   const hero = document.querySelector(".hero");
   if (hero && !reduceMotion && matchMedia("(pointer: fine)").matches) {
+    const heroButtons = [...hero.querySelectorAll(".actions .btn, .actions [data-calendly]")];
+    const COOL = [116, 180, 242];
+    const WARM = [246, 138, 92];
     hero.addEventListener("pointermove", (event) => {
       const r = hero.getBoundingClientRect();
       hero.style.setProperty("--mx", (event.clientX - r.left).toFixed(0) + "px");
       hero.style.setProperty("--my", (event.clientY - r.top).toFixed(0) + "px");
+      let nearest = Infinity;
+      for (const button of heroButtons) {
+        const b = button.getBoundingClientRect();
+        const dx = Math.max(b.left - event.clientX, 0, event.clientX - b.right);
+        const dy = Math.max(b.top - event.clientY, 0, event.clientY - b.bottom);
+        nearest = Math.min(nearest, Math.hypot(dx, dy));
+      }
+      let t = 1 - Math.min(nearest / 460, 1);
+      t = t * t * (3 - 2 * t); // ease in and out
+      const mix = COOL.map((cool, i) => Math.round(cool + (WARM[i] - cool) * t));
+      hero.style.setProperty("--glow", "rgb(" + mix.join(" ") + " / " + (0.4 + 0.2 * t).toFixed(2) + ")");
     });
-  }
-
-  // --- Reveal on scroll: cards and section heads rise into place the first time they are reached.
-  // Only elements that start below the fold are hidden, so the first screen never flickers,
-  // and nothing is hidden at all when the page loads in a background tab.
-  if (!reduceMotion && document.visibilityState === "visible") {
-    document.querySelectorAll(".section-head, .stats > li, .svc li, .case, .logos li, .shot, .founder-text, .proc, .sol, .changes li, .biz-panel").forEach((el) => {
-      if (el.getBoundingClientRect().top < innerHeight) return;
-      const index = [...el.parentElement.children].indexOf(el);
-      el.style.setProperty("--rd", (index % 6) * 70 + "ms");
-      el.classList.add("reveal");
-      pending.push(el);
-    });
-    root.classList.add("motion");
-    // Safety net: if the page becomes hidden or is printed, show everything.
-    const showAll = () => pending.splice(0).forEach((el) => el.classList.add("is-in"));
-    addEventListener("beforeprint", showAll);
-    document.addEventListener("visibilitychange", () => { if (document.visibilityState !== "visible") showAll(); });
   }
 
   // --- "תקצר לי": the short version of the home page (process, client messages, contact).

@@ -127,7 +127,6 @@ html.tachles #tachles { border-top: 0; }
 .layer { animation: float 7s ease-in-out infinite; animation-delay: calc(var(--i) * -1.1s); }
 .hero-art .leader { animation: flow 1.4s linear infinite; }
 @keyframes flow { to { stroke-dashoffset: -14; } }
-[data-parallax] { will-change: transform; }
 @keyframes float { 50% { transform: translateY(-5px); } }
 
 /* Depth in the opener: a dot grid that scrolls slower than the page (--sy from site.js),
@@ -136,9 +135,12 @@ html.tachles #tachles { border-top: 0; }
 .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(28rem circle at var(--mx, 22%) var(--my, 45%), var(--glow), transparent 65%); }
 .hero .wrap { position: relative; }
 
-/* Reveal on scroll: site.js marks only elements that start below the fold */
-.motion .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--rd, 0ms); }
-.motion .reveal.is-in { opacity: 1; transform: none; }
+/* The guide: one small dot that keeps the reader company and settles on the main button in view */
+.guide { position: fixed; left: 0; top: 0; z-index: 15; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--sky-3); color: var(--sky-3); box-shadow: 0 0 0 3px rgb(255 255 255 / 0.65); pointer-events: none; opacity: 0; transition: background-color 0.5s ease, color 0.5s ease, opacity 0.4s ease; }
+.guide.is-on { opacity: 1; }
+.guide.is-docked { background: var(--coral-2); color: var(--coral-2); }
+.guide.is-docked::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 1.5px solid currentColor; animation: guide-ping 2s ease-out infinite; }
+@keyframes guide-ping { from { transform: scale(0.6); opacity: 0.8; } to { transform: scale(2.2); opacity: 0; } }
 
 /* Sections */
 .section { border-top: var(--rule); }
@@ -230,15 +232,12 @@ html.tachles #tachles { border-top: 0; }
 .on-ink .changes span { color: var(--on-ink-soft); }
 .case .changes span { color: var(--ink-soft); }
 
-/* Illustrations, split layouts, drifting cubes */
+/* Illustrations and split layouts */
 .art { width: 100%; }
 .blend { mix-blend-mode: multiply; }
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .svc.one { grid-template-columns: minmax(0, 1fr); }
 .section, .hero, .page-hero { position: relative; overflow: hidden; }
-.deco { position: absolute; top: var(--y); inset-inline-end: var(--x); width: var(--w, 3.5rem); pointer-events: none; }
-.deco svg { width: 100%; }
-@media (max-width: 68rem) { .deco { display: none; } }
 /* Loyalty tiles: three equal cards, each with a figure row of the same height */
 .stats.light { gap: 1.5rem; padding-inline-start: 8px; }
 .stats.light .stat { gap: 1rem; border: var(--rule); background: var(--paper); padding: 1.5rem; box-shadow: -8px 8px 0 var(--sky-2); }
@@ -259,6 +258,17 @@ html.tachles #tachles { border-top: 0; }
 .links a.plain:hover { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
 .on-ink .links a.plain:hover { background: var(--on-ink); color: var(--ink); border-color: var(--on-ink); }
 .en-note { border-top: var(--rule); padding-top: 1.5rem; max-width: 44rem; direction: ltr; text-align: left; color: var(--ink-soft); }
+
+/* Contact buttons: on hover a slanted echo of the label appears below, off to the right */
+.contact .links a.plain, .form .btn { position: relative; }
+.contact .links a.plain::after, .form .btn::after {
+  content: attr(data-label); position: absolute; top: 100%; right: 0; white-space: nowrap; pointer-events: none;
+  color: var(--sky-2); opacity: 0; transform: translate(0, -6px) skewX(-16deg);
+  transition: opacity 0.2s ease, transform 0.25s ease;
+}
+.form .btn::after { color: var(--sky-ink); }
+.contact .links a.plain:hover::after, .contact .links a.plain:focus-visible::after, .form .btn:hover::after, .form .btn:focus-visible::after { opacity: 0.7; transform: translate(16px, 6px) skewX(-16deg); }
+.contact .links { row-gap: 1.75rem; }
 
 /* Portfolio viewer */
 .pdf-dialog { width: min(58rem, calc(100vw - 1rem)); height: min(92vh, 64rem); max-width: none; max-height: none; padding: 0; border: var(--rule); background: var(--surface); color: var(--ink); }
@@ -321,7 +331,6 @@ html.tachles #tachles { border-top: 0; }
 @media (max-width: 46rem) {
   .hero .wrap, .founder, .contact, .two-col, .svc, .sol-grid, .person .wrap, .split { grid-template-columns: minmax(0, 1fr); }
   .shots, .proc-grid, .changes { grid-template-columns: minmax(0, 1fr); }
-  .deco { display: none; }
   .masthead .wrap { flex-wrap: nowrap; padding-block: 0.625rem; }
   .brand { font-size: 1.25rem; }
   .brand img { height: 2rem; }
@@ -339,11 +348,12 @@ html.tachles #tachles { border-top: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .layer, .hero-art .leader { animation: none; }
+  .layer, .hero-art .leader, .guide.is-docked::after { animation: none; }
+  .contact .links a.plain::after, .form .btn::after { transition: none; }
   .btn { transition: none; }
 }
 
 @media print {
-  .motion .reveal { opacity: 1; transform: none; }
   .masthead { position: static; }
+  .guide { display: none; }
 }
