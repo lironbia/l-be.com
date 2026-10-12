@@ -1,11 +1,25 @@
-// Green letters falling down a dark panel, beside the consulting section on the home page: the
-// same rain as the "matrix" backdrop of the 404 game. Decoration only. It runs while the panel is
-// on screen, and stands still in calm mode and when the visitor asked for reduced motion.
+// Green letters falling down a dark panel, behind the call to action of the consulting section on
+// the home page: the same rain as the "matrix" backdrop of the 404 game. Decoration only. It runs
+// while the panel is on screen, and stands still in calm mode and when the visitor asked for
+// reduced motion.
 (() => {
   const canvas = document.querySelector("canvas[data-matrix]");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
   const GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{}<>/=+";
+  // What the rain spells: the business, and lines about automation (the same ones that drift across the 404 game)
+  const RAIN = [
+    "L-Be", "Liron Bialkovich", "CRM implementation", "AI systems for business", "AI agents", "Business automation", "Integrations", "System specification", "Consulting for companies", "Hands On",
+    "Whatever repeats itself belongs to automation",
+    "Automation never goes on vacation",
+    "Less typing, more business",
+    "A lead that isn't answered fast goes cold",
+    "A tidy process is worth another pair of hands",
+    "A good bot answers at two in the morning too",
+    "This form could fill itself in",
+    "The best time for automation was yesterday",
+  ];
+  const LONGEST = Math.max(...RAIN.map((text) => text.length));
   const STEP = 18, ROW = 16, TRAIL = 14;
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
   const calm = () => motion.matches || document.documentElement.classList.contains("a11y-calm");
@@ -30,20 +44,20 @@
     ctx.fillRect(0, 0, W, H);
     ctx.font = '14px "IBM Plex Mono", Consolas, monospace';
     ctx.textAlign = "center";
-    const span = H + TRAIL * ROW + 60;
+    const span = H + LONGEST * ROW + 60;
     for (let column = 0; column * STEP < W + STEP; column++) {
-      // two streams in every column, each at its own pace
-      for (let stream = 0; stream < 2; stream++) {
-        const seed = column + stream * 97;
-        const fall = 26 + rand(seed) * 44; // pixels a second
-        const head = ((clock * fall + rand(seed + 50) * span) % span) - 30;
-        for (let row = 0; row < TRAIL; row++) {
-          const y = head - row * ROW;
-          if (y < -10 || y > H + 10) continue;
-          ctx.fillStyle = row === 0 ? "#d5ffe6" : "#35d07f";
-          ctx.globalAlpha = row === 0 ? 0.95 : Math.max(0.08, 0.7 - row * 0.05);
-          ctx.fillText(GLYPHS[Math.floor(rand(seed * 31 + row * 7 + Math.floor(clock * 3 + column)) * GLYPHS.length)], column * STEP + 9, y);
-        }
+      const fall = 26 + rand(column) * 44; // pixels a second
+      const way = clock * fall + rand(column + 50) * span;
+      const head = (way % span) - 30;
+      // every second column carries real words, read from the top down; the others carry loose glyphs
+      const words = column % 2 === 0 ? RAIN[(column * 7 + Math.floor(way / span) * 3) % RAIN.length] : "";
+      const rows = words ? words.length : TRAIL;
+      for (let row = 0; row < rows; row++) {
+        const y = head - row * ROW;
+        if (y < -10 || y > H + 10) continue;
+        ctx.fillStyle = row === 0 ? "#d5ffe6" : "#35d07f";
+        ctx.globalAlpha = row === 0 ? 0.95 : words ? 0.8 : Math.max(0.08, 0.5 - row * 0.035);
+        ctx.fillText(words ? words[rows - 1 - row] : GLYPHS[Math.floor(rand(column * 31 + row * 7 + Math.floor(clock * 3 + column)) * GLYPHS.length)], column * STEP + 9, y);
       }
     }
     ctx.globalAlpha = 1;
@@ -73,10 +87,13 @@
   } else {
     seen = true;
   }
-  addEventListener("resize", () => {
+  const onResize = () => {
     resize();
     update();
-  });
+  };
+  // the panel changes size with the layout, not only with the window
+  if ("ResizeObserver" in window) new ResizeObserver(onResize).observe(canvas);
+  else addEventListener("resize", onResize);
   addEventListener("a11y-change", update);
   document.addEventListener("visibilitychange", update);
   if (motion.addEventListener) motion.addEventListener("change", update);

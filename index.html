@@ -33,8 +33,8 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preload" as="font" type="font/woff2" href="fonts/ibm-plex-sans-hebrew-400-hebrew.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/frank-ruhl-libre-900-hebrew.woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=42c299dd">
-<script src="a11y-early.js?v=42c299dd"></script>
+<link rel="stylesheet" href="style.css?v=528d24e3">
+<script src="a11y-early.js?v=528d24e3"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://l-be.com/#organization","name":"L-Be","alternateName":"SubK","url":"https://l-be.com/","logo":"https://l-be.com/logo.png","description":"ייעוץ והטמעת מערכות CRM, AI ואוטומציה עסקית לחברות.","slogan":"הטמעת מערכות CRM ו-AI לחברות","areaServed":{"@type":"Country","name":"Israel"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","מערכות CRM","סוכני AI","אוטומציה עסקית"],"founder":{"@id":"https://l-be.com/liron-bialkovich#person"},"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://subk.co.il/"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://l-be.com/#contact","availableLanguage":["he","en"]},"hasOfferCatalog":{"@type":"OfferCatalog","name":"פתרונות","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"סוכני AI ובוטים","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM, לידים ומכירות","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"שירות ותקשורת עם לקוחות","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"הזמנות, חיובים וכספים","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"אוטומציה ואינטגרציות","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ניהול, דוחות וצוות","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"אפיון, הדרכה וליווי","provider":{"@id":"https://l-be.com/#organization"}}}]}},{"@type":"Person","@id":"https://l-be.com/liron-bialkovich#person","name":"לירון ביאלקוביץ","alternateName":"Liron Bialkovich","givenName":"Liron","familyName":"Bialkovich","jobTitle":"יועץ ומפתח עצמאי: CRM, AI ואוטומציה","description":"לירון ביאלקוביץ הוא יועץ ומפתח עצמאי שבונה לחברות מערכות AI, אוטומציות ומערכות CRM. ב-L-Be הוא מאפיין, מקים ומטמיע מערכות CRM, פתרונות AI ותהליכים אוטומטיים.","image":"https://l-be.com/liron-bialkovich.jpg","url":"https://l-be.com/liron-bialkovich","mainEntityOfPage":"https://l-be.com/liron-bialkovich","worksFor":{"@id":"https://l-be.com/#organization"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","מערכות CRM","סוכני AI","אוטומציה עסקית"],"knowsLanguage":["he","en"],"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://www.facebook.com/LironBia","https://www.youtube.com/@lironbialkovich679","https://github.com/lironbia","https://subk.co.il/"]},{"@type":"WebSite","@id":"https://l-be.com/#website","url":"https://l-be.com/","name":"L-Be","description":"ייעוץ והטמעת מערכות CRM, AI ואוטומציה עסקית לחברות.","inLanguage":"he","publisher":{"@id":"https://l-be.com/#organization"}}]}</script>
 <meta property="og:site_name" content="L-Be">
 <link rel="alternate" type="text/html" href="ai-home" title="AI MODE: the same page, plain">
@@ -113,7 +113,7 @@
     <ul class="stats light">
       <li class="stat"><div class="figure"><b>11</b><small>שנים רצוף</small></div><span>יש לי לקוחות שאיתי כבר 11 שנים.</span></li>
       <li class="stat"><div class="figure"><b>3%</b><small>נטישה</small></div><span>אחוז הנטישה שלי עומד על 3%, ואני מקפיד לשמור אותו מתחת לזה.</span></li>
-      <li class="stat"><div class="figure"><b>0 ₪</b><small>ייעוץ ראשוני</small></div><span>הייעוץ הראשוני איתי הוא בחינם.</span></li>
+      <li class="stat"><div class="figure"><b aria-hidden="true">”</b><small>מילה של לקוח</small></div><span>״שמח על הרגע שהכרתי אותך.״<br>כך כתב לי לקוח בוואטסאפ.</span></li>
     </ul>
   </div>
 </section>
@@ -185,7 +185,6 @@
   </div>
 </section>
 <section class="section consult">
-  <canvas class="matrix" data-matrix aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="section-head">
       <p class="label">ייעוץ לחברות</p>
@@ -197,8 +196,11 @@
       <li><b>דוח מסכם ומקיף</b><span>עם המלצות.</span></li>
       <li><b>תוכנית עבודה</b><span>לשיפורים מיידיים.</span></li>
     </ol>
-    <div class="cta-row">
-      <a class="btn" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">לתיאום שיחה ביומן<span class="visually-hidden"> (נפתח בחלון קופץ)</span></a>
+  </div>
+  <div class="matrix-box">
+    <canvas class="matrix" data-matrix aria-hidden="true"></canvas>
+    <div class="matrix-cta on-ink">
+      <a class="btn btn-light" href="https://calendly.com/subk/intro-call" data-calendly rel="noopener" target="_blank">לתיאום שיחה ביומן<span class="visually-hidden"> (נפתח בחלון קופץ)</span></a>
       <a class="link" href="#contact" aria-label="או להשאיר פרטים בטופס יצירת הקשר">או להשאיר פרטים</a>
     </div>
   </div>
@@ -385,7 +387,6 @@
     </nav>
   </div>
 </footer>
-<span class="guide" aria-hidden="true"></span>
 <dialog id="portfolio" class="pdf-dialog" aria-labelledby="pdf-title">
   <header>
     <h2 id="pdf-title" lang="en" dir="ltr">Liron Bialkovich · Portfolio</h2>
@@ -431,12 +432,12 @@
       <a href="es/" hreflang="es" lang="es" translate="no">Español</a>
     </nav>
 </dialog>
-<script src="site.js?v=42c299dd" defer></script>
-<script src="a11y.js?v=42c299dd" defer></script>
-<script src="guard.js?v=42c299dd" defer></script>
-<script src="later.js?v=42c299dd" defer></script>
-<script src="agent.js?v=42c299dd" defer></script>
-<script src="lead.js?v=42c299dd" defer></script>
-<script src="matrix.js?v=42c299dd" defer></script>
+<script src="site.js?v=528d24e3" defer></script>
+<script src="a11y.js?v=528d24e3" defer></script>
+<script src="guard.js?v=528d24e3" defer></script>
+<script src="later.js?v=528d24e3" defer></script>
+<script src="agent.js?v=528d24e3" defer></script>
+<script src="lead.js?v=528d24e3" defer></script>
+<script src="matrix.js?v=528d24e3" defer></script>
 </body>
 </html>

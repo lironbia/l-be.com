@@ -26,6 +26,8 @@
     "הטופס הזה יכול למלא את עצמו",
     "הזמן הכי טוב לאוטומציה היה אתמול",
   ];
+  // What the green rain spells: the business, and the same lines about automation
+  const RAIN = ["L-Be", "לירון ביאלקוביץ", "הטמעת מערכות CRM", "מערכות AI לעסקים", "סוכני AI", "אוטומציה עסקית", "אינטגרציות", "אפיון מערכות", "ייעוץ לחברות", "Hands On", ...LINES];
   // Top, front and side shade of each colour. The first four follow the site's palette.
   const TONES = [
     ["#b9daf7", "#74b4f2", "#4a8fd4"],
@@ -133,15 +135,20 @@
         ctx.fillRect(0, 0, W, H);
         ctx.font = '14px "IBM Plex Mono", Consolas, monospace';
         ctx.textAlign = "center";
+        const span = H + 760;
         for (let column = 0; column * 18 < W + 18; column++) {
           const fall = 28 + rand(column) * 46; // pixels a second
-          const head = ((clock * fall + rand(column + 50) * 400) % (H + 220)) - 60;
-          for (let row = 0; row < 11; row++) {
+          const way = clock * fall + rand(column + 50) * span;
+          const head = (way % span) - 60;
+          // every second column carries real words, read from the top down; the others carry loose glyphs
+          const words = column % 2 === 0 ? RAIN[(column * 7 + Math.floor(way / span) * 3) % RAIN.length] : "";
+          const rows = words ? words.length : 11;
+          for (let row = 0; row < rows; row++) {
             const y = head - row * 16;
             if (y < -10 || y > H) continue;
-            const glyph = GLYPHS[Math.floor(rand(column * 31 + row * 7 + Math.floor(clock * 3 + column)) * GLYPHS.length)];
+            const glyph = words ? words[rows - 1 - row] : GLYPHS[Math.floor(rand(column * 31 + row * 7 + Math.floor(clock * 3 + column)) * GLYPHS.length)];
             ctx.fillStyle = row === 0 ? "#d5ffe6" : "#35d07f";
-            ctx.globalAlpha = row === 0 ? 0.95 : Math.max(0.08, 0.7 - row * 0.065);
+            ctx.globalAlpha = row === 0 ? 0.95 : words ? 0.8 : Math.max(0.08, 0.5 - row * 0.045);
             ctx.fillText(glyph, column * 18 + 9, y);
           }
         }
@@ -379,7 +386,7 @@
       ctx.font = '600 16px "IBM Plex Sans Hebrew", Arial, sans-serif';
       ctx.textAlign = "center";
       ctx.direction = document.documentElement.dir || "rtl";
-      const line = state === "over" ? "נתקעת בבאג. עוד סיבוב?" : "רווח, חץ למעלה או נגיעה כדי להתחיל";
+      const line = state !== "over" ? "רווח, חץ למעלה או נגיעה כדי להתחיל" : turns && spent ? "נגמרו הלחיצות. עוד סיבוב?" : "נתקעת בבאג. עוד סיבוב?";
       const width = ctx.measureText(line).width + 24;
       ctx.fillStyle = theme === 1 ? "#04140b" : "#ffffff";
       ctx.globalAlpha = 0.82;
@@ -485,20 +492,27 @@
     else requestAnimationFrame(step);
   }
 
-  // --- turn mode: the same game, one step at a time. For AI agents that browse the page, and for
-  // anyone who wants to play without the clock. One step is TURN frames of the ordinary game.
-  const TURN = 6;
+  // --- turn mode: the same game without the clock, for AI agents that browse the page and for
+  // anyone who prefers it. A game is PRESSES presses long. "run" moves the shape on until something
+  // comes close, "jump" jumps and moves one step. One step is TURN frames of the ordinary game.
+  const TURN = 6, PRESSES = 20, NEAR = 2;
   const turnOut = document.getElementById("turn-state");
-  // The nearest thing that has not passed the player yet, and how many whole steps are left before it arrives
-  function ahead() {
+  let presses = 0, met = null, spent = false;
+  // The nearest thing that has not passed the player yet
+  function nearest() {
     const px = W - 96;
     let next = null;
     for (const t of things) if (t.x < px + SIZE - 5 && (!next || t.x > next.x)) next = t;
-    if (!next) return null;
-    return { fly: Boolean(next.fly), steps: Math.max(0, Math.floor((px + 5 - (next.x + next.w)) / (speed * TURN))) };
+    return next;
+  }
+  // ...and how many whole steps are left before it arrives
+  const stepsTo = (t) => Math.max(0, Math.floor((W - 96 + 5 - (t.x + t.w)) / (speed * TURN)));
+  function ahead() {
+    const next = nearest();
+    return next ? { fly: Boolean(next.fly), steps: stepsTo(next) } : null;
   }
   function snapshot() {
-    return { state, turns, score: Math.floor(score), speed: level, inAir: player.y > 0, next: ahead() };
+    return { state, turns, score: Math.floor(score), speed: level, inAir: player.y > 0, pressesLeft: turns ? PRESSES - presses : 0, next: ahead() };
   }
   function describe() {
     if (!turnOut) return;
@@ -515,15 +529,33 @@
       "ניקוד: " + Math.floor(score).toLocaleString("en-US") + ". " +
       "מהירות: " + level + ". " +
       (next ? (next.fly ? "המכשול הבא עף. " : "המכשול הבא על הקרקע. ") + "צעדים עד שהוא מגיע: " + next.steps + ". " : "אין מכשול באופק. ") +
-      (player.y > 0 ? "הקוביה באוויר." : "הקוביה על הקרקע.");
+      (player.y > 0 ? "הקוביה באוויר. " : "הקוביה על הקרקע. ") +
+      "לחיצות שנותרו: " + (PRESSES - presses) + ".";
   }
-  // action: "new" starts a game in turns, "jump" jumps and moves one step, anything else only moves one step
+  // action: "new" starts a game in turns; "jump" jumps (from the ground) and moves one step;
+  // anything else runs on until the next thing is NEAR steps away, once for each thing.
   function turn(action) {
     if (action === "new" || state !== "run" || !turns) {
       start(true);
+      presses = 0;
+      met = null;
+      spent = false;
     } else {
+      presses++;
       if (action === "jump" && player.y === 0) player.vy = 11.2;
-      for (let i = 0; i < TURN; i++) if (!advance(1)) break;
+      for (let guard = 0; guard < 200 && state === "run"; guard++) {
+        for (let i = 0; i < TURN; i++) if (!advance(1)) break;
+        if (action === "jump" || state !== "run") break;
+        const next = nearest();
+        if (next && next !== met && stepsTo(next) <= NEAR) {
+          met = next;
+          break;
+        }
+      }
+      if (state === "run" && presses >= PRESSES) {
+        spent = true;
+        end();
+      }
       if (state === "run") draw();
     }
     describe();
