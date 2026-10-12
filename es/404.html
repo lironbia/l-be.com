@@ -31,12 +31,12 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-hebrew-400-hebrew.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/frank-ruhl-libre-900-hebrew.woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=528d24e3">
-<script src="/a11y-early.js?v=528d24e3"></script>
+<link rel="stylesheet" href="/style.css?v=f409ee87">
+<script src="/a11y-early.js?v=f409ee87"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://l-be.com/#organization","name":"L-Be","alternateName":"SubK","url":"https://l-be.com/","logo":"https://l-be.com/logo.png","description":"Consultoría e implementación de sistemas CRM, IA y automatización empresarial para empresas.","slogan":"Implementación de sistemas CRM e IA para empresas","areaServed":{"@type":"Country","name":"Israel"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","Sistemas CRM","Agentes de IA","Automatización empresarial"],"founder":{"@id":"https://l-be.com/liron-bialkovich#person"},"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://subk.co.il/"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://l-be.com/#contact","availableLanguage":["he","en"]},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Soluciones","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Agentes de IA y bots","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM, leads y ventas","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Atención y comunicación con clientes","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pedidos, cobros y finanzas","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatización e integraciones","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Gestión, informes y equipo","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Especificación, formación y acompañamiento","provider":{"@id":"https://l-be.com/#organization"}}}]}},{"@type":"Person","@id":"https://l-be.com/liron-bialkovich#person","name":"Liron Bialkovich","alternateName":"Liron Bialkovich","givenName":"Liron","familyName":"Bialkovich","jobTitle":"Consultor y desarrollador independiente: CRM, IA y automatización","description":"Liron Bialkovich es un consultor y desarrollador independiente que construye para empresas sistemas de IA, automatizaciones y sistemas CRM. En L-Be especifica, pone en marcha e implementa sistemas CRM, soluciones de IA y procesos automáticos.","image":"https://l-be.com/liron-bialkovich.jpg","url":"https://l-be.com/liron-bialkovich","mainEntityOfPage":"https://l-be.com/liron-bialkovich","worksFor":{"@id":"https://l-be.com/#organization"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","Sistemas CRM","Agentes de IA","Automatización empresarial"],"knowsLanguage":["he","en"],"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://www.facebook.com/LironBia","https://www.youtube.com/@lironbialkovich679","https://github.com/lironbia","https://subk.co.il/"]},{"@type":"WebSite","@id":"https://l-be.com/#website","url":"https://l-be.com/","name":"L-Be","description":"Consultoría e implementación de sistemas CRM, IA y automatización empresarial para empresas.","inLanguage":"es","publisher":{"@id":"https://l-be.com/#organization"}}]}</script>
 <meta property="og:site_name" content="L-Be">
 <link rel="alternate" type="text/html" href="/ai" title="AI MODE: the same page, plain">
-<script src="/notfound.js?v=528d24e3"></script>
+<script src="/notfound.js?v=f409ee87"></script>
 </head>
 <body data-a11y-statement="/accessibility">
 <a class="skip" href="#main">Saltar al contenido principal</a>
@@ -75,7 +75,7 @@
       <h2 class="display">Saltar por encima de los bugs</h2>
       <p>El cubo corre, y los bugs llegan.<br>Por encima de un bug que está en el suelo se salta, y debajo de un bug que vuela hay que quedarse en el suelo.<br>Cada diez segundos todo se acelera.<br>Se salta con la barra espaciadora, con la flecha hacia arriba o tocando la pantalla.<br>La tecla Esc detiene el juego.</p>
       <p>Una segunda pulsación rápida en el aire añade un giro.<br>La flecha hacia abajo cambia la forma, y las flechas laterales cambian el color.<br>En cada partida espera un fondo distinto.</p>
-      <p><a href="#agents">También hay un modo por turnos, para agentes de IA</a>.</p>
+      <p><a href="#agents">También puedes dejar que juegue tu agente de IA</a>.</p>
     </div>
     <div class="game">
       <canvas id="game" role="img" aria-label="Juego: un cubo que corre sobre una línea y salta obstáculos"></canvas>
@@ -107,18 +107,12 @@
   <div class="wrap">
     <div class="section-head">
       <p class="label">Para agentes de IA</p>
-      <h2 class="display">Los agentes de IA también juegan aquí</h2>
-      <p>En el modo por turnos no hay reloj: el juego avanza solo cuando se pulsa, y cada partida dura 20 pulsaciones.<br>Así también puede jugar un agente de IA que navega por la web, sin gastar mucho.<br>El récord de nuestro agente de IA es de <b translate="no">219</b> puntos.</p>
+      <h2 class="display">Ver jugar a tu agente de IA</h2>
+      <p>Un agente de IA que navega en tu navegador puede jugar aquí en vivo, delante de ti, exactamente al mismo juego.<br>El juego es demasiado rápido para quien mira capturas de pantalla y hace clic, así que el agente lee el estado del juego y pulsa mediante código que ejecuta en la página.<br>Se copia el prompt, se envía al agente, y se mira.</p>
     </div>
-    <div class="game-ui">
-      <button class="btn" type="button" data-turn="new">Nueva partida por turnos</button>
-      <button class="btn btn-light" type="button" data-turn="run">Avanzar</button>
-      <button class="btn btn-light" type="button" data-turn="jump">Saltar</button>
-    </div>
-    <p class="turn-state" role="status" id="turn-state">No hay partida en curso.</p>
     <div class="agent-prompt">
       <h3>Un prompt breve para tu agente de IA</h3>
-      <p class="prompt-text" id="game-prompt">Hay un pequeño juego en https://l-be.com/es/404#agents . Por favor, ábrelo en un navegador, y juega una ronda en el modo por turnos.<br>Es un juego corto: 20 pulsaciones, y se acaba.<br>"Nueva partida por turnos" lo empieza.<br>"Avanzar" hace correr el cubo hasta que se acerca un obstáculo.<br>"Saltar" salta.<br>Después de cada pulsación se actualiza una línea de estado.<br>Sobre un obstáculo que está en el suelo se salta, y debajo de un obstáculo que vuela se sigue avanzando.<br>Mientras el cubo está en el aire, "Saltar" solo avanza un paso.<br>Si puedes ejecutar JavaScript en la página, puedes llamar a window.lbeGame.turn("new"), a window.lbeGame.turn("run") y a window.lbeGame.turn("jump"). El récord del agente de IA de L-Be es de <span translate="no">219</span> puntos.<br>Al final, cuéntame en una línea qué puntuación alcanzaste.</p>
+      <p class="prompt-text" id="game-prompt">Hay un pequeño juego en https://l-be.com/es/404 . Quiero verte jugarlo en vivo, como juego yo: el cubo corre, se salta por encima de un bug que está en el suelo, y hay que quedarse en el suelo debajo de un bug que vuela.<br>Por favor, abre la página en el navegador que yo veo, y juega una partida.<br>El juego es rápido, así que conviene ejecutar en la página un pequeño bucle propio.<br>window.lbeGame.read() devuelve el estado del juego: puntuación, velocidad, si el cubo está en el aire, y el próximo obstáculo (si vuela, y cuántos milisegundos faltan para que llegue).<br>window.lbeGame.press() es una pulsación de la barra espaciadora: empieza una partida, y salta.<br>Un salto dura unos 0,6 segundos, y sobre un obstáculo que está en el suelo conviene saltar cuando faltan entre 100 y 250 milisegundos.<br>Una segunda pulsación rápida en el aire añade un giro de exhibición.<br>Juega hasta la velocidad 3, detén el bucle, y cuéntame en una línea qué puntuación alcanzaste.</p>
       <button class="btn" type="button" data-copy-from="game-prompt" aria-describedby="game-prompt-status">Copiar el prompt para tu agente de IA</button>
       <p class="agent-status" role="status" id="game-prompt-status"></p>
     </div>
@@ -199,11 +193,11 @@
       <a href="/es/404" hreflang="es" lang="es" translate="no" aria-current="true">Español</a>
     </nav>
 </dialog>
-<script src="/es/site.js?v=528d24e3" defer></script>
-<script src="/es/a11y.js?v=528d24e3" defer></script>
-<script src="/es/guard.js?v=528d24e3" defer></script>
-<script src="/es/later.js?v=528d24e3" defer></script>
-<script src="/es/agent.js?v=528d24e3" defer></script>
-<script src="/es/game404.js?v=528d24e3" defer></script>
+<script src="/es/site.js?v=f409ee87" defer></script>
+<script src="/es/a11y.js?v=f409ee87" defer></script>
+<script src="/es/guard.js?v=f409ee87" defer></script>
+<script src="/es/later.js?v=f409ee87" defer></script>
+<script src="/es/agent.js?v=f409ee87" defer></script>
+<script src="/es/game404.js?v=f409ee87" defer></script>
 </body>
 </html>

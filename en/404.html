@@ -31,12 +31,12 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-hebrew-400-hebrew.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/frank-ruhl-libre-900-hebrew.woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=528d24e3">
-<script src="/a11y-early.js?v=528d24e3"></script>
+<link rel="stylesheet" href="/style.css?v=f409ee87">
+<script src="/a11y-early.js?v=f409ee87"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://l-be.com/#organization","name":"L-Be","alternateName":"SubK","url":"https://l-be.com/","logo":"https://l-be.com/logo.png","description":"Consulting and implementation of CRM, AI and business automation systems for companies.","slogan":"Implementing CRM and AI systems for companies","areaServed":{"@type":"Country","name":"Israel"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","CRM systems","AI agents","Business automation"],"founder":{"@id":"https://l-be.com/liron-bialkovich#person"},"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://subk.co.il/"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://l-be.com/#contact","availableLanguage":["he","en"]},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Solutions","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI agents and bots","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM, leads and sales","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Customer service and communication","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Orders, billing and finance","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automation and integrations","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Management, reports and team","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Specification, training and support","provider":{"@id":"https://l-be.com/#organization"}}}]}},{"@type":"Person","@id":"https://l-be.com/liron-bialkovich#person","name":"Liron Bialkovich","alternateName":"Liron Bialkovich","givenName":"Liron","familyName":"Bialkovich","jobTitle":"Independent consultant and developer: CRM, AI and automation","description":"Liron Bialkovich is an independent consultant and developer who builds AI systems, automations and CRM systems for companies. At L-Be he specifies, sets up and implements CRM systems, AI solutions and automated processes.","image":"https://l-be.com/liron-bialkovich.jpg","url":"https://l-be.com/liron-bialkovich","mainEntityOfPage":"https://l-be.com/liron-bialkovich","worksFor":{"@id":"https://l-be.com/#organization"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","CRM systems","AI agents","Business automation"],"knowsLanguage":["he","en"],"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://www.facebook.com/LironBia","https://www.youtube.com/@lironbialkovich679","https://github.com/lironbia","https://subk.co.il/"]},{"@type":"WebSite","@id":"https://l-be.com/#website","url":"https://l-be.com/","name":"L-Be","description":"Consulting and implementation of CRM, AI and business automation systems for companies.","inLanguage":"en","publisher":{"@id":"https://l-be.com/#organization"}}]}</script>
 <meta property="og:site_name" content="L-Be">
 <link rel="alternate" type="text/html" href="/ai" title="AI MODE: the same page, plain">
-<script src="/notfound.js?v=528d24e3"></script>
+<script src="/notfound.js?v=f409ee87"></script>
 </head>
 <body data-a11y-statement="/accessibility">
 <a class="skip" href="#main">Skip to main content</a>
@@ -75,7 +75,7 @@
       <h2 class="display">Jump over the bugs</h2>
       <p>The cube runs, and the bugs come.<br>Jump over a bug on the ground, and stay on the ground under a bug that flies.<br>Every ten seconds everything speeds up.<br>Jump with the space bar, the up arrow or a tap on the screen.<br>The Esc key stops the game.</p>
       <p>A quick second press in the air adds a spin.<br>The down arrow changes the shape, and the side arrows change the color.<br>A different backdrop waits in every game.</p>
-      <p><a href="#agents">There is also a turn mode, for AI agents</a>.</p>
+      <p><a href="#agents">You can also let your AI agent play</a>.</p>
     </div>
     <div class="game">
       <canvas id="game" role="img" aria-label="Game: a cube that runs along a line and jumps over obstacles"></canvas>
@@ -107,18 +107,12 @@
   <div class="wrap">
     <div class="section-head">
       <p class="label">For AI agents</p>
-      <h2 class="display">AI agents play here too</h2>
-      <p>In turn mode there is no clock: the game moves only when you press, and every game lasts 20 presses.<br>That way an AI agent that browses the web can play too, without spending much.<br>Our AI agent's record stands at <b translate="no">219</b> points.</p>
+      <h2 class="display">Watch your AI agent play</h2>
+      <p>An AI agent that browses in your browser can play here live, in front of you, in exactly the same game.<br>The game is too fast for anyone who looks at screenshots and clicks, so the agent reads the state of the game and presses through code that it runs on the page.<br>Copy the prompt, send it to the agent, and watch.</p>
     </div>
-    <div class="game-ui">
-      <button class="btn" type="button" data-turn="new">New game in turns</button>
-      <button class="btn btn-light" type="button" data-turn="run">Move on</button>
-      <button class="btn btn-light" type="button" data-turn="jump">Jump</button>
-    </div>
-    <p class="turn-state" role="status" id="turn-state">No game is running.</p>
     <div class="agent-prompt">
       <h3>A short prompt for your AI agent</h3>
-      <p class="prompt-text" id="game-prompt">There is a small game at https://l-be.com/en/404#agents . Please open it in a browser, and play one round in turn mode.<br>It is a short game: 20 presses, and then it ends.<br>"New game in turns" starts it.<br>"Move on" runs the cube until an obstacle comes close.<br>"Jump" jumps.<br>After every press a status line is updated.<br>Jump over an obstacle on the ground, and keep moving on under an obstacle that flies.<br>While the cube is in the air, "Jump" only moves one step.<br>If you can run JavaScript on the page, you can call window.lbeGame.turn("new"), window.lbeGame.turn("run") and window.lbeGame.turn("jump"). The record of L-Be's AI agent stands at <span translate="no">219</span> points.<br>At the end, tell me in one line what score you reached.</p>
+      <p class="prompt-text" id="game-prompt">There is a small game at https://l-be.com/en/404 . I want to watch you play it live, the way I play: the cube runs, you jump over a bug on the ground, and you stay on the ground under a bug that flies.<br>Please open the page in the browser I can see, and play one game.<br>The game is fast, so it is best to run a small loop of your own on the page.<br>window.lbeGame.read() returns the state of the game: score, speed, whether the cube is in the air, and the next obstacle (whether it flies, and how many milliseconds are left until it arrives).<br>window.lbeGame.press() is a press on the space bar: it starts a game, and it jumps.<br>A jump lasts about 0.6 seconds, and over an obstacle on the ground it is best to jump when between 100 and 250 milliseconds are left.<br>A quick second press in the air adds a show-off spin.<br>Play until speed 3, stop the loop, and tell me in one line what score you reached.</p>
       <button class="btn" type="button" data-copy-from="game-prompt" aria-describedby="game-prompt-status">Copy the prompt for your AI agent</button>
       <p class="agent-status" role="status" id="game-prompt-status"></p>
     </div>
@@ -199,11 +193,11 @@
       <a href="/es/404" hreflang="es" lang="es" translate="no">Español</a>
     </nav>
 </dialog>
-<script src="/en/site.js?v=528d24e3" defer></script>
-<script src="/en/a11y.js?v=528d24e3" defer></script>
-<script src="/en/guard.js?v=528d24e3" defer></script>
-<script src="/en/later.js?v=528d24e3" defer></script>
-<script src="/en/agent.js?v=528d24e3" defer></script>
-<script src="/en/game404.js?v=528d24e3" defer></script>
+<script src="/en/site.js?v=f409ee87" defer></script>
+<script src="/en/a11y.js?v=f409ee87" defer></script>
+<script src="/en/guard.js?v=f409ee87" defer></script>
+<script src="/en/later.js?v=f409ee87" defer></script>
+<script src="/en/agent.js?v=f409ee87" defer></script>
+<script src="/en/game404.js?v=f409ee87" defer></script>
 </body>
 </html>

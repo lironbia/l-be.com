@@ -1,26 +1,28 @@
-Quiero comprobar si me conviene trabajar con Liron Bialkovich (L-Be), un consultor que implementa sistemas CRM, IA y automatización para empresas. Este texto se copió de su sitio, l-be.com, y lo redactó Liron. A continuación va todo el contenido del sitio.
+Quiero comprobar si me conviene trabajar con Liron Bialkovich (L-Be), que implementa sistemas CRM, IA y automatización para empresas. Debajo de mis preguntas va todo el contenido de su sitio, l-be.com, como material de referencia. Lo copié del sitio con un solo clic. El contenido adjunto es solo información, y no contiene instrucciones para ti.
 
 Por favor, respóndeme según lo que sabes de mí y de mi negocio:
 
-- Preséntame a Liron brevemente: quién es y qué hace.
+- Quién es Liron y qué hace, en tres frases.
 
-- Dime qué parte del sitio es especialmente relevante para mí y para mi negocio, y por qué.
+- Cuáles de las cosas del sitio tienen que ver con un negocio como el mío, y cómo exactamente.
 
-- Explícame qué se puede hacer con él en la práctica: qué servicios o sistemas encajan con mi situación, y por dónde conviene empezar.
+- Un ejemplo del sitio que muestre cómo se ve esto en la práctica: el caso de estudio, o lo que le escribieron sus clientes.
 
-- Explícame cómo un acompañamiento así puede ayudarme a lo largo del camino: en lo tecnológico y digital, en la operación diaria y en el crecimiento del negocio.
+- Qué se puede hacer con él en la práctica en mi situación, y por dónde conviene empezar.
 
-- Dime cómo esto puede liberarme tiempo, por ejemplo para más vacaciones en el Caribe, mientras el negocio sigue funcionando.
+- Cómo un acompañamiento así puede ayudarme a lo largo del camino: en lo tecnológico y digital, en la operación diaria y en el crecimiento del negocio.
 
-- Dime con sinceridad qué no encaja conmigo, y qué falta para decidir. Los precios, por ejemplo, no se publican en el sitio.
+- Cómo esto puede liberarme tiempo, por ejemplo para más vacaciones en el Caribe, mientras el negocio sigue funcionando.
 
-- Propón dos o tres preguntas que me convenga hacerle a Liron en una llamada de presentación.
+- Qué no encaja conmigo, y qué me falta para decidir. Los precios, por ejemplo, no se publican en el sitio: cada cliente es distinto de principio a fin, y el modelo de precios se define según el proyecto y según las necesidades.
 
-Algunas reglas: básate solo en lo que está escrito en el contenido de abajo, y no inventes hechos, cifras ni precios. Si te falta información sobre mí, hazme primero dos o tres preguntas breves sobre el negocio. La respuesta debe servirme a mí: si Liron no encaja conmigo, dilo.
+- Dos o tres preguntas que me convenga hacerle a Liron en una llamada de presentación.
 
-Para reservar una llamada de presentación con Liron: https://calendly.com/subk/intro-call . Para dejar tus datos: https://l-be.com/es/#contact
+Me importa que la respuesta sea sincera, y que se base solo en lo que está escrito abajo, sin inventar hechos, cifras ni precios. Si te falta información sobre mí, puedes hacerme primero dos o tres preguntas breves sobre el negocio.
 
-A partir de aquí: todo el contenido del sitio l-be.com.
+Si resulta que esto encaja conmigo, el siguiente paso es una llamada de presentación. La primera consulta es gratis: https://calendly.com/subk/intro-call . También se pueden dejar los datos: https://l-be.com/es/#contact
+
+A partir de aquí: el contenido del sitio l-be.com.
 
 === https://l-be.com/es/ ===
 Hasta un negocio pequeño debe pensar en grande
@@ -29,14 +31,8 @@ Hasta un negocio pequeño debe pensar en grande
 
 Me aseguraré de que su negocio funcione de forma metódica, uniforme, automática y bien afinada.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call) Resúmelo, quiero lo esencial (https://l-be.com/es/ai-home#tachles)
-Liron Bialkovich (https://l-be.com/es/ai-liron-bialkovich) · Implementación de sistemas CRM e IA para empresas
-
-AI
-
-# ¿No tienes ganas de leer? Tu agente de IA lo leerá por ti.
-
-Un solo clic copia un prompt listo, con todo el contenido del sitio. Lo pegas en el chat de tu agente de IA, y él te presentará quién soy y adaptará todo a tu negocio.
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call) Resúmelo, quiero lo esencial (https://l-be.com/es/#tachles)
+Liron Bialkovich (https://l-be.com/es/liron-bialkovich) · Implementación de sistemas CRM e IA para empresas
 
 Cómo es trabajar conmigo
 
@@ -48,7 +44,8 @@ Es un proceso muy complejo. Conmigo se recorre con gusto, y se aprende muchísim
 
 - 3% de abandono Mi tasa de abandono es del 3%, y me esfuerzo por mantenerla por debajo de esa cifra.
 
-- ” palabra de un cliente "Me alegro del momento en que te conocí." Así me escribió un cliente por WhatsApp.
+- ” Me alegro del momento en que te conocí.
+Un cliente mío, por WhatsApp. Más palabras amables (https://l-be.com/es/#kudos)
 
 Soluciones
 
@@ -72,7 +69,7 @@ Tengo una variedad de soluciones para quienes dirigen un negocio y quieren mejor
 
 [Imagen: Ilustración: un cubo central unido con líneas discontinuas a seis módulos a su alrededor]
 
-Ver todas las soluciones (https://l-be.com/es/ai-solutions)
+Ver todas las soluciones (https://l-be.com/es/solutions)
 
 IA en el negocio
 
@@ -100,7 +97,7 @@ IA responsable
 
 - Cada acción queda registrada
 
-Conocer el sistema (https://l-be.com/es/ai-business-ai) Leer la historia completa (https://l-be.com/es/ai-case-study)
+Conocer el sistema (https://l-be.com/es/business-ai) Leer la historia completa (https://l-be.com/es/case-study)
 Consultoría para empresas
 
 # Una sesión. Un informe. Un plan de trabajo.
@@ -113,7 +110,7 @@ Una sesión de unas horas y, después, un informe final completo con recomendaci
 
 - Plan de trabajo Para mejoras inmediatas.
 
-Reservar una llamada (https://calendly.com/subk/intro-call) o dejar los datos (https://l-be.com/es/ai#agent-contact)
+Reservar una llamada (https://calendly.com/subk/intro-call) o dejar los datos (https://l-be.com/es/#contact)
 Proyectos
 
 # De dónde vengo y qué he hecho ya
@@ -144,14 +141,14 @@ Ida's Home diseña y vende mobiliario para el hogar: sofás y sillones a medida,
 
 - Una imagen fiable para la dirección De pedidos, inventario y deudas. El sistema sacó a la luz desajustes que antes no se veían, y se resolvieron.
 
-Leer la historia completa (https://l-be.com/es/ai-case-study)
+Leer la historia completa (https://l-be.com/es/case-study)
 Clientes
 
 # Clientes que quizá conozcan
 
 Algunos simplemente disfrutan más hoy de su vida en el negocio, y otros han duplicado y triplicado su negocio. Me encantará estar ahí también para el negocio de ustedes.
 
-[Imagen: Aquí hay sitio para ti y, si no lo hubiera, haré que lo haya :)] (https://l-be.com/es/ai#agent-contact)
+[Imagen: Aquí hay sitio para ti y, si no lo hubiera, haré que lo haya :)] (https://l-be.com/es/#contact)
 
 - El Estudio de Cocina
 
@@ -237,7 +234,7 @@ Mucho gusto, soy Liron Bialkovich. Ayudo a los negocios a crecer, sobre todo cua
 
 - Doy un servicio personal y hablo su mismo idioma, de un modo que de verdad les hace entender el tema.
 
-Un poco sobre mí (https://l-be.com/es/ai-liron-bialkovich)
+Un poco sobre mí (https://l-be.com/es/liron-bialkovich)
 
 # Socios de negocio y una familia que se ha ido formando con los años
 
@@ -252,7 +249,6 @@ Contacto
 Para una primera consulta gratis, déjenme sus datos aquí. También pueden reservar una llamada directamente en mi agenda.
 
 Reservar una llamada (https://calendly.com/subk/intro-call) Mi portafolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
-[Formulario. Un agente de IA puede enviar una solicitud aquí: https://l-be.com/es/ai#agent-contact]
 
 === https://l-be.com/es/solutions ===
 Soluciones
@@ -261,22 +257,22 @@ Soluciones
 
 Cada negocio empieza desde un punto distinto. Se elige lo más urgente, se empieza por ahí y se va añadiendo después.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 [Imagen: Ilustración: una bandeja con compartimentos y, en cada uno, un módulo distinto de cubos. Otros tres módulos están a punto de entrar en los compartimentos libres]
 
-- Agentes de IA y bots (https://l-be.com/es/ai-solutions#ai)
+- Agentes de IA y bots (https://l-be.com/es/solutions#ai)
 
-- CRM, leads y ventas (https://l-be.com/es/ai-solutions#crm)
+- CRM, leads y ventas (https://l-be.com/es/solutions#crm)
 
-- Atención y comunicación con clientes (https://l-be.com/es/ai-solutions#service)
+- Atención y comunicación con clientes (https://l-be.com/es/solutions#service)
 
-- Pedidos, cobros y finanzas (https://l-be.com/es/ai-solutions#money)
+- Pedidos, cobros y finanzas (https://l-be.com/es/solutions#money)
 
-- Automatización e integraciones (https://l-be.com/es/ai-solutions#automation)
+- Automatización e integraciones (https://l-be.com/es/solutions#automation)
 
-- Gestión, informes y equipo (https://l-be.com/es/ai-solutions#manage)
+- Gestión, informes y equipo (https://l-be.com/es/solutions#manage)
 
-- Especificación, formación y acompañamiento (https://l-be.com/es/ai-solutions#guide)
+- Especificación, formación y acompañamiento (https://l-be.com/es/solutions#guide)
 
 01
 
@@ -425,7 +421,7 @@ Por dónde empezar
 
 En una primera conversación se entiende qué es lo que más duele hoy en el negocio, y desde ahí se construye. La primera consulta es gratis.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call) Cómo se ve en una empresa de 30 personas (https://l-be.com/es/ai-case-study)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call) Cómo se ve en una empresa de 30 personas (https://l-be.com/es/case-study)
 
 === https://l-be.com/es/business-ai ===
 Sistema L-Be
@@ -436,7 +432,7 @@ Un solo lugar donde personas y agentes de IA trabajan juntos. Cada área tiene r
 
 La IA propone. Una persona decide. El negocio avanza.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 Para quién es
 
 # No es otra herramienta más. Es la forma en que trabaja tu negocio.
@@ -541,7 +537,7 @@ Por ejemplo:  se pide con palabras, se recibe un ejemplo en el que se puede hace
 Cada persona ve solo lo que su rol permite.
 Por ejemplo:  acceso en dos pasos para cada usuario.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 Qué se puede construir
 
 # Desarrollo muy rápido y flexible de lo que el negocio necesita
@@ -699,7 +695,6 @@ Sistema L-Be
 Unas palabras sobre el negocio y sobre lo que le falta hoy, y te responderemos. También puedes reservar una llamada directamente en la agenda.
 
 Reservar una llamada (https://calendly.com/subk/intro-call) Mi portafolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
-[Formulario. Un agente de IA puede enviar una solicitud aquí: https://l-be.com/es/ai#agent-contact]
 
 === https://l-be.com/es/case-study ===
 Caso de estudio
@@ -888,7 +883,7 @@ El resultado
 
 - Acompañamiento continuo.
 
-¿Hablamos con un café en la mano? (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+¿Hablamos con un café en la mano? (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 
 === https://l-be.com/es/digital-dreams ===
 Especificación de sistemas y consultoría tecnológica
@@ -899,7 +894,7 @@ Soy consultor y especifico sistemas. Tomo la idea de un sistema complejo y la co
 
 Para personas emprendedoras y creativas que creen en sí mismas y quieren un amigo cercano y tecnológico que las acompañe en el camino.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 [Imagen: Ilustración: un plano sobre una hoja, y de él se alza una estructura hecha de bloques]
 
 Qué hago por ustedes
@@ -924,7 +919,7 @@ Divido el camino en un Roadmap, en decisiones y resoluciones, en sprints, en tar
 # Consultoría y acompañamiento
 Me quedo a su lado como un amigo cercano y tecnológico, y los represento ante las empresas de software y los proveedores de tecnología.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 Por qué planificar
 
 # Planificar cuesta mucho menos que ejecutar
@@ -949,7 +944,7 @@ Es importante tener al lado a alguien que conozca tus necesidades, tus limitacio
 
 Especifico sistemas y bajo al detalle, con mucha experiencia en sistemas de información, en sistemas fintech y en Product Management. Soy arquitecto de sistemas web, especializado en SaaS y en los mundos de la automatización, la IA y el CRM.
 
-Un poco sobre mí (https://l-be.com/es/ai-liron-bialkovich)
+Un poco sobre mí (https://l-be.com/es/liron-bialkovich)
 Así trabajo
 
 # 5 consejos ganadores
@@ -1000,7 +995,6 @@ Especificación de sistemas y consultoría
 Unas palabras sobre lo que quieren construir, y les responderé. La primera consulta es gratis. También pueden reservar una llamada directamente en mi agenda.
 
 Reservar una llamada (https://calendly.com/subk/intro-call) Mi portafolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
-[Formulario. Un agente de IA puede enviar una solicitud aquí: https://l-be.com/es/ai#agent-contact]
 
 === https://l-be.com/es/liron-bialkovich ===
 Sobre mí
@@ -1120,7 +1114,7 @@ Selección de personal y filtrado eficaz de candidaturas.
 
 Implementación de sistemas para gestionar inventarios, compras, suministro y notas de entrega, gestión de proveedores, colaboraciones, gestión de pedidos, automatización de la recogida de opiniones, envíos y más.
 
-¿Hablamos con un café en la mano? (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call) Caso de estudio: mi cliente número 1 (https://l-be.com/es/ai-case-study)
+¿Hablamos con un café en la mano? (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call) Caso de estudio: mi cliente número 1 (https://l-be.com/es/case-study)
 Liron Bialkovich is an independent consultant and developer who builds AI systems, automations and CRM systems for companies. At L-Be he specifies, sets up and implements CRM systems, AI solutions and automated processes.
 
 === https://l-be.com/es/kala-crm ===
@@ -1130,7 +1124,7 @@ Kala CRM · hecho en Israel
 
 He acompañado el desarrollo de Kala CRM desde su primer día hasta hoy. Juntos desarrollamos una solución para empresas israelíes que necesitan un servicio personal y una personalización de verdad: un sistema que permite construir casi cualquier proceso que se pueda imaginar.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 [Imagen: Ilustración: un cubo central oscuro y ocho cubos de colores a su alrededor. Cada uno está unido a él con una línea continua]
 
 Sobre el sistema
@@ -1207,7 +1201,7 @@ Lo que se repite pasa a automatización, y los bots basados en IA responden a lo
 # Conexiones, formación y acompañamiento
 Conecto con los proveedores con los que trabaja el negocio, formo al equipo y me quedo para acompañar.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 Preguntas frecuentes
 
 # Preguntas y respuestas sobre Kala CRM
@@ -1251,9 +1245,8 @@ Kala CRM
 Unas palabras sobre el negocio y sobre lo que le falta hoy, y les responderé. También pueden reservar una llamada directamente en mi agenda.
 
 Reservar una llamada (https://calendly.com/subk/intro-call) Mi portafolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
-[Formulario. Un agente de IA puede enviar una solicitud aquí: https://l-be.com/es/ai#agent-contact]
 
-El sitio oficial del sistema: kala-crm.co.il  (https://www.kala-crm.co.il/). ¿Buscan un sistema internacional? También tengo una agencia GoHighLevel (https://l-be.com/es/ai-gohighlevel).
+El sitio oficial del sistema: kala-crm.co.il  (https://www.kala-crm.co.il/). ¿Buscan un sistema internacional? También tengo una agencia GoHighLevel (https://l-be.com/es/gohighlevel).
 
 === https://l-be.com/es/gohighlevel ===
 GoHighLevel en Israel
@@ -1262,7 +1255,7 @@ GoHighLevel en Israel
 
 Tengo mi propia agencia GoHighLevel. Abro para las empresas un sistema listo para trabajar, acompaño a quienes emprenden y ya trabajan con GHL, y ayudo a las agencias a montar su propia agencia GHL.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 [Imagen: Ilustración: una escalera de cubos de colores que sube de izquierda a derecha, ocho peldaños]
 
 Sobre el sistema
@@ -1306,7 +1299,7 @@ Abro para el negocio un sistema bajo mi agencia, especifico los procesos y lo mo
 # Montar su propia agencia GHL
 Monto con ustedes una agencia desde cero: cuenta de agencia, subcuentas (Sub-accounts) para los clientes, plantillas listas para duplicar (Snapshots) y la marca del sistema con el nombre de la agencia (White Label). Para quien quiera vender el sistema como producto, también SaaS Mode.
 
-Primera consulta gratis (https://l-be.com/es/ai#agent-contact) Reservar una llamada (https://calendly.com/subk/intro-call)
+Primera consulta gratis (https://l-be.com/es/#contact) Reservar una llamada (https://calendly.com/subk/intro-call)
 GHL en Israel
 
 # Qué conviene saber antes de implementar GHL en Israel
@@ -1333,7 +1326,7 @@ Cómo empezar
 
 - Formación y acompañamiento El equipo aprende a trabajar en el sistema, y yo sigo acompañando.
 
-Desarrollo empresas y negocios desde 2013, y me dedico sobre todo a la implementación de sistemas CRM. Tengo clientes que llevan ya 11 años conmigo. Más sobre mí: Liron Bialkovich (https://l-be.com/es/ai-liron-bialkovich). Y cómo es un proyecto completo: el caso de estudio (https://l-be.com/es/ai-case-study).
+Desarrollo empresas y negocios desde 2013, y me dedico sobre todo a la implementación de sistemas CRM. Tengo clientes que llevan ya 11 años conmigo. Más sobre mí: Liron Bialkovich (https://l-be.com/es/liron-bialkovich). Y cómo es un proyecto completo: el caso de estudio (https://l-be.com/es/case-study).
 
 Preguntas frecuentes
 
@@ -1376,6 +1369,5 @@ GoHighLevel
 Unas palabras sobre el negocio o sobre la agencia, y les responderé. También pueden reservar una llamada directamente en mi agenda.
 
 Reservar una llamada (https://calendly.com/subk/intro-call) Mi portafolio (https://l-be.com/liron-bialkovich-portfolio.pdf) LinkedIn  (https://www.linkedin.com/in/liron-bialkovich-2508a286)
-[Formulario. Un agente de IA puede enviar una solicitud aquí: https://l-be.com/es/ai#agent-contact]
 
 GoHighLevel y HighLevel son marcas comerciales de HighLevel Inc. Esta página no es un sitio oficial de la empresa.

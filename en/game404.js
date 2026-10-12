@@ -82,7 +82,6 @@
   let theme = 0; // which backdrop this game uses
   let look = { shape: 0, tone: Math.floor(Math.random() * TONES.length) }; // the player's shape and colour, kept between games
   let player, things, speed, level, score, nextThing, lastKind, clock, travelled, message, last, lastAct = 0, lastJump = 0;
-  let turns = false; // true while a game is played one step at a time
   function reset() {
     player = { y: 0, vy: 0, spin: 0 }; // y: height above the ground; spin: 0, or how far the show-off turn has gone (0..1)
     things = [];
@@ -386,7 +385,7 @@
       ctx.font = '600 16px "IBM Plex Sans Hebrew", Arial, sans-serif';
       ctx.textAlign = "center";
       ctx.direction = document.documentElement.dir || "rtl";
-      const line = state !== "over" ? "Space, up arrow or a tap to start" : turns && spent ? "Out of presses. Another round?" : "Stuck on a bug. Another round?";
+      const line = state === "over" ? "Stuck on a bug. Another round?" : "Space, up arrow or a tap to start";
       const width = ctx.measureText(line).width + 24;
       ctx.fillStyle = theme === 1 ? "#04140b" : "#ffffff";
       ctx.globalAlpha = 0.82;
@@ -426,7 +425,7 @@
     return player.y < t.h - 5;
   }
   function step(time) {
-    if (state !== "run" || turns) return;
+    if (state !== "run") return;
     const dt = Math.min((time - last) / 16.67, 2.5);
     last = time;
     if (!advance(dt)) return;
@@ -477,91 +476,31 @@
     scoreOut.textContent = Math.floor(score).toLocaleString("en-US");
     return true;
   }
-  function start(inTurns) {
+  function start() {
     reset();
     // a different backdrop every game
     theme = (theme + 1 + Math.floor(Math.random() * (THEMES.length - 1))) % THEMES.length;
     state = "run";
-    turns = Boolean(inTurns);
     button.textContent = "Jump";
     scoreOut.textContent = "0";
     levelOut.textContent = "1";
     live.textContent = "The game has started.";
     last = performance.now();
-    if (turns) draw();
-    else requestAnimationFrame(step);
+    requestAnimationFrame(step);
   }
 
-  // --- turn mode: the same game without the clock, for AI agents that browse the page and for
-  // anyone who prefers it. A game is PRESSES presses long. "run" moves the shape on until something
-  // comes close, "jump" jumps and moves one step. One step is TURN frames of the ordinary game.
-  const TURN = 6, PRESSES = 20, NEAR = 2;
-  const turnOut = document.getElementById("turn-state");
-  let presses = 0, met = null, spent = false;
-  // The nearest thing that has not passed the player yet
-  function nearest() {
+  // --- for AI agents: the same live game, readable and playable from a script running in the page.
+  // read() says what is on the track; press() is the same press as Space, Up or a tap.
+  function read() {
     const px = W - 96;
     let next = null;
     for (const t of things) if (t.x < px + SIZE - 5 && (!next || t.x > next.x)) next = t;
-    return next;
+    return {
+      state, score: Math.floor(score), speed: level, inAir: player.y > 0,
+      // msAway: how long until it reaches the shape, at the present speed
+      next: next ? { flying: Boolean(next.fly), msAway: Math.max(0, Math.round(((px + 5 - (next.x + next.w)) / speed) * 16.67)) } : null,
+    };
   }
-  // ...and how many whole steps are left before it arrives
-  const stepsTo = (t) => Math.max(0, Math.floor((W - 96 + 5 - (t.x + t.w)) / (speed * TURN)));
-  function ahead() {
-    const next = nearest();
-    return next ? { fly: Boolean(next.fly), steps: stepsTo(next) } : null;
-  }
-  function snapshot() {
-    return { state, turns, score: Math.floor(score), speed: level, inAir: player.y > 0, pressesLeft: turns ? PRESSES - presses : 0, next: ahead() };
-  }
-  function describe() {
-    if (!turnOut) return;
-    if (state === "over") {
-      turnOut.textContent = "Game over. Score: " + Math.floor(score).toLocaleString("en-US") + ".";
-      return;
-    }
-    if (state !== "run") {
-      turnOut.textContent = "No game is running.";
-      return;
-    }
-    const next = ahead();
-    turnOut.textContent =
-      "Score: " + Math.floor(score).toLocaleString("en-US") + ". " +
-      "Speed: " + level + ". " +
-      (next ? (next.fly ? "The next obstacle is flying. " : "The next obstacle is on the ground. ") + "Steps until it arrives: " + next.steps + ". " : "No obstacle in sight. ") +
-      (player.y > 0 ? "The cube is in the air. " : "The cube is on the ground. ") +
-      "Presses left: " + (PRESSES - presses) + ".";
-  }
-  // action: "new" starts a game in turns; "jump" jumps (from the ground) and moves one step;
-  // anything else runs on until the next thing is NEAR steps away, once for each thing.
-  function turn(action) {
-    if (action === "new" || state !== "run" || !turns) {
-      start(true);
-      presses = 0;
-      met = null;
-      spent = false;
-    } else {
-      presses++;
-      if (action === "jump" && player.y === 0) player.vy = 11.2;
-      for (let guard = 0; guard < 200 && state === "run"; guard++) {
-        for (let i = 0; i < TURN; i++) if (!advance(1)) break;
-        if (action === "jump" || state !== "run") break;
-        const next = nearest();
-        if (next && next !== met && stepsTo(next) <= NEAR) {
-          met = next;
-          break;
-        }
-      }
-      if (state === "run" && presses >= PRESSES) {
-        spent = true;
-        end();
-      }
-      if (state === "run") draw();
-    }
-    describe();
-    return snapshot();
-  }
-  window.lbeGame = { turn, read: snapshot };
   function end() {
     state = "over";
     button.textContent = "Another round";
@@ -581,7 +520,6 @@
   function stop() {
     if (state !== "run") return;
     state = "idle";
-    turns = false;
     button.textContent = "Start game";
     live.textContent = "The game was stopped.";
     reset();
@@ -594,7 +532,6 @@
     const time = performance.now();
     if (time - lastAct < 90) return; // one press, one action
     lastAct = time;
-    if (state === "run" && turns) return void turn("jump");
     if (state !== "run") return start();
     if (player.y === 0) {
       player.vy = 11.2;
@@ -604,6 +541,7 @@
       player.vy = Math.max(player.vy, 7.5); // a little extra air for the turn
     }
   }
+  window.lbeGame = { read, press: act };
   function change(what, by = 1) {
     if (what === "shape") look.shape = (look.shape + 1) % SHAPES.length;
     else look.tone = (look.tone + by + TONES.length) % TONES.length;
@@ -620,7 +558,6 @@
     act();
   });
   document.querySelectorAll("[data-game]").forEach((el) => el.addEventListener("click", () => change(el.dataset.game)));
-  document.querySelectorAll("[data-turn]").forEach((el) => el.addEventListener("click", () => turn(el.dataset.turn)));
   // "Copy the prompt": the short text that sends a visitor's AI agent here to play
   document.querySelectorAll("[data-copy-from]").forEach((el) => el.addEventListener("click", async () => {
     const source = document.getElementById(el.dataset.copyFrom);

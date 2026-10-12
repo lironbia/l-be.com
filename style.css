@@ -761,8 +761,8 @@ html.a11y-big .agent-status { position: static; }
     width: calc((100% - min(100%, 72rem)) / 2 + min(100%, 72rem) * 0.4);
   }
   .matrix {
-    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 62%, transparent 97%);
-    mask-image: linear-gradient(to bottom, #000 0, #000 62%, transparent 97%);
+    -webkit-mask-image: linear-gradient(14deg, transparent 0, transparent 7%, #000 24%);
+    mask-image: linear-gradient(14deg, transparent 0, transparent 7%, #000 24%);
   }
 }
 html.a11y-big .consult > .wrap { min-height: 0; padding-bottom: 2rem; }
@@ -771,3 +771,11 @@ html.a11y-big .consult .steps { grid-template-columns: minmax(0, 1fr); }
 html.a11y-big .matrix-box { position: relative; width: auto; min-height: 17rem; padding: 2.5rem var(--gutter); background: #04140b; }
 html.a11y-big .matrix { -webkit-mask-image: none; mask-image: none; }
 @media print { .matrix { display: none; } .matrix-box { min-height: 0; background: none; } }
+
+/* The client-quote tile: one big mark, the client's words, and where they came from */
+.stats.light .quote { gap: 0.5rem; }
+.stats.light .quote .figure { height: 3.25rem; align-items: flex-start; }
+.stats.light .quote .figure b { font-size: 9rem; line-height: 0.82; height: 3.25rem; overflow: hidden; color: var(--coral-3, var(--ink)); }
+.stats.light .quote blockquote { margin: 0; font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 2.4vw, 1.875rem); line-height: 1.2; }
+.stats.light .quote > span { font-size: 0.9375rem; color: var(--ink-soft); }
+.stats.light .quote a { color: var(--ink); font-weight: 600; }
