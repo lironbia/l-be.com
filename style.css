@@ -727,3 +727,38 @@ html.a11y-big .changes.three, html.a11y-big .changes.five, html.a11y-big .steps.
 html.a11y-big .agent-band .wrap { grid-template-columns: minmax(0, 1fr); }
 html.a11y-big .agent-status { position: static; }
 .untangle { overflow: visible; }
+
+/* Chips whose text may hold a no-break span: the text is one run */
+.chain.plain li { display: block; }
+
+/* 404: the game and the table take the full width of the page */
+.game, .scores { max-width: none; }
+.game canvas { height: clamp(13rem, 24vw, 18rem); }
+.turn-state { font-weight: 600; font-size: 1.0625rem; line-height: 1.6; padding: 0.75rem 1rem; border: var(--rule); background: var(--surface); }
+.agent-prompt { display: grid; gap: 0.875rem; justify-items: start; }
+.agent-prompt h3 { font-size: 1.25rem; }
+.prompt-text { max-width: 60rem; padding: 1rem 1.25rem; border-inline-start: 4px solid var(--sky-2); background: var(--surface); font-size: 1rem; line-height: 1.7; overflow-wrap: anywhere; }
+.agent-prompt .agent-status { position: static; min-height: 1.5em; text-align: start; }
+
+/* Read-later band after sending: the thanks keeps a readable width on every screen */
+.later-form[data-sent] { grid-template-columns: minmax(0, 24rem); }
+.later-form[data-sent] .form-status { width: auto; min-width: 0; }
+
+/* Consulting section: the content on one side, falling green letters on the other */
+.matrix { display: none; }
+@media (min-width: 62.01rem) {
+  .consult > .wrap { position: relative; justify-items: start; }
+  .consult > .wrap > * { width: 100%; max-width: 57%; }
+  .consult .steps { grid-template-columns: minmax(0, 1fr) max-content max-content; }
+  .matrix {
+    display: block; position: absolute; inset-block: 0; inset-inline-end: 0;
+    width: calc((100% - min(100%, 72rem)) / 2 + min(100%, 72rem) * 0.4); height: 100%;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 52%, transparent 96%);
+    mask-image: linear-gradient(to bottom, #000 0, #000 52%, transparent 96%);
+  }
+}
+html.a11y-big .matrix { display: none; }
+html.a11y-big .consult > .wrap > * { max-width: none; }
+html.a11y-big .consult .steps { grid-template-columns: minmax(0, 1fr); }
+@media print { .matrix { display: none; } }
+@media (min-width: 62.01rem) { [dir="ltr"] .consult .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

@@ -31,12 +31,12 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-hebrew-400-hebrew.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/frank-ruhl-libre-900-hebrew.woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=9746d69a">
-<script src="/a11y-early.js?v=9746d69a"></script>
+<link rel="stylesheet" href="/style.css?v=42c299dd">
+<script src="/a11y-early.js?v=42c299dd"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://l-be.com/#organization","name":"L-Be","alternateName":"SubK","url":"https://l-be.com/","logo":"https://l-be.com/logo.png","description":"Consulting and implementation of CRM, AI and business automation systems for companies.","slogan":"Implementing CRM and AI systems for companies","areaServed":{"@type":"Country","name":"Israel"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","CRM systems","AI agents","Business automation"],"founder":{"@id":"https://l-be.com/liron-bialkovich#person"},"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://subk.co.il/"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://l-be.com/#contact","availableLanguage":["he","en"]},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Solutions","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI agents and bots","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM, leads and sales","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Customer service and communication","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Orders, billing and finance","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automation and integrations","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Management, reports and team","provider":{"@id":"https://l-be.com/#organization"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Specification, training and support","provider":{"@id":"https://l-be.com/#organization"}}}]}},{"@type":"Person","@id":"https://l-be.com/liron-bialkovich#person","name":"Liron Bialkovich","alternateName":"Liron Bialkovich","givenName":"Liron","familyName":"Bialkovich","jobTitle":"Independent consultant and developer: CRM, AI and automation","description":"Liron Bialkovich is an independent consultant and developer who builds AI systems, automations and CRM systems for companies. At L-Be he specifies, sets up and implements CRM systems, AI solutions and automated processes.","image":"https://l-be.com/liron-bialkovich.jpg","url":"https://l-be.com/liron-bialkovich","mainEntityOfPage":"https://l-be.com/liron-bialkovich","worksFor":{"@id":"https://l-be.com/#organization"},"knowsAbout":["CRM","AI agents","Business process automation","Systems integration","CRM systems","AI agents","Business automation"],"knowsLanguage":["he","en"],"sameAs":["https://www.linkedin.com/in/liron-bialkovich-2508a286","https://www.facebook.com/LironBia","https://www.youtube.com/@lironbialkovich679","https://github.com/lironbia","https://subk.co.il/"]},{"@type":"WebSite","@id":"https://l-be.com/#website","url":"https://l-be.com/","name":"L-Be","description":"Consulting and implementation of CRM, AI and business automation systems for companies.","inLanguage":"en","publisher":{"@id":"https://l-be.com/#organization"}}]}</script>
 <meta property="og:site_name" content="L-Be">
 <link rel="alternate" type="text/html" href="/ai" title="AI MODE: the same page, plain">
-<script src="/notfound.js?v=9746d69a"></script>
+<script src="/notfound.js?v=42c299dd"></script>
 </head>
 <body data-a11y-statement="/accessibility">
 <a class="skip" href="#main">Skip to main content</a>
@@ -75,6 +75,7 @@
       <h2 class="display">Jump over the bugs</h2>
       <p>The cube runs, and the bugs come.<br>Jump over a bug on the ground, and stay on the ground under a bug that flies.<br>Every ten seconds everything speeds up.<br>Jump with the space bar, the up arrow or a tap on the screen.<br>The Esc key stops the game.</p>
       <p>A quick second press in the air adds a spin.<br>The down arrow changes the shape, and the side arrows change the color.<br>A different backdrop waits in every game.</p>
+      <p><a href="#agents">There is also a turn mode, for AI agents</a>.</p>
     </div>
     <div class="game">
       <canvas id="game" role="img" aria-label="Game: a cube that runs along a line and jumps over obstacles"></canvas>
@@ -100,6 +101,27 @@
       </tbody>
     </table>
     <p class="scores-note">The figures in the table have not been audited. Sixth place, however, is reserved just for you.</p>
+  </div>
+</section>
+<section class="section" id="agents">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">For AI agents</p>
+      <h2 class="display">AI agents play here too</h2>
+      <p>In turn mode the game moves one step with every press, with no time pressure.<br>That way an AI agent that browses the web can play too.<br>Our AI agent's record stands at <b translate="no">484</b> points.</p>
+    </div>
+    <div class="game-ui">
+      <button class="btn" type="button" data-turn="new">New game in turns</button>
+      <button class="btn btn-light" type="button" data-turn="wait">Step forward</button>
+      <button class="btn btn-light" type="button" data-turn="jump">Jump and step</button>
+    </div>
+    <p class="turn-state" role="status" id="turn-state">No game is running.</p>
+    <div class="agent-prompt">
+      <h3>A short prompt for your AI agent</h3>
+      <p class="prompt-text" id="game-prompt">There is a small game at https://l-be.com/en/404#agents . Please open it in a browser, and play it in turn mode.<br>In the section "AI agents play here too" there are three buttons: "New game in turns" starts a game, "Step forward" moves the game one step, and "Jump and step" jumps and moves one step.<br>After every press a status line is updated: the score, the speed, the next obstacle, and how many steps are left until it arrives.<br>Jump over an obstacle on the ground when one or two steps are left.<br>Stay on the ground under an obstacle that flies.<br>A jump lasts six steps.<br>If you can run JavaScript on the page, you can call window.lbeGame.turn("new"), window.lbeGame.turn("wait") and window.lbeGame.turn("jump"), which return the state of the game.<br>The goal: to beat the record of L-Be's AI agent, which stands at <span translate="no">484</span> points.<br>At the end, tell me what score you reached.</p>
+      <button class="btn" type="button" data-copy-from="game-prompt" aria-describedby="game-prompt-status">Copy the prompt for your AI agent</button>
+      <p class="agent-status" role="status" id="game-prompt-status"></p>
+    </div>
   </div>
 </section>
 </main>
@@ -178,11 +200,11 @@
       <a href="/es/404" hreflang="es" lang="es" translate="no">Español</a>
     </nav>
 </dialog>
-<script src="/en/site.js?v=9746d69a" defer></script>
-<script src="/en/a11y.js?v=9746d69a" defer></script>
-<script src="/en/guard.js?v=9746d69a" defer></script>
-<script src="/en/later.js?v=9746d69a" defer></script>
-<script src="/en/agent.js?v=9746d69a" defer></script>
-<script src="/en/game404.js?v=9746d69a" defer></script>
+<script src="/en/site.js?v=42c299dd" defer></script>
+<script src="/en/a11y.js?v=42c299dd" defer></script>
+<script src="/en/guard.js?v=42c299dd" defer></script>
+<script src="/en/later.js?v=42c299dd" defer></script>
+<script src="/en/agent.js?v=42c299dd" defer></script>
+<script src="/en/game404.js?v=42c299dd" defer></script>
 </body>
 </html>
