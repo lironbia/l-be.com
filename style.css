@@ -204,7 +204,7 @@ html.tachles #tachles { border-top: 0; }
 .record-lead { font-size: clamp(1.25rem, 2.4vw, 1.625rem); line-height: 1.5; max-width: 50rem; text-wrap: balance; }
 .brands { display: grid; gap: 1rem; border-top: 1.5px solid var(--on-ink); padding-top: 1.5rem; }
 .brands > p { font-size: 1.0625rem; max-width: 46rem; }
-.past-clients { width: 100%; max-width: 54rem; border: 1.5px solid var(--on-ink); }
+.past-clients { width: 100%; border: 1.5px solid var(--on-ink); }
 .brands ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
 .brands li { display: inline-flex; align-items: center; gap: 0.625rem; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 3.4vw, 2.375rem); line-height: 1.25; }
 .brands .cube { width: 1.125rem; }
