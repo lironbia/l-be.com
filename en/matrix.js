@@ -37,7 +37,7 @@
     canvas.width = Math.round(W * ratio);
     canvas.height = Math.round(H * ratio);
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-    paint();
+    if (seen) paint(); // nothing is drawn while the panel is off screen, so page load stays light
   }
   function paint() {
     ctx.fillStyle = "#04140b";
@@ -83,6 +83,7 @@
     new IntersectionObserver((entries) => {
       seen = entries[0].isIntersecting;
       update();
+      if (seen && !running && W > 0) paint(); // calm mode: one still frame
     }).observe(canvas);
   } else {
     seen = true;
@@ -97,7 +98,7 @@
   addEventListener("a11y-change", update);
   document.addEventListener("visibilitychange", update);
   if (motion.addEventListener) motion.addEventListener("change", update);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => !running && W > 0 && paint());
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => !running && seen && W > 0 && paint());
   resize();
   update();
 })();
