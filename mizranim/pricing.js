@@ -36,7 +36,19 @@
     payLine.appendChild(el("b", null, "במידה שנבחרה: עד " + maxPayments(price) + " תשלומים."));
   }
 
+  // WhatsApp buttons: number comes from data.js only; the bot recognises the model by "קוד: <code>".
+  var waOrder = document.getElementById("wa-order");
+  var waAsk = document.getElementById("wa-ask");
+  var ref = (new URLSearchParams(location.search).get("ref") || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 32);
+  function waLink(text) { return "https://wa.me/" + D.botNumber + "?text=" + encodeURIComponent(text); }
+  function renderWa(size, custom) {
+    var tail = "\nמידה: " + size + (custom ? " (מיוחדת)" : "") + (ref ? "\nref: " + ref : "");
+    if (waOrder) waOrder.href = waLink("היי, אני מתעניין/ת ב" + model.name + " (קוד: " + model.code + "). הגעתי מדף הדגם ואשמח להמשיך." + tail);
+    if (waAsk) waAsk.href = waLink("היי, יש לי שאלה לגבי " + model.name + " (קוד: " + model.code + ")." + tail);
+  }
+
   function select(size, price, custom) {
+    renderWa(size, custom);
     renderPay(price);
     state.size = size;
     state.price = price;

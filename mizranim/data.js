@@ -2,6 +2,7 @@
 window.MIZRANIM = {
   sizes: ["80x190", "90x190", "90x200", "120x190", "120x200", "140x190", "160x190", "160x200", "180x200", "200x200"],
   defaultSize: "160x200",
+  botNumber: "12058583885", // WhatsApp number of the sales bot, international format without "+"; will change to an Israeli number
   customSizeAdd: 600, // a size not in the list = the nearest larger standard size + this amount, shown as one final price
   // credit-card installments by final price: up to `upTo` (inclusive) allows `max` payments; last tier has no upper limit
   installments: [
