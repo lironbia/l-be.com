@@ -21,7 +21,23 @@
   var chips = [];
   var customOut;
 
+  var payLine = document.getElementById("pay-line");
+  function maxPayments(price) {
+    for (var i = 0; i < D.installments.length; i++) if (price <= D.installments[i].upTo) return D.installments[i].max;
+    return D.installments[D.installments.length - 1].max;
+  }
+  function renderPay(price) {
+    if (!payLine) return;
+    var tiers = D.installments.map(function (t, i) {
+      var prev = i ? D.installments[i - 1].upTo : 0;
+      return "עד " + t.max + " תשלומים " + (t.upTo === Infinity ? "מעל " + fmt(prev) + " ₪" : "בעסקה עד " + fmt(t.upTo) + " ₪");
+    });
+    payLine.textContent = "תשלומים באשראי: " + tiers.join(", ") + " (לפי המחיר הסופי). ";
+    payLine.appendChild(el("b", null, "במידה שנבחרה: עד " + maxPayments(price) + " תשלומים."));
+  }
+
   function select(size, price, custom) {
+    renderPay(price);
     state.size = size;
     state.price = price;
     state.custom = !!custom;
