@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>LCS אורתו פלוס | לירון קומפורט סטייל</title>
-<meta property="og:title" content="LCS אורתו פלוס | לירון קומפורט סטייל">
+<title>מיטת LCS אורתו פלוס | לירון קומפורט סטייל</title>
+<meta property="og:title" content="מיטת LCS אורתו פלוס | לירון קומפורט סטייל">
 <meta property="og:description" content="מזרן אורתופדי בשכבות עם לטקס וקצף זיכרון, יחד עם בסיס מיטה עם אחסון וגב מיטה מרופד גבוה. תמיכה נכונה לאורך כל הגוף.">
 <meta property="og:image" content="https://l-be.com/mizranim/assets/ortho.webp">
 <meta property="og:type" content="website">
@@ -49,16 +49,18 @@ cite { display:block; font-size:13px; color:var(--muted); margin-top:4px; font-s
 .custom-row input { width:84px; padding:10px; font:inherit; border:1.5px solid var(--line); border-radius:10px; background:var(--card); color:var(--ink); text-align:center; }
 .chip.go { justify-content:center; border-color:var(--accent); color:var(--accent); font-weight:700; }
 @media (min-width:520px) { .sizes { grid-template-columns:repeat(3,1fr); } }
+.sel { font-weight:600; color:var(--accent); margin:0 0 6px; }
 </style>
 </head>
 <body>
 <div class="demo">דף הדגמה: מותג דמיוני "לירון קומפורט סטייל", המלצות ותוכן להמחשה בלבד | בוט המכירות של L-BE</div>
 <header>לירון קומפורט סטייל</header>
 <main>
-  <div class="hero"><img src="assets/ortho.webp" alt="LCS אורתו פלוס"></div>
-  <h1>LCS אורתו פלוס</h1>
+  <div class="hero"><img src="assets/ortho.webp" alt="מיטת LCS אורתו פלוס"></div>
+  <h1>מיטת LCS אורתו פלוס</h1>
   <p class="tag">תמיכה אורתופדית לגב, בלי להתפשר על נוחות</p>
   <div class="price"><span id="price-val"></span> <small>מזרן + בסיס מיטה, מחיר סופי כולל משלוח והרכבה</small></div>
+  <div class="sel" id="sel-line" aria-live="polite"></div>
   <p>מזרן אורתופדי בשכבות עם לטקס וקצף זיכרון, יחד עם בסיס מיטה עם אחסון וגב מיטה מרופד גבוה. תמיכה נכונה לאורך כל הגוף.</p>
 
   <div class="card" id="pricing" data-model="ortho"><noscript>יש להפעיל JavaScript כדי לראות את המידות והמחירים. אפשר גם לשאול אותנו ישירות בוואטסאפ.</noscript></div>
@@ -94,8 +96,8 @@ cite { display:block; font-size:13px; color:var(--muted); margin-top:4px; font-s
 <p class="note" style="text-align:center;margin-top:24px">הדגמה של בוט מכירות לוואטסאפ מבית L-BE</p>
 </main>
 <div class="cta">
-  <a class="btn primary" href="https://wa.me/12058583885?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%AA%D7%A2%D7%A0%D7%99%D7%99%D7%9F/%D7%AA%20%D7%91LCS%20%D7%90%D7%95%D7%A8%D7%AA%D7%95%20%D7%A4%D7%9C%D7%95%D7%A1%20%28%D7%A7%D7%95%D7%93%3A%20LCS-ORTHO%29.%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%93%D7%A3%20%D7%94%D7%93%D7%92%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%9E%D7%A9%D7%99%D7%9A.">המשך להזמנה בוואטסאפ</a>
-  <a class="btn ghost" href="https://wa.me/12058583885?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99%20LCS%20%D7%90%D7%95%D7%A8%D7%AA%D7%95%20%D7%A4%D7%9C%D7%95%D7%A1%20%28%D7%A7%D7%95%D7%93%3A%20LCS-ORTHO%29.">יש לי שאלה</a>
+  <a class="btn primary" href="https://wa.me/12058583885?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%AA%D7%A2%D7%A0%D7%99%D7%99%D7%9F/%D7%AA%20%D7%91%D7%9E%D7%99%D7%98%D7%AA%20LCS%20%D7%90%D7%95%D7%A8%D7%AA%D7%95%20%D7%A4%D7%9C%D7%95%D7%A1%20%28%D7%A7%D7%95%D7%93%3A%20LCS-ORTHO%29.%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%93%D7%A3%20%D7%94%D7%93%D7%92%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%9E%D7%A9%D7%99%D7%9A.">המשך להזמנה בוואטסאפ</a>
+  <a class="btn ghost" href="https://wa.me/12058583885?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99%20%D7%9E%D7%99%D7%98%D7%AA%20LCS%20%D7%90%D7%95%D7%A8%D7%AA%D7%95%20%D7%A4%D7%9C%D7%95%D7%A1%20%28%D7%A7%D7%95%D7%93%3A%20LCS-ORTHO%29.">יש לי שאלה</a>
 </div>
 <script src="data.js"></script>
 <script src="pricing.js"></script>

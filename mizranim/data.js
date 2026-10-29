@@ -4,9 +4,10 @@ window.MIZRANIM = {
   defaultSize: "160x200",
   customSizeAdd: 600, // a size not in the list = the nearest larger standard size + this amount, shown as one final price
   models: {
-    classic: { prices: [1390, 1450, 1490, 1550, 1590, 1650, 1750, 1790, 1890, 1990] },
-    soft: { prices: [2350, 2450, 2490, 2590, 2690, 2790, 2890, 2990, 3090, 3190] },
-    ortho: { prices: [3490, 3650, 3750, 3900, 3990, 4190, 4350, 4490, 4690, 4890] },
-    platinum: { prices: [4690, 4890, 4990, 5190, 5390, 5590, 5790, 6000, 6300, 6600] },
+    // name always starts with the Hebrew word "מיטת"; code is what the bot recognises
+    classic: { name: "מיטת LCS קלאסיק", code: "LCS-CLASSIC", prices: [1390, 1450, 1490, 1550, 1590, 1650, 1750, 1790, 1890, 1990] },
+    soft: { name: "מיטת LCS סופט קומפורט", code: "LCS-SOFT", prices: [2350, 2450, 2490, 2590, 2690, 2790, 2890, 2990, 3090, 3190] },
+    ortho: { name: "מיטת LCS אורתו פלוס", code: "LCS-ORTHO", prices: [3490, 3650, 3750, 3900, 3990, 4190, 4350, 4490, 4690, 4890] },
+    platinum: { name: "מיטת LCS פלטינום", code: "LCS-PLATINUM", prices: [4690, 4890, 4990, 5190, 5390, 5590, 5790, 6000, 6300, 6600] },
   },
 };

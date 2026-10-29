@@ -17,6 +17,7 @@
 
   var state = (window.mizranimState = { size: D.defaultSize, price: 0, custom: false });
   var priceVal = document.getElementById("price-val");
+  var selLine = document.getElementById("sel-line");
   var chips = [];
   var customOut;
 
@@ -25,6 +26,7 @@
     state.price = price;
     state.custom = !!custom;
     priceVal.textContent = fmt(price) + " ₪";
+    if (selLine) selLine.textContent = model.name + ", " + size;
     chips.forEach(function (c) {
       var on = !custom && c.getAttribute("data-size") === size;
       c.setAttribute("aria-pressed", on ? "true" : "false");
