@@ -4,6 +4,9 @@ window.MIZRANIM = {
   defaultSize: "160x200",
   botNumber: "12058583885", // WhatsApp number of the sales bot, international format without "+"; will change to an Israeli number
   customSizeAdd: 600, // a size not in the list = the nearest larger standard size + this amount, shown as one final price
+  // "I want a bot like this" button at the bottom of each page: leads to L-BE itself, not to the sales bot
+  leadNumber: "972502221023",
+  leadMessage: "היי לירון, ראיתי את הדמו של בוט המזרנים ואני רוצה בוט כזה לעסק שלי",
   // credit-card installments by final price: up to `upTo` (inclusive) allows `max` payments; last tier has no upper limit
   installments: [
     { upTo: 3000, max: 10 },

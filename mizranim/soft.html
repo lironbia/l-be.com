@@ -54,6 +54,9 @@ cite { display:block; font-size:13px; color:var(--muted); margin-top:4px; font-s
 .chip.go { justify-content:center; border-color:var(--accent); color:var(--accent); font-weight:700; }
 @media (min-width:520px) { .sizes { grid-template-columns:repeat(3,1fr); } }
 .sel { font-weight:600; color:var(--accent); margin:0 0 6px; }
+.demo-note { text-align:center; }
+.demo-line { font-size:17px; font-weight:600; margin:0 0 8px; }
+.lead-btn { display:block; max-width:340px; margin:12px auto 0; }
 </style>
 </head>
 <body>
@@ -97,13 +100,18 @@ cite { display:block; font-size:13px; color:var(--muted); margin-top:4px; font-s
     <blockquote>“הפסקנו להרגיש אחד את השני בלילה, ומיטה כזו מרגישה פינוק.”<cite>לקוחה לדוגמה, כפר סבא</cite></blockquote><blockquote>“איזון מושלם בין רך לתומך.”<cite>לקוח לדוגמה, ראשון לציון</cite></blockquote>
     <p class="note">המלצות לדוגמה למטרות הדגמה בלבד.</p>
   </div>
+  <div class="card demo-note" id="demo-note">
+    <p class="demo-line">ברור שאנחנו לא באמת מוכרים מזרנים 😄 זה מותג הדגמה של L-BE. מה שאמיתי הוא הבוט שמנהל את השיחה בוואטסאפ.</p>
+    <p class="note">יצרני ומשווקי מזרנים ועולם השינה: רוצים בוט כזה לעסק שלכם?</p>
+    <a class="btn primary lead-btn" id="wa-lead" href="#demo-note">אני רוצה כזה בוט!</a>
+  </div>
 <p class="note" style="text-align:center;margin-top:24px">הדגמה של בוט מכירות לוואטסאפ מבית L-BE</p>
 </main>
 <div class="cta">
   <a class="btn primary" id="wa-order" href="#pricing">המשך להזמנה בוואטסאפ</a>
   <a class="btn ghost" id="wa-ask" href="#pricing">יש לי שאלה</a>
 </div>
-<script src="data.js?v=4"></script>
-<script src="pricing.js?v=4"></script>
+<script src="data.js?v=5"></script>
+<script src="pricing.js?v=5"></script>
 </body>
 </html>

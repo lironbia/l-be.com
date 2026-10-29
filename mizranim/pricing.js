@@ -47,6 +47,9 @@
     if (waAsk) waAsk.href = waLink("היי, יש לי שאלה לגבי " + model.name + " (קוד: " + model.code + ")." + tail);
   }
 
+  var waLead = document.getElementById("wa-lead");
+  if (waLead) waLead.href = "https://wa.me/" + D.leadNumber + "?text=" + encodeURIComponent(D.leadMessage);
+
   function select(size, price, custom) {
     renderWa(size, custom);
     renderPay(price);
