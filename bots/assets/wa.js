@@ -11,6 +11,7 @@
     var text = "היי, " + (LEAD[intent] || LEAD.demo) + ".\nקוד: " + a.getAttribute("data-wa-code") + "\nכוונה: " + intent + (ref ? "\nref: " + ref : "");
     a.href = "https://wa.me/" + number + "?text=" + encodeURIComponent(text);
   });
+  if (ref) document.querySelectorAll("a[data-order]").forEach(function (a) { a.href += "?ref=" + ref; });
   // The gift disappears after the last day (Israel time).
   try {
     var today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Jerusalem" }).format(new Date());

@@ -362,6 +362,9 @@ svg { display: block; max-width: 100%; height: auto; }
 
 
 /* ---------- Page additions (not part of the brand system): layout glue, accessibility menu skin ---------- */
+.dock .btn { white-space: nowrap; padding-inline: 0.75rem; }
+.dock .btn-wa { flex: 1.8 1 0; }
+.dock .btn:not(.btn-wa) { flex: 1 1 0; }
 body { padding-block-end: 6rem; }
 @media (min-width: 48rem) { body { padding-block-end: 0; } }
 .hero-side { display: grid; gap: 1.5rem; justify-items: start; min-width: 0; }
