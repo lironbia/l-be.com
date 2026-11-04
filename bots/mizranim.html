@@ -1,145 +1,100 @@
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="rtl" data-vertical="mizranim">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>בוט וואטסאפ למזרנים ומיטות · L-BE</title>
-<meta name="description" content="בוט וואטסאפ שמדבר עם הפונים אליכם בשפה שלכם, מציג דגמים ומחירים, ומעביר אליכם את מי שמוכן לקנות.">
+<title>בוט וואטסאפ למזרנים | L-BE BOTS</title>
+<meta name="description" content="בוט וואטסאפ ליצרני ומשווקי מזרנים: מציג דגמים ומחירים לפי הקטלוג שלכם, אוסף פרטים ומעביר אליכם את מי שמוכן לקנות.">
 <meta name="robots" content="noindex, nofollow">
-<style>
-@font-face{font-family:"Frank Ruhl Libre";font-weight:700;font-display:swap;src:url(/fonts/frank-ruhl-libre-700-hebrew.woff2) format("woff2");unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
-@font-face{font-family:"Frank Ruhl Libre";font-weight:700;font-display:swap;src:url(/fonts/frank-ruhl-libre-700-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:400;font-display:swap;src:url(/fonts/ibm-plex-sans-hebrew-400-hebrew.woff2) format("woff2");unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:400;font-display:swap;src:url(/fonts/ibm-plex-sans-hebrew-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:600;font-display:swap;src:url(/fonts/ibm-plex-sans-hebrew-600-hebrew.woff2) format("woff2");unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:600;font-display:swap;src:url(/fonts/ibm-plex-sans-hebrew-600-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:700;font-display:swap;src:url(/fonts/ibm-plex-sans-hebrew-700-hebrew.woff2) format("woff2");unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
-@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:700;font-display:swap;src:url(/fonts/ibm-plex-sans-hebrew-700-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-</style>
-<style>
-:root{--bg:#f8f6f2;--ink:#1c2228;--muted:#566069;--card:#fff;--line:#e5dfd5;--accent:#0f5c4d;--accent-ink:#fff;--soft:#edf3f0;--accent-soft:color-mix(in srgb,var(--accent) 9%,transparent);--shadow:0 1px 2px rgba(28,34,40,.05),0 14px 34px -16px rgba(28,34,40,.22)}
-@media (prefers-color-scheme:dark){:root{--bg:#111517;--ink:#f1efe9;--muted:#a8afb8;--card:#1a1f22;--line:#2b3236;--accent:#3fb59b;--accent-ink:#0b1210;--soft:#18211f;--shadow:0 1px 2px rgba(0,0,0,.4),0 14px 34px -16px rgba(0,0,0,.65)}}
-*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}[hidden]{display:none!important}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.75 "IBM Plex Sans Hebrew","Segoe UI",system-ui,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:"Frank Ruhl Libre","IBM Plex Sans Hebrew",Georgia,serif;line-height:1.2;margin:0;letter-spacing:-.01em}
-a{color:inherit}
-.wrap{max-width:66rem;margin:0 auto;padding:0 20px}
-.band{padding:72px 0;position:relative}
-.band + .band{border-top:1px solid var(--line)}
-.band.first{padding-top:44px}
-.ribbon{background:var(--ink);color:var(--bg);text-align:center;font-size:.88rem;padding:8px 14px;line-height:1.5}
-header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line)}
-.brand{font-family:"Frank Ruhl Libre",Georgia,serif;font-weight:700;font-size:1.6rem;letter-spacing:.05em;text-decoration:none}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:12px;border:1.5px solid var(--accent);background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;transition:transform .08s,box-shadow .15s,background .15s;box-shadow:0 8px 20px -10px var(--accent)}
-.btn:hover{transform:translateY(-1px)}
-.btn:active{transform:none}
-.btn.ghost{background:transparent;color:var(--accent);box-shadow:none}
-.btn.ghost:hover{background:var(--accent-soft)}
-.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
-.hero{background:radial-gradient(60rem 22rem at 85% -10%,var(--accent-soft),transparent 70%)}
-.hero h1{font-size:clamp(2.2rem,6.2vw,3.8rem);font-weight:700;max-width:20ch;letter-spacing:-.025em}
-.hero p.sub{font-size:1.25rem;color:var(--muted);max-width:44ch;margin:20px 0 32px}
-.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
-.hero small{display:block;margin-top:16px;color:var(--muted);font-size:.92rem}
-h2{font-size:clamp(1.6rem,4vw,2.3rem);margin-bottom:30px;font-weight:700}
-h2::after{content:"";display:block;width:44px;height:3px;border-radius:3px;background:var(--accent);margin-top:14px}
-.grid{display:grid;gap:18px;grid-template-columns:1fr}
-@media(min-width:760px){.grid.three{grid-template-columns:repeat(3,1fr)}.grid.four{grid-template-columns:repeat(4,1fr)}.grid.two{grid-template-columns:1fr 1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
-.card h3{font-size:1.25rem;margin-bottom:8px}
-.card p{margin:0;color:var(--muted)}
-.num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;margin-bottom:12px;font-variant-numeric:tabular-nums}
-.chat{background:var(--soft);border:1px solid var(--line);border-radius:22px;padding:20px;max-width:32rem}
-.bubble{max-width:86%;padding:9px 15px;border-radius:16px;border-end-start-radius:4px;margin:9px 0;background:var(--card);border:1px solid var(--line);box-shadow:0 1px 2px rgba(28,34,40,.05)}
-.bubble.bot{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);margin-inline-start:auto;border-end-start-radius:16px;border-end-end-radius:4px}
-.bubble b{display:block;font-size:.8rem;opacity:.75;font-weight:500}
-.note{color:var(--muted);font-size:.92rem;margin-top:12px}
-ul.ticks{list-style:none;padding:0;margin:0}
-ul.ticks li{padding:11px 0;border-bottom:1px solid var(--line);padding-inline-start:34px;position:relative}
-ul.ticks li::before{content:"✓";position:absolute;inset-inline-start:0;top:12px;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:.8rem}
-.price{display:grid;gap:18px;grid-template-columns:1fr}
-@media(min-width:760px){.price{grid-template-columns:1fr 1fr}}
-.price .card{padding:28px}
-.amount{font-family:"Frank Ruhl Libre",Georgia,serif;font-size:2.8rem;font-weight:700;line-height:1.15;margin:6px 0 12px;font-variant-numeric:tabular-nums}
-.amount small{font-size:1rem;color:var(--muted);font-family:inherit;font-weight:400}
-.gift{border:1.5px solid var(--accent);border-radius:18px;padding:20px 24px;margin-top:24px;background:linear-gradient(135deg,var(--soft),var(--card))}
-.gift.gone{display:none}
-details{border-bottom:1px solid var(--line);padding:16px 0}
-summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);color:var(--accent);font-size:1.2rem;line-height:1}
-details[open] summary::after{content:"−"}
-details p{margin:12px 0 0;color:var(--muted)}
-footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:.95rem}
-footer a{margin-inline-end:20px}
-.split{margin-top:30px;align-items:start}.actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}.fine{margin-top:12px}
-.nicheNav{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.nicheNav a{font-size:.95rem;padding:6px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--muted);background:var(--card)}
-.nicheNav a:hover{border-color:var(--accent);color:var(--accent)}
-.nicheNav a[aria-current=page]{border-color:var(--accent);color:var(--accent);font-weight:600;background:var(--accent-soft)}
-@media(max-width:700px){.band{padding:48px 0}.wrap{padding:0 16px}.hero .cta .btn,.actions .btn{flex:1 1 100%}}
-@media print{.ribbon{display:none}}
-</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"הבוט נותן הנחות?","acceptedAnswer":{"@type":"Answer","text":"רק מה שהגדרתם. מעבר לזה הוא לא מתחייב ומעביר את הבקשה לאדם שקבעתם."}},{"@type":"Question","name":"יש דוגמה לראות?","acceptedAnswer":{"@type":"Answer","text":"כן, אפשר לנסות הדגמה בוואטסאפ ולשוחח עם בוט של מותג לדוגמה."}},{"@type":"Question","name":"צריך מספר חדש?","acceptedAnswer":{"@type":"Answer","text":"לא בהכרח. אפשר לחבר מספר קיים, ובחלק מהמקרים המספר נשאר פעיל גם באפליקציה בנייד. Meta מחליטה אם המספר מתאים, ובודקים את זה יחד לפני שמתחילים."}},{"@type":"Question","name":"מה כלול במחיר ומה מחויב בנפרד?","acceptedAnswer":{"@type":"Answer","text":"דמי ההקמה והמנוי החודשי כוללים את השירות והתחזוקה. השימוש בהודעות ובבינה מלאכותית מחויב בנפרד לפי חבילת שימוש חודשית: קטן 20$, בינוני 50$, גדול 100$, גדול יותר 150$, גדול מאוד 200$, ומעבר לכך בהתאמה אישית. החבילה נקבעת לפי השימוש בפועל באותו חודש, והסיכום נשלח אליכם לפני החיוב."}},{"@type":"Question","name":"אפשר לבקש דברים מיוחדים?","acceptedAnswer":{"@type":"Answer","text":"כן. שעת עבודה נוספת עולה 400 ₪ לפני מע\"מ, ובדרך כלל מספיקות מעט שעות."}},{"@type":"Question","name":"איך מבטלים?","acceptedAnswer":{"@type":"Answer","text":"מבקשים, והביטול נכנס לתוקף בסוף התקופה ששולמה. אפשר לייצא את הנתונים לפני כן."}},{"@type":"Question","name":"מה קורה עם המידע של הלקוחות שלי?","acceptedAnswer":{"@type":"Answer","text":"הנתונים נשמרים בצורה מוגנת ורק לצורך השירות. תנאי השימוש ומדיניות הפרטיות מפורטים בקישורים בתחתית הדף."}}]}</script>
+<link rel="icon" href="/favicon.png">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-hebrew-400-hebrew.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/frank-ruhl-libre-900-hebrew.woff2" crossorigin>
+<link rel="stylesheet" href="/bots/_shared/bots.css?v=83118e77">
+<script src="/a11y-early.js"></script>
 </head>
-<body>
-<div class="ribbon" role="note">דף בבנייה: לא מפורסם ולא מאונדקס</div>
-<div class="wrap">
-  <header class="top"><a class="brand" href="/bots/">L-BE</a><a class="btn ghost" href="#order">להזמנה</a></header>
+<body data-a11y-statement="/accessibility">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="cube" viewBox="0 0 18 20"><polygon class="f2" points="1.2,5.5 9,10 9,19 1.2,14.5"/><polygon class="f3" points="16.8,5.5 9,10 9,19 16.8,14.5"/><polygon class="f1" points="9,1 16.8,5.5 9,10 1.2,5.5"/></symbol>
+<symbol id="cube-tail" viewBox="0 0 18 20"><polygon class="f2" points="1.2,5.5 9,10 9,19 1.2,14.5"/><polygon class="f3" points="16.8,5.5 9,10 9,19 16.8,14.5"/><polygon class="f1" points="9,1 16.8,5.5 9,10 1.2,5.5"/><polygon class="f2" points="1.2,14.5 1.2,19.6 5.4,16.9"/></symbol>
+</svg>
+<a class="skip" href="#main">מעבר לתוכן</a>
+<header class="masthead"><div class="wrap"><a class="brand" href="/bots/"><svg class="mark mint" viewBox="0 0 18 20" aria-hidden="true"><use href="#cube-tail"/></svg><span class="brand-word">L-BE</span><span class="brand-tag">BOTS</span><span class="visually-hidden">, בוטי וואטסאפ לעסקים</span></a><nav class="site-nav" aria-label="ראשי"><a href="#how">איך זה עובד</a><a href="#price">מחיר</a><a href="#faq">שאלות</a></nav><a class="btn btn-wa" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A0%D7%A1%D7%95%D7%AA%20%D7%94%D7%93%D7%92%D7%9E%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20demo" data-wa-code="BOTS-MIZRANIM" data-wa-intent="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>הדגמה בוואטסאפ</a></div></header>
+<main id="main">
+<section class="hero"><div class="wrap">
+  <div class="hero-text">
+    <p class="label">יצרני ומשווקי מזרנים ועולם השינה</p>
+    <h1 class="display">מי שכותב בערב שאלה על מזרן, <span class="hl">מקבל תשובה</span> באותו רגע</h1>
+    <p class="lead">בוט וואטסאפ שמדבר עם הפונים אליכם בשפה שלכם. הוא מציג דגמים ומחירים לפי הקטלוג שלכם, ומעביר אליכם את מי שמוכן לקנות.</p>
+    <div class="actions"><a class="btn btn-wa" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A0%D7%A1%D7%95%D7%AA%20%D7%94%D7%93%D7%92%D7%9E%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20demo" data-wa-code="BOTS-MIZRANIM" data-wa-intent="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>לנסות הדגמה בוואטסאפ</a><a class="btn" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20ask" data-wa-code="BOTS-MIZRANIM" data-wa-intent="ask">שאלה בוואטסאפ</a></div>
+    <p class="hero-note">הדגמה בוואטסאפ, בלי התחייבות.</p>
+    <nav class="switcher" aria-label="תחומים"><ul><li data-slot="sky"><a href="/bots/mizranim" aria-current="page">מזרנים</a></li><li data-slot="amber"><a href="/bots/tzrimim">צימרים ואירוח</a></li><li data-slot="violet"><a href="/bots/nadlan">נדל"ן</a></li><li data-slot="coral"><a href="/bots/hair">מספרות</a></li></ul></nav>
+  </div>
+  <div class="hero-side"><svg class="motif" viewBox="-49 -31 122 101" aria-hidden="true" focusable="false"><polygon class="f2" points="-45.0,19.0 24.2,59.0 24.2,66.0 -45.0,26.0" style="fill:var(--sky-2)"/><polygon class="f3" points="69.3,33.0 24.2,59.0 24.2,66.0 69.3,40.0" style="fill:var(--sky-3)"/><polygon class="f1" points="0.0,-7.0 69.3,33.0 24.2,59.0 -45.0,19.0" style="fill:var(--sky-1)"/><polygon class="f2" points="-45.0,9.0 24.2,49.0 24.2,56.0 -45.0,16.0" style="fill:var(--sky-2)"/><polygon class="f3" points="69.3,23.0 24.2,49.0 24.2,56.0 69.3,30.0" style="fill:var(--sky-3)"/><polygon class="f1" points="0.0,-17.0 69.3,23.0 24.2,49.0 -45.0,9.0" style="fill:var(--sky-1)"/><polygon class="f2" points="-45.0,-1.0 24.2,39.0 24.2,46.0 -45.0,6.0" style="fill:var(--sky-2)"/><polygon class="f3" points="69.3,13.0 24.2,39.0 24.2,46.0 69.3,20.0" style="fill:var(--sky-3)"/><polygon class="f1" points="0.0,-27.0 69.3,13.0 24.2,39.0 -45.0,-1.0" style="fill:var(--sky-1)"/></svg><figure class="chat">
+  <figcaption class="chat-bar"><span class="who">בוט לדוגמה</span><span class="chat-tag">דוגמה להמחשה</span></figcaption>
+  <ol class="chat-body">
+    <li class="msg customer"><b>לקוח<span class="visually-hidden">:</span></b>היי, אני מחפש מזרן זוגי</li>
+    <li class="msg bot"><b>בוט<span class="visually-hidden">:</span></b>שלום, בשמחה. איזו מידה אתם מחפשים, ויש העדפה לקשיחות?</li>
+    <li class="msg customer"><b>לקוח<span class="visually-hidden">:</span></b>160 על 200, בינוני-קשה</li>
+    <li class="msg bot"><b>בוט<span class="visually-hidden">:</span></b>לפי המידה והקשיחות שציינתם, הדגם "אורתו" בקטלוג שלנו קרוב לזה. יש לו תקופת ניסיון ואחריות. לשלוח עוד פרטים, או להעביר אתכם לנציג לסגירה?</li>
+    <li class="typing" aria-hidden="true"><i></i><i></i><i></i></li>
+  </ol>
+  <p class="chat-note">דוגמה להמחשה. הדגמים, המחירים והתנאים בבוט שלכם יהיו שלכם.</p>
+</figure></div>
+</div></section>
 
-  <section class="band first hero" aria-labelledby="h1">
-    <h1 id="h1">מי שכותב בערב שאלה על מזרן, מקבל תשובה באותו רגע</h1>
-    <p class="sub">בוט וואטסאפ שמדבר עם הפונים אליכם בשפה שלכם, מציג דגמים ומחירים, ומעביר אליכם את מי שמוכן לקנות.</p>
-    <div class="cta"><a class="btn" id="demo" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A0%D7%A1%D7%95%D7%AA%20%D7%90%D7%AA%20%D7%94%D7%94%D7%93%D7%92%D7%9E%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20demo" data-wa-code="BOTS-MIZRANIM" data-wa-intent="demo">לנסות הדגמה בוואטסאפ</a><a class="btn ghost" href="#order">להזמנה</a></div>
-    <small>הדגמה היא שיחה קצרה עם בוט של מותג לדוגמה, בלי התחייבות.</small>
-    <nav class="nicheNav" aria-label="תחומים"><a href="/bots/mizranim" aria-current="page">מזרנים ומיטות</a><a href="/bots/tzrimim" >צימרים ואירוח</a><a href="/bots/" >עסקים נוספים</a></nav>
-  </section>
-
-  <section class="band" aria-labelledby="pain">
-    <h2 id="pain">מה קורה היום</h2>
-    <div class="grid three"><div class="card"><h3>פניות בערב ובסוף שבוע</h3><p>לקוחות משווים מזרנים בשעות שאתם לא עונים. מי שלא קיבל תשובה עובר לחנות הבאה.</p></div><div class="card"><h3>אותן שאלות שוב ושוב</h3><p>מידות, אחריות, ימי ניסיון, משלוח, תשלומים. הצוות עונה על אותו דבר עשרות פעמים.</p></div><div class="card"><h3>לידים שנשכחים</h3><p>מי שהתעניין ולא קנה לא תמיד מקבל חזרה. בלי מעקב, הרבה מהם נעלמים.</p></div></div>
-  </section>
-
-  <section class="band" aria-labelledby="what">
-    <h2 id="what">מה הבוט עושה</h2>
-    <div class="grid four"><div class="card"><span class="num" aria-hidden="true">1</span><h3>עונה על הפנייה</h3><p>דגמים, מידות, מחירים, אחריות והחזרות, לפי המדיניות שהגדרתם.</p></div><div class="card"><span class="num" aria-hidden="true">2</span><h3>מבין מה הלקוח מחפש</h3><p>שואל כמה שאלות קצרות ומציע את הדגם המתאים.</p></div><div class="card"><span class="num" aria-hidden="true">3</span><h3>מעביר אליכם</h3><p>כשהלקוח מבקש נציג או מוכן לקנות, אתם מקבלים התראה עם סיכום השיחה.</p></div><div class="card"><span class="num" aria-hidden="true">4</span><h3>חוזר ללקוח</h3><p>פולואפ אוטומטי למי שלא סגר. הוא נעצר ברגע שהלקוח קנה או ביקש שלא יפנו אליו.</p></div></div>
-    <div class="grid two split">
-      <div class="chat" role="img" aria-label="דוגמה לשיחה: לקוח: היי, אני מחפש מזרן זוגי לגב רגיש | בוט: שלום! אשמח לעזור. מה המידה שאתם מחפשים, ויש העדפה לקשיחות? | לקוח: 160 על 200, בינוני-קשה | בוט: לזה מתאים הדגם האורתופדי שלנו. יש לו 100 לילות ניסיון ואחריות ארוכה. רוצים שנעביר אתכם לנציג לסגירה, או לשלוח עוד פרטים?"><div class="bubble "><b>לקוח</b>היי, אני מחפש מזרן זוגי לגב רגיש</div><div class="bubble bot"><b>בוט</b>שלום! אשמח לעזור. מה המידה שאתם מחפשים, ויש העדפה לקשיחות?</div><div class="bubble "><b>לקוח</b>160 על 200, בינוני-קשה</div><div class="bubble bot"><b>בוט</b>לזה מתאים הדגם האורתופדי שלנו. יש לו 100 לילות ניסיון ואחריות ארוכה. רוצים שנעביר אתכם לנציג לסגירה, או לשלוח עוד פרטים?</div></div>
-      <div><ul class="ticks"><li>חיבור עמוד הפייסבוק והמספר ואימות מול פייסבוק</li><li>בניית הבוט והתאמתו לפי הטופס שמילאתם</li><li>מעקב אחרי כל פנייה ופולואפ אוטומטי, שנעצר כשהלקוח קנה או ביקש שלא יפנו אליו</li><li>העברה לנציג אנושי כשצריך, והתראה לאנשים שתגדירו על ליד חם</li><li>תחזוקה שוטפת ושיפורים קטנים</li><li>מנגנון &quot;הבא חבר&quot;: הבוט מציע ללקוחות מרוצים להמליץ ועוקב אחרי ההמלצות. אפשר להפעיל או לכבות.</li></ul></div>
-    </div>
-    <p class="note">דוגמה להמחשה. הדגמים, המחירים והתנאים בבוט שלכם יהיו שלכם.</p>
-  </section>
-
-  <section class="band" aria-labelledby="how">
-    <h2 id="how">איך מתחילים</h2>
-    <div class="grid four"><div class="card"><span class="num" aria-hidden="true">1</span><h3>מזמינים</h3><p>משלמים דמי הקמה ומקבלים קישור אישי לטופס הצטרפות.</p></div><div class="card"><span class="num" aria-hidden="true">2</span><h3>ממלאים טופס</h3><p>מוצרים, מחירים, מדיניות ואיך אתם רוצים שהבוט ידבר. אפשר לעצור ולהמשיך, ולסמן &quot;לא יודע&quot; ונשלים יחד.</p></div><div class="card"><span class="num" aria-hidden="true">3</span><h3>מחברים מספר</h3><p>אנחנו מחברים את מספר הוואטסאפ של העסק ומטפלים מולכם באימות מול פייסבוק. אתם נשארים הבעלים של החשבון.</p></div><div class="card"><span class="num" aria-hidden="true">4</span><h3>עולים לאוויר</h3><p>הבוט מתחיל לענות. דמי המנוי החודשיים מתחילים מרגע העלייה ולא לפני.</p></div></div>
-  </section>
-
-  <section class="band" id="order" aria-labelledby="pricing">
-    <h2 id="pricing">מחיר והזמנה</h2>
-    <div class="price">
-      <div class="card"><h3>הקמה חד פעמית</h3><div class="amount">1,000 ₪ <small>+ מע"מ</small></div><p>חיבור עמוד ומספר, אימות מול פייסבוק, בניית הבוט והתאמתו לטופס שמילאתם.</p></div>
-      <div class="card"><h3>מנוי חודשי</h3><div class="amount">400 ₪ <small>לחודש + מע"מ</small></div><p>שירות ותחזוקה. בתשלום שנתי, 4,000 ₪ + מע"מ: שני חודשים במתנה.</p></div>
-    </div>
-    <p class="note">השימוש בהודעות ובבינה מלאכותית מחויב בנפרד לפי חבילת שימוש חודשית (מ-20$ ועד 200$, ומעבר לכך בהתאמה אישית), לפי השימוש בפועל באותו חודש. שעת עבודה נוספת: 400 ₪ + מע"מ.</p>
-    <div class="gift" id="gift" data-deadline="2026-12-31"><strong>מתנה למזמינים עד 31.12.2026</strong><br>חיבור יומן לתיאום פגישות באולם התצוגה: זמינות, תזכורות למתאמים, מעקב אחרי קיום הפגישה והמשך הטיפול אחריה.</div>
-    <p class="actions"><a class="btn" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%96%D7%9E%D7%99%D7%9F%20%D7%91%D7%95%D7%98.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20order" data-wa-code="BOTS-MIZRANIM" data-wa-intent="order">להזמנה</a> <a class="btn ghost" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A0%D7%A1%D7%95%D7%AA%20%D7%90%D7%AA%20%D7%94%D7%94%D7%93%D7%92%D7%9E%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20demo" data-wa-code="BOTS-MIZRANIM" data-wa-intent="demo">קודם הדגמה</a></p>
-  </section>
-
-  <section class="band" aria-labelledby="faq">
-    <h2 id="faq">שאלות נפוצות</h2>
-    <details><summary>הבוט נותן הנחות?</summary><p>רק מה שהגדרתם. מעבר לזה הוא לא מתחייב ומעביר את הבקשה לאדם שקבעתם.</p></details><details><summary>יש דוגמה לראות?</summary><p>כן, אפשר לנסות הדגמה בוואטסאפ ולשוחח עם בוט של מותג לדוגמה.</p></details><details><summary>צריך מספר חדש?</summary><p>לא בהכרח. אפשר לחבר מספר קיים, ובחלק מהמקרים המספר נשאר פעיל גם באפליקציה בנייד. Meta מחליטה אם המספר מתאים, ובודקים את זה יחד לפני שמתחילים.</p></details><details><summary>מה כלול במחיר ומה מחויב בנפרד?</summary><p>דמי ההקמה והמנוי החודשי כוללים את השירות והתחזוקה. השימוש בהודעות ובבינה מלאכותית מחויב בנפרד לפי חבילת שימוש חודשית: קטן 20$, בינוני 50$, גדול 100$, גדול יותר 150$, גדול מאוד 200$, ומעבר לכך בהתאמה אישית. החבילה נקבעת לפי השימוש בפועל באותו חודש, והסיכום נשלח אליכם לפני החיוב.</p></details><details><summary>אפשר לבקש דברים מיוחדים?</summary><p>כן. שעת עבודה נוספת עולה 400 ₪ לפני מע&quot;מ, ובדרך כלל מספיקות מעט שעות.</p></details><details><summary>איך מבטלים?</summary><p>מבקשים, והביטול נכנס לתוקף בסוף התקופה ששולמה. אפשר לייצא את הנתונים לפני כן.</p></details><details><summary>מה קורה עם המידע של הלקוחות שלי?</summary><p>הנתונים נשמרים בצורה מוגנת ורק לצורך השירות. תנאי השימוש ומדיניות הפרטיות מפורטים בקישורים בתחתית הדף.</p></details>
-  </section>
-
-  <footer>
-    <a href="https://botsleads.l-be.com/legal/terms">תנאי שימוש</a><a href="https://botsleads.l-be.com/legal/privacy">מדיניות פרטיות</a>
-    <div class="fine">L-BE. המחירים לפני מע"מ.</div>
-  </footer>
-</div>
-<script>
-(function(){var g=document.getElementById('gift');if(!g)return;var d=g.getAttribute('data-deadline');
-var t=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Jerusalem'}).format(new Date());if(t>d)g.className+=' gone';})();
-</script>
-<script src="/bots/assets/wa.js?v=1" defer></script>
+<section class="section"><div class="wrap">
+  <div class="section-head"><p class="label">הבעיה</p><h2 class="h2">פניות על מזרנים מגיעות בשעות שלא עונים</h2></div>
+  <div class="grid three"><div class="card"><h3 class="h3">פניות בערב ובסוף שבוע</h3><p>לקוחות משווים מזרנים בשעות שאתם לא עונים. מי שלא קיבל תשובה עובר לחנות הבאה.</p></div><div class="card"><h3 class="h3">אותן שאלות שוב ושוב</h3><p>מידות, אחריות, ימי ניסיון, משלוח, תשלומים. הצוות עונה על אותו דבר עשרות פעמים.</p></div><div class="card"><h3 class="h3">לידים שנשכחים</h3><p>מי שהתעניין ולא קנה לא תמיד מקבל חזרה. בלי מעקב, הרבה מהם נעלמים.</p></div></div>
+</div></section>
+<section class="section on-ink" id="how"><div class="wrap">
+  <div class="section-head"><p class="label">איך זה עובד</p><h2 class="h2">מהפנייה הראשונה ועד שהלקוח אצלכם</h2></div>
+  <ol class="grid four steps"><li class="step"><h3 class="h3">עונה על הפנייה</h3><p>דגמים, מידות, מחירים, אחריות והחזרות, לפי המדיניות שהגדרתם.</p></li><li class="step"><h3 class="h3">מבין מה הלקוח מחפש</h3><p>שואל כמה שאלות קצרות, מידה וקשיחות מועדפת, ומציע דגם מהקטלוג שלכם.</p></li><li class="step"><h3 class="h3">מעביר אליכם</h3><p>כשהלקוח מבקש נציג או מוכן לקנות, אתם מקבלים התראה עם סיכום השיחה.</p></li><li class="step"><h3 class="h3">חוזר ללקוח</h3><p>פולואפ אוטומטי למי שלא סגר. הוא נעצר ברגע שהלקוח קנה או ביקש שלא יפנו אליו.</p></li></ol>
+  
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="section-head"><p class="label">השירות</p><h2 class="h2">מה כלול</h2></div>
+  <ul class="checks"><li><svg class="cube vslot" viewBox="0 0 18 20" aria-hidden="true"><use href="#cube"/></svg><span>חיבור עמוד הפייסבוק והמספר, ואימות מול פייסבוק</span></li><li><svg class="cube vslot" viewBox="0 0 18 20" aria-hidden="true"><use href="#cube"/></svg><span>בניית הבוט והתאמתו לפי הטופס שמילאתם</span></li><li><svg class="cube vslot" viewBox="0 0 18 20" aria-hidden="true"><use href="#cube"/></svg><span>מעקב אחרי כל פנייה ופולואפ אוטומטי, שנעצר כשהלקוח קנה או ביקש שלא יפנו אליו</span></li><li><svg class="cube vslot" viewBox="0 0 18 20" aria-hidden="true"><use href="#cube"/></svg><span>העברה לנציג אנושי כשצריך, והתראה לאנשים שתגדירו על ליד חם</span></li><li><svg class="cube vslot" viewBox="0 0 18 20" aria-hidden="true"><use href="#cube"/></svg><span>תחזוקה שוטפת ושיפורים קטנים</span></li></ul>
+  <div class="card"><h3 class="h3">הבא חבר (אופציונלי)</h3><p>הבוט יכול להציע ללקוחות מרוצים להמליץ, ועוקב אחרי ההמלצות. אפשר להפעיל או לכבות.</p></div>
+</div></section>
+<section class="section on-surface" id="start"><div class="wrap">
+  <div class="section-head"><p class="label">איך מתחילים</p><h2 class="h2">ארבעה צעדים עד שהבוט עונה</h2></div>
+  <ol class="grid four steps"><li class="step"><h3 class="h3">מזמינים</h3><p>משלמים דמי הקמה ומקבלים קישור אישי לטופס הצטרפות.</p></li><li class="step"><h3 class="h3">ממלאים טופס</h3><p>מוצרים, מחירים, מדיניות ואיך אתם רוצים שהבוט ידבר. אפשר לעצור ולהמשיך, ולסמן "לא יודע" ונשלים יחד.</p></li><li class="step"><h3 class="h3">מחברים מספר</h3><p>אנחנו מחברים את מספר הוואטסאפ של העסק ומטפלים מולכם באימות מול פייסבוק. אתם נשארים הבעלים של החשבון.</p></li><li class="step"><h3 class="h3">עולים לאוויר</h3><p>הבוט מתחיל לענות. דמי המנוי החודשיים מתחילים מרגע העלייה ולא לפני.</p></li></ol>
+</div></section>
+<section class="section" id="price"><div class="wrap">
+  <div class="section-head"><p class="label">מחיר</p><h2 class="h2">מחיר ברור מראש</h2><p>ארבעה צעדים, מחיר מפורסם, ואתם נשארים הבעלים של החשבון.</p></div>
+  <div class="grid two">
+    <div class="price-card"><h3 class="h3">הקמה</h3><div class="price-fig"><span class="num">1,000 ₪</span> <small>+ מע"מ</small></div><p class="small">חד-פעמי. חיבור המספר, בניית הבוט לפי הטופס שמילאתם ועלייה לאוויר.</p></div>
+    <div class="price-card"><h3 class="h3">מנוי חודשי</h3><div class="price-fig"><span class="num">400 ₪</span> <small>לחודש + מע"מ</small></div><p class="small">מתחיל מרגע העלייה לאוויר ולא לפני. כולל תחזוקה שוטפת ושיפורים קטנים.</p></div>
+  </div>
+  <p class="small">אפשר לשלם שנה מראש: <span class="num">4,000 ₪</span> + מע"מ, במקום <span class="num">4,800 ₪</span> + מע"מ.</p>
+  <div class="usage-block"><h3 class="h3">השימוש מחויב בנפרד</h3><p class="small">השימוש בהודעות ובבינה מלאכותית מחויב בנפרד לפי חבילת שימוש חודשית.</p>
+  <ul class="usage" aria-label="חבילות שימוש חודשיות"><li><span>קטן</span><span class="num">$20</span></li><li><span>בינוני</span><span class="num">$50</span></li><li><span>גדול</span><span class="num">$100</span></li><li><span>גדול יותר</span><span class="num">$150</span></li><li><span>גדול מאוד</span><span class="num">$200</span></li><li><span>מעבר לכך</span><span>בהתאמה אישית</span></li></ul>
+  <p class="small">החבילה נקבעת לפי השימוש בפועל באותו חודש, והסיכום נשלח אליכם לפני החיוב.</p></div>
+  <p class="small">בקשה מיוחדת? שעת עבודה נוספת עולה 400 ₪ + מע"מ. הביטול נכנס לתוקף בסוף התקופה ששולמה, ואפשר לייצא את הנתונים לפני כן.</p>
+  <div class="gift" data-until="2026-12-31"><strong>בהזמנה עד 31.12.2026: חיבור יומן במתנה</strong><br>חיבור יומן לתיאום פגישות באולם התצוגה: זמינות, תזכורות למתאמים, מעקב אחרי קיום הפגישה והמשך הטיפול אחריה.</div>
+  <div class="actions"><a class="btn btn-wa" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A0%D7%A1%D7%95%D7%AA%20%D7%94%D7%93%D7%92%D7%9E%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20demo" data-wa-code="BOTS-MIZRANIM" data-wa-intent="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>לנסות הדגמה בוואטסאפ</a><a class="btn" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20ask" data-wa-code="BOTS-MIZRANIM" data-wa-intent="ask">שאלה בוואטסאפ</a></div>
+</div></section>
+<section class="section on-surface" id="faq"><div class="wrap">
+  <div class="section-head"><p class="label">שאלות נפוצות</p><h2 class="h2">מה שנשאל הכי הרבה</h2></div>
+  <div class="faq"><details open><summary>הבוט נותן הנחות?</summary><p>רק מה שהגדרתם. מעבר לזה הוא לא מתחייב ומעביר את הבקשה לאדם שקבעתם.</p></details><details><summary>יש דוגמה לראות?</summary><p>כן. אפשר לנסות הדגמה בוואטסאפ ולשוחח עם בוט של מותג לדוגמה.</p></details><details><summary>הבוט ממליץ על מזרן לכאבי גב?</summary><p>לא. הבוט לא נותן ייעוץ רפואי. הוא מציע דגם לפי מידה, קשיחות מועדפת ומה שהגדרתם בקטלוג, ומעביר לנציג.</p></details><details><summary>אפשר להציג את כל הדגמים והמחירים?</summary><p>הבוט מציג את מה שמילאתם בטופס: דגמים, מידות, מחירים ותנאים.</p></details><details><summary>צריך מספר חדש?</summary><p>לא בהכרח. אפשר לחבר מספר קיים, ובחלק מהמקרים המספר נשאר פעיל גם באפליקציה בנייד. Meta מחליטה אם המספר מתאים, ובודקים את זה יחד לפני שמתחילים.</p></details><details><summary>מה כלול במחיר ומה מחויב בנפרד?</summary><p>דמי ההקמה והמנוי החודשי כוללים את השירות והתחזוקה. השימוש בהודעות ובבינה מלאכותית מחויב בנפרד לפי חבילת שימוש חודשית: קטן 20$, בינוני 50$, גדול 100$, גדול יותר 150$, גדול מאוד 200$, ומעבר לכך בהתאמה אישית. החבילה נקבעת לפי השימוש בפועל באותו חודש, והסיכום נשלח אליכם לפני החיוב.</p></details><details><summary>מה הבוט עושה כשהוא לא יודע?</summary><p>הוא לא מתחייב על מה שלא הגדרתם בטופס. הוא אומר שיבדוק ויחזור, ואתם יכולים להשלים את ההגדרות.</p></details><details><summary>אפשר לבקש דברים מיוחדים?</summary><p>כן. שעת עבודה נוספת עולה 400 ₪ לפני מע"מ, ובדרך כלל מספיקות מעט שעות.</p></details><details><summary>איך מבטלים?</summary><p>מבקשים, והביטול נכנס לתוקף בסוף התקופה ששולמה. אפשר לייצא את הנתונים לפני כן.</p></details><details><summary>מה קורה עם המידע של הלקוחות שלי?</summary><p>הנתונים נשמרים בצורה מוגנת ורק לצורך השירות. תנאי השימוש ומדיניות הפרטיות מפורטים בקישורים בתחתית הדף.</p></details></div>
+</div></section>
+<section class="section on-ink" id="close"><div class="wrap">
+  <div class="section-head"><h2 class="h2">רוצים לנסות בוט למזרנים?</h2><p>ההדגמה מתנהלת בוואטסאפ, בלי התחייבות.</p></div>
+  <div class="actions"><a class="btn btn-wa" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A0%D7%A1%D7%95%D7%AA%20%D7%94%D7%93%D7%92%D7%9E%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20demo" data-wa-code="BOTS-MIZRANIM" data-wa-intent="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>לנסות הדגמה בוואטסאפ</a><a class="btn" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20ask" data-wa-code="BOTS-MIZRANIM" data-wa-intent="ask">שאלה בוואטסאפ</a></div>
+  <nav class="switcher" aria-label="תחומים"><ul><li data-slot="sky"><a href="/bots/mizranim" aria-current="page">מזרנים</a></li><li data-slot="amber"><a href="/bots/tzrimim">צימרים ואירוח</a></li><li data-slot="violet"><a href="/bots/nadlan">נדל"ן</a></li><li data-slot="coral"><a href="/bots/hair">מספרות</a></li></ul></nav>
+</div></section>
+<section class="section credit" aria-label="על L-BE"><div class="wrap">
+  <p class="label">מי אנחנו</p>
+  <p class="lead">L-BE הוא העסק של לירון ביאלקוביץ, שמטמיע מערכות CRM ו-AI בעסקים מאז 2013. L-BE BOTS הוא המוצר המוגדר שלנו: בוט וואטסאפ במחיר מפורסם.</p>
+  <p><a class="link" href="https://l-be.com/">עוד על L-BE</a></p>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <nav aria-label="תחתית"><a href="https://botsleads.l-be.com/legal/terms">תנאי שימוש</a><a href="https://botsleads.l-be.com/legal/privacy">מדיניות פרטיות</a><a href="https://l-be.com/accessibility">הצהרת נגישות</a></nav>
+  <p class="small">L-BE BOTS הוא חלק מ-<a href="https://l-be.com/">L-BE</a>. כל המחירים לפני מע"מ.</p>
+</div></footer>
+<div class="dock" role="region" aria-label="פעולות וואטסאפ"><a class="btn btn-wa" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A0%D7%A1%D7%95%D7%AA%20%D7%94%D7%93%D7%92%D7%9E%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20demo" data-wa-code="BOTS-MIZRANIM" data-wa-intent="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>הדגמה בוואטסאפ</a><a class="btn btn-ghost" href="https://wa.me/972554606831?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94.%0A%D7%A7%D7%95%D7%93%3A%20BOTS-MIZRANIM%0A%D7%9B%D7%95%D7%95%D7%A0%D7%94%3A%20ask" data-wa-code="BOTS-MIZRANIM" data-wa-intent="ask">שאלה</a></div>
+<script src="/bots/assets/wa.js?v=2fac7f9c" defer></script>
+<script src="/a11y.js" defer></script>
 </body>
 </html>
