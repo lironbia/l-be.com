@@ -2,7 +2,7 @@
 window.MIZRANIM = {
   sizes: ["80x190", "90x190", "90x200", "120x190", "120x200", "140x190", "160x190", "160x200", "180x200", "200x200"],
   defaultSize: "160x200",
-  botNumber: "12058583885", // WhatsApp number of the sales bot, international format without "+"; will change to an Israeli number
+  botNumber: "972554606831", // fallback only: the live number comes from the leads system (window.LBE_CLIENT.waNumber, set in the client settings screen)
   customSizeAdd: 600, // a size not in the list = the nearest larger standard size + this amount, shown as one final price
   // "I want a bot like this" button at the bottom of each page: leads to L-BE itself, not to the sales bot
   leadNumber: "972502221023",

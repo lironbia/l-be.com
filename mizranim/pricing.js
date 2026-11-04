@@ -40,7 +40,8 @@
   var waOrder = document.getElementById("wa-order");
   var waAsk = document.getElementById("wa-ask");
   var ref = (new URLSearchParams(location.search).get("ref") || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 32);
-  function waLink(text) { return "https://wa.me/" + D.botNumber + "?text=" + encodeURIComponent(text); }
+  function waNumber() { return (window.LBE_CLIENT && window.LBE_CLIENT.waNumber) || D.botNumber; }
+  function waLink(text) { return "https://wa.me/" + waNumber() + "?text=" + encodeURIComponent(text); }
   function renderWa(size, custom) {
     var tail = "\nמידה: " + size + (custom ? " (מיוחדת)" : "") + (ref ? "\nref: " + ref : "");
     if (waOrder) waOrder.href = waLink("היי, אני מתעניין/ת ב" + model.name + " (קוד: " + model.code + "). הגעתי מדף הדגם ואשמח להמשיך." + tail);

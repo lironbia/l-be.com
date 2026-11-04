@@ -15,55 +15,88 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <style>
-:root { --accent: #6b7a8f; --bg:#faf8f5; --ink:#1f2328; --muted:#5b6470; --card:#ffffff; --line:#e7e2da; }
-@media (prefers-color-scheme: dark) { :root { --bg:#14171a; --ink:#f1efe9; --muted:#a6adb6; --card:#1d2125; --line:#2c3238; } }
+:root { --accent: #6b7a8f; }
+:root { --bg:#f7f4ef; --ink:#1b2128; --muted:#59626d; --card:#ffffff; --line:#e6e0d6; --accent-text:color-mix(in srgb,var(--accent) 68%,#000); --accent-soft:color-mix(in srgb,var(--accent) 11%,transparent); --accent-line:color-mix(in srgb,var(--accent) 38%,transparent); --shadow:0 1px 2px rgba(27,33,40,.05),0 10px 30px -12px rgba(27,33,40,.18); --wa:#25d366; --wa-ink:#05260f; }
+@media (prefers-color-scheme: dark) { :root { --bg:#111417; --ink:#f2efe8; --muted:#a8afb8; --card:#1a1e22; --line:#2b3238; --accent-text:color-mix(in srgb,var(--accent) 62%,#fff); --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -12px rgba(0,0,0,.6); } }
 * { box-sizing: border-box; }
-body { margin:0; background:var(--bg); color:var(--ink); font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; line-height:1.55; }
-.demo { background:#fff3cd; color:#5c4400; text-align:center; padding:8px 16px; font-size:13px; }
-header { padding:16px; text-align:center; font-weight:700; letter-spacing:.3px; border-bottom:1px solid var(--line); }
-main { max-width:760px; margin:0 auto; padding:0 16px 120px; }
-.hero img { width:100%; border-radius:16px; display:block; margin-top:16px; aspect-ratio:4/3; object-fit:cover; background:var(--line); }
-h1 { font-size:30px; margin:18px 0 4px; }
-.tag { color:var(--accent); font-weight:600; margin:0 0 12px; }
-.price { font-size:34px; font-weight:800; margin:10px 0 2px; }
-.price small { font-size:15px; font-weight:500; color:var(--muted); }
-.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; margin:16px 0; }
-.card h2 { margin:0 0 8px; font-size:18px; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+[hidden] { display:none !important; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family: "Segoe UI", system-ui, -apple-system, "Noto Sans Hebrew", Arial, sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; padding-bottom:96px; }
+.demo { background:var(--ink); color:var(--bg); text-align:center; padding:9px 16px; font-size:13px; line-height:1.45; }
+header { padding:20px 16px; text-align:center; font-weight:800; letter-spacing:.16em; font-size:15px; background:var(--card); border-bottom:1px solid var(--line); }
+header::after { content:""; display:block; width:28px; height:3px; margin:10px auto 0; border-radius:3px; background:var(--accent); }
+main { max-width:1080px; margin:0 auto; padding:0 16px 32px; }
+.top { display:grid; gap:22px; padding-top:20px; }
+.hero img { width:100%; display:block; border-radius:22px; aspect-ratio:4/3; object-fit:cover; background:var(--line); box-shadow:var(--shadow); }
+h1 { font-size:clamp(28px,4.2vw,42px); line-height:1.15; letter-spacing:-.02em; font-weight:800; margin:6px 0 6px; }
+.tag { color:var(--accent-text); font-weight:700; font-size:17px; margin:0 0 14px; }
+.price { font-size:clamp(38px,5.5vw,52px); line-height:1.1; font-weight:800; letter-spacing:-.02em; margin:16px 0 4px; font-variant-numeric:tabular-nums; }
+.price small { display:block; font-size:14px; line-height:1.5; font-weight:500; letter-spacing:0; color:var(--muted); margin-top:6px; }
+.sel { font-weight:700; color:var(--accent-text); margin:0 0 10px; min-height:1.65em; }
+.buy > p { color:var(--ink); opacity:.9; margin:8px 0 14px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; margin:16px 0; box-shadow:var(--shadow); }
+.card h2 { margin:0 0 12px; font-size:19px; letter-spacing:-.01em; font-weight:800; }
+.buy .card { margin-top:8px; }
 ul { margin:0; padding:0 18px 0 0; }
+ul li { margin:5px 0; }
+ul li::marker { color:var(--accent); }
 .gifts { list-style:none; padding:0; }
-.gifts li { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed var(--line); }
+.gifts li { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:11px 0; margin:0; border-bottom:1px solid var(--line); }
 .gifts li:last-child { border:none; }
-.gifts b { color:var(--accent); }
-.value { font-weight:700; margin-top:8px; }
-blockquote { margin:10px 0; padding:10px 14px; border-right:4px solid var(--accent); background:rgba(127,127,127,.07); border-radius:8px; }
-cite { display:block; font-size:13px; color:var(--muted); margin-top:4px; font-style:normal; }
-.note { font-size:12px; color:var(--muted); }
-.cta { position:fixed; bottom:0; right:0; left:0; background:var(--card); border-top:1px solid var(--line); padding:10px 16px; display:flex; gap:10px; justify-content:center; }
-.btn { flex:1; max-width:340px; text-align:center; padding:14px 12px; border-radius:12px; font-weight:700; text-decoration:none; font-size:16px; }
-.btn.primary { background:#25d366; color:#06270f; }
-.btn.ghost { border:2px solid var(--accent); color:var(--accent); }
-.sizes { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin:8px 0; }
-.chip { font:inherit; display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 12px; border:1.5px solid var(--line); border-radius:10px; background:var(--card); color:var(--ink); cursor:pointer; min-height:44px; }
-.chip.on { border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent); background:rgba(127,127,127,.08); font-weight:700; }
-.chip-size { font-weight:600; }
-.chip-price { color:var(--accent); font-weight:700; white-space:nowrap; }
-.custom { margin-top:12px; }
-.custom summary { cursor:pointer; font-weight:600; padding:6px 0; }
+.gifts li span::before { content:"\2713"; display:inline-grid; place-items:center; width:22px; height:22px; margin-inline-end:10px; border-radius:50%; background:var(--accent-soft); color:var(--accent-text); font-size:13px; font-weight:800; }
+.gifts b { color:var(--accent-text); font-size:13px; background:var(--accent-soft); border-radius:999px; padding:2px 12px; }
+.value { font-weight:800; margin-top:12px; padding:12px 14px; border-radius:12px; background:var(--accent-soft); text-align:center; }
+blockquote { margin:12px 0; padding:14px 18px; border-inline-start:4px solid var(--accent); background:var(--accent-soft); border-radius:12px; font-size:17px; line-height:1.55; }
+cite { display:block; font-size:13px; color:var(--muted); margin-top:6px; font-style:normal; }
+.note { font-size:13px; color:var(--muted); line-height:1.55; }
+.cta { position:fixed; bottom:0; right:0; left:0; z-index:30; background:color-mix(in srgb,var(--card) 92%,transparent); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); border-top:1px solid var(--line); padding:10px 16px calc(10px + env(safe-area-inset-bottom)); display:flex; gap:10px; justify-content:center; }
+.btn { flex:1; max-width:340px; display:inline-flex; align-items:center; justify-content:center; gap:9px; text-align:center; padding:14px 14px; min-height:50px; border-radius:14px; font-weight:800; text-decoration:none; font-size:16px; transition:transform .08s, box-shadow .15s, background .15s; }
+.btn svg { width:20px; height:20px; flex:none; }
+.btn:active { transform:translateY(1px); }
+.btn.primary { background:var(--wa); color:var(--wa-ink); box-shadow:0 6px 16px -6px rgba(37,211,102,.7); }
+.btn.primary:hover { background:#1fbd5b; }
+.btn.ghost { border:2px solid var(--accent); color:var(--accent-text); background:transparent; }
+.btn.ghost:hover { background:var(--accent-soft); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+.sizes { display:grid; grid-template-columns:repeat(auto-fill,minmax(148px,1fr)); gap:10px; margin:10px 0; }
+.top > *, .buy, .details > * { min-width:0; }
+.chip { font:inherit; display:flex; justify-content:space-between; align-items:center; gap:8px; padding:12px 14px; border:1.5px solid var(--line); border-radius:12px; background:var(--card); color:var(--ink); cursor:pointer; min-height:50px; transition:border-color .15s, background .15s, box-shadow .15s; }
+.chip:hover { border-color:var(--accent-line); background:var(--accent-soft); }
+.chip.on { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); background:var(--accent-soft); font-weight:700; }
+.chip-size { font-weight:700; }
+.chip-price { color:var(--accent-text); font-weight:800; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.custom { margin-top:14px; }
+.custom summary { cursor:pointer; font-weight:700; padding:8px 0; color:var(--accent-text); }
 .custom-row { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:6px; }
-.custom-row input { width:84px; padding:10px; font:inherit; border:1.5px solid var(--line); border-radius:10px; background:var(--card); color:var(--ink); text-align:center; }
-.chip.go { justify-content:center; border-color:var(--accent); color:var(--accent); font-weight:700; }
-@media (min-width:520px) { .sizes { grid-template-columns:repeat(3,1fr); } }
-.sel { font-weight:600; color:var(--accent); margin:0 0 6px; }
-.demo-note { text-align:center; }
-.demo-line { font-size:17px; font-weight:600; margin:0 0 8px; }
-.lead-btn { display:block; max-width:340px; margin:12px auto 0; }
+.custom-row input { width:92px; padding:11px; min-height:46px; font:inherit; border:1.5px solid var(--line); border-radius:12px; background:var(--card); color:var(--ink); text-align:center; }
+.chip.go { justify-content:center; border-color:var(--accent); color:var(--accent-text); font-weight:800; }
+.perk { background:linear-gradient(135deg,#fff7df,#ffffff 70%); border-color:#efd9a4; }
+.perk h2 { color:#6d4a00; }
+.perk img { box-shadow:var(--shadow); }
+@media (prefers-color-scheme: dark) { .perk { background:linear-gradient(135deg,#352a10,#1a1e22 70%); border-color:#5c4a1c; } .perk h2 { color:#f5d58a; } }
+.details { display:grid; gap:0 20px; margin-top:12px; }
+@media (min-width:900px) {
+  main { padding-bottom:48px; }
+  .top { grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:44px; align-items:start; padding-top:36px; }
+  .hero { position:sticky; top:24px; }
+  .details { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .details .wide { grid-column:1/-1; }
+  .cta { left:50%; right:auto; transform:translateX(-50%); bottom:18px; border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow); padding:10px; width:min(560px,calc(100% - 32px)); }
+}
+.demo-note { text-align:center; background:var(--ink); color:var(--bg); border-color:transparent; padding:30px 22px; }
+.demo-note .note { color:inherit; opacity:.78; font-size:14px; }
+.demo-line { font-size:18px; font-weight:700; line-height:1.5; margin:0 0 10px; }
+.lead-btn { display:flex; max-width:340px; margin:16px auto 0; }
+.foot { text-align:center; margin-top:28px; }
 </style>
 </head>
 <body>
 <div class="demo">דף הדגמה: מותג דמיוני "לירון קומפורט סטייל", המלצות ותוכן להמחשה בלבד | בוט המכירות של L-BE</div>
 <header>לירון קומפורט סטייל</header>
 <main>
+  <section class="top">
   <div class="hero"><img src="assets/classic.webp" alt="מיטת LCS קלאסיק"></div>
+  <div class="buy">
   <h1>מיטת LCS קלאסיק</h1>
   <p class="tag">הבחירה החכמה לחדר שינה נקי ונוח</p>
   <div class="price"><span id="price-val"></span> <small>מזרן + בסיס מיטה, מחיר סופי כולל משלוח והרכבה</small></div>
@@ -71,6 +104,10 @@ cite { display:block; font-size:13px; color:var(--muted); margin-top:4px; font-s
   <p>מזרן נוח ויציב עם בסיס מיטה נקי ומינימליסטי. הכי טוב ליחיד או לזוג שרוצים איכות אמיתית במחיר שפוי.</p>
 
   <div class="card" id="pricing" data-model="classic"><noscript>יש להפעיל JavaScript כדי לראות את המידות והמחירים ולהמשיך לוואטסאפ.</noscript></div>
+  <div class="card perk" id="lbe-gift" hidden></div>
+  </div>
+  </section>
+  <div class="details">
 
   <div class="card">
     <h2>מה מיוחד בדגם</h2>
@@ -89,29 +126,26 @@ cite { display:block; font-size:13px; color:var(--muted); margin-top:4px; font-s
     <ul><li>אחריות: 12 שנים על המזרן, שנתיים על בסיס המיטה</li><li>30 ימי ניסיון, משלוח ההחזרה על חשבוננו</li><li>אספקה: 3 ימי עסקים למרכז, 5 ימי עסקים לצפון ולדרום</li><li>אמצעי תשלום: מקבלים את כל אמצעי התשלום</li><li id="pay-line">תשלומים באשראי: לפי המחיר הסופי של המידה שנבחרה</li></ul>
   </div>
 
-  <div class="card perk">
-    <h2>בהזמנה היום: שידה קטנה ויפה במתנה</h2>
-    <img src="assets/dresser.webp" alt="שידה קטנה במתנה" style="width:100%;border-radius:12px;margin-top:8px">
-    <p class="note">ההטבה מוצגת בשיחה בוואטסאפ.</p>
-  </div>
-
   <div class="card">
     <h2>ממליצים</h2>
     <blockquote>“נוח מהלילה הראשון, והמחיר באמת הוגן.”<cite>לקוחה לדוגמה, תל אביב</cite></blockquote><blockquote>“הגיע, הורכב, ושכחתי שהיה אי פעם מזרן ישן.”<cite>לקוח לדוגמה, חיפה</cite></blockquote>
     <p class="note">המלצות לדוגמה למטרות הדגמה בלבד.</p>
   </div>
-  <div class="card demo-note" id="demo-note">
+  <div class="card demo-note wide" id="demo-note">
     <p class="demo-line">ברור שאנחנו לא באמת מוכרים מזרנים 😄 זה מותג הדגמה של L-BE. מה שאמיתי הוא הבוט שמנהל את השיחה בוואטסאפ.</p>
     <p class="note">יצרני ומשווקי מזרנים ועולם השינה: רוצים בוט כזה לעסק שלכם?</p>
-    <a class="btn primary lead-btn" id="wa-lead" href="#demo-note">אני רוצה כזה בוט!</a>
+    <a class="btn primary lead-btn" id="wa-lead" href="#demo-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>אני רוצה כזה בוט!</a>
   </div>
-<p class="note" style="text-align:center;margin-top:24px">הדגמה של בוט מכירות לוואטסאפ מבית L-BE</p>
+
+  </div>
+<p class="note foot">הדגמה של בוט מכירות לוואטסאפ מבית L-BE</p>
 </main>
 <div class="cta">
-  <a class="btn primary" id="wa-order" href="#pricing">המשך להזמנה בוואטסאפ</a>
+  <a class="btn primary" id="wa-order" href="#pricing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>המשך להזמנה בוואטסאפ</a>
   <a class="btn ghost" id="wa-ask" href="#pricing">יש לי שאלה</a>
 </div>
-<script src="data.js?v=5"></script>
-<script src="pricing.js?v=5"></script>
+<script src="https://botsleads.l-be.com/public/c/mizranim-demo.js" defer></script>
+<script src="data.js?v=6" defer></script>
+<script src="pricing.js?v=6" defer></script>
 </body>
 </html>
